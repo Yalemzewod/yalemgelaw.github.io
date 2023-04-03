@@ -1,0 +1,144 @@
+---
+title: "Yalemzewod Gelaw,PhD, MPH, Bsc"
+image: "images/yalem.png"
+about: 
+ template: trestles
+ image-shape: rounded
+ image-width: 16em
+ links: 
+   - icon: linkedin
+     text: linkdeIn
+     href: https://www.linkedin.com/feed/
+   - icon: twitter
+     text: Twitter
+     href: https://twitter.com/yalassefa
+   - icon: github
+     text: GitHub
+     href: https://github.com/yalemz
+   - icon: envelop
+     text: Email
+     href: yalassefa@gmail.com 
+   - icon: orcid
+     text: OrcId
+     href: https://orcid.org/0000-0002-5338-586X
+---
+
+### Welcome !
+
+<p class="topbr">
+
+I am a research scientist with a PhD in Epidemiology from the University of Queensland in Australia. My wider research focuses on preventing and controlling infectious diseases, such as tuberculosis, malaria, and HIV, using geostatistical models. I have published a number of articles in peer-review journals, and I also presented my research at various national and international conferences.
+
+Currently, I work as a research officer at the [Telethon Kids Institute](https://www.telethonkids.org.au/) of [Malaria Atlas Project (MAP)](https://malariaatlas.org/), where I assist with data management, analysis, modelling and research in malaria epidemiology and prevention and elimination programs. With over ten years of teaching and research experience in Australia and Ethiopia, I have gained valuable insights into the challenges of preventing and controlling infectious diseases in low-resource settings.
+
+</p>
+
+------------------------------------------------------------------------
+
+### Education
+
+::: topbr
+<p class="custom-subtitle">
+
+`r fontawesome::fa("graduation-cap", fill = "blue")`**PhD (Epidemiology and Biostatitsics), 2020**
+
+</p>
+
+<p class="custom-subtitle2">
+
+The University of Queensland,Brisbane, Australia
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("graduation-cap", fill = "blue")`**MPH (Epidemiology and Biostatitsics), 2013**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Gondar,Gondar, Ethiopia
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("graduation-cap", fill = "blue")`**BSc (Environmental Health Science), 2006**
+
+</p>
+
+<p class="custom-subtitle2">
+
+Debub University, Hawasa, Ethiopia
+
+</p>
+:::
+  
+------------------------------------------------------------------------
+
+### Experience - academic
+
+::: topbr
+<p class="custom-subtitle">
+
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Postdoctoral Research Officer, 2021-present**
+
+</p>
+
+<p class="custom-subtitle2">
+
+Malaria Atlas Project (MAP), Telethon Kids Institute, Perth, AU
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Postdoctoral Research Associate, 2020-2021**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of New South Wales, Sydney, AU
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Tutor/marker, 2017-2019**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Queensland, Brisbane, AU
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Lecturer, 2013 - 2016**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Gondar, Gondar, ET
+
+</p>
+:::
+
+------------------------------------------------------------------------
+
+### Interest
+
+-   Geospatial Analysis
+
+-   Data Analysis
+
+-   Data Visualization
+
+-   Knowledge Sharing
+
+-   Learning New Skills

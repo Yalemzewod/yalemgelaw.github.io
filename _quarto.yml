@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Yalemzewod Assefa Gelaw"
+  search: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - skills.qmd
+      - talksandworkshops.qmd
+      - publications.qmd
+      - grantsandawards.qmd
+    
+    right: 
+      - icon: twitter
+        href: https://twitter.com/yalassefa
+        aria-label: Quarto Twitter
+      - icon: github
+        href: https://github.com/yalemz
+        aria-label: Quarto GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/feed/
+        aria-label: Quarto LinKedin
+      - href: CV/Yalem_CV.pdf
+        text: cv
+  page-footer:
+    background: light
+    left: 
+      - "Copyright 2023, Yalemzewod Gelaw"
+    right: 
+      - icon: github
+        href: https://github.com/yalemz
+      - icon: twitter
+        href: https://twitter.com/yalassefa
+  reader-mode: true
+
+format:
+  html:
+    theme:
+      light: minty
+      dark: slate
+    css: styles.css
+    toc: false
+page-layout: full
+
+editor: visual
+

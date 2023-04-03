@@ -1,0 +1,42 @@
+---
+title: "Skills"
+---
+I possess solid skills in `Epidemiology and Biostatistics`, and have utilized advanced statistical and data analysis methods such as Classification and Regression Tree analysis, spatiotemporal analysis, Bayesian conditional autoregressive (CAR) models, survival analysis, longitudinal regression, and infectious disease modeling in my research. My proficiency in data science and analysis has been demonstrated through the publication of my research articles.
+
+::: topbr
+<p class="custom-subtitle">
+
+`r fontawesome::fa("r-project", fill = "blue")`
+
+</p>
+
+<p class="custom-subtitle2">
+
+I have over five years of experience using `R` programming language, specifically for data management, data cleaning, statistical analysis, and advanced modeling. For example, I have worked on projects involving cleaning and analyzing longitudinal large datasets (e.g., [POCOLS](https://www.facs.nsw.gov.au/resources/research/pathways-of-care)) to derive insights and build machine learning model. I have used various packages such as ggplot2 for data visualization, dplyr for data manipulation, caret for building machine learning models, sf, sp, and INLA for spatial and spatio-temporal data management and modeling. Overall, my experience with R has equipped me with a strong foundation in data science.
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("python", fill = "blue")`
+
+</p>
+
+<p class="custom-subtitle2">
+
+My `Python` skill is at a beginner level. However, I am actively working on improving my skills and I am confident that I will be able to enhance my proficiency in Python in the near future.
+
+</p>
+
+<p class="custom-subtitle">
+
+![](images/stata-fb.jpg){width="30" height="15"}
+
+</p>
+
+<p class="custom-subtitle2">
+
+I have a proficient skill in `Stata`, and I have been using it for data management, and statistical analysis s. I have worked on several projects involving longitudinal data analysis, where I have used Stata to perform group trajectory modeling and to estimate the socio-emotional trajectories of children in out-of-home care service. I am also comfortable using Stata for data manipulation and cleaning tasks, and have experience with advanced statistical techniques such as regression analysis and meta-analysis.
+
+</p>
+:::
