@@ -1,6 +1,7 @@
 ---
 title: "Skills"
 ---
+
 I possess solid skills in `Epidemiology and Biostatistics`, and have utilized advanced statistical and data analysis methods such as Classification and Regression Tree analysis, spatiotemporal analysis, Bayesian conditional autoregressive (CAR) models, survival analysis, longitudinal regression, and infectious disease modeling in my research. My proficiency in data science and analysis has been demonstrated through the publication of my research articles.
 
 ::: topbr

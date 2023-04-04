@@ -10,11 +10,11 @@ website:
       - href: index.qmd
         text: Home
       - skills.qmd
-      - talksandworkshops.qmd
-      - publications.qmd
       - grantsandawards.qmd
-    
-    right: 
+      - workshopsandpresentations.qmd
+      - publications.qmd
+  
+    right:
       - icon: twitter
         href: https://twitter.com/yalassefa
         aria-label: Quarto Twitter
@@ -36,12 +36,12 @@ website:
       - icon: twitter
         href: https://twitter.com/yalassefa
   reader-mode: true
-
+  
 format:
   html:
-    theme:
-      light: minty
-      dark: slate
+    theme: cosmo
+    fontsize: 1.16em
+    linestretch: 1.7
     css: styles.css
     toc: false
 page-layout: full

@@ -1,6 +1,6 @@
 ---
 title: "Yalemzewod Gelaw,PhD, MPH, Bsc"
-image: "images/yalem.png"
+image: "images/me.jpg"
 about: 
  template: trestles
  image-shape: rounded
@@ -74,7 +74,7 @@ Debub University, Hawasa, Ethiopia
 
 </p>
 :::
-  
+
 ------------------------------------------------------------------------
 
 ### Experience - academic
