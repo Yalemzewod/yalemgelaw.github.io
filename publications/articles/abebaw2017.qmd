@@ -1,0 +1,37 @@
+---
+title: "The prevalence of impaired fasting glucose and undiagnosed diabetes mellitus and associated risk factors among adults living in a rural Koladiba town, northwest Ethiopia."
+type: "article"
+author: "Abebaw, Shitaye, Yalemzewod & Molla"
+year: "2017"
+publication: "BMC research notes"
+preprint: ""
+doi: "https://doi.org/10.1186/s13104-017-2571-3"
+materials: ""
+toc: false
+categories:
+  - NCDs
+  - Diabetes
+  - Residence
+---
+
+## Citation (Vancouver)
+
+> Worede A, Alemu S, Gelaw YA, Abebe M. The prevalence of impaired fasting glucose and undiagnosed diabetes mellitus and associated risk factors among adults living in a rural Koladiba town, northwest Ethiopia. BMC research notes. 2017 Dec;10(1):1-7.
+
+## Abstract
+
+### Background
+
+Diabetes mellitus is becoming a big public health challenge, particularly in developing countries like Ethiopia. It is a manageable disease if early screening and follow up is made. However, as studies in Ethiopia are limited and unorganized, determining the magnitude of prediabetes and diabetes and identifying associated risk factors is quite essential.
+
+### Methods
+
+A community-based, cross-sectional study was conducted from February to April 2015 among adults (aged ≥20 years) in a rural Koladiba town. A multistage sampling technique was used to select a total of 392 study participants. Data were collected after a fully informed written consent was obtained from each participant. Demographic, behavioral, and clinical data were collected using a well-structured questionnaire. Multivariable logistic regression models were fitted to control the effect of confounders. Adjusted odds ratios (AOR) with their 95% confidence intervals (95% CI) were computed to measure associations. A p value of \<0.05 was considered as statistically significant.
+
+### Results
+
+The prevalence of impaired fasting glucose and undiagnosed diabetes mellitus were 12% (95% CI 9--16) and 2.3% (95% CI 1.1--4), respectively, in Koladiba. Overweight (AOR: 4.257, 95% CI 1.345--13.476), obesity (AOR: 5.26, 95% CI 1.138--24.316), hypertriglyceridemia (AOR: 2.83, 95% CI 1.451--5.521), and systolic hypertension (AOR: 3.858, 95% CI 1.62--9.189) were found to be independently associated with impaired fasting glucose. Positive family history of diabetes also showed a marginal association with impaired fasting glucose (p = 0.057). Male sex (p = 0.012) and hypertriglyceridemia (p = 0.030) were associated with undiagnosed diabetes mellitus.
+
+### Conclusions
+
+The prevalence of impaired fasting glucose and undiagnosed diabetes mellitus are found to be significant. Obesity, hypertriglyceridemia, and systolic hypertension are independently associated with impaired fasting glucose among adults. We recommend that the community be aware of healthy life style, early screening, and maintain continuous follow up.

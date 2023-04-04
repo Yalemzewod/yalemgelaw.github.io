@@ -1,0 +1,34 @@
+---
+title: "Risk factors for COVID-19 infection, disease severity and related deaths in Africa: a systematic review"
+type: "article"
+author: "Hailay, Digsu, Dagnachew, Mulu,..., Yalemzewod,... et al."
+year: "2021"
+publication: "BMJ open"
+preprint: ""
+doi: "http://dx.doi.org/10.1136/bmjopen-2020-044618"
+materials: ""
+toc: false
+categories:
+  - COVID
+  - Review
+---
+
+## Citation (Vancouver)
+
+> Gesesew HA, Koye DN, Fetene DM, Woldegiorgis M, Kinfu Y, Geleto AB, Melaku YA, Mohammed H, Alene KA, Awoke MA, Birhanu MM. Risk factors for COVID-19 infection, disease severity and related deaths in Africa: a systematic review. BMJ open. 2021 Feb 1;11(2):e044618.
+
+## Abstract
+
+**Objective** The aim of this study was to provide a comprehensive evidence on risk factors for transmission, disease severity and COVID-19 related deaths in Africa.
+
+**Design** A systematic review has been conducted to synthesise existing evidence on risk factors affecting COVID-19 outcomes across Africa.
+
+**Data sources** Data were systematically searched from MEDLINE, Scopus, MedRxiv and BioRxiv.
+
+**Eligibility criteria** Studies for review were included if they were published in English and reported at least one risk factor and/or one health outcome. We included all relevant literature published up until 11 August 2020.
+
+**Data extraction and synthesis** We performed a systematic narrative synthesis to describe the available studies for each outcome. Data were extracted using a standardised Joanna Briggs Institute data extraction form.
+
+**Results** Fifteen articles met the inclusion criteria of which four were exclusively on Africa and the remaining 11 papers had a global focus with some data from Africa. Higher rates of infection in Africa are associated with high population density, urbanisation, transport connectivity, high volume of tourism and international trade, and high level of economic and political openness. Limited or poor access to healthcare are also associated with higher COVID-19 infection rates. Older people and individuals with chronic conditions such as HIV, tuberculosis and anaemia experience severe forms COVID-19 leading to hospitalisation and death. Similarly, high burden of chronic obstructive pulmonary disease, high prevalence of tobacco consumption and low levels of expenditure on health and low levels of global health security score contribute to COVID-19 related deaths.
+
+**Conclusions** Demographic, institutional, ecological, health system and politico-economic factors influenced the spectrum of COVID-19 infection, severity and death. We recommend multidisciplinary and integrated approaches to mitigate the identified factors and strengthen effective prevention strategies.

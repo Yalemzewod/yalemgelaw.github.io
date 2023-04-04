@@ -1,0 +1,38 @@
+---
+title: "The role of smoking in the relationship between intimate partner violence and age at natural menopause: a mediation analysis."
+type: "article"
+author: "Deborah, Hsin, Yalemzewod, Gita."
+year: "2018"
+publication: "Women's midlife health"
+preprint: ""
+doi: "http://dx.doi.org/10.1186/s40695-017-0031-9"
+materials: ""
+toc: false
+categories:
+  - smoking
+  - Mediation analysis
+  - Longitudinal Study 
+  - Intimate partner violence
+---
+
+## Citation (Vancouver)
+
+> Mishra GD, Chung HF, Gelaw YA, Loxton D. The role of smoking in the relationship between intimate partner violence and age at natural menopause: a mediation analysis. Women's midlife health. 2018 Dec;4:1-0.
+
+## Abstract
+
+### Background
+
+Age at natural menopause (ANM) is considered as a biologic marker of health and ageing. The relationship between intimate partner violence (IPV) and ANM is currently unknown, and whether smoking plays a role in this relationship is unclear. The aim of this study was to examine the association between IPV and ANM and to quantify the effect mediated through smoking.
+
+### Methods
+
+Data were drawn from the 1946--51 cohort of the Australian Longitudinal Study on Women's Health, a prospective cohort study first conducted in 1996. History of IPV (yes or no) was self-reported at baseline. ANM was confirmed by at least 12 months of cessation of menses where this was not a result of medical interventions such as bilateral oophorectomy or hysterectomy and categorised as \<45 (early menopause), 45--49, 50--51, 52--53, and ≥54 years. Regression models and mediation analyses based on the counterfactual framework were performed to examine the relationship between IPV and ANM and to quantify the proportion mediated through smoking (never, past, current \<10, 10--19 and ≥20 cigarettes/day).
+
+### Results
+
+Of 6138 women in the study with natural menopause, 932 (15%) reported a history of IPV and 429 (7.0%) had an early ANM (before age 45 years). Women with IPV were more likely to smoke and be heavy smokers (Odds Ratio: 2.77, 95% CI 2.19--3.51). Women with IPV were also at increased risk of early menopause (ANM \<45 years) (Relative Risk Ratio: 1.36, 95% CI 1.03--1.80) after accounting for education level, income difficulties, age at menarche, parity, body mass index, and perceived stress, compared to the reference group (women without IPV and ANM at 50--51 years). This relationship was attenuated after adjusting for smoking (Relative Risk Ratio: 1.20, 95% CI 0.90--1.59). Mediation analysis showed that cigarette smoking explained 36.7% of the association between IPV and early menopause (ANM \<45 vs. ≥45 years).
+
+### Conclusion
+
+Cigarette smoking substantially mediated the relationship between IPV and early menopause. Findings suggest that as part of addressing the impact of IPV, timely interventions that result in cessation of smoking will partly mitigate the increased risk of early menopause.

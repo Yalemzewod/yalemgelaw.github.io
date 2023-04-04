@@ -1,0 +1,38 @@
+---
+title: "Effect of temperature and altitude difference on tuberculosis notification: a systematic review."
+type: "article"
+author: "Yalemzewod,Weiwei,Yibeltal, Ricardo J.,& Gail"
+year: "2019"
+publication: "Journal of global infectious diseases"
+preprint: ""
+doi: "https://doi.org/10.1007/s10461-018-02386-4"
+materials: ""
+toc: false
+categories:
+  - Infectious disease
+  - TB
+  - Review
+  - Journal article
+---
+
+## Citation (Vancouver)
+
+> Gelaw YA, Yu W, Magalhães RJ, Assefa Y, Williams G. Effect of temperature and altitude difference on tuberculosis notification: a systematic review. Journal of global infectious diseases. 2019 Apr;11(2):63.
+
+## Abstract
+
+### Background:
+
+Ecological factors are important indicators for tuberculosis (TB) notification. However, consolidation of evidence on the effect of altitude and temperature on TB notification rate has not yet been done. The aim of this review is to illustrate the effect of altitude and temperature on TB notification rate.
+
+### Methods:
+
+Electronic searches were undertaken from PubMed, EMBASE, and Scopus databases. Hand searches of bibliographies of retrieved papers provided additional references. A review was performed using the Meta-analysis Of Observational Studies in Epidemiology guideline.
+
+### Results:
+
+Nine articles from various geographic regions were included in the study. Five out of nine studies showed the effect of altitude and four articles identified temperature effects. Results showed that TB notification rates were lower at higher altitude and higher at a higher temperature.
+
+### Conclusion:
+
+This review provides qualitative evidence that TB notification rates increase with temperature and decrease with altitude. The findings of this review will encourage policymakers and program managers to consider seasonality and altitude differences in the design and implementation of TB prevention and control strategies.

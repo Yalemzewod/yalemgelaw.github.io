@@ -1,0 +1,30 @@
+---
+title: "Screening tools to exclude active pulmonary TB in high TB burden countries: systematic review and meta-analysis."
+type: "article"
+author: "Yibeltal,Solomon, Yalemzewod, et al."
+year: "2019"
+publication: "The international journal of tuberculosis and lung disease"
+preprint: ""
+doi: "https://doi.org/10.5588/ijtld.18.0547"
+materials: ""
+toc: false
+categories:
+  - Meta-analysis
+  - TB
+  - Review
+  - Screening tools
+---
+
+## Citation (Vancouver)
+
+> Assefa Y, Woldeyohannes S, Gelaw YA, Hamada Y, Getahun H. Screening tools to exclude active pulmonary TB in high TB burden countries: systematic review and meta-analysis. The international journal of tuberculosis and lung disease. 2019 Jun 1;23(6):728-34.
+
+## Abstract
+
+To examine the use of symptoms, chest X-ray (CXR) abnormalities, and combinations of symptoms and CXR in excluding active pulmonary tuberculosis (TB) before treating for latent tuberculous infection (LTBI) in high TB burden countries.\
+\
+We updated a systematic review and meta-analysis of studies on the sensitivities, specificities, predictive values, diagnostic odds ratios and areas under the curve for index tests. The analysis was conducted using the hierarchical summary receiver operating characteristic method in R software.\
+\
+We included 24 publications in the systematic review and meta-analysis. 'Any CXR abnormality' had the highest sensitivity (94.1%, 95%CI 85.8--97.7) among all index tests. 'CXR abnormality suggestive of TB' had a higher specificity (92.2%, 95%CI 89.7--94.1) than 'any CXR abnormality' (86.8%, 95%CI 79.7--91.7). The sensitivity for 'any TB symptom' was 73.0% (95%CI 64.1--80.4), while 'prolonged cough' of ???2 weeks had a specificity of 94.3% (95%CI 92.2--95.9). There was no significant difference in the sensitivity and specificity of all screening tools stratified by human immunodeficiency virus (HIV) settings, with the exception of 'CXR abnormality suggestive of TB', which had a significantly higher sensitivity in low than in high HIV prevalence settings (effect estimate 2.26, 95%CI 0.69--3.82; *P =* 0.002).\
+\
+In countries with a high TB burden, the absence of any TB symptom and any CXR abnormality can be used to exclude active pulmonary TB before initiating treatment for LTBI in household contacts aged ???5 years of patients with bacteriologically confirmed pulmonary TB.

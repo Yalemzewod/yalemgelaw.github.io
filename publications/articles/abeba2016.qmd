@@ -1,0 +1,36 @@
+---
+title: "Married women’s decision making power on family planning use and associated factors in Mizan-Aman, South Ethiopia: a cross sectional study."
+type: "article"
+author: "Abeba, Zelalem, Manay, & Yalemzewod"
+year: "2016"
+publication: "BMC women's health"
+preprint: ""
+doi: "https://doi.org/10.1186/s12905-016-0290-x"
+materials: ""
+toc: false
+categories:
+  - Decision-making power
+  - Family planning
+---
+
+## Citation (Vancouver)
+
+> Belay AD, Mengesha ZB, Woldegebriel MK, Gelaw YA. Married women's decision making power on family planning use and associated factors in Mizan-Aman, South Ethiopia: a cross sectional study. BMC women's health. 2016 Dec;16:1-6.
+
+## Abstract
+
+### Background
+
+Women's use of family planning service is influenced by many factors, especially by their decision making power. A woman's decision-making power, be it individual or decision made in collaboration with a partner, is the most important factor in the use of family planning in a household. The purpose of this study was to assess the impact of women's decision making power on family planning use and its associated factors.
+
+### Methods
+
+A community-based cross-sectional study was conducted on married women in the child bearing age. The women who were living in Mizan city were selected using the simple random sampling method. Trained nurses collected the data by interview, using a structured and pre-tested questioner. Bivariable and multivariable binary logistic regression analysis was used to identify the associated factors, and the odds ratio with a 95 % CI was computed to assess the strength of the association. Collinearity was also assessed by looking at standard errors in the final fitted model.
+
+### Result
+
+Overall, more than two-thirds \[67.2 %: 95 % CI (63--71 %)\] of the married women were found to be more autonomous to decide family planning use. Secondary education \[AOR: 9.04, 95 % CI: (4.50, 18.16)\], government employment \[AOR: 4.84, 95 % CI: (2.03, 11.52)\], being wives of government employed spouses \[AOR 2.71, 95 % CI: (1.24, 7.97)\], having husbands with college or university education \[AOR: 11.29, 95 % CI: (4.66, 27.35)\], and being in the younger age \[AOR: 0.27, 95 % CI :(0.09, 0.75)\] were significantly associated with women's decision-making power on family planning.
+
+### Conclusions
+
+In this study, women had a high decision making power in family planning use. Age category (34--44-years), formal education, and occupational status had effects on women's decision making power. Promoting parental adult education and engaging women in out of house employment is essential to improve their decision making power in using family planning.

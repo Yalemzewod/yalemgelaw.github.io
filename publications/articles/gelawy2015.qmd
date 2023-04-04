@@ -1,0 +1,37 @@
+---
+title: "Effect of residence on mothers’ health care seeking behavior for common childhood illness in Northwest Ethiopia: a community based comparative cross–sectional study."
+type: "article"
+author: "Yalemzewod, Gashaw, & Kefyalew"
+year: "2015"
+publication: "BMC Res Notes"
+preprint: ""
+doi: "https://doi.org/10.1186/1756-0500-7-705"
+materials: ""
+toc: false
+categories:
+  - Health care seeking
+  - Residence
+  - Common childhood illness
+---
+
+## Citation (Vancouver)
+
+> Gelaw YA, Biks GA, Alene KA. Effect of residence on mothers' health care seeking behavior for common childhood illness in Northwest Ethiopia: a community based comparative cross--sectional study. BMC research notes. 2014 Dec;7(1):1-8.
+
+## Abstract
+
+### Background
+
+Children are at higher risk of acquiring infections and developing severe disease. This study assessed the health care seeking behavior and associated factors of urban and rural mothers for common childhood illness in Northwest Ethiopia.
+
+### Methods
+
+A comparative community based cross-sectional study was conducted among urban and rural mothers living in the district. A multistage sampling technique was used to select the study participants. A pre-tested and structured questioner via interview was used to collect the data. Binary logistic regression analysis was used to identify associated factors. Odds ratio with 95% CI was computed to assess the strength of the associations.
+
+### Result
+
+A total of 827 (274 urban and 553 rural) mothers were interviewed. Among these, 79.3% (95% CI: (76.5%, 82.06%)) of the mothers were sought health care in the district. Health care seeking behavior was higher among urban mothers (84.6%) than rural mothers (76.7%). Marital status, completion health extension package, and sex of child were significantly associated with health care seeking behavior of urban mothers. Whereas age of child, age and occupation of mothers, educational level of fathers, wealth quintile, and type of reported illness were significantly associated with rural mothers. Perceived severity of illness was significantly associated with both urban and rural mothers for health care seeking behavior.
+
+### Conclusion
+
+The overall health seeking behaviors of mothers for common childhood illness was high. However, urban mothers seek health care more than rural. Socio Economic position and types of reported illness has an effect for health seeking behavior of rural mothers. Whereas child sex preference and graduation status for health extension package has an effect for health care seeking behavior of urban mothers. Work on strengthen accessibility of health care services in the rural mothers and increase awareness of mothers about the disadvantage of sex preferences will improve the health care seek behavior of families regardless of the severity of illness and types of illnesses.

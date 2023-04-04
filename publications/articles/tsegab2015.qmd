@@ -1,0 +1,38 @@
+---
+title: "Prevalence and Associated Factors of Hypertension among Adults in Durame Town, Southern Ethiopia."
+type: "article"
+author: "Tsegab,Yalemzewod & Akilew"
+year: "2014"
+publication: "PLoS ONE"
+preprint: ""
+doi: "https://doi.org/10.1371/journal.pone.0112790"
+materials: ""
+toc: false
+categories:
+  - Hypertension
+  - Residence
+  - Prevalence
+---
+
+## Citation (Vancouver)
+
+> Helelo TP, Gelaw YA, Adane AA. Prevalence and associated factors of hypertension among adults in Durame Town, Southern Ethiopia. PloS one. 2014 Nov 21;9(11):e112790.
+
+## Abstract
+
+### 
+**Background**
+
+To date, non-communicable diseases, such as cardiovascular diseases, are becoming severe public health challenges particularly in developing countries. Hypertension is a modifiable risk factor that contributes the leading role for mortality. The problem is significant in low- and middle-income countries like sub-Saharan Africa. However, there are limited studies in developing countries, particularly in Ethiopia. Hence, determining the magnitude of hypertension and identifying risk groups are important.
+
+### **Methods**
+
+A community based cross sectional study was conducted in April 2013 among adults (age\>31 years) old. A systematic sampling technique was used to select a total of 518 study participants. Data were collected after full verbal informed consent was obtained from each participant. Multivariable logistic regressions were fitted to control the effect of confounding. Adjusted Odds ratios (OR) with their 95% confidence intervals (95% CI) were calculated to measure associations. Variables having P-value \<0.05 were considered as significant.
+
+### **Results**
+
+The overall prevalence of hypertension in Durame town was 22.4% (95% CI: 18.8--26.0). Nearly 40% of hypertensive patients were newly screened. Male sex \[AOR  = 2.03, 95% CI; 1.05--3.93\], age \[AOR  = 29.49, 95% CI; 10.60--81.27\], salt use \[AOR  = 6.55, 95% CI; 2.31--18.53\], eating vegetable three or fewer days per week \[AOR  = 2.3,95% CI; 1.17--4.51\], not continuously walking at least for 10 minutes per day \[AOR  = 7.82, 95% CI; 2.37--25.82\], having family history of hypertension \[AOR  = 2.46, 95%CI; 1.31--4.61\] and being overweight/obese \[AOR  = 15.7, 95% CI 7.89--31.21)\] were found to be risk factors for hypertension.
+
+### **Conclusions**
+
+The prevalence of hypertension is found to be high. Older age, male sex, having family history of hypertension, physical inactivity, poor vegetable diet, additional salt consumption and obesity were important risk factors associated with hypertension among adults. Community level intervention measures with a particular emphasis on prevention by introducing lifestyle modifications are recommended.

@@ -1,0 +1,22 @@
+---
+title: "Determinants of default to fully completion of immunization among children aged 12 to 23 months in south Ethiopia: unmatched case-control study."
+type: "article"
+author: "Abyiot, Digsu, Amsalu, Ejigu, & Yalemzewod."
+year: "2016"
+publication: "Pan African Medical Journal"
+preprint: ""
+doi: "https://doi.org/10.11604/pamj.2016.23.100.7879"
+materials: ""
+toc: false
+categories:
+  - Vaccination
+  - Children
+---
+
+## Citation (Vancouver)
+
+> Asfaw AG, Koye DN, Demssie AF, Zeleke EG, Gelaw YA. Determinants of default to fully completion of immunization among children aged 12 to 23 months in south Ethiopia: unmatched case-control study. Pan African Medical Journal. 2016 Jul 6;23(1).
+
+## Abstract
+
+Introduction: Immunization is a cost effective interventions of vaccine preventable disease. There is still, 2.5 million children die by vaccine preventable disease every year in developing countries. In Ethiopia, default to fully completion of child immunization is high and determinants of default to completions are not explored well in the study setting. The aim of the study was to identify determinants of default to fully completion of immunization among children between ages 12 to 23 months in Sodo Zurea District, Southern Ethiopia. Methods: Community based unmatched case-control study was conducted. Census was done to identify cases and controls before the actual data collection. A total of 344 samples (172 cases and 172 controls) were selected by simple random sampling technique. Cases were children in the age group of 12 to 23 months old who missed at least one dose from the recommended schedule. Bivariable and multivariable binary logistic regression was used to identify the determinant factors. Odds ratio, 95%CI and p - value less than 0.05 was used to measure the presence and strength of the association. Results: Mothers of infants who are unable to read and write (AOR=8.9; 95%CI: 2.4, 33.9) and attended primary school (AOR=4.1; 95% CI:1.4-15.8), mothers who had no postnatal care follow up (AOR=0.4; 95%CI: 0.3, 0.7), good maternal knowledge towards immunization (AOR= 0.5; 95% CI: 0.3, 0.8) and maternal favorable perception towards uses of health institution for maternal and child care (AOR= 0.2; 95% CI: 0.1, 0.6) were significant determinant factors to default to fully completion of immunization. Conclusion: Working on maternal education, postnatal care follow up, promoting maternal knowledge and perception about child immunization are recommended measures to mitigate defaults to complete immunization.

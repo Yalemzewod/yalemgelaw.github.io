@@ -1,0 +1,30 @@
+---
+title: "Community health extension program of Ethiopia, 2003-2018: Successes and challenges toward universal coverage for primary healthcare services"
+type: "article"
+author: "Yibeltal, Yalemzewod, Peter, Belaynew, Van Damme"
+year: "2019"
+publication: "Globalization and health"
+preprint: ""
+doi: "https://doi.org/10.1186/s12992-019-0470-1"
+materials: ""
+toc: false
+categories:
+  - Primary health care
+  - Review
+  - Health extension program
+  - Universal health coverage
+---
+
+## Citation (Vancouver)
+
+> Assefa Y, Gelaw YA, Hill PS, Taye BW, Van Damme W. Community health extension program of Ethiopia, 2003--2018: successes and challenges toward universal coverage for primary healthcare services. Globalization and health. 2019 Dec;15:1-1.
+
+## Abstract
+
+**Background**: Ethiopia has been implementing a community health extension program (HEP) since 2003. We aimed to assess the successes and challenges of the HEP over time, and develop a framework that may assist the implementation of the program toward universal primary healthcare services.
+
+**Methods**: We conducted a systematic review and synthesis of the literature on the HEP in Ethiopia between 2003 and 2018. Literature search was accomplished in PubMed, Embase and Google scholar databases. Literature search strategies were developed using medical subject headings (MeSH) and text words related to the aim of the review. We used a three-stage screening process to select the publications. Data extraction was conducted by three reviewers using pre-prepared data extraction form. We conducted an interpretive (not aggregative) synthesis of studies.
+
+**Findings**: The HEP enabled Ethiopia to achieve significant improvements in maternal and child health, communicable diseases, hygiene and sanitation, knowledge and health care seeking. The HEP has been a learning organization that adapts itself to community demands. The program is also dynamic enough to shift tasks between health centers and community. The community has been a key player in the successful implementation of the HEP. In spite of these successes, the program is currently facing challenges that remain to be addressed. These challenges are related to productivity and efficiency of health extension workers (HEWs); working and living conditions of HEWs; capacity of health posts; and, social determinants of health. These require a systemic approach that involves the wider health system, community, and sectors responsible for social determinants of health. We developed a framework that may assist in the implementation of the HEP.
+
+**Conclusion**: The HEP has enabled Ethiopia to achieve significant improvements. However, several challenges remain to be addressed. The framework can be utilized to improve community health programs toward universal coverage for primary healthcare services.

@@ -1,0 +1,23 @@
+---
+title: "HIV prevalence among tuberculosis patients in sub-Saharan Africa: a systematic review and meta-analysis."
+type: "article"
+author: "Yalemzewod,Gail, Ricardo J.,& Yibeltal"
+year: "2019"
+publication: "AIDS and Behavior"
+preprint: ""
+doi: "https://doi.org/10.1007/s10461-018-02386-4"
+materials: ""
+toc: false
+categories:
+  - TB/HIV
+  - Prevalence
+  - Meta-analysis
+---
+
+## Citation (Vancouver)
+
+> Gelaw YA, Williams G, Soares Magalh?es RJ, Gilks CF, Assefa Y. HIV prevalence among tuberculosis patients in sub-Saharan Africa: a systematic review and meta-analysis. AIDS and Behavior. 2019 Jun 15;23:1561-75.
+
+## Abstract
+
+HIV associated tuberculosis (TB) morbidity and mortality is a major concern in sub-Saharan Africa. Understanding the level of HIV infection among TB patients is vital for adequate response. We conducted a systematic review and meta-analysis to estimate the prevalence of HIV in TB patients in sub-Saharan Africa. We searched PubMed, EMBASE, Web of Science and CINAHL databases. A meta-analysis with a random-effects model was performed. Potential sources of heterogeneity in the prevalence estimates were explored using meta-regression analysis. We identified 68 studies that collectively included 62,969?TB patients between 1990 and 2017. The overall estimate of HIV prevalence in TB patients was 31.8% (95% CI 27.8--36.1). There was substantial heterogeneity in the prevalence estimates in Southern, Central, Eastern, and Western sub-Saharan Africa regions (43.7, 41.3, 31.1 and 25.5%, respectively). We noted an apparent reduction in the estimate from 33.7% (95% CI 27.6--40.4) in the period before 2000 to 25.7% (95% CI 17.6--336.6) in the period after 2010. The Eastern and Southern sub-Saharan Africa region had higher prevalence \[34.4% (95% CI 29.3--34.4)\] than the Western and Central region \[27.3% (95% CI 21.6--33.8)\]. The prevalence of HIV in TB patients has declined over time in sub-Saharan Africa. We argue that this is due to strengthened HIV prevention and control response and enhanced TB/HIV collaborative activities. Countries and regions with high burdens of HIV and TB should strengthen and sustain efforts in order to achieve the goal of ending both HIV and TB epidemics in line with the Sustainable Development Goals.

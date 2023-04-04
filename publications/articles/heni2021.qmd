@@ -1,0 +1,22 @@
+---
+title: "Geographical heterogeneity and socio-ecological risk profiles of dengue in Jakarta, Indonesia"
+type: "article"
+author: "Heni, Pandji, Joni, Endang, Yalemzewod, et al."
+year: "2021"
+publication: "Child Abuse & Neglect"
+preprint: ""
+doi: "https://doi.org/10.4081/gh.2021.948"
+materials: ""
+toc: false
+categories:
+  - Dengue
+  - Spatial analysis
+---
+
+## Citation (Vancouver)
+
+> Prasetyowati H, Dhewantara PW, Hendri J, Astuti EP, Gelaw YA, Harapan H, Ipa M, Widyastuti W, Handayani DO, Salama N, Picasso M. Geographical heterogeneity and socio-ecological risk profiles of dengue in Jakarta, Indonesia. Geospatial Health. 2021 Mar 12;16(1).
+
+## Abstract
+
+The aim of this study was to assess the role of climate variability on the incidence of dengue fever (DF), an endemic arboviral infection existing in Jakarta, Indonesia. The work carried out included analysis of the spatial distribution of confirmed DF cases from January 2007 to December 2018 characterising the sociodemographical and ecological factors in DF high-risk areas. Spearman's rank correlation was used to examine the relationship between DF incidence and climatic factors. Spatial clustering and hotspots of DF were examined using global Moran's I statistic and the local indicator for spatial association analysis. Classification and regression tree (CART) analysis was performed to compare and identify demographical and socio-ecological characteristics of the identified hotspots and low-risk clusters. The seasonality of DF incidence was correlated with precipitation (r= 0.254, P\< 0.01), humidity (r= 0.340, P\< 0.01), dipole mode index (r=--0.459, P\< 0.01) and Tmin (r=--0.181, P\< 0.05). DF incidence was spatially clustered at the village level (I= 0.294, P\< 0.001) and 22 hotspots were identified with a concentration in the central and eastern parts of Jakarta. CART analysis showed that age and occupation were the most important factors explaining DF clustering. Areaspecific and population-targeted interventions are needed to improve the situation among those living in the identified DF high-risk areas in Jakarta.

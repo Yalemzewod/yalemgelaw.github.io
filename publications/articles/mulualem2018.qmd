@@ -1,0 +1,43 @@
+---
+title: "Factors affecting the utilization of Xpert MTB/RIF assay among TB clinic health workers in Addis Ababa"
+type: "article"
+author: "Mulualem,Yalemzewod, Feven, & Degu"
+year: "2018"
+publication: "Journal of Clinical Tuberculosis and Other Mycobacterial Diseases"
+preprint: ""
+doi: "https://doi.org/10.1016/j.jctube.2018.06.007"
+materials: ""
+toc: false
+categories:
+  - Infectious disease
+  - TB
+  - Xpert MTB/RIF assay
+---
+
+## Citation (Vancouver)
+
+> Agonafir M, Assefa Y, Girmachew F, Jerene D. Factors affecting the utilization of Xpert MTB/RIF assay among TB clinic health workers in Addis Ababa. Journal of Clinical Tuberculosis and Other Mycobacterial Diseases. 2018 Aug 1;12:48-53.
+
+## Abstract
+
+### Introduction
+
+The diagnostic accuracy of Xpert MTB/RIF is well documented but underutilization is a major challenge in most high burden countries. This appears to be linked with insufficient knowledge of health professionals of using the tool. However, this has not been well studied.
+
+### Objective
+
+Our objective was to assess the knowledge of health professionals on Xpert MTB/RIF assay and associated factors in detecting TB/TB drug resistance.
+
+### Methods
+
+An institution based cross--sectional study was conducted from April 4 to June 5, 2015, in Addis Ababa that involved 209 healthcare providers working in TB clinics. Structured questionnaire through self-administered interview technique was used to collect the data. We asked them about Xpert on whether they are aware of its place in [TB diagnosis](https://www.sciencedirect.com/topics/medicine-and-dentistry/tuberculosis-diagnosis "Learn more about TB diagnosis from ScienceDirect's AI-generated Topic Pages"), when and for whom it shall be used, its role in treatment monitoring, result interpretation and patient's registration that are diagnosed by Xpert MTB/RIF. We used binary [logistic regression analysis](https://www.sciencedirect.com/topics/medicine-and-dentistry/logistic-regression-analysis "Learn more about logistic regression analysis from ScienceDirect's AI-generated Topic Pages") to identify associated factors. Odds ratio with 95% CI was computed to assess the strength of the associations.
+
+### Results
+
+Of the 209 participants interviewed, the majority 151 (72.2%) were nurses. More than a half of the respondents 114 (54.6%) had poor knowledge. Health professionals with age above 35 years (AOR = 6.253, 95% CI (1.1995, 19.604)) and those who read the Xpert guideline (AOR = 4.231, 95% CI (2.011, 8.900)) were more likely to have good knowledge on Xpert.
+
+### Conclusion and recommendation
+
+This study revealed that the overall magnitude of knowledge status was found to be low. Health workers above 35 years and those who read the guideline on Xpert had higher knowledge status on Xpert. Distribution of national guideline on Xpert and assigning experienced clinicians in TB DOTs clinics are recommended.
+
+\

@@ -1,0 +1,36 @@
+---
+title: "Spatial clustering and socio-demographic determinants of HIV infection in Ethiopia, 2015-2017."
+type: "article"
+author: "Yalemzewod, Yibeltal, Ricardo J.,& Gail"
+year: "2019"
+publication: "IJID"
+preprint: ""
+doi: "https://doi.org/10.1016/j.ijid.2019.02.046"
+materials: ""
+toc: false
+categories:
+  - HIV/AIDS
+  - Spatial analysis
+---
+
+## Citation (Vancouver)
+
+> Gelaw YA, Magalh?es RJ, Assefa Y, Williams G. Spatial clustering and socio-demographic determinants of HIV infection in Ethiopia, 2015--2017. International Journal of Infectious Diseases. 2019 May 1;82:33-9.
+
+## Abstract
+
+### Background
+
+Amhara Region has the largest at-risk population in Ethiopia, with widespread traditional practices that are likely to increase transmission of HIV. However, the identification and characterization of HIV hotspots within this region have not been undertaken. This study aimed to explore and describe the geographical pattern of HIV infection using notification data in Amhara Region, Ethiopia.
+
+### Methods
+
+Data on HIV infection at the district level were obtained from the Amhara Regional Health Bureau. A Bayesian conditional autoregressive (CAR) model was used to explore the association between HIV infection and socio-demographic variables in OpenBUGS.
+
+### Results
+
+A total of 35 210 new HIV cases were reported during 2015--2017 in Amhara Region, Ethiopia. Metema and Mirab Armacho districts were found to be hotspots throughout the study period. There was a decrease in HIV infection in 2016 (odds ratio 0.77, 95% credible interval (CrI) 0.72--0.82) and 2017 (odds ratio 0.71, 95% CrI 0.60--0.76) as compared with HIV infection in 2015. HIV infection increased by 1.004 (95% CrI 1.001--1.008) and 1.47 (95% CrI 1.11--3.59) for a one-unit increase in the proportion of the population who had never attended school and migrants, respectively.
+
+### Conclusions
+
+This study identified spatial clustering of HIV infection in Amhara Region, with a slight reduction in the annual infection rates from 2015 to 2017. The proportion of the population who were migrants or who had a low educational status was associated with a high risk of infection. Access to HIV counselling and the promotion of condom utilization, integrated with other health care services, targeting those with a lower level of education and seasonal migrants, are important strategies for the prevention of new HIV infections.

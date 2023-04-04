@@ -1,0 +1,35 @@
+---
+title: "Factors associated with overweight and obesity among adults in northeast Ethiopia: a cross-sectional study."
+type: "article"
+author: "Samue,Yalemzewod,Zegeye,& Molla"
+year: "2019"
+publication: "Diabetes, metabolic syndrome and obesity: targets and therapy"
+preprint: ""
+doi: "http://dx.doi.org/10.2147/DMSO.S179699"
+materials: ""
+toc: false
+categories:
+  - Overweight and obesity
+---
+
+## Citation (Vancouver)
+
+> Dagne S, Gelaw YA, Abebe Z, Wassie MM. Factors associated with overweight and obesity among adults in northeast Ethiopia: a cross-sectional study. Diabetes, metabolic syndrome and obesity: targets and therapy. 2019 Mar 22:391-9.
+
+## Abstract
+
+### **Objective**
+
+Currently, the growing prevalence of overweight and obesity is an emerging public health problem in middle- and low-income countries such as Ethiopia. However, the prevalence of overweight and obesity among Ethiopian adults who live in the major cities is not well documented. Therefore, the study aimed to assess the prevalence and factors associated with overweight and obesity among adults in Dessie town, northeast Ethiopia.
+
+### **Subjects and methods**
+
+A community-based cross-sectional study was conducted from March 15 to April 10, 2015. A total of 751 adults aged 18--64 years were included. Multistage followed by systematic random sampling method was used to select the study participants. Both bivariable and multivariable ordinal logistic regression were done. The proportional odds ratio (POR) with a 95% CI was reported to show the strength of association. A *P*-value \<0.05 was considered statistically significant.
+
+### **Results**
+
+Of all participants, 19.9% (95% CI: 16.9%, 23.1%) were recorded to be overweight and 8.6% (95% CI: 6.6%, 10.9%) to be obese. The odds of being overnourished (overweight or obese) were higher among adults who had snack intake habit (POR =1.52; 95 CI: 1.04, 2.20), drank alcohol (POR =1.75; 95% CI: 1.04, 2.97), had higher wealth status (POR =2.29; 95% CI: 1.26, 4.19), and were married (POR =2.22; 95% CI: 1.49, 3.29) compared to their counterparts.
+
+### **Conclusion**
+
+Compared to the previous local reports, the prevalence of overweight and obesity in the study area is high; this appears to be an emerging problem in Ethiopia. Hence, there is a need to develop a control and prevention strategy on potentially modifiable risk factors of overweight and obesity.

@@ -1,0 +1,32 @@
+---
+title: "The COVID-19 pandemic and healthcare systems in Africa: a scoping review of preparedness, impact and response"
+type: "article"
+author: "Gizachew, Yohannes K, Berihun,..., Yalemzewod,... et al."
+year: "2021"
+publication: "BMJ global health"
+preprint: ""
+doi: "http://dx.doi.org/10.1136/bmjgh-2021-007179"
+materials: ""
+toc: false
+categories:
+  - Health system
+  - COVID
+  - Review
+  - Preparedness, impact, and response
+---
+
+## Citation (Vancouver)
+
+> Tessema GA, Kinfu Y, Dachew BA, Tesema AG, Assefa Y, Alene KA, Aregay AF, Ayalew MB, Bezabhe WM, Bali AG, Dadi AF. The COVID-19 pandemic and healthcare systems in Africa: a scoping review of preparedness, impact and response. BMJ global health. 2021 Dec 1;6(12):e007179.
+
+## Abstract
+
+**Background** The COVID-19 pandemic has overwhelmed health systems in both developed and developing nations alike. Africa has one of the weakest health systems globally, but there is limited evidence on how the region is prepared for, impacted by and responded to the pandemic.
+
+**Methods** We conducted a scoping review of PubMed, Scopus, CINAHL to search peer-reviewed articles and Google, Google Scholar and preprint sites for grey literature. The scoping review captured studies on either preparedness or impacts or responses associated with COVID-19 or covering one or more of the three topics and guided by Arksey and O'Malley's methodological framework. The extracted information was documented following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses extension checklist for scoping reviews. Finally, the resulting data were thematically analysed.
+
+**Results** Twenty-two eligible studies, of which 6 reported on health system preparedness, 19 described the impacts of COVID-19 on access to general and essential health services and 7 focused on responses taken by the healthcare systems were included. The main setbacks in health system preparation included lack of available health services needed for the pandemic, inadequate resources and equipment, and limited testing ability and surge capacity for COVID-19. Reduced flow of patients and missing scheduled appointments were among the most common impacts of the COVID-19 pandemic. Health system responses identified in this review included the availability of telephone consultations, re-purposing of available services and establishment of isolation centres, and provisions of COVID-19 guidelines in some settings.
+
+**Conclusions** The health systems in Africa were inadequately prepared for the pandemic, and its impact was substantial. Responses were slow and did not match the magnitude of the problem. Interventions that will improve and strengthen health system resilience and financing through local, national and global engagement should be prioritised.
+
+\

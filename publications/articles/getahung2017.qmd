@@ -1,0 +1,38 @@
+---
+title: "Spatial patterns of childhood diarrhea in Ethiopia: data from Ethiopian demographic and health surveys (2000, 2005, and 2011)."
+type: "article"
+author: "Getahun, Shitaye,Yalemzewod & Molla"
+year: "2017"
+publication: "BMC Infect Dis"
+preprint: ""
+doi: "https://doi.org/10.1186/s12879-017-2504-8"
+materials: ""
+toc: false
+categories:
+  - Childhood diarrhea
+  - DHS
+  - Spatial analysis 
+  - Common childhood illness
+---
+
+## Citation (Vancouver)
+
+> Bogale GG, Gelaye KA, Degefie DT, Gelaw YA. Spatial patterns of childhood diarrhea in Ethiopia: data from Ethiopian demographic and health surveys (2000, 2005, and 2011). BMC infectious diseases. 2017 Dec;17(1):1-0.
+
+## Abstract
+
+### Background
+
+Childhood diarrhea is a major public health problem, especially in developing countries, including Ethiopia. Exploring the spatial pattern of childhood diarrhea is important to monitor and design effective intervention programs. Therefore, this study aimed to explore the spatial patterns of childhood diarrhea in Ethiopia over the past one decade.
+
+### Methods
+
+A total of 29,358 under-five children were retrieved from three consecutive Ethiopian demographic and health surveys (2000, 2005, and 2011) and included into the study. Spatial cluster and autocorrelation analysis was done to explore the patterns of childhood diarrhea.
+
+### Results
+
+Childhood diarrhea clustered spatially at a national level in all survey periods (Moran's I: 0.3830--1.3296, *p* \< 0.05). Significant spatial clusters were found in different survey periods across the regions. The most likely spatial clusters were found in Southern Nations Nationalities and people, West Oromia, Gambella, Benshangul-Gumuz, and Somali regions. Childhood diarrhea also clustered at the border areas of Southern Nations Nationalities and People and Tigray, Central Somali and Western Oromia, Gambella and Amhara (West Gojam, Awi, Oromia, and Wag Himra) regions. In 2000, the most likely clusters were found in Southern Nations Nationalities and People, West Oromia, and Gambella regions (LLR = 55.37, *p* \< 0.001); in 2005, at Southern Nations Nationalities and People (LLR: 45.69, *p* \< 0.001); and in 2011, at Gambella, West Southern Nations Nationalities and People and Oromia, and Benshangul-Gumuz regions (LLR: 51.09, *p* \< 0.001).
+
+### Conclusion
+
+In this study, childhood diarrhea remains public health problem and had a spatial variation across the regions. Identifying the risk areas would help in designing effective interventions to reduce childhood diarrhea in these areas.

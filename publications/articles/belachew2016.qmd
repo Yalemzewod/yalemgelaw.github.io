@@ -1,0 +1,36 @@
+---
+title: "Disordered eating attitude and associated factors among high school adolescents aged 12–19 years in Addis Ababa, Ethiopia: a cross-sectional study."
+type: "article"
+author: "Belachew, Yalemzewod, Terefe & Molla"
+year: "2016"
+publication: "BMC research notes"
+preprint: ""
+doi: "https://doi.org/10.1186/s13104-016-2318-6"
+materials: ""
+toc: false
+categories:
+  - Eating attitude
+  - High school students
+---
+
+## Citation (Vancouver)
+
+> Yirga B, Assefa Gelaw Y, Derso T, Wassie MM. Disordered eating attitude and associated factors among high school adolescents aged 12--19 years in Addis Ababa, Ethiopia: a cross-sectional study. BMC research notes. 2016 Dec;9:1-7.
+
+## Abstract
+
+### Background
+
+Eating disorders are very complex, frequently developed and have a public health impact on adolescents. Different studies revealed that eating disorders is a pressing public health problem among adolescents. Eating disorders may also lead to mortality due to their physiological sequelae. There is no previous study regarding disordered of eating attitude in Ethiopian adolescents. Therefore, this study aimed to assess prevalence of disordered eating attitude and its associated factors among adolescents in Addis Ababa high schools.
+
+### Methods
+
+A school-based cross sectional study was conducted. Data were collected among 836 high school adolescents aged 12--19 years from May to June, 2015 in Addis Ababa city. The data were collected by self-administered questionnaire containing eating attitudes test-26 items (EAT-26) and socio-demographic factors. Binary logistic regression analysis was carried out to identify factors associated with disordered eating attitude. Both crude odds ratio and adjusted odds ratio were calculated to show the strength of association. In multivariable analysis, variables with a *P* value of \<0.05 were considered statistically significant.
+
+### Results
+
+The prevalence of disordered eating attitude among adolescents was 8.6% \[95% CI 4.9, 12.3\]. Being female \[AOR = 1.75, 95% CI 1.03, 3.00\], Mother's educational status (Primary \[AOR = 0.28, 95% CI 0.11, 0.78\], Certificate/diploma \[AOR = 0.22, 95% CI 0.07, 0.58\] and first degree and above \[AOR = 0.16, 95% CI 0.07, 0.40\]) were found to be significantly associated with disordered eating attitude.
+
+### Conclusion
+
+The finding of this study revealed that a significant number of adolescents were susceptible to developing disordered eating attitude. Being female and Mothers' education status were significantly associated with disordered eating attitude among adolescents. Provision of screening test for eating disorders focusing on female adolescents is highly recommended.

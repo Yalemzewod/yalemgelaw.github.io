@@ -1,0 +1,25 @@
+---
+title: "Predictors of mortality among multidrug-resistant tuberculosis patients in central Ethiopia: a retrospective follow-up study"
+type: "article"
+author: "Getahun, Abilo, Yalemzewod, Temesgen, Adino, Koku,  & Temesgen"
+year: "2022"
+publication: "Epidemiology & Infection"
+preprint: ""
+doi: "https://doi.org/10.1017/S0950268820002514"
+materials: ""
+toc: false
+categories:
+  - Multidrug-resistant
+  - Mortality
+  - TB
+---
+
+## Citation (Vancouver)
+
+> Kassa GM, Tadesse A, Gelaw YA, Alemayehu TT, Tsegaye AT, Tamirat KS, Akalu TY. Predictors of mortality among multidrug-resistant tuberculosis patients in central Ethiopia: a retrospective follow-up study. Epidemiology & Infection. 2020;148:e258.
+
+## Abstract
+
+The burden of multidrug-resistant tuberculosis (MDR-TB) related to mortality in resource-poor countries remains high. This study aimed to estimate the incidence and predictors of death among MDR-TB patients in central Ethiopia. A retrospective follow-up study was conducted at three hospitals in the Amhara region on 451 patients receiving treatment for MDR-TB from September 2010 to January 2017. Data were collected from patient registration books, charts and computer databases. Data were fitted to a parametric frailty model and survival was expressed as an adjusted hazard ratio (AHR) with a 95% confidence interval (CI). The median follow-up time of participants was 20 months (interquartile range: 12, 22) and 46 (10.20%) of patients died during this period. The incidence rate of mortality was 7.42 (95% CI 5.56--9.91)/100 person-years. Older age (AHR = 1.04, 95% CI 1.01--1.08), inability to self-care (AHR = 13.71, 95% CI 5.46--34.40), co-morbidity (AHR = 5.74, 95% CI 2.19--15.08), low body mass index (AHR = 4.13, 95% CI 1.02--16.64), acute lung complications (AHR = 4.22, 95% CI 1.66--10.70) and lung consolidation at baseline (AHR = 5.27, 95% CI 1.06--26.18) were independent predictors of mortality. Most of the identified predictor factors of death in this study were considered to be avoidable if the TB programme had provided nutritional support for malnourished patients and ensured a close follow-up of the elderly, and patients with co-morbidities.
+
+\

@@ -1,0 +1,36 @@
+---
+title: "Exclusive breastfeeding and mothers’ employment status in Gondar town, Northwest Ethiopia: a comparative cross-sectional stud."
+type: "article"
+author: "Dawit,Gashaw,Yalemzewod,& Yayehirad"
+year: "2017"
+publication: "International breastfeeding journal"
+preprint: ""
+doi: "http://dx.doi.org/10.1186/s13006-017-0118-9"
+materials: ""
+toc: false
+categories:
+  - Breastfeeding
+  - Employment status
+---
+
+## Citation (Vancouver)
+
+> Chekol DA, Biks GA, Gelaw YA, Melsew YA. Exclusive breastfeeding and mothers' employment status in Gondar town, Northwest Ethiopia: a comparative cross-sectional study. International breastfeeding journal. 2017 Dec;12(1):1-9.
+
+## Abstract
+
+### Background
+
+Exclusive breastfeeding is defined as feeding an infant breast milk only, for the first six months. In Ethiopia, more than half of infants do not receive exclusive breastfeeding. Workplace barriers contribute to these low rates of exclusive breastfeeding practices. Understanding the sociodemographic, health related, behavioral and economic factors is crucial to promote the practice of exclusive breastfeeding in Ethiopia. Therefore, the aim of this study was to assess the extent of exclusive breastfeeding practice and associated factors among employed and unemployed mothers with children of age 7--12 months in Gondar town, northwest Ethiopia, 2015.
+
+### Methods
+
+A community based comparative cross-sectional study was conducted in October 2015. Simple random sampling technique was used to select 649 eligible mothers with children age 7--12 months during the study period. A structured and pretested interviewer administered questionnaire was used to collect the data. Three logistic regression models: whole sample, employed and not employed, were fitted.
+
+### Results
+
+A total of 649 (333 unemployed and 316 employed) mothers were interviewed. The mean duration of mothers to exclusively breastfeed was 4.77 months (± 1.36 Standard Deviation \[SD\]). Exclusive breastfeeding was higher among unemployed 48.0% with 95% Confidence Interval (CI) (42.0%, 54.0%) than employed (20.9%) with 95% CI (16.0%, 25.0%). Parity of three children and above (Adjusted Odds Ratio \[AOR\] = 3.48), and having social support (AOR = 3.45) were positively associated with exclusive breastfeeding while poor knowledge (AOR = 0.30), wealth index of the medium level (AOR = 0.38) were negatively associated among employed mothers. In the case of unemployed mothers, vaginal delivery (AOR = 2.60) and having social support (AOR = 3.03) were positively associated with exclusive breastfeeding while, poor knowledge (AOR = 0.28), and not having antenatal care (AOR = 0.56) were negatively associated.
+
+### Conclusions
+
+The overall exclusive breastfeeding practice of mothers was low. However, unemployed mothers breastfeed more than employed mothers. Providing a special support for employed mothers and revising either the legislation of the two month postpartum maternity leave or applying different alternatives is recommended.

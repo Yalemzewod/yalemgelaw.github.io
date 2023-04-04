@@ -1,0 +1,28 @@
+---
+title: "COVID-19 in Ethiopia: a geospatial analysis of vulnerability to infection, case severity and death"
+type: "article"
+year: "2021"
+author: "Kefyalew, Yalemzewod, Dagnachew, Digsu, et al."
+publication: "BMJ open"
+preprint: ""
+doi: "http://dx.doi.org/10.1136/bmjopen-2020-044606"
+materials: ""
+toc: false
+categories:
+  - Spatial analysis
+  - COVID
+---
+
+## Citation (Vancouver)
+
+> Alene KA, Gelaw YA, Fetene DM, Koye DN, Melaku YA, Gesesew H, Birhanu MM, Adane AA, Muluneh MD, Dachew BA, Abrha S. COVID-19 in Ethiopia: a geospatial analysis of vulnerability to infection, case severity and death. BMJ open. 2021 Feb 1;11(2):e044606.
+
+## Abstract
+
+**Background** COVID-19 has caused a global public health crisis affecting most countries, including Ethiopia, in various ways. This study maps the vulnerability to infection, case severity and likelihood of death from COVID-19 in Ethiopia.
+
+**Methods** Thirty-eight potential indicators of vulnerability to COVID-19 infection, case severity and likelihood of death, identified based on a literature review and the availability of nationally representative data at a low geographic scale, were assembled from multiple sources for geospatial analysis. Geospatial analysis techniques were applied to produce maps showing the vulnerability to infection, case severity and likelihood of death in Ethiopia at a spatial resolution of 1 km×1 km.
+
+**Results** This study showed that vulnerability to COVID-19 infection is likely to be high across most parts of Ethiopia, particularly in the Somali, Afar, Amhara, Oromia and Tigray regions. The number of severe cases of COVID-19 infection requiring hospitalisation and intensive care unit admission is likely to be high across Amhara, most parts of Oromia and some parts of the Southern Nations, Nationalities and Peoples' Region. The risk of COVID-19-related death is high in the country's border regions, where public health preparedness for responding to COVID-19 is limited.
+
+**Conclusion** This study revealed geographical differences in vulnerability to infection, case severity and likelihood of death from COVID-19 in Ethiopia. The study offers maps that can guide the targeted interventions necessary to contain the spread of COVID-19 in Ethiopia.

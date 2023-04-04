@@ -1,0 +1,36 @@
+---
+title: "Awareness of occupational hazards and associated factors among welders in Lideta Sub-City, Addis Ababa, Ethiopia."
+type: "article"
+author: "Sebsibe, Kassahun, Bezabih, & Yalemzewod"
+year: "2016"
+publication: "J Occup Med Toxicol"
+preprint: ""
+doi: "https://doi.org/10.1186/s12995-016-0105-x"
+materials: ""
+toc: false
+categories:
+  - Workplace safety
+  - Hazard awarness
+---
+
+## Citation (Vancouver)
+
+> Tadesse S, Bezabih K, Destaw B, Assefa Y. Awareness of occupational hazards and associated factors among welders in Lideta Sub-City, Addis Ababa, Ethiopia. Journal of Occupational Medicine and Toxicology. 2016 Dec;11(1):1-6.
+
+## Abstract
+
+### Background
+
+Welding is a manufacturing industry where workers could be exposed to several hazards. However, there is a dearth of studies clarifying the situation in Ethiopia. The present study determined the level of awareness of occupational hazards and associated factors among welding employees at Lideta Sub-City, Addis Ababa, Ethiopia.
+
+### Methods
+
+A work site-based cross-sectional study was conducted among welding employees Lideta Sub-City, Addis Ababa, Ethiopia from April to May 2015. Stratified sampling followed by simple random sampling techniques was used to select the study participants. A pilot tested and structured questionnaire was used to collect data. Multivariable analyses were employed to see the effect of explanatory variables on workers' awareness of occupational hazards.
+
+### Results
+
+According to our criteria of awareness 86.5 % of surveyed workers were aware of occupational hazards. A higher work experience, presence of work regulation, job satisfaction, being married, being single, and a higher educational status were factors significantly associated with workers' awareness of occupational hazards.
+
+### Conclusion
+
+This study revealed that the level of awareness of occupational hazards among welders was high. However, this does not mean that there will be no need for further strengthening of the safety measures as significant proportions of the workers still had low awareness. Interventions to boost workers awareness of occupational hazards should focus on areas, such as provision of safety trainings, promotion of safety advocacy, and enforcement of appropriate workplace safety regulation.

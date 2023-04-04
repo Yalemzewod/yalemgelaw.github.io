@@ -1,0 +1,26 @@
+---
+title: "TB and HIV Epidemiology and Collaborative Service: Evidence from Ethiopia, 2011-2015."
+type: "article"
+author: "Yalemzewod, Yibeltal, Ricardo J., Demssie, Wegayehu, Panji & Gail"
+year: "2022"
+publication: "HIV/AIDS"
+preprint: ""
+doi: "https://doi.org/10.2147/HIV.S284722"
+materials: ""
+toc: false
+categories:
+  - Co-infection
+  - TB/HIV
+  - Collaborative Health Services
+---
+
+## Citation (Vancouver)
+
+> Gelaw YA, Assefa Y, Soares Magalhaes RJ, Demissie M, Tadele W, Dhewantara PW, Williams G. TB and HIV epidemiology and collaborative service: evidence from Ethiopia, 2011--2015. HIV/AIDS-Research and Palliative Care. 2020 Dec 3:839-47.
+
+## Abstract
+
+**Background:** Integrating and scaling up tuberculosis (TB) and HIV services are essential strategies to achieve the combined goals ending both TB and HIV, especially in TB and HIV high burden countries. This study aimed to examine the prevalence of TB and HIV co-infection and the implementation of collaborative services in Ethiopia.\
+**Methods:** We used a national sentinel surveillance TB/HIV co-infection collected between 2010 and 2015. The Ethiopian Public Health Institute collected and collated the data quarterly from 79 health facilities in nine regional states and two city administrations.\
+**Results:** A total of 55,336 people living with HIV/AIDS were screened for active TB between 2011 and 2015. Of these, 7.3% were found co-infected with TB, and 13% TB-negative PLWHA were on isoniazid preventive therapy. Nine out of ten (89.2%) active TB patients were screened for HIV counselling and 17.8% were found to be HIV positive; 78.2% and 53.0% of HIV/TB co-infected patients were receiving cotrimoxazole preventive therapy and antiretroviral treatment, respectively.\
+**Conclusion:** This study showed that the prevalence of TB and HIV co-infection failed to decrease over the study period, and that, while there was an increasing trend for integration of collaborative services, this was not uniform over time. Aligning and integrating TB and HIV responses are still needed to achieve the target of ending TB and HIV by 2030.

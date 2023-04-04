@@ -1,0 +1,28 @@
+---
+title: "Restoration from out-of-home care for Aboriginal children: Evidence from the pathways of care longitudinal study and experiences of parents and children"
+type: "article"
+author: "BJ, Ilan, Paul,Solange, Yalemzewod, Nan, Raghu, & Jennifer"
+year: "2022"
+publication: "Child Abuse & Neglect"
+preprint: ""
+doi: "https://doi.org/10.1016/j.chiabu.2023.106058"
+materials: ""
+toc: false
+categories:
+  - Out-of-home care
+  - Restoration
+---
+
+## Citation (Vancouver)
+
+> Newton BJ, Katz I, Gray P, Frost S, Gelaw Y, Hu N, Lingam R, Stephensen J. Restoration from out-of-home care for Aboriginal children: Evidence from the pathways of care longitudinal study and experiences of parents and children. *Child Abuse & Neglect*. 2023 Feb 1:106058.
+
+## Abstract
+
+**Background**: Restoration of Aboriginal children (also called reunification) is an under-researched area despite being the preferred permanency outcome for children.
+
+**Objective:** To investigate the rate of restoration for Aboriginal children, the factors that influence restoration, and to explore the experiences of parents whose Aboriginal children have been restored, and their children. Participants and setting Analyses were conducted using data from the NSW Department of Communities and Justice Pathways of Care Longitudinal Study (POCLS). **Methods**: The quantitative sample includes all Aboriginal children in NSW who were on final Children's Court care and protection orders by 30 April 2013. Qualitative data were extracted from the POCLS survey instruments.
+
+**Results**: Of the 1018 Aboriginal children in the study, 15.2% were restored. Around 40 % of children entered care following just one (or no) substantiated Risk of Significant Harm reports. Children entering care under the age of 2 years were the least likely to be restored. Parents expressed dissatisfaction with child protection agencies and family support services both at the time their child was removed and in the restoration period. Parents and children expressed the importance of being supported to maintain family relationships while children are in care.
+
+**Conclusions**: Despite policy priorities to the contrary, few Aboriginal children are considered for restoration. More support is needed for Aboriginal parents interfacing with all stages of the care system and following restoration. Additional research is needed to understand the factors underlying decisions to remove Aboriginal children from their families and whether restoration to their family is considered or achieved.

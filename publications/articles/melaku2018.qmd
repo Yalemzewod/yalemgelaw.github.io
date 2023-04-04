@@ -1,0 +1,37 @@
+---
+title: "Mothers’ health service utilization and attitude were the main predictors of incomplete childhood vaccination in east-central Ethiopia: a case-control study."
+type: "article"
+author: "Melaku, Yalemzewod,  & Atsede."
+year: "2018"
+publication: "Arch Public Health"
+preprint: ""
+doi: "https://doi.org/10.1186/s13690-018-0261-9"
+materials: ""
+toc: false
+categories:
+  - Vaccination
+  - Children
+  - Health service utilization
+---
+
+## Citation (Vancouver)
+
+> Yenit MK, Gelaw YA, Shiferaw AM. Mothers' health service utilization and attitude were the main predictors of incomplete childhood vaccination in east-central Ethiopia: a case-control study. Archives of Public Health. 2018 Dec;76:1-9.
+
+## Abstract
+
+### Background
+
+Vaccination is an effective public health intervention for reducing childhood morbidity and mortality. It becomes more effective if the child receives the full course of the recommended doses. In Ethiopia, many children fail to complete the full course, and there is a consensus on the low coverage of complete vaccination; however, factors relating to the problem have not been largely explored by community based studies. The problem still persists posing a challenge to the health care delivery system. Therefore, this study assessed the predictors of incomplete childhood vaccination among children aged 12--23 months. The result is expected to improve health promotion efforts to boost childhood vaccination uptake and serve as a tool for increasing the utilization of the existing Expanded Program on Immunization efforts.
+
+### Methods
+
+A community-based unmatched case-control study was conducted in six kebeles of Amanuel district in east-central Ethiopia from March to April 2014. Census was carried out to identify cases and controls. A total of 308 mother-child pairs (154 cases and 154 controls) were selected by the stratified multistage sampling technique. Cases were children in the 12--23 months age group who missed at least one dose of the recommended vaccination. Child vaccination cards and mothers' oral responses were used to verify the vaccination status of each child. Data were collected using interviews through a pretested structured questionnaire and analyzed using SPSS version 20. A *p*-value of less than 0.05 was considered for declaring statistical significance.
+
+### Results
+
+The study revealed that the odds of defaulters from childhood vaccinations noted among mothers who delivered at home were high \[AOR = 4.11, (95% CI: 2.26, 7.47)\]. Other irregularities detected were lack of antenatal care visits during pregnancy \[AOR = 2.54, (95% CI: 1.31, 4.95)\], misperception about vaccines \[AOR: 2.83, 95% CI: (1.56, 5.15)\], and lack of postnatal care visits \[AOR = 2.51, 95% CI: (1.18, 5.33)\].
+
+### Conclusion
+
+Home deliveries, a misconception on vaccine, lack of prenatal and postnatal care services were found to be the predictors of incomplete childhood vaccinations. Therefore, increasing mothers' awareness on childhood vaccination, strengthening maternal health service utilization, and supervision and monitoring are highly recommended to reduce incomplete vaccination in the study setting.

@@ -1,0 +1,36 @@
+---
+title: "Factors associated with utilization of long-acting and permanent contraceptive methods among women who have decided not to have more children in Gondar city."
+type: "article"
+author: "Chernet, Mulat, Melaku, & Yalemzewod"
+year: "2017"
+publication: "BMC women's health"
+preprint: ""
+doi: "http://dx.doi.org/10.1186/s12905-017-0432-9"
+materials: ""
+toc: false
+categories:
+  - Contraceptive methods
+  - Family planning
+---
+
+## Citation (Vancouver)
+
+> Zenebe CB, Adefris M, Yenit MK, Gelaw YA. Factors associated with utilization of long-acting and permanent contraceptive methods among women who have decided not to have more children in Gondar city. BMC women's health. 2017 Dec;17:1-7.
+
+## Abstract
+
+### Background
+
+Despite the fact that long acting family planning methods reduce population growth and improve maternal health, their utilization remains poor. Therefore, this study assessed the prevalence of long acting and permanent family planning method utilization and associated factors among women in reproductive age groups who have decided not to have more children in Gondar city, northwest Ethiopia.
+
+### Method
+
+An institution based cross-sectional study was conducted from August to October, 2015. Three hundred seventeen women who have decided not to have more children were selected consecutively into the study. A structured and pretested questionnaire was used to collect data. Both bivariate and multi-variable logistic regressions analyses were used to identify factors associated with utilization of long acting and permanent family planning methods. The multi-variable logistic regression analysis was used to investigate factors associated with the utilization of long acting and permanent family planning methods. The Adjusted Odds Ratio (AOR) with the corresponding 95% Confidence Interval (CI) was used to show the strength of associations, and variables with a *P*-value of \<0.05 were considered statistically significant.
+
+### Results
+
+In this study, the overall prevalence of long acting and permanent contraceptive (LAPCM) method utilization was 34.7% (95% CI: 29.5-39.9). According to the multi-variable logistic regression analysis, utilization of long acting and permanent contraceptive methods was significantly associated with women who had secondary school, (AOR: 2279, 95% CI: 1.17, 4.44), college, and above education (AOR: 2.91, 95% CI: 1.36, 6.24), history of previous utilization (AOR: 3.02, 95% CI: 1.69, 5.38), and information about LAPCM (AOR: 8.85, 95% CI: 2.04, 38.41).
+
+### Conclusion
+
+In this study the prevalence of long acting and permanent family planning method utilization among women who have decided not to have more children was high compared with previous studies conducted elsewhere. Advanced educational status, previous utilization of LAPCM, and information on LAPCM were significantly associated with the utilization of LAPCM. As a result, strengthening behavioral change communication channels to make information accessible is highly recommended.

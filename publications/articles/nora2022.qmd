@@ -1,0 +1,22 @@
+---
+title: "Ethics and governance for a multi-site study in Australia: Navigating the snakes and ladders"
+type: "article"
+author: "Nora, Lahiru A, Louise , Michael , Yalemzewod, Raghu, & Karen"
+year: "2022"
+publication: "Journal of Paediatrics and Child Health"
+preprint: ""
+doi: "https://doi.org/10.1111/jpc.15747"
+materials: ""
+toc: false
+categories:
+  - Program research
+  - Ethics & governance
+---
+
+## Citation (Vancouver)
+
+> Samir N, Amarasena L, Sealy L, Hodgins M, Gelaw Y, Lingam R, Zwi K. Ethics and governance for a multi‐site study in Australia: Navigating the snakes and ladders. Journal of Paediatrics and Child Health. 2022 Jan;58(1):16-23.
+
+## Abstract
+
+Multi-site research studies are essential if we are to conduct national research across all Australian jurisdictions. There is widespread agreement among clinicians and researchers that obtaining essential approvals to conduct multi-site research studies in Australia can be complex, bureaucratic and time consuming. Although there is inherent value in the review process, resources and months of valuable research time are often expended long before the study has begun. Using our recent experience for a multi-site, longitudinal paediatric cohort study of children and adolescents who were detained in offshore immigration detention on Nauru, we describe the process of navigating the ethics and governance approval systems. We identify tips for researchers and clinicians conducting multi-site studies, including early consultation with ethics and governance committees, using their recommended templates, anticipating time delays, and commencing time consuming processes as early as permissible. Our recommendations at the systemic level include streamlined and integrated ethics and governance review processes for all Australian jurisdictions, with co-ordinated requests for further information, a standardised approach across all Research Governance Offices, a rapid system for addressing amendments and individualised study support and consultations. Above all, a nationally agreed framework whereby ethics and governance committees across jurisdictions communicate with each other, use the same electronic platform and present a unified process whilst protecting the welfare, rights, dignity and safety of research participants is required. The complexity of the current ethics and governance processes may inadvertently and unintentionally be a barrier to conducting ethical research.

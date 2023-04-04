@@ -1,0 +1,28 @@
+---
+title: "Willingness to pay for community-based health insurance and associated factors among rural households of Bugna District, Northeast Ethiopia."
+type: "article"
+author: "Amare, Measho, & Yalemzewod"
+year: "2019"
+publication: "BMC Research Notes"
+preprint: ""
+doi: "https://doi.org/10.1186/s13104-019-4091-9"
+materials: ""
+toc: false
+categories:
+  - Community Health Insurance
+  - Residence
+---
+
+## Citation (Vancouver)
+
+> Minyihun A, Gebregziabher MG, Gelaw YA. Willingness to pay for community-based health insurance and associated factors among rural households of Bugna District, Northeast Ethiopia. BMC research notes. 2019 Dec;12:1-7.
+
+## Abstract
+
+### Objective
+
+Community based health insurance schemes are becoming recognized as powerful method to achieve universal health coverage and reducing the financial catastrophic shock of the community. Therefore, this study aimed to assess willingness to pay for community-based health insurance and associated factors among rural households of Bugna District, Ethiopia.
+
+### Results
+
+A total of 532 study participants were included in the study. The finding indicated that 77.8% of the households were willing to pay for the community-based health insurance. The average amount of money the households were willing to pay per household per annum was 233 ETB (\$11.12 USD). The result of the study also revealed that attending formal education\[????=???3.20; 95% CI???=???1.87, 4.53\], history of illness \[????=???2.52; 95% CI???=???1.29, 3.75\], household size \[????=???0.408; 95% CI???=???0.092, 0.724\], awareness about the scheme \[????=???2.96; 95% CI???=???1.61, 4.30\], and wealth status \[????=???5.55; 95% CI???=???4.19, 6.90\] were factors significantly associated with willingness to pay. Therefore, enhancing awareness of the community about the scheme, considering the amount of premium as per household family size and wealth status might increase household's willingness to pay for community-based health insurance.

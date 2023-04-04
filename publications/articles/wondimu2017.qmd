@@ -1,0 +1,23 @@
+---
+title: "Prevalence and associated factors of khat use among university students in the University of Gondar, northwest Ethiopia."
+type: "article"
+author: "Wondimu, Getahun, Solomon, & Yalemzewod"
+year: "2017"
+publication: "Journal of Substance Use"
+preprint: ""
+doi: "https://doi.org/10.3109/14659891.2016.1166273"
+materials: ""
+toc: false
+categories:
+  - Substance Use
+  - University students
+  - Prevalence
+---
+
+## Citation (Vancouver)
+
+> Adane WG, Alemie GA, W/yhonnes SM, Gelaw YA. Prevalence and associated factors of khat use among university students in the University of Gondar, northwest Ethiopia. Journal of Substance Use. 2017 Mar 4;22(2):176-81.
+
+## Abstract
+
+Habitual khat use has negative psychological, social, sexual, and economic consequences. Therefore, this study was aimed to assess the prevalence of khat use and associated factors among university students in the University of Gondar. Institution-based cross-sectional study was conducted from February to September 2011. Multistage sampling techniques were used to select the study participants. Anonymous self-administered questionnaire was used to collect the data. Epi Info and SPSS softwares were used to enter and analyze the data. Binary logistic regression was used to identify the determinant factors. Independent two-sample "*t*" test was employed to compare academic performance between khat chewers and non-chewers. Odds ratio with 95% confidence interval was used to assess the strength of the association. *P*-value \<0.05 was considered statistically significant. The current prevalence of khat chewing was 16.4%. Sex, place of upbringing, alcohol use, cigarette smoking, and history of family and friends related chewing khat were statistically associated with khat chewing habit. The prevalence of khat chewing was found moderate and had not any influence on academic performance. Targeted and consistent counseling by a close controller and guidance is recommended as a direct in-campus intervention to tackle this habit.

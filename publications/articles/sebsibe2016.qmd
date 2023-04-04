@@ -1,0 +1,36 @@
+---
+title: "Utilization of personal protective equipment and associated factors among textile factory workers at Hawassa Town, Southern Ethiopia."
+type: "article"
+author: "Sebsibe, Temesgen, & Yalemzewod"
+year: "2016"
+publication: "J Occup Med Toxicol"
+preprint: ""
+doi: "https://doi.org/10.1186/s12995-016-0096-7"
+materials: ""
+toc: false
+categories:
+  - Personal protective equipment
+  - Workplace safety
+---
+
+## Citation (Vancouver)
+
+> Tadesse S, Kelaye T, Assefa Y. Utilization of personal protective equipment and associated factors among textile factory workers at Hawassa Town, Southern Ethiopia. Journal of Occupational Medicine and Toxicology. 2016 Dec;11:1-6.
+
+## Abstract
+
+### Background
+
+Use of personal protective equipment is one of the important measures to safeguard workers from exposure to occupational hazards, especially in developing countries. However, there is a dearth of studies describing personal protective equipment utilization in Ethiopia. The present study has determined the magnitude of personal protective equipment utilization and identified associated factors among textile factory workers at Hawassa Town, southern Ethiopia.
+
+### Methods
+
+An institution-based cross-sectional study was conducted among textile factory workers at Hawassa Town, southern Ethiopia from January to March 2014. Stratified sampling followed by simple random sampling techniques was used to select the total of 660 study participants. A pre-tested and structured questionnaire was used to collect data. Multivariate analyses were employed to see the effect of explanatory variables on dependent variable.
+
+### Results
+
+The magnitude of personal protective equipment utilization was 82.4 %. Service duration of \>10 years \[AOR: 0.23, 95 % CI: (0.09, 0.58)\], availability of personal protective equipments \[AOR: 21.73, 95 % CI: (8.62, 54.79)\], shift work \[AOR: 2.28, 95 % CI: (1.12, 4.66)\], alcohol drinking \[AOR: 0.26, 95 % CI: (0.10, 0.66)\], and cigarette smoking \[AOR: 0.20, 95 % CI: (0.05, 0.78)\] were factors significantly associated with use of personal protective equipment.
+
+### Conclusion
+
+In this study a relatively higher personal protective equipment utilization rate was reported compared to other studies in developing countries. However, this does not mean that there will be no need for further strengthening the safety programs as there are significant proportion of the workers still does not use all the necessary personal protective equipment during work. Interventions to promote use personal protective equipment should focus on areas, such as service duration, availability of protective equipment, presence of shift work, and control of substance abuse.

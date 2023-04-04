@@ -1,0 +1,34 @@
+---
+title: "Mapping national, regional and local prevalence of hypertension and diabetes in Ethiopia using geospatial analysis."
+type: "article"
+author: "Digsu, Yohannes A, Yalemzewod, Berihun, et al."
+year: "2022"
+publication: "BMJ open"
+preprint: ""
+doi: "http://dx.doi.org/10.1136/bmjopen-2022-065318"
+materials: ""
+toc: false
+categories:
+  - NCDs
+  - Spatial analysis
+  - Hypertension 
+  - Diabetes
+---
+
+## Citation (Vancouver)
+
+> Koye DN, Melaku YA, Gelaw YA, Zeleke BM, Adane AA, Tegegn HG, Gebreyohannes EA, Erku DA, Tesfay FH, Gesesew HA, Mekonnen A. Mapping national, regional and local prevalence of hypertension and diabetes in Ethiopia using geospatial analysis. BMJ open. 2022 Dec 1;12(12):e065318.
+
+## Abstract
+
+**Objectives** This study aimed to map the national, regional and local prevalence of hypertension and diabetes in Ethiopia.
+
+**Design and setting** Nationwide cross-sectional survey in Ethiopia combined with georeferenced ecological level data from publicly available sources.
+
+**Participants** 9801 participants aged between 15 and 69 years.
+
+**Primary outcome measures** Prevalence of hypertension and diabetes were collected using the WHO's STEPS survey approach. Bayesian model-based geostatistical techniques were used to estimate hypertension and diabetes prevalence at national, regional and pixel levels (1×1 km^2^) with corresponding 95% credible intervals (95% CrIs).
+
+**Results** The national prevalence was 19.2% (95% CI: 18.4 to 20.0) for hypertension and 2.8% (95% CI: 2.4 to 3.1) for diabetes. Substantial variation was observed in the prevalence of these diseases at subnational levels, with the highest prevalence of hypertension observed in Addis Ababa (30.6%) and diabetes in Somali region (8.7%). Spatial overlap of high hypertension and diabetes prevalence was observed in some regions such as the Southern Nations, Nationalities and People's region and Addis Ababa. Population density (number of people/km^2^) was positively associated with the prevalence of hypertension (β: 0.015; 95% CrI: 0.003--0.027) and diabetes (β: 0.046; 95% CrI: 0.020--0.069); whereas altitude in kilometres was negatively associated with the prevalence of diabetes (β: --0.374; 95% CrI: --0.711 to --0.044).
+
+**Conclusions** Spatial clustering of hypertension and diabetes was observed at subnational and local levels in Ethiopia, which was significantly associated with population density and altitude. The variation at the subnational level illustrates the need to include environmental drivers in future NCDs burden estimation. Thus, targeted and integrated interventions in high-risk areas might reduce the burden of hypertension and diabetes in Ethiopia.

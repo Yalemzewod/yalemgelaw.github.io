@@ -1,0 +1,36 @@
+---
+title: "Sociodemographic profiling of tuberculosis hotspots in Ethiopia, 2014-2017."
+type: "article"
+author: "Yalemzewod, Gail, Yibeltal,& Ricardo J."
+year: "2019"
+publication: "RSTMH"
+preprint: ""
+doi: "https://doi.org/10.1093/trstmh/trz017"
+materials: ""
+toc: false
+categories:
+  - TB
+  - Spatial analysis
+---
+
+## Citation (Vancouver)
+
+> Gelaw YA, Williams G, Assefa Y, Asressie M, Soares Magalh?es RJ. Sociodemographic profiling of tuberculosis hotspots in Ethiopia, 2014--2017. Transactions of The Royal Society of Tropical Medicine and Hygiene. 2019 Jul 1;113(7):379-91.
+
+## Abstract
+
+**Background**
+
+Tuberculosis (TB) notification rates vary across regions in Ethiopia and districts within the Amhara Region. The Amhara Region is one of the main TB hotspot regions in the country. In this study we identified the spatial distribution of TB and characterized the sociodemographic factors of spatial clusters in the Amhara Region.
+
+**Methods**
+
+An ecological spatial analysis of TB notifications from 2014 to 2017 was conducted to quantify the presence and location of spatial clusters of TB notifications at the district level within the Amhara Region. Global Moran's I statistics and local indicators of spatial association were used to explore the spatial clustering of TB notifications. Notifications from hotspots and low-risk districts were compared to identify significant sociodemographic factors using analysis of variance and Classification and Regression Tree analysis. The geographic information system and 'sp' packages of R software were used for spatial analysis.
+
+**Results**
+
+From 2014 to 2017 the average notification rate of all forms of TB in the Amhara Region was 107/100 000 population (range 18--614 per 100 000 population). District-level TB notification rates were positively spatially autocorrelated, with Moran's I value ranging from 0.207 to 0.276 (p=0.01). Hotspot TB clusters were found in the northwest and central part of the region. The proportion of migrants (F~(3,124)~=23.21, p\<0.001, d=1.4) was found to be the most important factor associated with hotspot TB clustering.
+
+**Conclusions**
+
+TB notification rates in the Amhara Region of Ethiopia over the past 4 y were significantly clustered. Distinguishing high-risk areas from low-risk areas and characterizing the proportion of migrants and other risk factors is important for targeted TB prevention and control in the region.

@@ -1,0 +1,23 @@
+---
+title: "3-month daily rifampicin and isoniazid compared to 6- or 9-month isoniazid for treating latent tuberculosis infection in children and adolescents less than 15 years of age: an updated systematic review."
+type: "article"
+author: "Yibeltal,Yalemzewod,Solomon, Yohie, Haileyesus."
+year: "2018"
+publication: "The international journal of tuberculosis and lung disease"
+preprint: ""
+doi: "https://doi.org/10.1183/13993003.00395-2018"
+materials: ""
+toc: false
+categories:
+  - Latent tuberculosis infection
+  - TB
+  - Review
+---
+
+## Citation (Vancouver)
+
+> Assefa Y, Assefa Y, Woldeyohannes S, Hamada Y, Getahun H. 3-month daily rifampicin and isoniazid compared to 6-or 9-month isoniazid for treating latent tuberculosis infection in children and adolescents less than 15 years of age: an updated systematic review. European Respiratory Journal. 2018 Jul 1;52(1).
+
+## Abstract
+
+One-third to one-quarter of the world's population is estimated to have latent tuberculosis infection (LTBI) . These infected persons are at risk for developing active disease with a lifetime risk of reactivation estimated to be 5--10% . Prevention of reactivation of LTBI in population groups with higher risk of progression to active disease than the general population, is critical to end the global TB epidemic .
