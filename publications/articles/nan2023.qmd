@@ -1,0 +1,44 @@
+---
+title: "Developmental trajectories of socio-emotional outcomes of children and young people in out-of-home care–Insights from data of Pathways of Care Longitudinal Study (POCLS)"
+type: "article"
+author: "Hu N, Gelaw YA, Katz I, Fernandez E, et al."
+year: "2023"
+publication: "Child Abuse & Neglect"
+preprint: ""
+doi: "https://doi.org/10.1016/j.chiabu.2023.106196"
+materials: ""
+toc: false
+categories:
+  - Out-of-home care
+  - Socio-emotional
+---
+
+## Citation (Vancouver)
+
+> Hu N, **Gelaw YA**, Katz I, Fernandez E, Falster K, Hanly M, Newton BJ, Stephensen J, Hotton P, Zwi K, Lingam R. Developmental trajectories of socio-emotional outcomes of children and young people in out-of-home care--Insights from data of Pathways of Care Longitudinal Study (POCLS). Child Abuse & Neglect. 2023 May 5:106196.
+
+## Abstract
+
+### Background
+
+There has been a limited understanding of the longitudinal trajectory and determinants of socio-emotional outcomes among children in out-of-home care (OOHC).
+
+### Objectives
+
+This study aimed to examine child socio-demographics, pre-care maltreatment, placement, and caregiver factors associated with trajectories of socio-emotional difficulties of children in OOHC.
+
+### Participants and setting
+
+The study sample (*n* = 345) included data from the Pathways of Care Longitudinal Study (POCLS), a prospective longitudinal cohort of children aged 3--17 years who entered the OOHC system in New South Wales (NSW) Australia, between 2010 and 2011.
+
+### Methods
+
+Group-based trajectory models were used to identify distinct socio-emotional trajectory groups based on the Child Behaviour Check List (CBCL) Total Problem T-scores completed at all four Waves 1--4. Modified Poisson regression analysis was conducted to assess the association (risk ratios) of socio-emotional trajectory group membership with pre-care maltreatment, placement, and caregiver-related factors.
+
+### Results
+
+Three trajectories of socio-emotional development were identified: \'persistently low difficulties\' (average CBCL T-score changed from 40 to 38 over time), normal (average CBCL T-score changed from 52 to 55 over time), and clinical (average CBCL T-score remained at 68 over time) trajectories. Each trajectory presented a stable trend over time. Relative/kinship care, as compared with foster care, was associated with the \"persistently low\" socio-emotional trajectory. Being male, exposure to ≥8 pre-care substantiated risk of significant harm (ROSH) reports, placement changes, and caregiver's psychological distress (more than two-fold increased risk) were associated with the clinical socio-emotional trajectory.
+
+### Conclusions
+
+Early intervention to ensure children have a nurturing care environment and psychological support to caregivers are vital for positive socio-emotional development over time among children in long-term OOHC.
