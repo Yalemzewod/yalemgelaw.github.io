@@ -8,13 +8,13 @@ about:
  links: 
    - icon: linkedin
      text: linkdeIn
-     href: https://www.linkedin.com/feed/
+     href: www.linkedin.com/in/yalemzewod-gelaw
    - icon: twitter
      text: Twitter
      href: https://twitter.com/yalassefa
    - icon: github
      text: GitHub
-     href: https://github.com/yalemz
+     href: https://github.com/yalemzewod
    - icon: envelop
      text: Email
      href: yalassefa@gmail.com 
@@ -23,13 +23,13 @@ about:
      href: https://orcid.org/0000-0002-5338-586X
 ---
 
-### Welcome !
+### Hello !
 
 <p class="topbr">
 
-I am a research scientist with a PhD in Epidemiology from the University of Queensland in Australia. My wider research focuses on preventing and controlling infectious diseases, such as tuberculosis, malaria, and HIV, using geostatistical models. I have published a number of articles in peer-review journals, and I also presented my research at various national and international conferences.
-
-Currently, I work as a research officer at the [Telethon Kids Institute](https://www.telethonkids.org.au/) of [Malaria Atlas Project (MAP)](https://malariaatlas.org/), where I assist with data management, analysis, modelling and research in malaria epidemiology and prevention and elimination programs. With over ten years of teaching and research experience in Australia and Ethiopia, I have gained valuable insights into the challenges of preventing and controlling infectious diseases in low-resource settings.
+Allow me to provide a brief overview of my skill set and experience. With over seven years of experience in data analytics, data management, statistical modeling, and research, I have developed a strong foundation in academia and the healthcare industry. My expertise lies in advanced statistical modeling techniques, including linear and logistic regression, machine learning, geostatistical modeling, and Bayesian statistics, to name a few. I proficiently use R and Python for data management, analysis, and statistical modeling, and I have a solid background in utilizing Excel and Power BI for visualization.
+Throughout my academic and professional journey, I have successfully managed large datasets, conducted thorough analyses, and generated impactful visualizations, resulting in the publication of over 30 peer-reviewed journal articles. I hold master's and PhD degrees, specializing in Epidemiology and Biostatistics, which have provided me with a deep understanding of the intricacies of data analysis and modeling in the context of health-related research.
+I am passionate about leveraging my skills and expertise to contribute to meaningful projects within the data analytics and statistical modeling domain. I have a proven track record of delivering high-quality work, collaborating effectively with teams, and utilizing cutting-edge statistical techniques to derive actionable insights.
 
 </p>
 
@@ -131,7 +131,7 @@ University of Gondar, Gondar, ET
 
 ------------------------------------------------------------------------
 
-### Interest
+### Experience
 
 -   Geospatial Analysis
 
@@ -139,6 +139,4 @@ University of Gondar, Gondar, ET
 
 -   Data Visualization
 
--   Knowledge Sharing
-
--   Learning New Skills
+-   Statistical modelling

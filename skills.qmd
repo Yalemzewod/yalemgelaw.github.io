@@ -2,7 +2,7 @@
 title: "Skills"
 ---
 
-I possess solid skills in `Epidemiology and Biostatistics`, and have utilized advanced statistical and data analysis methods such as Classification and Regression Tree analysis, spatiotemporal analysis, Bayesian conditional autoregressive (CAR) models, survival analysis, longitudinal regression, and infectious disease modeling in my research. My proficiency in data science and analysis has been demonstrated through the publication of my research articles.
+I possess solid skills in `Epidemiology and Biostatistics`, and I have applied a range of advanced statistical and data analysis methods in my research. These methods include Classification and Regression Tree analysis, spatiotemporal analysis, Bayesian conditional autoregressive (CAR) models, survival analysis, longitudinal regression, and infectious disease modeling. My proficiency in data science and analysis is evident through the publication of my research articles
 
 ::: topbr
 <p class="custom-subtitle">
@@ -25,7 +25,7 @@ I have over five years of experience using `R` programming language, specificall
 
 <p class="custom-subtitle2">
 
-My `Python` skill is at a beginner level. However, I am actively working on improving my skills and I am confident that I will be able to enhance my proficiency in Python in the near future.
+I have utilized **Pandas, Numpy, Seaborn, and Matplotlib** packages in `Python` for data management and visualization.
 
 </p>
 

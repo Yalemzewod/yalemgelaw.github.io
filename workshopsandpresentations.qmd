@@ -1,44 +1,54 @@
 ---
 title: "Workshops and Presentations"
 ---
+
 ## Recent workshops and conference presentations
 
-### Workshop 1
+### Workshop 2
 
 -   Title: [Geostatistical modelling](https://sctravelmedconference.com/speakers-2022/ "Spatial analysis workshop")
 -   Date: September 17, 2022
 -   Location: Hilton Hotel, Brisbane
 
-I was an invited speaker in the 5th Annual South Cross Travel Medicine Conference and the Inaugural South Cross Tropical Medicine Conference, conducted from 16th - 18th September 2022 at Hilton Hotel Brisbane.
+I was an invited speaker at the 5th Annual South Cross Travel Medicine Conference and the Inaugural South Cross Tropical Medicine Conference, conducted from 16th - 18th September 2022 at Hilton Hotel Brisbane.
 
-### Workshop 2
+### Workshop 3
 
 -   Title: [Spatial Analysis Using QGIS and R](https://malariaatlas.org/news/spatial-analysis-training-in-ethiopia-2/ "Spatial analysis in R")
 -   Date: December 16 - 20, 2022
 -   Location: Nazret, Ethiopia
 
-I provided a five-day workshop on introduction to Spatial analysis in a workshop organized by EPHI National Data Management Centre, in collaboration with MAP and the Australian Based Ethiopian Researchers Network (ABReN), held from October December 16 - 20, 2022.
+I conducted a five-day workshop on Introduction to Spatial Analysis as part of a collaborative effort between the EPHI National Data Management Centre, MAP, and the Australian-Based Ethiopian Researchers Network (ABReN). The workshop took place from October 16th to December 20th, 2022.
 
 ### Conference Presentation 1
+
+Title: Web‑based interactive Tool to improve Decision-making for malaria elimination in Vietnam
+
+-   Date: May 23 -24, 2023
+-   Location: Graduate House, CARLTON, VIC
+
+I was invited to speak at the 2023 [ACREME annual meeting](https://www.acreme.edu.au/wp-content/uploads/2023/05/ACREME-Annual-Meeting-Program.pdf) held from May 23-24, 2023, at the Graduate House in Carlton, VIC. My presentation focused on the preliminary results of my seed grant project, which involved mapping the malaria reproduction number in Viet Nam.
+
+### Conference Presentation 2
 
 -   Title: [Districts of HIV clustering in Ethiopia: 2015-2017](https://espace.library.uq.edu.au/view/UQ:56e0df8)
 -   Date: September 16 - 20, 2019
 -   Location: Liverpool, UK
 
-Poster presentation on the 11th European Congress on Tropical Medicine and International Health.
+I presented a poster at the 11th European Congress on Tropical Medicine and International Health.
 
-### Conference Presentation 2
+### Conference Presentation 3
 
--   Title: Epidemiology of tuberculosis and HIV co-infection and its collaborative services towards ending the TB epidemic in Ethiopia ([Abstract no. 1170](https://www.ajtmh.org/view/journals/tpmd/101/5_Suppl/article-p1_a.xml?tab_body=pdf))
+-   Title: Epidemiology of Tuberculosis and HIV Co-infection and its collaborative services towards Ending the TB Epidemic in Ethiopia ([Abstract no. 1170](https://www.ajtmh.org/view/journals/tpmd/101/5_Suppl/article-p1_a.xml?tab_body=pdf))
 -   Date: November 20--24, 2019
 -   Location: NATIONAL HARBOR, MARYLAND, USA
 
-Poster presentation on the 68th ASTMH annual conference.
+I presented a poster at the 68th ASTMH annual conference.
 
-### Conference Presentation 3
+### Conference Presentation 4
 
 -   Title: The Effect of Climate and Altitude Variability on Tuberculosis: A Systematic Review ([Abstract Number: 313](https://ehp.niehs.nih.gov/doi/abs/10.1289/isee.2017.2017-313))
 -   Date: September 24 - 28, 2017
 -   Location: Sydney, Australia
 
-Oral presentation on the 11th European Congress on the International Society for Environmental Epidemiology (ISEE).
+I delivered an oral presentation at the 11th European Congress on the International Society for Environmental Epidemiology (ISEE).

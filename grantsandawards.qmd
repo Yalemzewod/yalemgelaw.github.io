@@ -1,34 +1,41 @@
 ---
 title: "Grants and Awards"
 ---
+
+### ACREME Travel Grant
+
+-   Awarded: April 2023
+
+-   Description: Travel grant to present ACREME-funded seed grant (\$ 2, 450 AUD)
+
 ### ACREME Seed Grants (Round 1, 2022)
 
--   Awarded: August, 2022
+-   Awarded: August 2022
 
--   Title: Web-based interactive tool to improve decision-making for malaria elimination in Vietnam
+-   Title: Web-based interactive Tool to improve Decision-making for malaria elimination in Vietnam
 
--   Descriptions: This grant supported by Australian Centre of Research Excellence in Malaria Elimination (\$15,000 AUD)
+-   Descriptions: This grant supported by the Australian Centre of Research Excellence in Malaria Elimination (\$15,000 AUD)
 
 ### ASTMH Travel Award
 
--   Awarded: October , 2019
+-   Awarded: October 2019
 
 -   Title: ASTMH/BMGF Annual Meeting Travel Awards
 
--   Description: This award covers round trip airfare, conference registration and \$800 USD
+-   Description: This award covers round-trip airfare, conference registration and \$800 USD
 
 ### Thomas McIntyre Travel Scholarship
 
--   Awarded: September, 2017
+-   Awarded: September 2017
 
 -   Title: Thomas McIntyre Travel Scholarship
 
 -   Description: Internal reavel scholarship (\$3, 000 AUD) available for HDR students conducting tuberculosis research.
 
-### University of Queensland HDR Travel Scholarship
+### The University of Queensland HDR Travel Scholarship
 
--   Awarded: November, 2019
+-   Awarded: November 2019
 
 -   Title: HDR Travel Scholarship
 
--   Description: Internal treavel scholarship ( \$2,500 AUD) available for HDR students .
+-   Description: Internal travel scholarship ( \$2,500 AUD) available for HDR students.
