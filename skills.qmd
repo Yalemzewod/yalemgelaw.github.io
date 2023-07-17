@@ -1,8 +1,8 @@
 ---
-title: "Skills"
+title: "Career Summary"
 ---
 
-I possess solid skills in `Epidemiology and Biostatistics`, and I have applied a range of advanced statistical and data analysis methods in my research. These methods include Classification and Regression Tree analysis, spatiotemporal analysis, Bayesian conditional autoregressive (CAR) models, survival analysis, longitudinal regression, and infectious disease modeling. My proficiency in data science and analysis is evident through the publication of my research articles
+With over seven years of academic and research experience, Yalemzewod has developed a comprehensive skill set in data science and data analysis. He is proficient in using software such as R, Python, ArcGIS, QGIS, MySQL, PostgreSQL, SPSS, and Win BUGS. His expertise includes data management, cleaning, validation, geospatial analysis, statistical modeling (including Bayesian statistics), systematic reviews, manuscript preparation, and providing statistical analysis support. He has also conducted training sessions and provided research supervision to foster the development of research skills and knowledge in students. He holds a master's and PhD in Epidemiology and Biostatistics, further solidifying his knowledge and expertise in the field.
 
 ::: topbr
 <p class="custom-subtitle">
