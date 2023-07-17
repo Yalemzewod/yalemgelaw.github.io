@@ -33,6 +33,68 @@ Allow me to provide a brief overview of my skill set and experience. With over s
 
 ------------------------------------------------------------------------
 
+### Employment summary
+
+::: topbr
+<p class="custom-subtitle">
+
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Geospatial researcher, 2021-present**
+
+</p>
+
+<p class="custom-subtitle2">
+
+Child Health Analytics, Telethon Kids Institute, Perth, AU
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Child Health Statistician, 2020-2021**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of New South Wales, Sydney, AU
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Sessional Tutor 2017-2019**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Queensland, Brisbane, AU
+
+</p>
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Lecturer, 2013 - 2016**
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Gondar, Gondar, ET
+
+</p>
+:::
+
+------------------------------------------------------------------------
+
+### Industry and skill summary
+
+> Programming language: SQL, R, Python
+>
+> Database technologies: PostgreSQL, SQL, MySQL
+>
+> Business intelligence: Data Analytics, Data Science, MS Excel, Power BI, Tableau
+
 ### Education
 
 ::: topbr
@@ -74,67 +136,3 @@ Debub University, Hawasa, Ethiopia
 :::
 
 ------------------------------------------------------------------------
-
-### Experience - academic
-
-::: topbr
-<p class="custom-subtitle">
-
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Postdoctoral Research Officer, 2021-present**
-
-</p>
-
-<p class="custom-subtitle2">
-
-Malaria Atlas Project (MAP), Telethon Kids Institute, Perth, AU
-
-</p>
-
-<p class="custom-subtitle">
-
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Postdoctoral Research Associate, 2020-2021**
-
-</p>
-
-<p class="custom-subtitle2">
-
-University of New South Wales, Sydney, AU
-
-</p>
-
-<p class="custom-subtitle">
-
-`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Tutor/marker, 2017-2019**
-
-</p>
-
-<p class="custom-subtitle2">
-
-University of Queensland, Brisbane, AU
-
-</p>
-
-<p class="custom-subtitle">
-
-`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Lecturer, 2013 - 2016**
-
-</p>
-
-<p class="custom-subtitle2">
-
-University of Gondar, Gondar, ET
-
-</p>
-:::
-
-------------------------------------------------------------------------
-
-### Experience
-
--   Geospatial Analysis
-
--   Data Analysis
-
--   Data Visualization
-
--   Statistical modelling
