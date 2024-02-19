@@ -5,8 +5,10 @@ title: "Career Summary"
 With over seven years of academic and research experience, Yalemzewod has developed a comprehensive skill set in data science and data analysis. He is proficient in using software such as R, Python, ArcGIS, QGIS, MySQL, PostgreSQL, SPSS, and Win BUGS. His expertise includes data management, cleaning, validation, geospatial analysis, statistical modeling (including Bayesian statistics), systematic reviews, manuscript preparation, and providing statistical analysis support. He has also conducted training sessions and provided research supervision to foster the development of research skills and knowledge in students. He holds a master's and PhD in Epidemiology and Biostatistics, further solidifying his knowledge and expertise in the field.
 
 ------------------------------------------------------------------------
-
-> *2021 -- present*
+>*2024 - present*
+>*WA Department of Health, Healthcare Quality Intellegence Unit*
+>**Key responsibilities:**
+> *2021 - 2023*
 >
 > *Child Health Analytics Team,*
 >
