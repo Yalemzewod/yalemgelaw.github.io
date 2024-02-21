@@ -6,26 +6,26 @@ editor:
 
 With over seven years of academic and research experience, Yalemzewod has developed a comprehensive skill set in data science and data analysis. He is proficient in using *R* programming language, Query language (MySQL, PostgreSQL,and SQL server); visualization tool (PowerBI) and snowflakes data warehouse. His expertise includes data management and statistical modeling, analytic, systematic and strategical skills. He also had enough experience in providing training, University teaching and research supervision. He holds a master's and PhD in Epidemiology and Biostatistics.
 
-**2024 - present**
+> **2024 - present**
 
 *WA Department of Health, Healthcare Quality Intelligence Unit*
 
 *Senior Data Scientist*
 
-***Skills*****:** PowerBI, SQL, R, Snowflakes.
+> ***Skills*****:** PowerBI, SQL, R, Snowflakes.
 
 **Key responsibilities**\
 - Dashboard development\
 - Data modeling & reporting\
 - Project management and stakeholder consultation.
 
-***2021 - 2023***
+> ***2021 - 2023***
 
 *Child Health Analytics Team,* *Telethon Kids Institute Researcher and geospatial analyst.*
 
-***Skills*** Excel, R, Python, ArcGIS, and QGIS
-
-**Key responsibilities:**
+> ***Skills*** Excel, R, Python, ArcGIS, and QGIS
+>
+> **Key responsibilities:**
 
 -   Provided assistance in data management and validation for high-resolution raster insecticide-treated nets (ITNs) model outputs.
 
@@ -41,9 +41,9 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -   *2020 - 2021* *Population Child Health Research Group, UNSW Sydney* *Child Health Biostatistician*
 
-    ***Skills***: MySQL, R.
+    > ***Skills***: MySQL, R.
 
-    **Key responsibilities:**
+    > **Key responsibilities:**
 
 -    Conducted quantitative analysis on linked administrative data sets and data sets specifically related to children in out-of-home care.
 
@@ -55,7 +55,7 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -   *2019 - 2020* *Metro North Public Health Unit, Queensland Health* *Epidemiologist* *Skills*: PostgreSQL, R, and QGIS
 
-    **Key responsibilities:**
+    > **Key responsibilities:**
 
 -   Offered statistical analysis expertise and input in population health research studies, projects, programs, and community population health planning processes.
 
@@ -65,13 +65,13 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -    Took on a leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.
 
-    ***2016 -- 2020***
+    > ***2016 -- 2020***
 
 -   *The University of Queensland, Brisbane, AU* *PhD study*
 
-    ***Skills***: Scientific writing, R, ArcGIS, and Win BUGS.
-
-    **Key activities**:
+    > ***Skills***: Scientific writing, R, ArcGIS, and Win BUGS.
+    >
+    > **Key activities**:
 
 -    Applied a range of statistical methods including population-attributable risks, ANOVAs, Poisson, Binomial, Bayesian statistics, and geostatistical models to analyze the collected data.
 
@@ -81,13 +81,13 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -    Authored five first-author journal papers and provided assistance in the preparation of four additional journal articles.
 
-    ***2013 -- 2016***
+    > ***2013 - 2016***
 
 -   *Institute of Public Health, The University of Gondar* *Lecturer*
 
-    ***Skills***: Scientific writing, teaching, R and SPSS.
-
-    **Key responsibilities**:
+    > ***Skills***: Scientific writing, teaching, R and SPSS.
+    >
+    > **Key responsibilities**:
 
 -    Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years.
 
