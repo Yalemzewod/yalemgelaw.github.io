@@ -17,7 +17,7 @@ about:
      href: https://github.com/yalemzewod
    - icon: envelop
      text: Email
-     href: yalassefa@gmail.com 
+     href: yalassefa@gmail.com
    - icon: orcid
      text: OrcId
      href: https://orcid.org/0000-0002-5338-586X
@@ -40,7 +40,8 @@ Since 2016, I have worked as a Biostatistician and gained extensive experience i
 ::: topbr
 <p class="custom-subtitle">
 
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Senior Data Scientist, 2024-Present**
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` 
+**Senior Data Scientist, 2024-Present**
 
 </p>
 
@@ -49,9 +50,11 @@ Since 2016, I have worked as a Biostatistician and gained extensive experience i
 Healthcare Quality Intellegence Unit, WA Department of Health, Perth, AU
 
 </p>
+
 <p class="custom-subtitle">
 
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Data analyst and Geospatial researcher, 2021-2023**
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")`
+**Data analyst and Geospatial researcher, 2021-2023**
 
 </p>
 
@@ -63,7 +66,8 @@ Child Health Analytics, Telethon Kids Institute, Perth, AU
 
 <p class="custom-subtitle">
 
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Data analyst and Child health researcher, 2020-2021**
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` 
+**Data analyst and Child health researcher, 2020-2021**
 
 </p>
 
@@ -75,7 +79,8 @@ University of New South Wales, Sydney, AU
 
 <p class="custom-subtitle">
 
-`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Sessional Tutor 2017-2019**
+`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` 
+**Sessional Tutor 2017-2019**
 
 </p>
 
@@ -87,7 +92,8 @@ University of Queensland, Brisbane, AU
 
 <p class="custom-subtitle">
 
-`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` **Lecturer, 2013 - 2016**
+`r fontawesome::fa("chalkboard-teacher", fill = "#98A08D", a11y = "sem")` 
+**Lecturer, 2013 - 2016**
 
 </p>
 
