@@ -1,115 +1,25 @@
 ---
 title: "Career Summary"
+editor: 
+  markdown: 
+    wrap: 70
 ---
 
-With over seven years of academic and research experience, Yalemzewod has developed a comprehensive skill set in data science and data analysis. He is proficient in using software such as R, Python, ArcGIS, QGIS, MySQL, PostgreSQL, SPSS, and Win BUGS. His expertise includes data management, cleaning, validation, geospatial analysis, statistical modeling (including Bayesian statistics), systematic reviews, manuscript preparation, and providing statistical analysis support. He has also conducted training sessions and provided research supervision to foster the development of research skills and knowledge in students. He holds a master's and PhD in Epidemiology and Biostatistics, further solidifying his knowledge and expertise in the field.
+With over seven years of academic and research experience, Yalemzewod
+has developed a comprehensive skill set in data science and data
+analysis. He is proficient in using *R* programming language, Query
+language (MySQL, PostgreSQL,and SQL server); visualization tool
+(PowerBI) and snowflakes data warehouse. His expertise includes data
+managemen and statistical modeling, analytic, systematic and
+strategical skills. He also had enough experience in providing
+training, University teaching and research supervision. He holds a
+master's and PhD in Epidemiology and Biostatistics.
 
-------------------------------------------------------------------------
->*2024 - present*
->*WA Department of Health, Healthcare Quality Intellegence Unit*
->**Key responsibilities:**
-> *2021 - 2023*
->
-> *Child Health Analytics Team,*
->
-> *Telethon Kids Institute Researcher and geospatial analyst.*
->
-> This was done using, Excel, R, Python, ArcGIS, and QGIS
->
-> **Key responsibilities:**
->
-> -   Provided assistance in data management and validation for high-resolution raster insecticide-treated nets (ITNs) model outputs.
->
-> -    Acquired, cleaned, and geolocated malaria surveillance data along with shapefiles.
->
-> -    Led geostatistical modeling of malaria endemicity at a sub-national level, employing Bayesian statistics.
->
-> -    Lead authored two manuscripts, which are currently prepared for submission to high-impact journals.
->
-> -   Collaborated with colleagues to develop a training manual on spatial analysis in R and QGIS, and successfully conducted two rounds of training in Ethiopia.
->
-> -    Secured a seed grant of \$15,000 AUD to conduct a research project focused on developing a web-based interactive tool to enhance decision-making for malaria elimination in Vietnam.
->
->     ------------------------------------------------------------------------
-
-> *2020 - 2021*
->
-> *Population Child Health Research Group, UNSW Sydney*
->
-> *Child Health Biostatistician*
->
-> This was done using MySQL, R.
->
-> **Key responsibilities:**
->
-> -   Conducted quantitative analysis on linked administrative data sets and data sets specifically related to children in out-of-home care.
->
-> -    Provided statistical and research design support to the Population Child Health Research Group.
->
-> -    Played a key role in grant writing applications, including study design, sample size determination, and selection of analytical techniques.
->
-> -   Authored manuscripts for research publications, including three submissions, two of which were as a lead or co-lead author.
->
->     ------------------------------------------------------------------------
-
-> *2019 - 2020*
->
-> *Metro North Public Health Unit, Queensland Health*
->
-> *Epidemiologist*
->
-> This was done using PostgreSQL, R, and QGIS
->
-> **Key responsibilities:**
->
-> -   Offered statistical analysis expertise and input in population health research studies, projects, programs, and community population health planning processes.
->
-> -   Collected data from a routine disease surveillance database, performed analysis, and prepared comprehensive reports based on the findings.
->
-> -    Conducted monitoring and surveillance of foodborne outbreaks by applying best epidemiological practices, including data collection, management, and analysis. •
->
-> -   Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years.
->
-> -   Provided research supervision and guidance to undergraduate and postgraduate medicine, as well as other health sciences students, fostering their development of research skills and knowledge.
->
-> -   Took on a leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.
->
->     ------------------------------------------------------------------------
-
-> 2016 -- 2020
->
-> The University of Queensland, Brisbane, AU
->
-> PhD study
->
-> This was done using R, ArcGIS, and Win BUGS.
->
-> **Key activities**:
->
-> -    Applied a range of statistical methods including population-attributable risks, ANOVAs, Poisson, Binomial, Bayesian statistics, and geostatistical models to analyze the collected data.
->
-> -   Developed multiple high-resolution maps using surveillance data and environmental data.
->
-> -   Collaborated with senior researchers involved in WHO projects to conduct two systematic reviews aimed at updating the Adolescent latent Tuberculosis Infection Treatment guidelines.
->
-> -   Authored five first-author journal papers and provided assistance in the preparation of four additional journal articles.
->
->     ------------------------------------------------------------------------
-
-> *2013 -- 2016*
->
-> *Institute of Public Health, The University of Gondar*
->
-> *Lecturer*
->
-> This was done using R and SPSS.
->
-> **Key responsibilities**:
->
-> -   Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years.
->
-> -   Provided research supervision and guidance to undergraduate and postgraduate medicine, as well as other health sciences students, fostering their development of research skills and knowledge.
->
-> -   Took on a team leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.
-
-------------------------------------------------------------------------
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|:---------------------------------------------------------------------|
+| \>*2024 - present* \> \> *WA Department of Health, Healthcare Quality Intelligence Unit* \> \> *Senior Data Scientist.* \> \> Skills: PowerBI, SQL, R, Snowflakes. \> \> **Key responsibilities:** \> \> - Dashboard development \> \> - Data modeling & reporting \> \> - Project management and stakeholder consultation. \> \> ------------------------------------------------------------------------
+| \> *2021 - 2023* \> \> *Child Health Analytics Team,* \> \> *Telethon Kids Institute Researcher and geospatial analyst.* \> \> This was done using, Excel, R, Python, ArcGIS, and QGIS \> \> **Key responsibilities:** \> \> - Provided assistance in data management and validation for high-resolution raster insecticide-treated nets (ITNs) model outputs. \> \> - Acquired, cleaned, and geolocated malaria surveillance data along with shapefiles. \> \> - Led geostatistical modeling of malaria endemicity at a sub-national level, employing Bayesian statistics. \> \> - Lead authored two manuscripts, which are currently prepared for submission to high-impact journals. \> \> - Collaborated with colleagues to develop a training manual on spatial analysis in R and QGIS, and successfully conducted two rounds of training in Ethiopia. \> \> - Secured a seed grant of \$15,000 AUD to conduct a research project focused on developing a web-based interactive tool to enhance decision-making for malaria elimination in Vietnam. \> \> ------------------------------------------------------------------------                                                       |
+| \> *2020 - 2021* \> \> *Population Child Health Research Group, UNSW Sydney* \> \> *Child Health Biostatistician* \> \> Skills: MySQL, R. \> \> **Key responsibilities:** \> \> - Conducted quantitative analysis on linked administrative data sets and data sets specifically related to children in out-of-home care. \> \> - Provided statistical and research design support to the Population Child Health Research Group. \> \> - Played a key role in grant writing applications, including study design, sample size determination, and selection of analytical techniques. \> \> - Authored manuscripts for research publications, including three submissions, two of which were as a lead or co-lead author. \> \> ------------------------------------------------------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| \> *2019 - 2020* \> \> *Metro North Public Health Unit, Queensland Health* \> \> *Epidemiologist* \> \> Skills: PostgreSQL, R, and QGIS \> \> **Key responsibilities:** \> \> - Offered statistical analysis expertise and input in population health research studies, projects, programs, and community population health planning processes. \> \> - Collected data from a routine disease surveillance database, performed analysis, and prepared comprehensive reports based on the findings. \> \> - Conducted monitoring and surveillance of foodborne outbreaks by applying best epidemiological practices, including data collection, management, and analysis. • \> \> - Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years. \> \> - Provided research supervision and guidance to undergraduate and postgraduate medicine, as well as other health sciences students, fostering their development of research skills and knowledge. \> \> - Took on a leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience. \> \> ------------------------------------------------------------------------ |
+| \> 2016 -- 2020 \> \> The University of Queensland, Brisbane, AU \> \> PhD study \> \> Skills: R, ArcGIS, and Win BUGS. \> \> **Key activities**: \> \> - Applied a range of statistical methods including population-attributable risks, ANOVAs, Poisson, Binomial, Bayesian statistics, and geostatistical models to analyze the collected data. \> \> - Developed multiple high-resolution maps using surveillance data and environmental data. \> \> - Collaborated with senior researchers involved in WHO projects to conduct two systematic reviews aimed at updating the Adolescent latent Tuberculosis Infection Treatment guidelines. \> \> - Authored five first-author journal papers and provided assistance in the preparation of four additional journal articles. \> \> ------------------------------------------------------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| \> *2013 -- 2016* \> \> *Institute of Public Health, The University of Gondar* \> \> *Lecturer* \> \> This was done using R and SPSS. \> \> **Key responsibilities**: \> \> - Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years. \> \> - Provided research supervision and guidance to undergraduate and postgraduate medicine, as well as other health sciences students, fostering their development of research skills and knowledge. \> \> - Took on a team leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |

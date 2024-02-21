@@ -24,12 +24,12 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/feed/
         aria-label: Quarto LinKedin
-      - href: CV/Gelaw_resume_20230804.pdf
+      - href: CV/Yalemzewod_Gelaw.pdf
         text: cv
   page-footer:
     background: light
     left: 
-      - "Copyright 2023, Yalemzewod Gelaw"
+      - "Copyright 2024, Yalemzewod Gelaw"
     right: 
       - icon: github
         href: https://github.com/yalemzewod

@@ -23,11 +23,13 @@ about:
      href: https://orcid.org/0000-0002-5338-586X
 ---
 
-### Hello !
+### Welcome !
 
 <p class="topbr">
 
-Allow me to provide a brief overview of my skill set and experience. With over seven years of experience in data analytics, data management, statistical modeling, and research, I have developed a strong foundation in academia and the healthcare industry. My expertise lies in advanced statistical modeling techniques, including linear and logistic regression, machine learning, geostatistical modeling, and Bayesian statistics, to name a few. I proficiently use R and Python for data management, analysis, and statistical modeling, and I have a solid background in utilizing Excel and Power BI for visualization. Throughout my academic and professional journey, I have successfully managed large datasets, conducted thorough analyses, and generated impactful visualizations, resulting in the publication of over 30 peer-reviewed journal articles. I hold master's and PhD degrees, specializing in Epidemiology and Biostatistics, which have provided me with a deep understanding of the intricacies of data analysis and modeling in the context of health-related research. I am passionate about leveraging my skills and expertise to contribute to meaningful projects within the data analytics and statistical modeling domain. I have a proven track record of delivering high-quality work, collaborating effectively with teams, and utilizing cutting-edge statistical techniques to derive actionable insights.
+My name is Yalemzewod Assefa Gelaw. I'm currently a senior data scientist at the WA Department of Health, Perth. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland in 2020, where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
+
+Since 2016, I have worked as a Biostatistician and gained extensive experience in managing complex datasets, developing data pipelines, performing data integration, and predictive modelling. I am proficient in using tools such as R, SQL, Python, and Power BI, enabling me to handle the technical aspects of public health and medical data.
 
 </p>
 
@@ -49,7 +51,7 @@ Healthcare Quality Intellegence Unit, WA Department of Health, Perth, AU
 </p>
 <p class="custom-subtitle">
 
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Geospatial researcher, 2021-2023**
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Data analyst and Geospatial researcher, 2021-2023**
 
 </p>
 
@@ -61,7 +63,7 @@ Child Health Analytics, Telethon Kids Institute, Perth, AU
 
 <p class="custom-subtitle">
 
-`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Child Health Statistician, 2020-2021**
+`r fontawesome::fa("pen-to-square", fill = "#98A08D", a11y = "sem")` **Data analyst and Child health researcher, 2020-2021**
 
 </p>
 
