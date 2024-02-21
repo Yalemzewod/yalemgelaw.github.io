@@ -29,7 +29,7 @@ about:
 
 My name is Yalemzewod Assefa Gelaw. I'm currently a senior data scientist at the WA Department of Health, Perth. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland in 2020, where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
 
-Since 2016, I have worked as a Biostatistician and gained extensive experience in managing complex datasets, developing data pipelines, performing data integration, and predictive modelling. I am proficient in using tools such as R, SQL, Python, and Power BI, enabling me to handle the technical aspects of public health and medical data.
+Since 2016, I have worked as a data analyst/scientist and gained extensive experience in managing complex datasets, developing data pipelines, performing data integration, and predictive modelling. I am proficient in using tools such as R, SQL, Python, and Power BI, enabling me to handle the technical aspects of public health and medical data.
 
 </p>
 
