@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Yalemzewod Assefa Gelaw"
-  search: false
+  title: "Welcome"
+  search: true
   navbar:
     left:
       - href: index.qmd

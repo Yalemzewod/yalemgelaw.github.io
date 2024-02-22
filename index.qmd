@@ -1,6 +1,6 @@
 ---
-title: "Yalemzewod Gelaw,PhD, MPH, Bsc"
-image: "images/me.JPG"
+title: "Yalemzewod Gelaw"
+image: "images/use.jpg"
 about: 
  template: trestles
  image-shape: rounded
