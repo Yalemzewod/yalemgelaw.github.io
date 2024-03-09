@@ -1,4 +1,12 @@
-What [Jadey Ryan](https://jadeyryan.com/) changed to get Netlify deployments working with links to her tutorial:
+**Deployment instructions:**
+
+1.  Add, edit, remove content.
+2.  Run `quarto preview` in Terminal to preview and edit iteratively.
+3.  When happy with changes, run `quarto render` in Terminal.
+4.  Commit and push changes to GitHub in `main` branch for auto-publishing.
+    -   Commit and push to branches to see [deploy previews](https://jadeyryan.com/blog/2023-11-19_publish-quarto-website/#deploy-previews) without changing your live website.
+
+What [Jadey Ryan](https://jadeyryan.com/) changed to get Netlify deployments working, see links to tutorial for more details:
 
 -   **Repository**
     -   `_quarto.yml`
