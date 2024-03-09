@@ -1,0 +1,12 @@
+-   Repository
+    -   `_quarto.yml`
+        -   Set `execute: freeze: auto`
+        -   Remove `output-dir: docs`
+    -   `_publish.yml`
+        -   Change site name and ID
+    -   Add `netlify.toml` and `package.json`
+        -   <https://jadeyryan.com/blog/2023-11-19_publish-quarto-website/#configure-netlify-plugin>
+    -   Remove `.github` folder with jekyll workflow
+-   Netlify
+    -   Build settings
+        -   Remove `jekyll build` from build command
