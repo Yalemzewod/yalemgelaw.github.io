@@ -54,8 +54,7 @@ website:
   page-footer:
     background: light
     left: "&#169; 2024 Yalemzewod Gelaw"
-    right: "Made with [Quarto](https://quarto.org)"
-     
+        
 format:
   html:
     theme: [flatly, assets/styling/theme.scss]
