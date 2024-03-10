@@ -12,15 +12,17 @@ website:
   title: "Yalemzewod Gelaw"
   description: "Personal website of Yalemzewod Gelaw"
   site-url: https://yalemzewodgelaw.com
-  rep-url: https://github.com/Yalemzewod/yalemgelaw.github.io
+  repo-url: https://github.com/Yalemzewod/yalemgelaw.github.io
   repo-actions:
     - source
     - issue
   favicon: images/logo.ico
   twitter-card:
     creator: "@yalassefa@
-  search: true
+  
   navbar:
+    pinned: true
+    logo: images/logo.ico
     left:
       - href: index.qmd
         text: About
