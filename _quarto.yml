@@ -54,14 +54,8 @@ website:
   page-footer:
     background: light
     left: "&#169; 2024 Yalemzewod Gelaw"
-
-    right: 
-      - icon: github
-        href: https://github.com/yalemzewod
-      - icon: twitter
-        href: https://twitter.com/yalassefa
-  reader-mode: true
-  
+    right: "Made with [Quarto](https://quarto.org)"
+     
 format:
   html:
     theme: [flatly, assets/styling/theme.scss]
