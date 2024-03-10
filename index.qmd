@@ -1,7 +1,10 @@
 ---
+pagetitle: "Yalemzewod Gelaw | About"
 title: "Yalemzewod Gelaw"
 image: "images/use.jpg"
+
 about: 
+ id: hero-heading
  template: trestles
  image-shape: rounded
  image-width: 16em
@@ -23,62 +26,17 @@ about:
      href: https://orcid.org/0000-0002-5338-586X
 ---
 
-### Welcome !
+### Welcome!
 
 <p class="topbr">
 
-My name is Yalemzewod Assefa Gelaw. I'm currently a senior data scientist at the WA Department of Health, Perth. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland in 2020, where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
+I’m Yalemzewod Assefa Gelaw. I'm a senior data scientist at the Healthcare Quality Intelligence Unit (HQIU), the WA Department of Health, Perth. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland (2020), where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
 
-Since 2016, I have worked as a data analyst/scientist and gained extensive experience in managing complex datasets, developing data pipelines, performing data integration, and predictive modelling. I am proficient in using tools such as R, SQL, Python, and Power BI, enabling me to handle the technical aspects of public health and medical data.
+Since 2016, my experience as an academic researcher and data analyst/scientist honed my skills in handling complex datasets, developing data pipelines, and performing predictive modelling.  I utilize a comprehensive software toolkit including R, SQL, Python, Power BI for visualization, and Snowflake for data warehousing, effectively tackling technical challenges within the healthcare sector.
+
 
 </p>
 
 ------------------------------------------------------------------------
 
-### Employment Summary
 
-**Senior Data Scientist, 2024-Present**
-      
->Healthcare Quality Intelligence Unit, WA Department of Health, Perth, AU
-
-**Data Analyst and Geospatial Researcher, 2021-2023**
-
->Child Health Analytics, Telethon Kids Institute, Perth, AU
-
-**Data Analyst and Child Health Researcher, 2020-2021**
-
->University of New South Wales, Sydney, AU
-
-**Sessional Tutor, 2017-2019**
-
->University of Queensland, Brisbane, AU
-
-**Lecturer, 2013-2016**
-
->University of Gondar, Gondar, ET
-
-
-------------------------------------------------------------------------
-
-### Industry and skill summary
-
-> Programming language: SQL, R, Python
->
-> Database technologies: PostgreSQL, SQL, MySQL
->
-> Business intelligence: Data Analytics, Data Science, MS Excel, Power BI, Tableau
-
-### Education
-**PhD (Epidemiology and Biostatistics), 2020**
-
->The University of Queensland, Brisbane, Australia
-
-**MPH (Epidemiology and Biostatistics), 2013**
-
->University of Gondar, Gondar, Ethiopia
-
-**BSc (Environmental Health Science), 2006**
-
->Debub University, Hawasa, Ethiopia
-
-------------------------------------------------------------------------
