@@ -24,6 +24,10 @@ about:
    - icon: orcid
      text: OrcId
      href: https://orcid.org/0000-0002-5338-586X
+toc: false
+anchor-sections: false
+execute: 
+  freeze: true
 ---
 
 ### Welcome!
