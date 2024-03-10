@@ -6,7 +6,8 @@ execute:
 
 website:
   title: "Yalemzewod Gelaw"
-  description: "Personal website of Yalemzewod Gelaw
+  description: "Personal website of Yalemzewod Gelaw"
+  favicon: images/logo.ico
   search: true
   navbar:
     left:
