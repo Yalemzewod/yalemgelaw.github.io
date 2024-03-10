@@ -52,7 +52,7 @@ website:
   page-footer:
     background: light
     left: 
-      -  "Copyright 2024, Yalemzewod Gelaw"
+      - "Copyright 2024, Yalemzewod Gelaw"
     right: 
       - icon: github
         href: https://github.com/yalemzewod
