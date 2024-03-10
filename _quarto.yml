@@ -51,9 +51,9 @@ website:
         href: https://www.linkedin.com/feed/
         aria-label: Quarto LinKedin
    
-  page-footer:
-    background: light
-    left: "&#169; 2024 Yalemzewod Gelaw"
+  #page-footer:
+    #background: light
+    #left: "&#169; 2024 Yalemzewod Gelaw"
         
 format:
   html:
