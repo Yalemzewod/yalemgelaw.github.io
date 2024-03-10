@@ -1,5 +1,9 @@
 project:
   type: website
+  preview:
+    port: 4200
+    browser: true
+    
 
 execute:
   freeze: auto
@@ -7,7 +11,14 @@ execute:
 website:
   title: "Yalemzewod Gelaw"
   description: "Personal website of Yalemzewod Gelaw"
+  site-url: https://yalemzewodgelaw.com
+  rep-url: https://github.com/Yalemzewod/yalemgelaw.github.io
+  epo-actions:
+    - source
+    - issue
   favicon: images/logo.ico
+  twitter-card:
+    creator: "@yalassefa@
   search: true
   navbar:
     left:
@@ -59,7 +70,5 @@ format:
     smooth-scroll: true
     link-external-newwindow: true
     code-link: true
-    highlight-style: a11yout: full
-
-editor: visual
+    highlight-style: a11y
 
