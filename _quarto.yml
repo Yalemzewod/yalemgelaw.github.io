@@ -57,9 +57,6 @@ format:
     toc: true
     toc-depth: 4
     pagetitle: "Yalemzewod Gelaw | {{< meta title >}}"
-    page-layout: article
-    smooth-scroll: true
-    link-external-newwindow: true
     code-link: true
     highlight-style: a11y
 
