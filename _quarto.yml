@@ -13,7 +13,7 @@ website:
   description: "Personal website of Yalemzewod Gelaw"
   site-url: https://yalemzewodgelaw.com
   rep-url: https://github.com/Yalemzewod/yalemgelaw.github.io
-  epo-actions:
+  repo-actions:
     - source
     - issue
   favicon: images/logo.ico
