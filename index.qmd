@@ -5,7 +5,7 @@ image: "images/use.jpg"
 
 about: 
  id: hero-heading
- template: trestles
+ template: jolla
  image-shape: rounded
  image-width: 16em
  links: 
@@ -20,7 +20,7 @@ about:
      href: https://github.com/yalemzewod
    - icon: envelop
      text: Email
-     href: 'yalassefa@gmail.com'
+     href: mailto:'yalassefa@gmail.com'
    - icon: orcid
      text: OrcId
      href: https://orcid.org/0000-0002-5338-586X
@@ -32,7 +32,7 @@ anchor-sections: false
 
 <p class="topbr">
 
-I’m Yalemzewod Assefa Gelaw. I'm a senior data scientist at the Healthcare Quality Intelligence Unit (HQIU), the WA Department of Health, Perth. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland (2020), where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
+I’m Yalemzewod Assefa Gelaw. I'm a senior data scientist at the Healthcare Quality Intelligence Unit (HQIU), the WA Department of Health. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland (2020), where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
 
 Since 2016, my experience as an academic researcher and data analyst/scientist honed my skills in handling complex datasets, developing data pipelines, and performing predictive modelling.  I utilize a comprehensive software toolkit including R, SQL, Python, Power BI for visualization, and Snowflake for data warehousing, effectively tackling technical challenges within the healthcare sector.
 

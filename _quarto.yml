@@ -52,8 +52,9 @@ website:
         aria-label: Quarto LinKedin
            
 format:
-  html:
-    theme: [flatly, assets/styling/theme.scss]
-    toc: true
-    toc-depth: 4
-    pagetitle: "Yalemzewod Gelaw | {{< meta title >}}"
+  html: 
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 300px
+      gutter-width: 1.5rem
