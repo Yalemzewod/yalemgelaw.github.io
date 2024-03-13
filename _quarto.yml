@@ -39,9 +39,9 @@ website:
       - href: publications.qmd
         text: Publications
         icon: book-open
-      - href: CV/Yalemzewod_Gelaw.pdf
-        text: CV
-        icon: file-earmark-text-fill
+      # - href: CV/Yalemzewod_Gelaw.pdf
+      # text: CV
+      # icon: file-earmark-text-fill
         
       
     right:
@@ -54,12 +54,17 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/feed/
         aria-label: Quarto LinKedin
- 
+
+page-footer: 
+    background: light
+    left: Copyright 2024, Yalemzewod Gelaw
+    right: This website is built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
-  html: 
-    grid:
-      sidebar-width: 300px
-      body-width: 900px
-      margin-width: 300px
-      gutter-width: 1.5rem
+  html:
+    page-layout: full
+    sidebar: false
+    theme: 
+      - styles.scss
+    mainfont: Nunito
+    toc: true
