@@ -37,9 +37,9 @@ website:
         text: Workshops, training and Presentations
         icon: mic-fill
       - href: publications.qmd
-        text: Research Publications
+        text: Publications
         icon: book-open
-      - text: cv
+      - text: CV
         icon: file-earmark-text-fill
       
     right:
