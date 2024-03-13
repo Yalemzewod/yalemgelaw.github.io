@@ -14,10 +14,10 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 > ***Skills*****:** PowerBI, SQL, R, Snowflakes.
 
-**Key responsibilities**\
-- Dashboard development\
-- Data modeling & reporting\
-- Project management and stakeholder consultation.
+> **Key responsibilities**\
+> - Dashboard development\
+> - Data modeling & reporting\
+> - Project management and stakeholder consultation\
 
 > #### 2021 - 2023
 >

@@ -1,5 +1,5 @@
 ---
-pagetitle: "Yalemzewod Gelaw | About"
+pagetitle: "About"
 title: "Yalemzewod Gelaw"
 image: "images/use.jpg"
 
