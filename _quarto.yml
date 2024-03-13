@@ -39,9 +39,9 @@ website:
       - href: publications.qmd
         text: Publications
         icon: book-open
-      # - href: CV/Yalemzewod_Gelaw.pdf
-      # text: CV
-      # icon: file-earmark-text-fill
+      - href: CV/Yalemzewod_Gelaw.pdf
+        text: CV
+        icon: file-earmark-text-fill
         
       
     right:
