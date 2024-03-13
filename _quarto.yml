@@ -18,8 +18,8 @@ website:
     - issue
   favicon: images/logo.ico
   twitter-card:
-    creator: "@yalassefa@
-  
+    creator: "@yalassefa"
+    
   navbar:
     pinned: true
     logo: images/logo.ico
