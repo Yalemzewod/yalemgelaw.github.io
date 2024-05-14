@@ -1,6 +1,6 @@
 ---
-pagetitle: "About"
-title: "Yalemzewod Gelaw"
+pagetitle: "DataMasteryHub"
+title: "DataMasteryHub"
 image: "images/use.jpg"
 
 about: 
@@ -32,10 +32,7 @@ anchor-sections: false
 
 <p class="topbr">
 
-I’m Yalemzewod Assefa Gelaw. I'm a senior data scientist at the Healthcare Quality Intelligence Unit (HQIU), the WA Department of Health. I hold a PhD in Epidemiology and Biostatistics from The University of Queensland (2020), where I focused on mathematical modelling, data visualization, statistics, spatial modelling, and scientific writing. My educational background has prepared me to understand and address the unique data challenges within the healthcare sector.
-
-Since 2016, my experience as an academic researcher and data analyst/scientist honed my skills in handling complex datasets, developing data pipelines, and performing predictive modelling.  I utilize a comprehensive software toolkit including R, SQL, Python, Power BI for visualization, and Snowflake for data warehousing, effectively tackling technical challenges within the healthcare sector.
-
+Welcome to DataMasteryHub, your go-to destination for mastering the world of data. Dive into tutorials and insights on R, SQL, Python, and PowerBI, curated to enhance your data skills and expertise.
 
 </p>
 
