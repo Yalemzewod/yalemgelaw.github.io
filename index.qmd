@@ -1,7 +1,7 @@
 ---
 pagetitle: "DataMasteryHub"
-title: "DataMasteryHub"
-image: "images/use.jpg"
+title: "Yalemzewod Gelaw"
+image: "images/yalem.jpg"
 
 about: 
  id: hero-heading
@@ -28,11 +28,19 @@ toc: false
 anchor-sections: false
 ---
 
-### Welcome!
+### Hello there!
 
 <p class="topbr">
 
-Welcome to DataMasteryHub, your go-to destination for mastering the world of data. Dive into tutorials and insights on R, SQL, Python, and PowerBI, curated to enhance your data skills and expertise.
+Welcome to my website! I’m Yalemzewod Gelaw, an Epidemiologist and Biostatistician with a passion for data-driven insights. Here’s a bit about my background:
+
+Education: I earned my PhD degree from the University of Queensland, where I specialized in mathematical modeling, data visualization, statistical analysis, and spatial modeling. My studies equipped me with the tools to tackle unique data challenges within the healthcare sector.
+
+Skills: I’m proficient in various software tools, including R, SQL, Python, and PowerBI. Whether it’s analyzing epidemiological trends, creating compelling visualizations, or building predictive models, I’m always up for a data-driven adventure.
+
+Blog and Tutorials: On this website, I’ll be sharing my experiences, insights, and practical tips. Expect blog posts, tutorials, and code snippets related to data science, epidemiology, and more.
+
+Feel free to explore, learn, and connect! If you have any questions or want to collaborate, don’t hesitate to reach out. 🌟
 
 </p>
 
