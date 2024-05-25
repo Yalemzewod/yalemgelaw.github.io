@@ -16,13 +16,13 @@ website:
   repo-actions:
     - source
     - issue
-  favicon: images/logo.ico
+  favicon: images/logo.png
   twitter-card:
     creator: "@yalassefa"
     
   navbar:
     pinned: true
-    logo: images/logo.ico
+    logo: images/logo.png
     left:
       - href: index.qmd
         text: About
