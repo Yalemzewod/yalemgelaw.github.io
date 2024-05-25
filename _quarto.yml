@@ -9,7 +9,7 @@ execute:
   freeze: auto
 
 website:
-  title: "DataMasteryHub"
+  title: "Yalemzewod Gelaw"
   description: "This blog discovers practical data wrangling, insightful data visualization, and effective statistical modelling techniques."
   site-url: https://yalemzewodgelaw.com
   repo-url: https://github.com/Yalemzewod/yalemgelaw.github.io
