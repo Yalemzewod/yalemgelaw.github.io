@@ -1,5 +1,6 @@
 ---
 title: "Publications"
+title-block-banner: true
 toc: false
 listing: 
   - id: articles
