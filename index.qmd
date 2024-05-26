@@ -24,6 +24,9 @@ about:
    - icon: orcid
      text: OrcId
      href: https://orcid.org/0000-0002-5338-586X
+   - icon: youtube
+     text: YouTube
+     href: https://youtube.com/@yz1121?si=y7dpAlVtlEnGRSSm
 toc: false
 anchor-sections: false
 ---
