@@ -34,7 +34,7 @@ website:
         text: Grants and Awards
         icon: mic-fill
       - href: workshopsandpresentations.qmd
-        text: Workshops, training and Presentations
+        text: Research Workshops and Presentations
         icon: mic-fill
       - href: publications.qmd
         text: Publications
