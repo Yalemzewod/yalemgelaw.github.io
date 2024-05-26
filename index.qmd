@@ -2,9 +2,7 @@
 pagetitle: "DataMasteryHub"
 title: "Yalemzewod Gelaw"
 image: "images/yalem.jpg"
-
 about: 
- id: hero-heading
  template: jolla
  image-shape: rounded
  image-width: 16em
