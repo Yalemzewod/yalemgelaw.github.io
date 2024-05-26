@@ -35,14 +35,8 @@ anchor-sections: false
 
 <p class="topbr">
 
-Welcome to my website! I’m Yalemzewod Gelaw, a Senior Data Scientist passionate about data-driven insights. Here’s a bit about my background:
-
-__Education__: I earned my PhD degree from the University of Queensland, where I specialized in mathematical modelling, data visualization, statistical analysis, and spatial modelling. My studies equipped me with the tools to tackle unique data challenges within the healthcare sector. I currently work as a Senior Data Scientist at the WA Department of Health. 
-
-__Skills__: I’m proficient in various software tools, including R, SQL, Python, and PowerBI. Whether it’s analyzing epidemiological trends, creating compelling visualizations, or building predictive models, I’m always up for a data-driven adventure.
-
-__Blog and Tutorials__: On this website, I’ll be sharing my experiences, insights, and practical tips. Expect blog posts, tutorials, and code snippets related to data science, epidemiology, and more.
-
+Welcome to my website! I’m Yalemzewod Gelaw, a Senior Data Scientist passionate about data-driven insights. 
+On this website, I’ll be sharing my experiences, insights, and practical tips. Expect blog posts, tutorials, and code snippets related to data science, epidemiology, and more.
 Feel free to explore, learn, and connect! If you have any questions or want to collaborate, please reach out. 🌟
 
 </p>
