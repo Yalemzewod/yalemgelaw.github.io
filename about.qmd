@@ -1,6 +1,6 @@
 ---
-title: "about"
-subtitle: "a bit about me - education, skll and work experience"
+title: "About"
+subtitle: "A bit about me - Education, Skills and Experience"
 title-block-banner: true
 ---
 
