@@ -45,15 +45,19 @@ website:
       - icon: twitter
         href: https://twitter.com/yalassefa
         aria-label: Quarto Twitter
+        target: _blank
       - icon: github
         href: https://github.com/yalemzewod
         aria-label: Quarto GitHub
+        target: _blank
       - icon: linkedin
         href: https://www.linkedin.com/feed/
         aria-label: Quarto LinKedin
+        target: _blank
       - icon: youtube
         text: YouTube
         href: https://youtube.com/@yz1121?si=y7dpAlVtlEnGRSSm
+        target: _blank
 
 page-footer: 
     background: light
