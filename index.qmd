@@ -12,21 +12,27 @@ about:
    - icon: linkedin
      text: linkdeIn
      href: https://www.linkedin.com/in/yalemzewod-gelaw
+     target: _blank
    - icon: twitter
      text: X
      href: https://twitter.com/yalassefa
+     target: _blank
    - icon: github
      text: GitHub
      href: https://github.com/yalemzewod
+     target: _blank
    - icon: envelop
      text: Email
      href: mailto:'yalassefa@gmail.com'
+     target: _blank
    - icon: orcid
      text: OrcId
      href: https://orcid.org/0000-0002-5338-586X
+     target: _blank
    - icon: youtube
      text: YouTube
      href: https://youtube.com/@yz1121?si=y7dpAlVtlEnGRSSm
+     target: _blank
 toc: false
 anchor-sections: false
 ---
