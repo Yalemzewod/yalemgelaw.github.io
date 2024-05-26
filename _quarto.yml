@@ -26,11 +26,10 @@ website:
     left:
       - href: index.qmd
         text: home
-        #icon: person-badge-fill
-      - about.qmd
-     # - href: skills.qmd
-     #   text: Career Summary
-     #  icon: arrow-right-circle-fill
+        icon: person-badge-fill
+      - href: about.qmd
+        text: About
+        icon: arrow-right-circle-fill
       - href: grantsandawards.qmd
         text: Grants and Awards
         icon: mic-fill
