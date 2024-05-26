@@ -26,9 +26,7 @@ website:
     left:
       - href: index.qmd
         text: home
-      - href: about.qmd
-        text: About
-        icon: person-badge-fill
+      - about.qmd
       - href: grantsandawards.qmd
         text: Grants and Awards
         icon: mic-fill
