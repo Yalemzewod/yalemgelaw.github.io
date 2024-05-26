@@ -7,11 +7,11 @@ author:
     url: https://yalemzewodgelaw.com/
     orcid: 0000-0002-5338-586 
 date: 2024-05-24
+image: "media/R_console.PNG"
 slug: beginner’s guide
 categories: [RStudio, R]
 toc: true
 toc-depth: 2
-css: index.css
 number-sections: false
 highlight-style: github
 format:
@@ -20,7 +20,6 @@ format:
     code-fold: true
     code-summary: "Show the code"
     code-tools: true
-    theme: united 
 knitr: 
  opts_knit: 
    warning: false
