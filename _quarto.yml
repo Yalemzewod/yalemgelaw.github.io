@@ -28,17 +28,15 @@ website:
       - about.qmd
       - href: grantsandawards.qmd
         text: grants & awards
-       # icon: mic-fill
       - href: workshopsandpresentations.qmd
         text: workshops & presentations
-        #icon: mic-fill
       - href: publications.qmd
         text: publications
-        #icon: book-open
       - href: CV/CV_Yalemzewod_Gelaw.pdf
         text: cv
         icon: file-earmark-text-fill
-             
+      - href: tutorial.qmd
+        text: tutorials
     right:
       - icon: twitter
         href: https://twitter.com/yalassefa
