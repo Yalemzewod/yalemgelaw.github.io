@@ -24,19 +24,19 @@ website:
     logo: images/logo.png
     left:
       - href: index.qmd
-        text: Home
-      - About.qmd
+        text: home
+      - about.qmd
       - href: grantsandawards.qmd
-        text: Grants & Awards
+        text: grants & awards
        # icon: mic-fill
       - href: workshopsandpresentations.qmd
-        text: Workshops & Presentations
+        text: workshops & presentations
         #icon: mic-fill
       - href: publications.qmd
-        text: Publications
+        text: publications
         #icon: book-open
       - href: CV/CV_Yalemzewod_Gelaw.pdf
-        text: CV
+        text: cv
         icon: file-earmark-text-fill
              
     right:
