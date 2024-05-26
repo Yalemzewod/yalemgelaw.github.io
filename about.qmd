@@ -6,15 +6,17 @@ title-block-banner: true
 
 ## {{< fa briefcase title="Current Affiliation" >}} Current Affiliation: 
 
-I'm a Senior Data Scientist in the Western Australia Department of Health at Perth Australia, where I'm managing, analysing and visualizing complex big and longitudinal cloud-based data to develop a deep dive dashboard to provide a better understanding of patients journey related to safety and clinical quality.
+I'm a Senior Data Scientist in the Western Australia Department of Health in Perth Australia, where I'm managing, analysing and visualizing complex big and longitudinal cloud-based data to develop a deep dive dashboard to provide a better understanding of patient journey related to safety and clinical quality.
 
 ## {{< fa graduation-cap title="Education" >}} Education:
 
-My background is in Environmental Health then Master of Public Health in Epidemiology and Biostatistics. I earned my PhD degree from the University of Queensland (UQ), where I specialized in mathematical modelling, data visualization, statistical analysis, and spatial modelling. My studies equipped me with the tools to tackle unique data challenges within the healthcare sector. Since the beginning of my study in UQ, I started to learn coding. My first programming language was R, and thanks to the great supportive R community, I absolutely loved it and able to use on my day-to-day data analysis and visualization work.
+I have a background in Environmental Health and a Master of Public Health in Epidemiology and Biostatistics. I earned my PhD from the University of Queensland, specializing in mathematical modelling, data visualization, statistical analysis, and spatial modelling. My studies provided me with tools to address unique data challenges in the healthcare sector.
+
+During my time at UQ, I learned coding, starting with R. The supportive R community fostered my love for the language, and I now use it regularly for data analysis and visualization.
 
 ## {{< fa history title="Work Experience" >}} Work Experience: 
 
-I have diverse working experience from the opportunity to work in the Ethiopian Health System at the district health office holding different positions (2007 -- 2011), University Lecturer at the University of Gondar (2013 -- 2016), Epidemiologist in the Queensland Department of Health (2019 -- 2020), Postdoctoral Research positions (2020 -- 2023). Since Nov 2024, I'm a senior data scientist at WA Department of Health.
+I have diverse working experience, including roles in the Ethiopian Health System at the district health office (2007–2011), University Lecturer at the University of Gondar (2013–2016), Epidemiologist in the Queensland Department of Health (2019–2020), and Postdoctoral Research positions (2020–2023). Currently, I am a Senior Data Scientist at the WA Department of Health.
 
 ## {{< fa tools title="Skills" >}} Skills: 
 
@@ -25,6 +27,6 @@ I'm proficient in various software tools, including R, SQL, Python, and PowerBI.
 #| fig-align: center
 #| fig-width: 5
 #| fig-height: 3
-#| fig-alt: "The name, 'sam csik' in white lettering. Above 'csik' sits a horizontal dark green bar. Above the green bar is a white chick."
-knitr::include_graphics("images/logos/logo-light.png")
+#| fig-alt: "The logo for "Data Mastery Hub" features a vibrant design with a central orange and yellow map pin containing the initials "YG" in white, surrounded by various data-related icons on a blue circular background, with the text "DATA MASTERY HUB" in bold black letters beneath it."
+knitr::include_graphics("images/logo.png")
 ```
