@@ -35,7 +35,7 @@ website:
       - href: CV/CV_Yalemzewod_Gelaw.pdf
         text: cv
         icon: file-earmark-text-fill
-      - href: tutorial.qmd
+      - href: tutorials.qmd
         text: tutorials
     right:
       - icon: twitter
