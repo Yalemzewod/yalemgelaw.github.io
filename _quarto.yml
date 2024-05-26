@@ -54,6 +54,9 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/feed/
         aria-label: Quarto LinKedin
+      - icon: youtube
+        text: YouTube
+        href: https://youtube.com/@yz1121?si=y7dpAlVtlEnGRSSm
 
 page-footer: 
     background: light
