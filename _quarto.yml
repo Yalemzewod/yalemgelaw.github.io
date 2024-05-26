@@ -25,8 +25,9 @@ website:
     logo: images/logo.png
     left:
       - href: index.qmd
-        text: About
-        icon: person-badge-fill
+        text: home
+        #icon: person-badge-fill
+      - about.qmd
       - href: skills.qmd
         text: Career Summary
         icon: arrow-right-circle-fill
