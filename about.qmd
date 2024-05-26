@@ -21,12 +21,3 @@ I have diverse working experience, including roles in the Ethiopian Health Syste
 ## {{< fa tools title="Skills" >}} Skills: 
 
 I'm proficient in various software tools, including R, SQL, Python, and PowerBI. Whether it's analysing epidemiological trends, creating compelling visualizations, or building predictive models, I'm always up for a data-driven adventure.
-
-```{r}
-#| echo: false
-#| fig-align: center
-#| fig-width: 5
-#| fig-height: 3
-#| fig-alt: "The logo for "Data Mastery Hub" features a vibrant design with a central orange and yellow map pin containing the initials "YG" in white, surrounded by various data-related icons on a blue circular background, with the text "DATA MASTERY HUB" in bold black letters beneath it."
-knitr::include_graphics("images/logo.png")
-```
