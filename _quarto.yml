@@ -2,8 +2,7 @@ project:
   type: website
   preview:
     port: 4200
-    browser: true
-    
+    browser: true    
 
 execute:
   freeze: auto
@@ -39,8 +38,7 @@ website:
       - href: CV/CV_Yalemzewod_Gelaw.pdf
         text: CV
         icon: file-earmark-text-fill
-        
-      
+             
     right:
       - icon: twitter
         href: https://twitter.com/yalassefa
