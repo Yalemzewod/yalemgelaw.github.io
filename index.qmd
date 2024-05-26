@@ -1,6 +1,6 @@
 ---
 pagetitle: "DataMasteryHub"
-title: "Yalemzewod Gelaw"
+title: ""
 image: "images/yalem.jpg"
 about: 
  template: jolla
