@@ -7,7 +7,7 @@ author:
     url: https://yalemzewodgelaw.com/
     orcid: 0000-0002-5338-586 
 date: 2024-05-24
-image: "media/rstudio.PNG"
+image: "media/rstudio.png"
 slug: beginner’s guide
 categories: [RStudio, R]
 toc: true
