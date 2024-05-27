@@ -7,7 +7,7 @@ author:
     url: https://yalemzewodgelaw.com/
     orcid: 0000-0002-5338-586 
 date: 2024-05-24
-image: "media/R_console.PNG"
+image: "media/rstudio.PNG"
 slug: beginner’s guide
 categories: [RStudio, R]
 toc: true
@@ -27,7 +27,7 @@ knitr:
 ---
 
 ::: callout-note
-# What's in it for you?
+## What's in it for you?
 
 -   Overview of RStudio
 
@@ -80,7 +80,7 @@ In RStudio, a project is a self-contained environment that manages all the files
 
 Once a project is set up, RStudio will automatically set your working directory to the project's root folder each time you open it, which is incredibly convenient for file management and relative paths in your code.
 
-### Set working directory
+## Set working directory
 
 Set working directory is to tell R where to look for files and where to save outputs.
 
@@ -106,7 +106,7 @@ setwd(path) # tell R to access the file from 'R_training' folder
 getwd() # check the file folder
 ```
 
-### Operators in R
+## Operators in R
 
 **Basic arithmetic and logical operators to perform mathematical operations and expressions in R are:**
 
@@ -173,9 +173,9 @@ getwd() # check the file folder
 |                           | | `[1] FALSE FALSE TRUE TRUE TRUE`                                                                                                                                                           |
 +---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-### Coding Basic Expression
+## Coding Basic Expression
 
-| Welcome to to your first R programming experience if it's your first time using R. In RStudio, you can write in two places: the console and R scripts.
+| Welcome to your first R programming experience if it's your first time using R. In RStudio, you can write in two places: the console and R scripts.
 | R Console: This is where you can directly enter and run R commands:
 
 ![R Console](media/R_console.PNG){fig-align="center"}
@@ -186,15 +186,15 @@ getwd() # check the file folder
 1 + 1 # sum
 3^2 # sqrt
 3**2
-13%%2 #reminder/moduous
+13%%2 #reminder/modules
 8/4 # divided
 2*4 # multiplication
 ```
 
 ::: callout-important
-#### Order of Operation
+## Order of Operation
 
-Understanding the order of arithmetic operation in R is crucial. The order from highest to lowest:
+Understanding the order of arithmetic operations in R is crucial. The order from highest to lowest:
 
 **Parenthesis:** `()`
 
@@ -209,7 +209,7 @@ Understanding the order of arithmetic operation in R is crucial. The order from 
 **Subtraction:** `-`
 :::
 
-Lets practice using these operations:
+Let's practice using these operations:
 
 ```{r, order_of_operation, eval=FALSE}
 
@@ -217,7 +217,7 @@ Lets practice using these operations:
 
 ```
 
-#### Mathematical functions:
+## Mathematical functions:
 
 ```{r, maths_ope, eval=FALSE}
 
@@ -231,11 +231,11 @@ log10(10)
 exp(0.5) 
 ```
 
-#### **Character operation**
+## **Character operation**
 
 | R can also work with text.
 | R uses the print function to display the variables
-| The function `paste` and `past0` used to format texts and variables together. For you challenge, what do you notice the difference between paste() and paste0()
+| The function `paste` and `past0` used to concatenate texts and variables together. For your challenge, what do you notice the difference between paste() and paste0()
 
 ```{r, text, eval=FALSE}
 
@@ -255,9 +255,9 @@ print(message2)
 rep("hello",10)
 ```
 
-#### Logical operation
+## Logical operation
 
-A logical value is often created via comparison between variables.
+A logical value is often created via a comparison between variables.
 
 ```{r, comparing, eval=FALSE}
 test = 89
@@ -276,7 +276,7 @@ x < y & is.even
 x > y | x > z
 ```
 
-Let's create a scenario related to COVID-19 data analysis where we compare the number of cases and deaths in different countries.
+Let's create a scenario related to COVID-19 data analysis where you compare the number of cases and deaths in different countries.
 
 ```{r, comapr, eval=FALSE}
 # Assume we have COVID-19 data for three countries: USA, India, and Brazil
@@ -323,7 +323,7 @@ if (USA_more_deaths) {
 
 ```
 
-### Variable assignment
+## Variable assignment
 
 <div>
 
@@ -351,7 +351,7 @@ print(message)
 
 ```
 
-In R, the traditional methods of assigning a value to a variable is using the left arrow `<-`. For example:
+In R, the traditional method of assigning a value to a variable is using the left arrow `<-`. For example:
 
 ```{r, variable, eval=FALSE}
 x <-  2
@@ -390,17 +390,17 @@ round(Test_positive,3)*100
 ?round
 ```
 
-You can also assign date as a variable
+You can also assign a date as a variable
 
 ```{r, date_as_var, eval=FALSE}
 
 # assign today 
 today = Sys.Date() 
-# print the date with text
+# print the date with the text
 paste("Today is", today)
 ```
 
-### Data types and structure
+## Data types and structure
 
 R has several basic data types:
 
@@ -459,7 +459,7 @@ print(comp)
 ?typeof()
 ```
 
-#### **Data Structures in R**
+## **Data Structures in R**
 
 R has several data structures to organize data:
 
@@ -484,12 +484,12 @@ R has several data structures to organize data:
     list <- list(name="Yalem", assessment="malaria", result="Pf", age = 35, height = 1.68)
     print(list)
 
-    # retrive third element of list
+    # retrive third element of the list
     list[3]
     ```
 
     ::: callout-tip
-    ***Challenge : update the list.***
+    ***Challenge: update the list.***
 
     Add the `weight`variable at the end with the value of 65 and update the `result` with 'neg' instead of 'pf'
     :::
@@ -540,13 +540,13 @@ A `pacakge` is a collection of functions developed by R experts for various purp
 
 3.  **Install Packages**: Select **`Install Packages...`** from the drop down menu.
 
-4.  **Choose Package**: In the dialog box, type the name of the package you want to install (e.g., **`tidyverse`**).
+4.  **Choose Package**: In the dialogue box, type the name of the package you want to install (e.g., **`tidyverse`**).
 
 5.  **Install**: Click **`Install`** to download and install the package from CRAN.
 
     ![Install package](media/install_pk.PNG){fig-align="center"}
 
-Example installing package via the command line
+For example installing package via the command line
 
 ```{r, insatll_pck, eval=FALSE}
 
@@ -559,7 +559,7 @@ if (!requireNamespace("tidyverse", quietly = TRUE)) {
 }
 ```
 
-There are two ways of loading installed packages in R: ***`library()`*** and ***`require()`***, but they have some difference in terms of behavior and usage.
+There are two ways of loading installed packages in R: ***`library()`*** and ***`require()`***, but they have some differences in terms of behaviour and usage.
 
 The `library()` function is commonly used to load packages. If the specified package is not installed, *`library`()* will output an error and stop the execution of the code.
 
@@ -567,15 +567,15 @@ The `library()` function is commonly used to load packages. If the specified pac
 library(sf) #Error in library(sf) : there is no package called ‘sf’
 ```
 
-*The require()* function is useful for conditional loading within function or scripts where you want running even if the package is missing. If the specified package is not installed, **`require()`** will output a warning but continue executing the code.
+*The require()* function is useful for conditional loading within functions or scripts where you want running even if the package is missing. If the specified package is not installed, **`require()`** will output a warning but continue executing the code.
 
 ```{r, require, eval=FALSE, warning=FALSE}
 require(sf) #Warning: there is no package called ‘sf’
 ```
 
-### Getting Help in R
+## Getting Help in R
 
-R has extensive documentation and help feature to assist users. There are different options to search for help:
+R has extensive documentation and help features to assist users. There are different options to search for help:
 
 -   Help function: use **`?`** followed by the function name to get help on that function `?round`
 
@@ -632,7 +632,7 @@ You can import data directly from a website. COVID19 data is available online at
 
 3.  Read the CSV file into R.
 
-In the below example you can load the `COVID-19` data by country. Here's an example:
+In the below example, you can load the `COVID-19` data by country. Here's an example:
 
 ```{r, web, eval=FALSE}
 # Install and load necessary packages
@@ -680,8 +680,8 @@ Example using `read_csv()`:
 aus2 <- read.csv("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/AUS.csv") 
 ```
 
-| Whilst `read.csv()` is the most common way to read data into R, there is the alternative `read_csv()` function (note the underscore). This is part of the tidyverse group of packages and is often a better option for reading in CSV files. This function is quicker, it reads the data in as a tibble instead of a data frame and allows for non standard variable names among other benefits.
-| There are various options you can use when importing data, such as whether to include headers, what character to use for decimal points, what to import as missing values. To explore these options you can look at the help pages e.g. `?read_csv`.
+| Whilst `read.csv()` is the most common way to read data into R, there is the alternative `read_csv()` function (note the underscore). This is part of the tidyverse group of packages and is often a better option for reading in CSV files. This function is quicker, it reads the data in as a tibble instead of a data frame and allows for non-standard variable names among other benefits.
+| There are various options you can use when importing data, such as whether to include headers, what character to use for decimal points, and what to import as missing values. To explore these options you can look at the help pages e.g. `?read_csv`.
 | Excel Files `.xlsx`: To read Excel files into R, use the `read_excel()` function from the `readxl` package.
 | 
 | When reading files in R, you might encounter the use of **`/`** and **`\`**:
@@ -714,7 +714,7 @@ my_stata_data <- read_dta("C://Users/User/Documents/R_training/Tutorial_R/R_Tuto
 
 About the data:
 
-The data I used for this demonstration is a sample of routine leprosy data from Amhara Region, Ethiopia Leprosy surveillance system in 2014. The data were collected and collatd at district level (third adminstrative system) and stored in excel file with four sheets. Let's explore the data
+The data I used for this demonstration is a sample of routine leprosy data from Amhara Region, Ethiopia Leprosy surveillance system in 2014. The data were collected and collated at the district level (third administrative system) and stored in Excel file with four sheets. Let's explore the data
 
 ```{r, import_csv_data, eval=FALSE}
 
@@ -729,7 +729,7 @@ excel_file <- "C://Users/User/Documents/R_training/Tutorial_R/R_Tutorial/Leprosy
 all_sheets <- excel_sheets(excel_file) %>%
   map(~ read_excel(excel_file, sheet = .x)) %>%
   bind_rows(.id = "sheet_name")|> 
-clean_names() #  make the column names readable
+clean_names() #  Make the column names readable
 ```
 
 **Inspect the data**
@@ -742,7 +742,7 @@ View the whole data: You can view the entire dataset by clicking on it in the gl
  View(all_sheets)
 ```
 
-View the Top Five Rows: To quickly inspect the first few rows of the dataset, you can use the head() function to see the top rows and tail() function to see the last rows . This function displays the first n rows of the data.
+View the Top Five Rows: To quickly inspect the first few rows of the dataset, you can use the head() function to see the top rows and the tail() function to see the last rows. This function displays the first n rows of the data.
 
 ```{r, view_rows_of_the_dataframe, eval=FALSE}
 head(all_sheets, 5) # top five
