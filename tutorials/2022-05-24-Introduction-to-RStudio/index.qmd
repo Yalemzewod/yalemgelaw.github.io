@@ -231,7 +231,7 @@ log10(10)
 exp(0.5) 
 ```
 
-## **Character operation**
+## Character operation
 
 | R can also work with text.
 | R uses the print function to display the variables
@@ -400,7 +400,7 @@ today = Sys.Date()
 paste("Today is", today)
 ```
 
-## Data types and structure
+## Data types in R
 
 R has several basic data types:
 
@@ -459,7 +459,7 @@ print(comp)
 ?typeof()
 ```
 
-## **Data Structures in R**
+## Data Structures in R
 
 R has several data structures to organize data:
 
@@ -528,7 +528,7 @@ R has several data structures to organize data:
     print(factor)
     ```
 
-### Installing packages
+## Installing packages
 
 A `pacakge` is a collection of functions developed by R experts for various purposes. R comes with built-in base function like `sum()`, `mean()`, `summay()`, and others. Additionally, you can install extra packages from `CRAN (Comprehensive R Archive Network)` or from GitHub repositories of the package developers. You can install packages from the CRAN in two ways: using the RStudio menu or via the command line.
 
@@ -710,7 +710,7 @@ my_stata_data <- read_dta("C://Users/User/Documents/R_training/Tutorial_R/R_Tuto
 | For `Matlab` files, use `readMat()` from the `R.matlab` package.
 | For binary files, explore relevant functions based on your specific needs
 
-#### Import and Exploring Data
+## Import and Exploring Data
 
 About the data:
 
