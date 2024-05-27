@@ -710,7 +710,6 @@ my_stata_data <- read_dta("C://Users/User/Documents/R_training/Tutorial_R/R_Tuto
 | For `Matlab` files, use `readMat()` from the `R.matlab` package.
 | For binary files, explore relevant functions based on your specific needs
 
-**Import data from local file**
 
 About the data:
 
