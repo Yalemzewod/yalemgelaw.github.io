@@ -1,6 +1,6 @@
 ---
 title: "tutorials"
-subtitle: "some tutorial-related posts"
+subtitle: "tutorial related posts"
 listing:
   contents: tutorials
   sort: "date desc"
