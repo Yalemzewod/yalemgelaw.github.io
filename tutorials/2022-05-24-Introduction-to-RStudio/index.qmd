@@ -6,6 +6,10 @@ author:
   - name: Yalemzewod Gelaw
     url: https://yalemzewodgelaw.com/
     orcid: 0000-0002-5338-586 
+adsense:
+  publisher-id: ca-pub-7959266255261935
+filters:
+- adsense
 date: 2024-05-24
 image: "media/rstudio.png"
 slug: beginner’s guide
@@ -677,7 +681,7 @@ aus <- read.csv("C://Users/User/Documents/R_training/Tutorial_R/R_Tutorial/AUS.c
 Example using `read_csv()`:
 
 ```{r,option2, eval=FALSE}
-aus2 <- read.csv("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/AUS.csv") 
+aus2 <- read_csv("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/AUS.csv") 
 ```
 
 | Whilst `read.csv()` is the most common way to read data into R, there is the alternative `read_csv()` function (note the underscore). This is part of the tidyverse group of packages and is often a better option for reading in CSV files. This function is quicker, it reads the data in as a tibble instead of a data frame and allows for non-standard variable names among other benefits.
