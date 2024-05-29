@@ -6,10 +6,6 @@ author:
   - name: Yalemzewod Gelaw
     url: https://yalemzewodgelaw.com/
     orcid: 0000-0002-5338-586 
-adsense:
-  publisher-id: ca-pub-7959266255261935
-filters:
-- adsense
 date: 2024-05-24
 image: "media/rstudio.png"
 slug: beginner’s guide
@@ -29,7 +25,10 @@ knitr:
    warning: false
    message: false
 ---
-
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7959266255261935"
+     crossorigin="anonymous"></script>
+</head>
 ::: callout-note
 ## What's in it for you?
 
