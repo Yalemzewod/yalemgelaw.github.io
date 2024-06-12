@@ -1,0 +1,710 @@
+region,zone,district,conf_u5,conf_ov5
+Addis Ababa,Addis Ketema,Addis Ketema (AA),8,122
+Addis Ababa,Akaki Kality,Akaki - Kalit,9,81
+Addis Ababa,Bole,Bole,2,8
+Addis Ababa,Kolfe,Kolfe - Keran,38,131
+Addis Ababa,Nifas Silk Lafto,Nefas Silk,1,11
+Addis Ababa,Yeka,Yeka,2,19
+Afar,Zone 1,Adar,350,1970
+Afar,Zone 1,Afambo,681,2435
+Afar,Zone 1,Asayita,486,1489
+Afar,Zone 1,Asayita town,776,2840
+Afar,Zone 1,Chifra,2428,4779
+Afar,Zone 1,Dubti,40,65
+Afar,Zone 1,Dubti town,109,169
+Afar,Zone 1,Elidar,64,270
+Afar,Zone 1,Kori,4,62
+Afar,Zone 1,Mile,791,2178
+Afar,Zone 1,Samera Logiya town,275,1698
+Afar,Zone 2,Abaala,84,197
+Afar,Zone 2,Abaala town,45,245
+Afar,Zone 2,Berahile,367,912
+Afar,Zone 2,Bidu,9,12
+Afar,Zone 2,Dalol,119,222
+Afar,Zone 2,Erebti,126,573
+Afar,Zone 2,Kunneba,468,1887
+Afar,Zone 2,Megale,1124,2334
+Afar,Zone 3,Amibara,4389,17169
+Afar,Zone 3,Arguba,15,140
+Afar,Zone 3,Awash,648,3845
+Afar,Zone 3,Awash town,6,67
+Afar,Zone 3,Dulecha,583,2237
+Afar,Zone 3,Gelalu,570,1970
+Afar,Zone 3,Gewane,422,1074
+Afar,Zone 3,Hanruka,1132,1927
+Afar,Zone 4,Awra (AF),1475,3178
+Afar,Zone 4,Euwa,409,1216
+Afar,Zone 4,Gulina,827,1821
+Afar,Zone 4,Teru,439,1123
+Afar,Zone 4,Yalo,302,1442
+Afar,Zone 5,Dalefage,237,658
+Afar,Zone 5,Dawe,234,767
+Afar,Zone 5,Hadelela,61,173
+Afar,Zone 5,Samurobi,464,959
+Afar,Zone 5,Telalek,620,2031
+Amhara,Awi,Ankasha,11,190
+Amhara,Awi,Ayehu Guwagusa,144,1987
+Amhara,Awi,Banja,4,132
+Amhara,Awi,Chagni town,314,1782
+Amhara,Awi,Dangila,71,1171
+Amhara,Awi,Dangila town,6,91
+Amhara,Awi,Fagta Lakoma,2,59
+Amhara,Awi,Guagusa Shikudad,10,103
+Amhara,Awi,Guangua,56,756
+Amhara,Awi,Injibara town,1,20
+Amhara,Awi,Jawi,3850,16316
+Amhara,Awi,Zigem,202,1419
+Amhara,Bahirdar,Bahir Dar town,2630,13981
+Amhara,Central Gondar,Alfa,250,4479
+Amhara,Central Gondar,Chilga 1,73,2244
+Amhara,Central Gondar,Chilga 2,352,3382
+Amhara,Central Gondar,East Belesa,498,3364
+Amhara,Central Gondar,East Dembia,1059,9496
+Amhara,Central Gondar,Gonder Zuria,3664,23584
+Amhara,Central Gondar,Kinfaz,364,2848
+Amhara,Central Gondar,Lay Armacho,22,1285
+Amhara,Central Gondar,Tach Armacho,2933,14032
+Amhara,Central Gondar,Takusa,305,3660
+Amhara,Central Gondar,Tsegede (AM),1022,9834
+Amhara,Central Gondar,Wegera,32,908
+Amhara,Central Gondar,West Belesa,610,4455
+Amhara,Central Gondar,West Dembiya,412,3849
+Amhara,Dessie,Dessie town,1,2
+Amhara,East Gojjam,Aneded,136,2281
+Amhara,East Gojjam,Awabel,94,2552
+Amhara,East Gojjam,Baso Liben,441,14466
+Amhara,East Gojjam,Bibugn,16,341
+Amhara,East Gojjam,Debay Telatgen,1,13
+Amhara,East Gojjam,Debre Elias,69,4536
+Amhara,East Gojjam,Debre Markos town,12,211
+Amhara,East Gojjam,Dejen,22,728
+Amhara,East Gojjam,Enarj Enawga,36,288
+Amhara,East Gojjam,Enebse Sarmder,2,294
+Amhara,East Gojjam,Enemay,8,148
+Amhara,East Gojjam,Goncha Siso Enebse,18,313
+Amhara,East Gojjam,Guzamn,118,3659
+Amhara,East Gojjam,Hulet Ej Enese,493,2237
+Amhara,East Gojjam,Michakel,16,156
+Amhara,East Gojjam,Mota Town,30,129
+Amhara,East Gojjam,Sedae,2,36
+Amhara,East Gojjam,Shebel Bernta,29,1667
+Amhara,Gondar,Gonder town,459,5425
+Amhara,North Gondar,Addi Arekay,171,2155
+Amhara,North Gondar,Beyeda,1,9
+Amhara,North Gondar,Dabat,507,3481
+Amhara,North Gondar,Debark,191,1846
+Amhara,North Gondar,Janamora,51,1354
+Amhara,North Gondar,Telemt,72,1350
+Amhara,North Shewa,Antsokiya,21,299
+Amhara,North Shewa,Berehet,42,319
+Amhara,North Shewa,Eferatana Gidem,77,458
+Amhara,North Shewa,Ensaro,32,811
+Amhara,North Shewa,Kewet,19,151
+Amhara,North Shewa,Merhabete,45,1602
+Amhara,North Shewa,Mida Woremo,149,3642
+Amhara,North Shewa,Moretna Jiru,1,52
+Amhara,North Shewa,Shoa Robit,123,1461
+Amhara,North Wollo,Bugna,108,1382
+Amhara,North Wollo,Dawunt,1,46
+Amhara,North Wollo,Gidan,1,7
+Amhara,North Wollo,Guba Lafto,97,522
+Amhara,North Wollo,Habru,167,1148
+Amhara,North Wollo,Kobo town,509,2628
+Amhara,North Wollo,Lalibela town,8,54
+Amhara,North Wollo,Lasta,175,1462
+Amhara,North Wollo,Meket,25,426
+Amhara,North Wollo,Raya Kobo,173,3045
+Amhara,North Wollo,Wadla,1,9
+Amhara,North Wollo,Woldiya town,2,86
+Amhara,Oromia Special,Artuma Fursi,140,629
+Amhara,Oromia Special,Bati,96,475
+Amhara,Oromia Special,Bati Town,32,142
+Amhara,Oromia Special,Dewa Cheffa,138,944
+Amhara,Oromia Special,Dewa Harewa,65,456
+Amhara,Oromia Special,Jilye Tumuga,522,1538
+Amhara,Oromia Special,Kemisie town,44,364
+Amhara,South Gondar,Debre Tabor town,6,253
+Amhara,South Gondar,Dera (AM),3495,23172
+Amhara,South Gondar,East Esite,235,5076
+Amhara,South Gondar,Ebenat,555,5505
+Amhara,South Gondar,Farta,217,2261
+Amhara,South Gondar,Fogera,3898,23331
+Amhara,South Gondar,Guna Begemider,81,1422
+Amhara,South Gondar,Lay Gayint,61,1506
+Amhara,South Gondar,Libokemekem,1603,16019
+Amhara,South Gondar,Mena Meketewa,3,204
+Amhara,South Gondar,Sede Muja,115,1240
+Amhara,South Gondar,Semada,119,1797
+Amhara,South Gondar,Tach Gayint,9,334
+Amhara,South Gondar,West Esite,580,5183
+Amhara,South Gondar,Woreta town,1046,6718
+Amhara,South Wollo,Ambasel,10,53
+Amhara,South Wollo,Argoba,34,342
+Amhara,South Wollo,Borena /Debresina,3,419
+Amhara,South Wollo,Delanta,5,95
+Amhara,South Wollo,Kalu,286,2186
+Amhara,South Wollo,Kelela,42,1363
+Amhara,South Wollo,Kombolcha town,4,324
+Amhara,South Wollo,Kutaber,5,59
+Amhara,South Wollo,Legambo,2,10
+Amhara,South Wollo,Legehida,5,24
+Amhara,South Wollo,Mehal Sayint,12,105
+Amhara,South Wollo,Sayint,10,164
+Amhara,South Wollo,Tenta,2,26
+Amhara,South Wollo,Thehulederie,21,241
+Amhara,South Wollo,Wegde,9,402
+Amhara,South Wollo,Worebabu,29,100
+Amhara,Waghimera,Abergele (AM),758,4915
+Amhara,Waghimera,Dehana,51,511
+Amhara,Waghimera,Gaz Gibla,5,27
+Amhara,Waghimera,Sahila,205,1870
+Amhara,Waghimera,Sekota,65,982
+Amhara,Waghimera,Zequala,93,1405
+Amhara,West Gojjam,Bahirdar Zuria,1615,9530
+Amhara,West Gojjam,Bure (AM),345,2596
+Amhara,West Gojjam,Bure town,19,185
+Amhara,West Gojjam,Debub Achefer,77,641
+Amhara,West Gojjam,Debub Mecha,15,67
+Amhara,West Gojjam,Dega Damot,82,1409
+Amhara,West Gojjam,Dembecha,233,1916
+Amhara,West Gojjam,Finote Selam town,195,1031
+Amhara,West Gojjam,Gonje,278,2014
+Amhara,West Gojjam,Jabi Tehnan,789,4240
+Amhara,West Gojjam,Mecha,30,289
+Amhara,West Gojjam,Quarit,160,2144
+Amhara,West Gojjam,Sekela,30,1463
+Amhara,West Gojjam,Semen Achefer,260,2384
+Amhara,West Gojjam,Wemberma,717,4170
+Amhara,West Gojjam,Yilmana Densa,281,2218
+Amhara,West Gondar,Adagn Ager Chaqo,1250,5113
+Amhara,West Gondar,Gendawuha town,612,2670
+Amhara,West Gondar,Metema,3264,24343
+Amhara,West Gondar,Mirab Armacho,1039,13085
+Amhara,West Gondar,Quara,3369,18687
+Beneshangul Gumuz,Assosa,Assosa,451,2724
+Beneshangul Gumuz,Assosa,Bambasi,1173,6560
+Beneshangul Gumuz,Assosa,Bilidigilu,2779,8008
+Beneshangul Gumuz,Assosa,Homosha,39,524
+Beneshangul Gumuz,Assosa,Kurmuk,434,1854
+Beneshangul Gumuz,Assosa,Menge,1064,3661
+Beneshangul Gumuz,Assosa,Sherkole,2462,8288
+Beneshangul Gumuz,Assosa,Undulu,748,2156
+Beneshangul Gumuz,Kamashi,Dembi,1266,2876
+Beneshangul Gumuz,Kamashi,Mizyiga,346,1346
+Beneshangul Gumuz,Kamashi,Sedal,854,1866
+Beneshangul Gumuz,Kamashi,Zayi,494,1178
+Beneshangul Gumuz,Mao Komo Special,Maokomo Special,522,2043
+Beneshangul Gumuz,Metekel,Bulen,727,3061
+Beneshangul Gumuz,Metekel,Dangura,1362,5771
+Beneshangul Gumuz,Metekel,Debati,278,1846
+Beneshangul Gumuz,Metekel,Guba,968,4879
+Beneshangul Gumuz,Metekel,Madira,1432,4622
+Beneshangul Gumuz,Metekel,Pawe,826,4528
+Beneshangul Gumuz,Metekel,Wenbera,111,1268
+Dire Dawa,Addis Ketema Operational,Addis Ketema (DD),32,278
+Dire Dawa,Dire Dawa Operational,Legehare,18,259
+Dire Dawa,Gende Kore Operational,Gende Kore,1,9
+Dire Dawa,Jeldessa Operational,Jeldessa,1,2
+Dire Dawa,Melkajebdu Operational,Malka Jabti /M.Jebdu),8,143
+Gambella,Agniwa,Abobo,893,2402
+Gambella,Agniwa,Dima (GM),881,2355
+Gambella,Agniwa,Gambela Zuria,384,1924
+Gambella,Agniwa,Gog,971,849
+Gambella,Agniwa,Jore,107,306
+Gambella,Gambella,Gambela town,4289,9801
+Gambella,Itang Special,Itang,2379,3923
+Gambella,Majang,Godere,499,2335
+Gambella,Majang,Mengesh,340,1258
+Gambella,Nuer,Akobo,367,752
+Gambella,Nuer,Jikawo,993,430
+Gambella,Nuer,Lare,605,1091
+Gambella,Nuer,Makuey,1170,2552
+Gambella,Nuer,Wantawo,651,1155
+Harari,Amir Nur,Amir Nur,19,69
+Harari,Erer,Erer (HR),40,184
+Harari,Hakim,Hakim,50,294
+Harari,Jinela,Jinela,10,83
+Harari,Sofi,Sofi,15,34
+Oromiya,Adama Special,Adama town,7,73
+Oromiya,Arsi,Aseko,15,50
+Oromiya,Arsi,Dodota,1,5
+Oromiya,Arsi,Golocha,14,102
+Oromiya,Arsi,Jeju,25,175
+Oromiya,Arsi,Merti,90,486
+Oromiya,Arsi,Robe,20,107
+Oromiya,Arsi,Seru,86,316
+Oromiya,Arsi,Shanan Kolu,9,34
+Oromiya,Arsi,Sude,10,100
+Oromiya,Bale,Agarfa,2,10
+Oromiya,Bale,Berbere,1,9
+Oromiya,Bale,Gasera,3,10
+Oromiya,Bale,Meda Welabu,1,3
+Oromiya,Bale,Mena (Bale),2,3
+Oromiya,Bishan Guracha,Bishan Guracha,103,665
+Oromiya,Bishoft,Bishoftu town,18,143
+Oromiya,Borena,Arero,126,642
+Oromiya,Borena,Dhas,110,86
+Oromiya,Borena,Dilo,67,140
+Oromiya,Borena,Dire,1,3
+Oromiya,Borena,Dubluk,1,6
+Oromiya,Borena,Elwaya,63,438
+Oromiya,Borena,Gomole,1,3
+Oromiya,Borena,Moyale (OR),116,431
+Oromiya,Borena,Teltale,443,1966
+Oromiya,Buno Bedele,Badele Zuria,15,72
+Oromiya,Buno Bedele,Borecha,7,31
+Oromiya,Buno Bedele,Chora (Buno Bedele),2,11
+Oromiya,Buno Bedele,Chwaka,118,929
+Oromiya,Buno Bedele,Dabo Hana,2,24
+Oromiya,Buno Bedele,Dedesa,54,192
+Oromiya,Buno Bedele,Gechi,18,116
+Oromiya,Buno Bedele,Meko,4,46
+Oromiya,Dukem Special,Dukem,4,22
+Oromiya,East Bale,Dawe Ketchen,3,14
+Oromiya,East Bale,Gololcha Bale,2,15
+Oromiya,East Bale,Lege Hida,22,55
+Oromiya,East Bale,Rayitu,21,61
+Oromiya,East Bale,Seweyna,7,21
+Oromiya,East Hararge,Aweday town,2,4
+Oromiya,East Hararge,Babile (OR),35,275
+Oromiya,East Hararge,Babile town,4,42
+Oromiya,East Hararge,Bedeno,12,189
+Oromiya,East Hararge,Chinaksen,1,2
+Oromiya,East Hararge,Fedis,78,1154
+Oromiya,East Hararge,Girawa,2,29
+Oromiya,East Hararge,Golo Oda,4,70
+Oromiya,East Hararge,Haro Maya,9,59
+Oromiya,East Hararge,Kersa (East Hararge),10,140
+Oromiya,East Hararge,Kurfa Chele,1,3
+Oromiya,East Hararge,Melka Balo,12,52
+Oromiya,East Hararge,Meyu Muleke,10,56
+Oromiya,East Hararge,Midhaga Tola,18,136
+Oromiya,East Shewa,Adaa,2,29
+Oromiya,East Shewa,Adama,112,908
+Oromiya,East Shewa,Adama Tulu Jido Kombolcha,235,847
+Oromiya,East Shewa,Bora (OR),48,191
+Oromiya,East Shewa,Boset,120,860
+Oromiya,East Shewa,Dugda,208,964
+Oromiya,East Shewa,Fentale,408,1758
+Oromiya,East Shewa,Liben Chukala,60,268
+Oromiya,East Shewa,Lome (OR),11,125
+Oromiya,East Shewa,Metehara town,279,1881
+Oromiya,East Wellega,Bila Seyo,1,24
+Oromiya,East Wellega,Boneya Boshe,414,1827
+Oromiya,East Wellega,Diga,159,1036
+Oromiya,East Wellega,Gida Ayana,69,499
+Oromiya,East Wellega,Gobu Seyo,42,301
+Oromiya,East Wellega,Guto Gida,191,1446
+Oromiya,East Wellega,Haro Limu,76,713
+Oromiya,East Wellega,Ibantu,11,61
+Oromiya,East Wellega,Jimma Arjo,85,938
+Oromiya,East Wellega,Kiremu,56,511
+Oromiya,East Wellega,Leka Dulecha,25,195
+Oromiya,East Wellega,Limu (OR),86,486
+Oromiya,East Wellega,Nunu Kumba,134,615
+Oromiya,East Wellega,Sasiga,103,739
+Oromiya,East Wellega,Sibu Sire,67,877
+Oromiya,East Wellega,Wama Hagalo,142,524
+Oromiya,East Wellega,Wayu Tuka,85,620
+Oromiya,Finifine Special,Akaki,25,103
+Oromiya,Finifine Special,Sebeta Hawas,1,12
+Oromiya,Finifine Special,Sululta,2,5
+Oromiya,Guji,Aga Wayu,207,337
+Oromiya,Guji,Ana Sora,1,3
+Oromiya,Guji,Girja /Harenfema,49,95
+Oromiya,Guji,Gora Dola,123,178
+Oromiya,Guji,Gumi Idalo,28,99
+Oromiya,Guji,Liben,16,86
+Oromiya,Guji,Negele town,67,244
+Oromiya,Guji,Odo Shakiso,238,638
+Oromiya,Guji,Saba Boru,418,319
+Oromiya,Guji,Shakiso town,140,201
+Oromiya,Guji,Wadera,41,95
+Oromiya,Horo Gudru Wellega,Ababo,71,5373
+Oromiya,Horo Gudru Wellega,Abay Chomen,137,2111
+Oromiya,Horo Gudru Wellega,Abe Dongoro,68,587
+Oromiya,Horo Gudru Wellega,Amuru,116,440
+Oromiya,Horo Gudru Wellega,Guduru,22,401
+Oromiya,Horo Gudru Wellega,Jarte Jardega,167,387
+Oromiya,Horo Gudru Wellega,Jimma Genete,1,20
+Oromiya,Horo Gudru Wellega,Jimma Rare,6,54
+Oromiya,Ilu Aba Bora,Ale,20,89
+Oromiya,Ilu Aba Bora,Bilo Nopha,1,7
+Oromiya,Ilu Aba Bora,Bure (OR),44,335
+Oromiya,Ilu Aba Bora,Darimu,152,1251
+Oromiya,Ilu Aba Bora,Didu,5,59
+Oromiya,Ilu Aba Bora,Halu /Huka,27,123
+Oromiya,Ilu Aba Bora,Metu town,4,31
+Oromiya,Ilu Aba Bora,Metu Zuria,15,21
+Oromiya,Ilu Aba Bora,Sale Nono,5,14
+Oromiya,Ilu Aba Bora,Yayu,6,15
+Oromiya,Jimma,Agaro town,21,96
+Oromiya,Jimma,Botor Tolay,222,1181
+Oromiya,Jimma,Chora (Jimma),179,426
+Oromiya,Jimma,Dedo,11,66
+Oromiya,Jimma,Gera,49,215
+Oromiya,Jimma,Goma,95,676
+Oromiya,Jimma,Gumay,2,15
+Oromiya,Jimma,Kersa (Jimma),71,193
+Oromiya,Jimma,Limu Kosa,195,475
+Oromiya,Jimma,Limu Seka,276,932
+Oromiya,Jimma,Mancho,6,267
+Oromiya,Jimma,Mena (Jimma),18,32
+Oromiya,Jimma,Nono Benja,415,2223
+Oromiya,Jimma,Omo Beyam,31,10
+Oromiya,Jimma,Omo Nada,73,483
+Oromiya,Jimma,Sekoru,104,630
+Oromiya,Jimma,Shebe Sambo,146,1255
+Oromiya,Jimma,Tiro Afeta,18,232
+Oromiya,Kelem Wellega,Anfilo,11,116
+Oromiya,Kelem Wellega,Dale Sadi,29,127
+Oromiya,Kelem Wellega,Dale Wabera,1181,2611
+Oromiya,Kelem Wellega,Gawo Kebe,709,2237
+Oromiya,Kelem Wellega,Gidami,36,713
+Oromiya,Kelem Wellega,Hawa Galan,50,394
+Oromiya,Kelem Wellega,Jimma Horo,404,1503
+Oromiya,Kelem Wellega,Lalo Kile,17,102
+Oromiya,Kelem Wellega,Sayo,7,521
+Oromiya,Kelem Wellega,Sedi Chenka,103,424
+Oromiya,Kelem Wellega,Yama Logi Welel,36,134
+Oromiya,Mojo,Mojo Town,10,68
+Oromiya,North Shewa,Dera (OR),78,2221
+Oromiya,North Shewa,Gerar Jarso,6,52
+Oromiya,North Shewa,Kuyu,4,42
+Oromiya,North Shewa,Wara Jarso,6,181
+Oromiya,Sebeta,Sebeta town,2,7
+Oromiya,South West Shewa,Ameya,79,406
+Oromiya,South West Shewa,Dawo,1,7
+Oromiya,South West Shewa,Goro (SW Shewa),104,278
+Oromiya,South West Shewa,Ilu,6,24
+Oromiya,South West Shewa,Sodo Daci,1,2
+Oromiya,South West Shewa,Tole,24,148
+Oromiya,South West Shewa,Waliso,38,92
+Oromiya,West Arsi,Arsi Negele,220,544
+Oromiya,West Arsi,Arsi Negele town,34,168
+Oromiya,West Arsi,Heban Arsi,93,186
+Oromiya,West Arsi,Nenesebo,12,40
+Oromiya,West Arsi,Shala,203,689
+Oromiya,West Arsi,Shashemene Zuria,65,303
+Oromiya,West Arsi,Siraro,266,1188
+Oromiya,West Arsi,Wondo,34,229
+Oromiya,West Guji,Abaya,417,2182
+Oromiya,West Guji,Bule Hora,59,317
+Oromiya,West Guji,Bule Hora town,6,37
+Oromiya,West Guji,Dugda Dawa,120,357
+Oromiya,West Guji,Gelana (West Guji),1778,3606
+Oromiya,West Guji,Kercha,6,15
+Oromiya,West Guji,Melka Soda,489,822
+Oromiya,West Guji,Suro Berguda,253,1008
+Oromiya,West Hararge,Anchar,3,21
+Oromiya,West Hararge,Burqua Dhintu,5,5
+Oromiya,West Hararge,Daro Lebu,1,4
+Oromiya,West Hararge,Gemechis,2,4
+Oromiya,West Hararge,Gumbi Bordede,15,33
+Oromiya,West Hararge,Hawi Gudina,11,61
+Oromiya,West Hararge,Mesela,2,4
+Oromiya,West Hararge,Mieso,8,52
+Oromiya,West Shewa,Abuna Ginde Beret,2,13
+Oromiya,West Shewa,Ambo Zuria,7,89
+Oromiya,West Shewa,Bako Tibe,84,668
+Oromiya,West Shewa,Cobi,46,143
+Oromiya,West Shewa,Dano,185,1303
+Oromiya,West Shewa,Dendi,11,18
+Oromiya,West Shewa,Ginde Beret,152,751
+Oromiya,West Shewa,Ifata,45,204
+Oromiya,West Shewa,Illu Galan,123,622
+Oromiya,West Shewa,Jeldu,8,13
+Oromiya,West Shewa,Meta Walkite,1,19
+Oromiya,West Shewa,Mida Kegn,73,877
+Oromiya,West Shewa,Nono,811,2349
+Oromiya,West Shewa,Toke Kutaye,11,39
+Oromiya,West Wellega,Ayira,57,387
+Oromiya,West Wellega,Babo,1106,5755
+Oromiya,West Wellega,Begi,302,1213
+Oromiya,West Wellega,Boji Chekorsa,63,493
+Oromiya,West Wellega,Boji Dirmeji,46,826
+Oromiya,West Wellega,Gimbi,16,111
+Oromiya,West Wellega,Gudetu Kondole,1235,5487
+Oromiya,West Wellega,Guliso,160,945
+Oromiya,West Wellega,Haru,10,54
+Oromiya,West Wellega,Homa,7,30
+Oromiya,West Wellega,Jarso (West Wellega),94,403
+Oromiya,West Wellega,Kiltu Kara,65,453
+Oromiya,West Wellega,Lalo Asabi,45,387
+Oromiya,West Wellega,Leta Sibu,17,190
+Oromiya,West Wellega,Mana Sibu,1554,10249
+Oromiya,West Wellega,Mendi town,21,164
+Oromiya,West Wellega,Nejo,233,2809
+Oromiya,West Wellega,Nejo town,64,406
+Oromiya,West Wellega,Sayo Nole,9,19
+Oromiya,West Wellega,Yubdo,65,479
+Sidama,Aleta Chuko,Aleta Chuko,232,1061
+Sidama,Aleta Wondo,Aleta Wendo,14,109
+Sidama,Aleta Wondo  Administration,Aleta Wondo town,1,5
+Sidama,Arbegona,Arbegona,1,26
+Sidama,Aroressa,Aroresa,1,4
+Sidama,Bensa,Bensa,6,14
+Sidama,Bilate Zuria,Bilate Zuria,223,832
+Sidama,Borricha,Boricha,106,415
+Sidama,Chabe Gambeltu,Chabe Gambeltu,7,73
+Sidama,Chire,Chire,23,225
+Sidama,Dale,Dale,547,3351
+Sidama,Dara,Dara,191,1199
+Sidama,Dara Otilcho,Dara Otilicho,17,57
+Sidama,Darara,Darara,118,240
+Sidama,Daye  Administration,Daye town,37,228
+Sidama,Hawassa City Administration,Hawasa town,1345,6803
+Sidama,Hawassa Zuriya,Hawassa Zuria,298,2380
+Sidama,Hawella,Hawela,2,28
+Sidama,Hoko,Hokko,3,11
+Sidama,Loka Abaya,Loka Abaya,417,1597
+Sidama,Shebedino,Shebe Dino,112,730
+Sidama,Wensho,Wonosho,13,51
+Sidama,Wondo Genet,Wondo-Genet town,23,50
+Sidama,Wondogenet,Wondo-Genet,16,54
+Sidama,Yirgalem  Administration,Yirgalem town,480,882
+SNNP,Ale Special,Alle Special,232,1403
+SNNP,Amaro Special,Amaro,185,1840
+SNNP,Basketo Special,Basketo SP Woreda,704,3148
+SNNP,Burji  Special,Burji Special,414,1358
+SNNP,Derashe Special,Derashe Special,1895,10408
+SNNP,Gamo,Arba Minch town,1433,6089
+SNNP,Gamo,Arba Minch Zuria,952,6797
+SNNP,Gamo,Boreda,511,2182
+SNNP,Gamo,Daramalo,1409,5977
+SNNP,Gamo,Gacho Baba,26,511
+SNNP,Gamo,Garda Marta,252,974
+SNNP,Gamo,Gerese,249,3024
+SNNP,Gamo,Kemba,367,1367
+SNNP,Gamo,Kemba town,336,1005
+SNNP,Gamo,Kucha,802,3148
+SNNP,Gamo,Kucha Alpha,55,405
+SNNP,Gamo,Mirab Abaya,823,3546
+SNNP,Gamo,Selamber town,552,1201
+SNNP,Gedeo,Chelelektu town,151,860
+SNNP,Gedeo,Dila town,217,1210
+SNNP,Gedeo,Dila Zuria,147,659
+SNNP,Gedeo,Gedeb town,11,25
+SNNP,Gedeo,Kochere,16,162
+SNNP,Gedeo,Wenago,10,130
+SNNP,Gedeo,Yirgachefe,2,18
+SNNP,Gedeo,Yirgachefe town,41,297
+SNNP,Goffa,Denba Gofa,712,2594
+SNNP,Goffa,Gezei Gofa,95,617
+SNNP,Goffa,Melekoza,275,821
+SNNP,Goffa,O'yida,146,533
+SNNP,Goffa,Sawla town,1861,4083
+SNNP,Goffa,Uba Debre Tsehay,1947,5548
+SNNP,Goffa,Zala,984,4207
+SNNP,Gurage,Abeshege,258,936
+SNNP,Gurage,Bui town,6,24
+SNNP,Gurage,Butajira town,1,2
+SNNP,Gurage,Cheha,179,742
+SNNP,Gurage,Debub Sodo,135,630
+SNNP,Gurage,Enemor Ener,6,27
+SNNP,Gurage,Enor Ener,2,18
+SNNP,Gurage,Ezha,6,36
+SNNP,Gurage,Kebena,75,321
+SNNP,Gurage,Meskan,14,46
+SNNP,Gurage,Misrak Meskan,5,16
+SNNP,Gurage,Muhur Na Aklil,33,202
+SNNP,Gurage,Sodo,4,21
+SNNP,Gurage,Welkite town,199,704
+SNNP,Hadiya,Analemmo,52,350
+SNNP,Hadiya,Duna,4,41
+SNNP,Hadiya,Gibe,26,237
+SNNP,Hadiya,Gimbichu town,115,1027
+SNNP,Hadiya,Gombora,142,1048
+SNNP,Hadiya,Hosaena town,18,164
+SNNP,Hadiya,Jajura town,25,116
+SNNP,Hadiya,Lemmo,56,269
+SNNP,Hadiya,Mirab Badowach,139,518
+SNNP,Hadiya,Mirab Soro,223,373
+SNNP,Hadiya,Misrak Badawacho,1047,3238
+SNNP,Hadiya,Shashogo,1029,2994
+SNNP,Hadiya,Shone Town,238,818
+SNNP,Hadiya,Siraro Badawacho,588,941
+SNNP,Hadiya,Soro,383,1124
+SNNP,Halaba,Atote Ulo,148,288
+SNNP,Halaba,Kulito town,553,1427
+SNNP,Halaba,Wera,324,879
+SNNP,Halaba,Wera Djo,447,1169
+SNNP,Kembata Tembaro,Adilo,733,3082
+SNNP,Kembata Tembaro,Angacha,23,73
+SNNP,Kembata Tembaro,Damboya,58,536
+SNNP,Kembata Tembaro,Doyogena,4,40
+SNNP,Kembata Tembaro,Durame town,46,126
+SNNP,Kembata Tembaro,Hadero town,12,63
+SNNP,Kembata Tembaro,Hadero Tunto,185,783
+SNNP,Kembata Tembaro,Kacha Bira,298,1595
+SNNP,Kembata Tembaro,Kediada Gambela,9,28
+SNNP,Kembata Tembaro,Shinshincho town,73,240
+SNNP,Kembata Tembaro,Tembaro,784,3408
+SNNP,Konso,Karat town,29,152
+SNNP,Konso,Karat Zuria,388,3312
+SNNP,Konso,Kena,49,1371
+SNNP,Konso,Segen Zuria,93,698
+SNNP,Silte,Dalocha,1073,2388
+SNNP,Silte,Hulbareg,472,1963
+SNNP,Silte,Lanfero,19,58
+SNNP,Silte,Misirak Silti,69,366
+SNNP,Silte,Misrak Azenet Berbere,58,247
+SNNP,Silte,Mito,52,228
+SNNP,Silte,Sankura,3128,4783
+SNNP,Silte,Silti,53,111
+SNNP,Silte,Tora town,141,218
+SNNP,Silte,Worabe town,41,331
+SNNP,South Omo,Bena Tsemay,561,2280
+SNNP,South Omo,Boko Dawula,86,549
+SNNP,South Omo,Dasenech /Kuraz,523,4014
+SNNP,South Omo,Hamer,1740,4832
+SNNP,South Omo,Jinka town,59,280
+SNNP,South Omo,Malie,936,3301
+SNNP,South Omo,North Ari,647,2113
+SNNP,South Omo,Nyngatom,471,1673
+SNNP,South Omo,Salamago,3099,11818
+SNNP,South Omo,South Ari,137,594
+SNNP,Wolayita,Abela Abaya,410,1283
+SNNP,Wolayita,Areka town,247,1317
+SNNP,Wolayita,Bayera Koisha,136,737
+SNNP,Wolayita,Boditi town,37,237
+SNNP,Wolayita,Boloso Bombe,851,4840
+SNNP,Wolayita,Boloso Sore,649,2248
+SNNP,Wolayita,Damot Gale,442,2209
+SNNP,Wolayita,Damot Pullasa,542,2560
+SNNP,Wolayita,Damot Sore,221,1643
+SNNP,Wolayita,Damot Woide,298,1293
+SNNP,Wolayita,Gesuba town,407,1598
+SNNP,Wolayita,Gununo Hamus town,90,494
+SNNP,Wolayita,Hobicha Abaya,107,516
+SNNP,Wolayita,Humbo,226,666
+SNNP,Wolayita,Kindo Daddaye,56,243
+SNNP,Wolayita,Kindo Koyesha,1176,4379
+SNNP,Wolayita,Ofa,110,408
+SNNP,Wolayita,Sodo Town,88,404
+SNNP,Wolayita,Sodo Zuria,166,759
+SNNP,Wolayita,Tebela town,66,196
+SNNP,Yem Special,Yem SP Woreda,1,57
+Somali,Afder,Barey,944,2237
+Somali,Afder,Dolobay,6,17
+Somali,Afder,Kohle /Qoxle,12,19
+Somali,Afder,West Imi,296,1159
+Somali,Dawa,Hudet,12,299
+Somali,Dawa,Moyale (SM),762,1945
+Somali,Dawa,Qada Duma,74,101
+Somali,Erar,Fik,66,342
+Somali,Erar,Lagahida,6,35
+Somali,Erar,Meyumuluka,115,189
+Somali,Erar,Qubi,44,55
+Somali,Fafan,Babile (SM),124,470
+Somali,Fafan,Gursum (SM),52,196
+Somali,Fafan,Shabeeley,17,175
+Somali,Jarar,Aware,92,375
+Somali,Jarar,Bilcil-Bur,2,4
+Somali,Jarar,Burqod,227,480
+Somali,Jarar,Daror,6,63
+Somali,Jarar,Degehabur,50,105
+Somali,Jarar,Dig,12,19
+Somali,Jarar,Gashamo,12,25
+Somali,Jarar,Gunagado,89,123
+Somali,Korahay,Bodaley,54,126
+Somali,Korahay,Goglo,5,77
+Somali,Korahay,Kebridehar town,53,334
+Somali,Korahay,Lasdhankayre,15,79
+Somali,Korahay,Shaygosh,12,212
+Somali,Liben,Bokolmayo,131,267
+Somali,Liben,Dolo Odo,41,97
+Somali,Liben,Filtu,23,16
+Somali,Liben,Goro Baqaqsa,830,1639
+Somali,Liben,Guradamole,22,110
+Somali,Nogob,Ayun,40,123
+Somali,Nogob,Dihun,54,45
+Somali,Nogob,Elwayne,515,1130
+Somali,Nogob,Garbo,4,82
+Somali,Nogob,Hararey,11,10
+Somali,Nogob,Horshagah,177,677
+Somali,Nogob,Sagag,7,112
+Somali,Shebelle,Danan,882,2676
+Somali,Shebelle,East Imi,39,304
+Somali,Shebelle,Elale,322,662
+Somali,Shebelle,Ferfer,81,207
+Somali,Shebelle,Gode,65,77
+Somali,Shebelle,Kelafo,154,344
+Somali,Shebelle,Mustahil,413,888
+Somali,Sitti,Afdem,126,783
+Somali,Sitti,Erer (SM),148,312
+Somali,Sitti,Hadhagala,63,217
+Somali,Sitti,Shinile,460,1098
+South Western Ethiopia,Bench Sheko,Debub Bench,296,1535
+South Western Ethiopia,Bench Sheko,Gidi Bench,14,99
+South Western Ethiopia,Bench Sheko,Gurafereda,1036,3347
+South Western Ethiopia,Bench Sheko,Mizan Aman town,76,301
+South Western Ethiopia,Bench Sheko,Semen Bench,72,572
+South Western Ethiopia,Bench Sheko,Shay Bench,12,608
+South Western Ethiopia,Bench Sheko,Sheko,74,314
+South Western Ethiopia,Dawro,Disa,53,264
+South Western Ethiopia,Dawro,Gena,906,2639
+South Western Ethiopia,Dawro,Isara,118,424
+South Western Ethiopia,Dawro,Kache,62,270
+South Western Ethiopia,Dawro,Loma,711,2990
+South Western Ethiopia,Dawro,Mareka,54,316
+South Western Ethiopia,Dawro,Mari Mansa,25,193
+South Western Ethiopia,Dawro,Tercha town,696,3844
+South Western Ethiopia,Dawro,Tercha Zuriya,476,2394
+South Western Ethiopia,Dawro,Tocha,3,23
+South Western Ethiopia,Dawro,Zabagazo,1027,2624
+South Western Ethiopia,Kaffa,Adiyio,3,13
+South Western Ethiopia,Kaffa,Bita,95,625
+South Western Ethiopia,Kaffa,Bonga town,11,73
+South Western Ethiopia,Kaffa,Chena,97,1347
+South Western Ethiopia,Kaffa,Cheta,9,19
+South Western Ethiopia,Kaffa,Decha,57,532
+South Western Ethiopia,Kaffa,Gewata,3,37
+South Western Ethiopia,Kaffa,Gimbo,109,569
+South Western Ethiopia,Kaffa,Goba (SP),9,44
+South Western Ethiopia,Kaffa,Shisho Ande,3,26
+South Western Ethiopia,Kaffa,Tullo,8,44
+South Western Ethiopia,Konta,Konta,1393,3419
+South Western Ethiopia,Sheka,Tepi,155,451
+South Western Ethiopia,Sheka,Yeki,255,2278
+South Western Ethiopia,West Omo,Bero,1254,2667
+South Western Ethiopia,West Omo,Gachit,150,149
+South Western Ethiopia,West Omo,Gori Gesha,13,64
+South Western Ethiopia,West Omo,Maji,73,559
+South Western Ethiopia,West Omo,Menit Goldiye,230,664
+South Western Ethiopia,West Omo,Menit Shasha,107,701
+South Western Ethiopia,West Omo,Surma,919,2190
+Tigray,Central,Abergele (TG),175,1422
+Tigray,Central,Abi Adi town,1,22
+Tigray,Central,Adet,15,809
+Tigray,Central,Adwa,46,610
+Tigray,Central,Adwa town,27,188
+Tigray,Central,Aheferom,50,492
+Tigray,Central,Kola Temben,160,1082
+Tigray,Central,Laelay Maychew,7,152
+Tigray,Central,Merb Leke,135,913
+Tigray,Central,Tahtay Mayechew,22,724
+Tigray,Central,Werei Leke,88,709
+Tigray,Eastern,Ganta Afeshum,5,62
+Tigray,Eastern,Hawzen,35,327
+Tigray,Eastern,Kelete Awelallo,5,35
+Tigray,Mekelle,Mekelle,8,207
+Tigray,North Western,Asgede,644,4023
+Tigray,North Western,Indasilassie town,51,278
+Tigray,North Western,Laelay Adiabo,154,1442
+Tigray,North Western,Sheraro town,76,264
+Tigray,North Western,Tahtay Adiyabo,623,3561
+Tigray,North Western,Tahtay Koraro,84,1118
+Tigray,North Western,Tselemti,183,1118
+Tigray,North Western,Zana,132,1665
+Tigray,South Eastern,Degua Temben,4,58
+Tigray,South Eastern,Enderta,1,12
+Tigray,South Eastern,Hintalo,6,110
+Tigray,South Eastern,Saharti,213,1106
+Tigray,Southern,Alamata town,38,246
+Tigray,Southern,Raya Alamata,180,1043
+Tigray,Southern,Raya Azebo,301,1804
+Tigray,Western,Kafta Humera,288,4935
+Tigray,Western,Setit Humera,22,314
+Tigray,Western,Tsegede (TG),204,2003
+Tigray,Western,Welkait,521,2984
