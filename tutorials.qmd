@@ -1,8 +1,8 @@
 ---
-title: "tutorials"
-subtitle: "tutorial related posts"
+title: "posts"
+subtitle: "Data analysis in R related posts"
 listing:
-  contents: tutorials
+  contents: posts
   sort: "date desc"
   type: default
   image-align: right
