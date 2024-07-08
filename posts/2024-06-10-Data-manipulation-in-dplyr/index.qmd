@@ -81,7 +81,7 @@ getwd()
 For data management, you will use the `tidyverse` package. Install the package if you haven't installed before using *install.packages("*tidyverse"*)* function.
 
 ```{r,load_package, echo=TRUE, eval=FALSE}
-library(tidyverse)   # To read Excel files
+library(tidyverse)   # To data manipulation
 library(janitor)  # To clean column names
 library(dplyr) # For data wrangling
 library(dplyr)    # For data manipulation
@@ -92,16 +92,15 @@ library(lubridate) # date function
 
 Read the malaria data: The data I used for this post is a sample of routine malaria surveillance data from **Ethiopia**. The data youre collected monthly and collated at the district level (third administrative system) and stored in csv file format.
 
-```{r,path, echo=TRUE, eval=FALSE}
+```{r,path, echo=TRUE}
 malaria_data <- read_csv("C:/Users/User/Documents/R_training/Tutorial_R/data/routine_data.csv")
-
 ```
 
 **Safeguard your data: Make a backup of the data**:
 
 When dealing with large datasets, it’s essential to take precautions. Imagine your data disappearing into the digital abyss—scary, right? To prevent that, always make a backup. Think of it as a safety net for your precious data. Whether you’re crunching numbers, visualizing trends, or building models, follow this golden rule: **Back it up before you hack it up**🔒!
 
-```{r, backup, echo=TRUE, eval=FALSE}
+```{r, backup, echo=TRUE}
 routine_data <- malaria_data #Make a backup 
 ```
 
@@ -119,17 +118,17 @@ View(routine_data)
 
 Alternatively, you may just want to look at a few rows. You can do this by using the `head()` function, which shows us the first six rows of data and `tail()` function, which shows us the lass six rows of the data.
 
-```{r, top,echo=TRUE, eval=FALSE}
+```{r, top,echo=TRUE}
 head(routine_data) # top six rows
 ```
 
-```{r, bottom,echo=TRUE,eval=FALSE}
+```{r, bottom,echo=TRUE}
 tail(routine_data) # bottom six rows
 ```
 
 To understand the structure of the data you can use the `str()` command or `glimpse().`
 
-```{r, attributes,echo=TRUE, eval=FALSE}
+```{r, attributes,echo=TRUE}
 glimpse(routine_data)
 ```
 
@@ -141,31 +140,29 @@ class(routine_data)
 
 For a data frame you can select the nth row, or the nth column using square brackets (note where the comma is paced).
 
-```{r, second_col,echo=TRUE,eval=FALSE}
+```{r, second_col,echo=TRUE}
 head(routine_data[,2], 5) #second column
 ```
 
-```{r, first_row,echo=TRUE,eval=FALSE}
+```{r, first_row,echo=TRUE}
 routine_data[1,] #firts row
 ```
 
 To view all variable names with the `names()`, `colnames()` , and `variable.names()` function.
 
-```{r, col_list,echo=TRUE,eval=FALSE}
+```{r, col_list,echo=TRUE}
 colnames(routine_data)
-names(routine_data)
-variable.names(routine_data)
 ```
 
 To view variable with the position number:
 
-```{r,col_position,echo=TRUE,eval=FALSE}
+```{r,col_position,echo=TRUE}
 names(routine_data)[5]
 ```
 
 There are several incorrect data types in this dataset, but let's continue using the "date" variable to demonstrate how to identify and update these errors:
 
-```{r, data_type,echo=TRUE,eval=FALSE}
+```{r, data_type,echo=TRUE}
 typeof(routine_data$date)
 ```
 
