@@ -25,9 +25,14 @@ knitr:
    warning: false
    message: false
 ---
+
 <head>
+
+```{=html}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7959266255261935" crossorigin="anonymous"></script>
+```
 </head>
+
 ::: callout-note
 ## What's in it for you?
 
@@ -711,7 +716,6 @@ my_stata_data <- read_dta("C://Users/User/Documents/R_training/Tutorial_R/R_Tuto
 | For `SPSS` files, use `read_sav()` from the haven package.
 | For `Matlab` files, use `readMat()` from the `R.matlab` package.
 | For binary files, explore relevant functions based on your specific needs
-
 
 About the data:
 

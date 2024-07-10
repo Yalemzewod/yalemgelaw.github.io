@@ -1,27 +1,15 @@
 ---
-title: "Data manipulation: dplyr"
-description: |
-  Basic data cleaning and management in dplyr
-author: 
-  - name: Yalemzewod Gelaw
-    url: https://yalemzewodgelaw.com/
-    orcid: 0000-0002-5338-586 
-date: 2024-06-12
-image: "media/pc.png"
-slug: beginner’s guide
-categories: [RStudio, Data management]
+title: " Basic data cleaning and management in dplyr"
+author: "Yalemzewod Gelaw"
+date: "`r Sys.Date()`"
 toc: true
 toc-depth: 4
-css: index.css
 number-sections: false
 highlight-style: github
-execute:
-  echo: false
-  eval: true
 format:
   html:
     self-contained: true
-    code-fold: true
+    code-fold: false
     code-summary: "Show the code"
     code-tools: true
     theme: united 
@@ -29,14 +17,8 @@ knitr:
  opts_knit: 
    warning: false
    message: false
+editor: visual
 ---
-
-<head>
-
-```{=html}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7959266255261935" crossorigin="anonymous"></script>
-```
-</head>
 
 # Data management in dplyr
 
@@ -47,7 +29,7 @@ Data can be defined as a collection of facts that can be used to draw a conclusi
 Public health data may originate from various sources including:
 
 | Routine disease surveillance system such as hospital medical records (individual level information) or aggregated data captured through a reporting software - District Health Information Software (DHIS2)
-| Research and surveys - Demographic Health Survey, Malaria Indicator Survey, Survice Provision Assessment
+| Research and surveys - Demographic Health Survey, Malaria Indicator Survey, Service Provision Assessment
 | Administrative - logistic data
 | Vital statistics - birth, death and marriage
 | Literature and reports
@@ -80,59 +62,69 @@ getwd()
 
 For data management, you will use the `tidyverse` package. Install the package if you haven't installed before using *install.packages("*tidyverse"*)* function.
 
-```{r,load_package, echo=TRUE, eval=FALSE}
-library(tidyverse)   # To data manipulation
-library(janitor)  # To clean column names
-library(dplyr) # For data wrangling
-library(dplyr)    # For data manipulation
-library(lubridate) # date function
+```{r,load_package, echo=TRUE, eval=TRUE}
+# Install necessary packages if not already installed
+if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+if (!requireNamespace("janitor", quietly = TRUE)) install.packages("janitor")
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")
+if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")
+if (!requireNamespace("haven", quietly = TRUE)) install.packages("haven")
+
+# Load the packages
+library(tidyverse)   # To read Excel files
+library(janitor)     # To clean column names
+library(dplyr)       # For data wrangling
+library(lubridate)   # Date functions
+library(haven)       # To read stata file
+
 ```
 
 ### 3. Reading and Cleaning Data
 
-Read the malaria data: The data I used for this post is a sample of routine malaria surveillance data from **Ethiopia**. The data youre collected monthly and collated at the district level (third administrative system) and stored in csv file format.
+Read the malaria data: The data I used for this post is a sample of routine malaria surveillance data from **Ethiopia**. The data you're collected monthly and collated at the district level (third administrative system) and stored in csv file format.
 
-```{r,path, echo=TRUE}
+```{r,path, echo=TRUE, eval=TRUE}
 malaria_data <- read_csv("C:/Users/User/Documents/R_training/Tutorial_R/data/routine_data.csv")
+
 ```
 
 **Safeguard your data: Make a backup of the data**:
 
 When dealing with large datasets, it’s essential to take precautions. Imagine your data disappearing into the digital abyss—scary, right? To prevent that, always make a backup. Think of it as a safety net for your precious data. Whether you’re crunching numbers, visualizing trends, or building models, follow this golden rule: **Back it up before you hack it up**🔒!
 
-```{r, backup, echo=TRUE}
+```{r, backup, echo=TRUE, eval=TRUE}
 routine_data <- malaria_data #Make a backup 
 ```
 
-### 3. Skimm the data
+### 3. Skim the data
 
 Knowing your dataset well from file size to data types is another crucial step prior to hands-on data cleaning.
 
 To look at how the data looks like either by clicking on it in the global environment window or by typing the command `View(routine_data)` which opens up a window displaying the data.
 
-```{r, view, echo=TRUE, eval=FALSE}
+```{r, view, echo=TRUE, eval=TRUE}
 View(routine_data)
 ```
 
-![*View data*](media/data_view.png)
+![*View data*](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/data_view.png)
 
 Alternatively, you may just want to look at a few rows. You can do this by using the `head()` function, which shows us the first six rows of data and `tail()` function, which shows us the lass six rows of the data.
 
-```{r, top,echo=TRUE}
+```{r, top,echo=TRUE, eval=TRUE}
 head(routine_data) # top six rows
 ```
 
-```{r, bottom,echo=TRUE}
+```{r, bottom,echo=TRUE,eval=FALSE}
 tail(routine_data) # bottom six rows
 ```
 
 To understand the structure of the data you can use the `str()` command or `glimpse().`
 
-```{r, attributes,echo=TRUE}
+```{r, attributes,echo=TRUE, eval=TRUE}
 glimpse(routine_data)
 ```
 
-From the above results, you can see that the data frame consists of 11,604 observations (rows) and 14 variables (columns). Each variable's name and data type is also listed. The dataset can be read as `data.frame`, `lists`, `tbl_df`, `spatial`. Please refre my previous post on [**Mastering RStudio: A Beginner’s Guide**](https://yalemzewodgelaw.com/tutorials/2022-05-24-introduction-to-rstudio/)for detail note about data structure in R and supplementary [YouTube videos .](https://youtu.be/7MyAEQO3nqM?si=K0l2q8kU2hYaMUiW)
+From the above results, you can see that the data frame consists of 11,604 observations (rows) and 14 variables (columns). Each variable's name and data type is also listed. The dataset can be read as `data.frame`, `lists`, `tbl_df`, `spatial`. Please refer my previous post on [**Mastering RStudio: A Beginner’s Guide**](https://yalemzewodgelaw.com/tutorials/2022-05-24-introduction-to-rstudio/) for detail note about data structure in R and supplementary [YouTube videos .](https://youtu.be/7MyAEQO3nqM?si=K0l2q8kU2hYaMUiW)
 
 ```{r, class,echo=TRUE,eval=FALSE}
 class(routine_data)
@@ -140,45 +132,46 @@ class(routine_data)
 
 For a data frame you can select the nth row, or the nth column using square brackets (note where the comma is paced).
 
-```{r, second_col,echo=TRUE}
+```{r, second_col,echo=TRUE,eval=FALSE}
 head(routine_data[,2], 5) #second column
 ```
 
-```{r, first_row,echo=TRUE}
+```{r, first_row,echo=TRUE,eval=FALSE}
 routine_data[1,] #firts row
 ```
 
 To view all variable names with the `names()`, `colnames()` , and `variable.names()` function.
 
-```{r, col_list,echo=TRUE}
+```{r, col_list,echo=TRUE,eval=FALSE}
 colnames(routine_data)
+names(routine_data)
+variable.names(routine_data)
 ```
 
 To view variable with the position number:
 
-```{r,col_position,echo=TRUE}
+```{r,col_position,echo=TRUE,eval=FALSE}
 names(routine_data)[5]
 ```
 
 There are several incorrect data types in this dataset, but let's continue using the "date" variable to demonstrate how to identify and update these errors:
 
-```{r, data_type,echo=TRUE}
+```{r, data_type,echo=TRUE,eval=FALSE}
 typeof(routine_data$date)
 ```
 
 "Character" is returned but the variable should in fact be a date. you can use the `as.Date` function of `lubridate` package to change the data type accordingly:
 
-```{r, as_date, echo=TRUE, eval=FALSE}
- as.Date(routine_data$date) # to date
+```{r, as_date, echo=TRUE, eval=TRUE}
+ #as.Date(routine_data$date) # to date
 ```
 
-![*Convert to date from a character variable*](media/date.png)
+![*Convert to date from a character variable*](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/date.png)
 
 String inconsistencies: This includes typos, capitalization errors, misplaced punctuation, or similar character data errors that might interfere with data analysis. Take for instance your "Year" column. As you can see there are wrongly entered year 21 and 3021.
 
-```{r, unique_year,echo=TRUE, eval=FALSE}
-routine_data %>% 
-  unique(Year)
+```{r, unique_year,echo=TRUE, eval=TRUE}
+unique(routine_data$Year)
 ```
 
 **Outliers**:
@@ -187,13 +180,13 @@ The dataset has 8 continuous variables: *test_performed*, *confirmed_all, confir
 
 Under 5 confirmed malaria cases:
 
-```{r, hist_u5, echo=TRUE, eval=FALSE}
+```{r, hist_u5, echo=TRUE, eval=TRUE}
 hist(routine_data$confirmed_u5)
 ```
 
 All age confirmed malaria cases:
 
-```{r, hist_all,echo=TRUE, eval=FALSE}
+```{r, hist_all,echo=TRUE, eval=TRUE}
 hist(routine_data$confirmed_all)
 ```
 
@@ -231,15 +224,15 @@ These functions simplify common data manipulation tasks.
 
 This operator allows you to chain commands together. Instead of creating intermediate variables, you can directly link functions.
 
-you use `pipes` when you creating intermediate variables to link commands together . For example, the idea is instead of using :
+You use `pipes` when you creating intermediate variables to link commands together . For example, the idea is instead of using :
 
-```{r,select, echo=TRUE, eval=FALSE}
+```{r,select, echo=TRUE, eval=TRUE}
 select(routine_data, Year)
 ```
 
-building blocks that code readability and reproducibility, making your data workflows more efficient.
+Building blocks that code readability and reproducibility, making your data workflows more efficient.
 
-```{r, pipe, echo=TRUE, eval=FALSE}
+```{r, pipe, echo=TRUE, eval=TRUE}
 routine_data %>% 
   select(Year)
 ```
@@ -248,7 +241,7 @@ routine_data %>%
 
 The `select()` function in R allows you to choose specific columns (variables) from a data frame. Specify the data frame name as the first argument, followed by the column names you want to keep. Example:
 
-```{r, colu, echo=TRUE, eval=FALSE}
+```{r, colu, echo=TRUE, eval=TRUE}
 routine_data %>% 
   select(region,zone,district, 
        Month,date,confirmed_all,test_performed)
@@ -256,7 +249,7 @@ routine_data %>%
 
 To select columns that have common prefix or suffix, you can use the `start_witth()` `contains()`, or `end_with()` functions. Example to subset columns that captured confirmed cases
 
-```{r, start, echo=TRUE, eval=FALSE}
+```{r, start, echo=TRUE, eval=TRUE}
 routine_data %>% 
   select(
     starts_with("confirmed")
@@ -265,7 +258,7 @@ routine_data %>%
 
 contains()
 
-```{r, contain, echo=TRUE, eval=FALSE}
+```{r, contain, echo=TRUE, eval=TRUE}
 routine_data %>% 
   select(
     contains("confirmed")
@@ -274,7 +267,7 @@ routine_data %>%
 
 end_with()
 
-```{r, end, echo=TRUE, eval=FALSE}
+```{r, end, echo=TRUE, eval=TRUE}
 routine_data %>% 
   select(
     ends_with("5")
@@ -287,21 +280,21 @@ The `filter()` function helps you retain only the rows (observations) that mee
 
 For instance: To select rows for the *Tigray* region:
 
-```{r, filter, echo=TRUE, eval=FALSE}
+```{r, filter, echo=TRUE, eval=TRUE}
 routine_data%>% 
   filter(region == "Tigray")
 ```
 
 To choose rows with more than 500 confirmed cases in children under 5:
 
-```{r, pick, echo=TRUE, eval=FALSE}
+```{r, pick, echo=TRUE, eval=TRUE}
 routine_data %>% 
   filter(confirmed_u5 > 500)
 ```
 
-To filter by multiple conditions (e.g., regions “Amhara” or “Afar” with at least 500 confirmed cases in children under 5):
+To filter by multiple conditions (e.g., regions “Amhara” or “Afar” with at least 500 confirmed cases in children under 5 ):
 
-```{r, filter_m, echo=TRUE, eval=FALSE}
+```{r, filter_m, echo=TRUE, eval=TRUE}
 routine_data %>% 
   filter(
     (region == "Amhara" | region == "Afar") &
@@ -312,7 +305,7 @@ routine_data %>%
 
 You can use `filter()` to spot inconsistencies. For instance, find rows where the number of confirmed cases exceeds the number tested:
 
-```{r, inco, echo=TRUE, eval=FALSE}
+```{r, inco, echo=TRUE, eval=TRUE}
 routine_data %>% 
   filter(confirmed_all > test_performed)
 ```
@@ -323,7 +316,7 @@ There may be situations when you want to rename variables in a data frame to mak
 
 Example, if you wanted to change the variable "confirmed_u5" to "conf_u5", and to overwrite the object "routine_data" with this you would simply write:
 
-```{r, rename, echo=TRUE, eval=FALSE}
+```{r, rename, echo=TRUE, eval=TRUE}
 routine_data %>% 
   rename(conf_u5 =confirmed_u5)
 ```
@@ -332,7 +325,7 @@ routine_data %>%
 
 The ***`mutate()`*** function lets you add new variables or modify existing ones. You use the **`=`** sign to assign new values . For example, to calculate the incidence rate of malaria in children under five per 1000 population using the formula `(confirmed_u5 / pop_5) * 1000`, you could write:
 
-```{r,prop, echo=TRUE, eval=FALSE}
+```{r,prop, echo=TRUE, eval=TRUE}
 routine_data %>% 
   mutate(incidence_rate = (confirmed_u5/pop_5)*1000)
 ```
@@ -357,614 +350,24 @@ This will update the **`region`** variable in your data frame.
 
 If you need to make multiple changes based on different conditions, consider using **`case_when`** instead of `ifelse`. Let’s say there are other errors in the district names. You can correct them simultaneously using **`case_when`**.
 
-There is a district name mismatch between district names in **DHIS2** and names in **shapefile**. For this you will use the `task_data.csv`
+There is a district name mismatch between district names in **DHIS2** and names in ***shapefile***. For this you will use the `task_data.csv`
 
-```{r, multiple_change, eval=FALSE, echo=FALSE, include=FALSE}
+```{r, multiple_change, eval=TRUE, echo=TRUE}
 task_data <- read_csv("C:/Users/User/Documents/R_training/Tutorial_R/data/task_data.csv") %>% 
   data.frame() %>% 
  mutate(district_new = case_when(
  district == "Addis Ketema" ~ "Addis Ketema (AA)",
  district == "Nifas Silk Lafto" ~ "Nefas Silk",
- district == "Adaar" ~ "Adar", 
- district == "Ayssaita" ~ "Asayita",
- district == "Aysita City Admin" ~ "Asayita town",
- district == "Dubti City Admin" ~ "Dubti town" ,
- district == "Semera Logia Kentiba" ~ "Samera Logiya town",
- district == "Aba'ala City Admin" ~ "Abaala town",
- district == "Abala" ~ "Abaala",
- district == "Berahle" ~ "Berahile",
- district == "Erabti" ~ "Erebti",
- district == "Koneba" ~ "Kunneba",
- district == "Magale" ~ "Megale", 
- district == "Mille" ~ "Mile",
- district == "Awash Fenteale" ~ "Awash",
- district == "Awash Town" ~ "Awash town", 
- district == "Galalo" ~ "Gelalu", 
- district == "Ewa" ~ "Euwa",
- district == "Yallo" ~ "Yalo",
- district == "Awura" ~ "Awra (AF)",
- district == "Awash Fenteale" ~ "Awash",
- district == "Dalifaghe" ~ "Dalefage",
- district == "Dewe" ~ "Dawe",
- district == "Hadeleala" ~ "Hadelela",
-  district == "Semirobi" ~ "Samurobi",
-  district == "Telalak" ~ "Telalek",
-  district == "Ayehu Guagusa" ~ "Ayehu Guwagusa",
-  district == "Chagni Town" ~ "Chagni town",
-  district == "Guagusa Shikuda" ~ "Guagusa Shikudad",
-  district == "Dangila Town" ~ "Dangila town",  
-  district == "Fagitalekoma" ~ "Fagta Lakoma", 
-  district == "Injibara Town" ~ "Injibara town",
-  district == "Nebaru Chilga" ~ "Chilga 1",
-  district == "Chilga" ~ "Chilga 2",
-  district == "Adagn Ager Chako" ~ "Adagn Ager Chaqo",
-  district == "Gondar Zuriya" ~ "Gonder Zuria",
-  district == "Gondar Town Woreda" ~ "Gonder town",
-  district == "Kinfaze Begela" ~ "Kinfaz",
-  district == "Tegede" ~ "Tsegede (AM)",
-  district == "Wogera" ~ "Wegera", 
-  district == "Bahirdar Town Woreda" ~ "Bahir Dar town",
-  district == "Debay Tilatgin" ~ "Debay Telatgen",
-  district == "Debre Markos" ~ "Debre Markos town",
-  district == "Enarge Enawga" ~ "Enarj Enawga",
-  district == "Enebse Sar Midir" ~ "Enebse Sarmder", 
-  district == "Goncha" ~ "Goncha Siso Enebse",
-  district == "Hulet Eju Nese" ~ "Hulet Ej Enese",
-  district == "Motta" ~  "Mota Town",
-  district == "Sinan" ~"Senan",
-  district == "Adi Arkay" ~ "Addi Arekay",
-  district == "Debark Town" ~ "Debark town", 
-  district == "Debark Zuria" ~ "Debark", 
-  district == "Angolala Tera" ~ "Angolelana Tera", 
-  district == "Antsokia Gemza" ~ "Antsokiya",
-  district == "Asagirt" ~ "Assagirt",
-  district == "Basona Werana" ~ "Basona Worena",
-  district == "Debere Birhan Town" ~ "Debre Berhan town",
-  district == "Efratana Gidim" ~ "Eferatana Gidem",
-  district == "Gishe" ~ "Gishe Rabel",
-  district == "Menz Gera Midir" ~ "Menze Gera Midir",
-  district == "Menz Keya Gebreal" ~ "Menze Keya Gabriel",
-  district == "Menz Lalo Midir" ~ "Menze Lalo Midir",
-  district == "Menz Mama Midir" ~ "Menze Mama Midir",
-  district == "Saya Deberna Wayu" ~ "Siya Debirna Wayu",
-  district == "Mena meketewa" ~ "Mena Meketewa",
-  district == "Shewarobit" ~ "Shoa Robit",
-  district == "Taremaber"~ "Tarema Ber",
-  district == "Bugina" ~ "Bugna", 
-  district == "Kobo Town" ~ "Kobo town",
-  district == "Lalibela Town" ~ "Lalibela town",
-  district == "Mekete" ~ "Meket",
-  district == "Wadila"~"Wadla",
-  district == "Woldia Town" ~ "Woldiya town", 
-  district == "Bati Woreda" ~ "Bati",
-  district == "Dawa Chefa" ~ "Dewa Cheffa", 
-  district == "Dawa Harewa" ~ "Dewa Harewa",
-  district == "Kemissie Town" ~ "Kemisie town",
-  district == "Andabet" ~ "West Esite",
-  district == "Mojana Wodera" ~ "Mojan Wedera",
-  district == "Debretabor Town" ~ "Debre Tabor town",
-  district == "Dera" ~ "Dera (AM)",
-  district == "Estie" ~ "East Esite",
-  district == "Guna begemider" ~ "Guna Begemider",
-  district == "Sedie Muja"~"Sede Muja",
-  district == "Woreta" ~ "Woreta town",
-  district == "Borena" ~ "Borena /Debresina",
-  district == "Dessie Zuriya" ~ "Dessie Zuria",
-  district == "kallu" ~ "Kalu", 
-  district == "Kombolcha Town" ~ "Kombolcha town",
-  district == "Legahida" ~ "Legehida",
-  district == "Dessie Town Woreda" ~ "Dessie town",
-  district == "Mehal Saint" ~ "Mehal Sayint",
-  district == "Tehulederie" ~ "Thehulederie",
-  district == "Werebabo" ~ "Worebabu", 
-  district == "Wereilu" ~ "Were Ilu",
-  district == "Wogidi" ~ "Wegde",
-  district == "Minjarina Shenkora" ~ "Minjar Shenkora",
-  district == "Abergele" ~ "Abergele (AM)",
-  district == "Gazgibla" ~ "Gaz Gibla",
-  district == "Sehala" ~ "Sahila", 
-  district == "Sekota Town" ~ "Sekota town",
-  district == "Burie town" ~ "Bure town",
-  district == "Bure Zuria" ~ "Bure (AM)",
-  district == "Finote Selam Town"~ "Finote Selam town",
-  district == "Wenberma" ~ "Wemberma", 
-  district == "Gendawuha" ~ "Gendawuha town",
-  district == "Dangla Town" ~ "Dangila town",
-  district == "Dangla Zuria" ~ "Dangila",
-  district == "Asosa Town 1" ~ "Undulu", 
-  district == "Oda Bilidigilu" ~ "Bilidigilu",
-  district == "Dambie" ~ "Dembi", 
-  # district == "Kamash town" ~ "Kamashi",
-  district == "Mizhiga" ~ "Mizyiga",
-  district == "Zaye" ~ "Zayi",
-  district == "Dangur" ~ "Dangura", 
-  district == "Dibate" ~ "Debati", 
-  district == "Wembera" ~ "Wenbera",
-  district == "Mao Komo Special" ~ "Maokomo Special",
-  district == "SherKole" ~ "Sherkole",
-  district == "Agalo Meti" ~ "Dembi", 
-  district == "Yaso" ~ "Zayi",
-  district == "Belo Jeganfoy" ~ "Mizyiga",
-  district == "Dire Dawa Operational" ~ "Dire Dawa",
- district == "Addis Ketema Operational" ~ "Addis Ketema (DD)",
- district == "Biyoawale Operational" ~ "Biyoawale",
- district == "Gende Kore Operational" ~ "Gende Kore",
- district == "Jeldessa Operational" ~ "Jeldessa",
- district == "Legehare Operational" ~ "Legehare", 
- district == "Melkajebdu Operational" ~ "Malka Jabti /M.Jebdu)",
- district == "Wahil Operational" ~ "Wahil",
- district == "Dimma" ~ "Dima (GM)",
- district == "Gambella Zuria" ~ "Gambela Zuria",
- district == "Jor" ~ "Jore",
- district == "Gambella Town" ~ "Gambela town",
- district == "Itang Special" ~ "Itang",
- district == "Mengeshi" ~ "Mengesh",
- district == "Wanthoa" ~ "Wantawo",
- district == "Erer" ~ "Erer (HR)",
- district == "Ambo Town" ~ "Ambo town",
- district == "Ada Berga" ~ "Adda Berga",
- district == "Asalla town" ~ "Asela town",
- district == "Bokeji Town" ~ "Bekoji town",
- district == "Deksis" ~ "Diksis",
- district == "Digeluna Tijo" ~ "Degeluna Tijo",
- district == "Abe Dengoro" ~ "Abe Dongoro",
- district == "Enkelo Wabe" ~ "Inkolo Wabe", 
- district == "Limuna Bilbilo" ~ "Limu Bilbilo",
- district == "Abichu Gna" ~ "Abichugna Gnea",
- district == "Lode Hetosa" ~ "Lude Hitosa",
- district == "Munesa" ~ "Munessa",
- district == "Dello menna" ~ "Mena (Bale)",
- district == "Goba Town" ~ "Goba town",
- district == "Goba" ~ "Goba (OR)",
- district == "Goro" ~ "Goro (Bale)",
- district == "Goro Dola" ~ "Gora Dola",
- district == "Guradhamole" ~ "Gura Damole",
- district == "Harena Bulluk" ~ "Harena Buluk",
- district == "Dukem Special" ~ "Dukem",
- district == "Medawelabu" ~ "Meda Welabu",
- district == "Das" ~ "Dhas",
- district == "Dubluki" ~ "Dubluk",
- district == "Elwaye" ~ "Elwaya",
- district == "Moyale (OR)" ~ "Moyale (OR)",
- district == "Taltale" ~ "Teltale", 
- district == "Adama Special" ~ "Adama town",
- district == "Yabelo Town" ~ "Yabelo town",
- district == "Bedele Town" ~ "Bedele town",
- district == "Bedele" ~ "Badele Zuria",
- district == "Chora" ~ "Chora (Buno Bedele)",
- district == "Chewaka" ~ "Chwaka",
- district == "Fitche Town" ~ "Fiche town",
- district == "Dawe kachen" ~ "Dawe Ketchen",
- district == "Ginnir Town" ~ "Ginir town",
- district == "Ginnr" ~ "Ginir",
- district == "Gololcha" ~ "Golocha",
- district == "Gololcha (EB)" ~ "Gololcha Bale",
- district == "Laga Hidha" ~ "Lege Hida",
- district == "Gawo kebe" ~ "Gawo Kebe",
- district == "Sewena" ~ "Seweyna",
- district == "Aweday Town" ~ "Aweday town",
- district == "Babile Town" ~ "Babile town",
- district == "Babile" ~ "Babile (OR)",
- district == "Deder Town" ~ "Deder town",
- district == "Agaro Town" ~ "Agaro town",
- district == "Gursum" ~ "Gursum (OR)",
- district == "Haromaya Town" ~ "Haromaya town",
- district == "Haromaya" ~ "Haro Maya",
- district == "Jarso (EH)" ~ "Jarso (East Hararghe)",
- district == "Jarso" ~ "Jarso (West Wellega)",
- district == "Kersa" ~ "Kersa (East Hararge)",
- district == "Haro walabu" ~ "Haro Walabu", 
- district == "Mendi Twon" ~ "Mendi town",
- district == "Kurfa Chale" ~ "Kurfa Chele",
- district == "Melkabello" ~ "Melka Balo",
- district == "Meye Muluke" ~ "Meyu Muleke",
- district == "Midaga Tola" ~ "Midhaga Tola",
- district == "Bishoft Town" ~ "Bishoftu town",
- district == "Bora" ~ "Bora (OR)",
- district == "Billo Nopha" ~ "Bilo Nopha",
- district == "Liben (EH)" ~ "Liben Chukala",
- district == "Liben (Guji)" ~ "Liben",
- district == "Lume" ~ "Lome (OR)",
- district == "Metehara Town" ~ "Metehara town",
- district == "Boneya Bushe" ~ "Boneya Boshe",
- district == "Ebantu"~ "Ibantu",
- district == "Bule Hora Town" ~ "Bule Hora town",
- district == "Jima Arjo" ~ "Jimma Arjo",
- district == "Kiramu" ~ "Kiremu",
- district == "Limu" ~ "Limu (OR)",
- district == "Gudeya Bila" ~ "Bila Seyo",
-district == "Meta Welkite" ~ "Meta Walkite",
-district == "Leqa Dulecha" ~ "Leka Dulecha",
-district == "Arsi Negele Rural" ~ "Arsi Negele",
-district == "Arsi Negele Town" ~ "Arsi Negele town",
-district == "Nekemte Town" ~ "Nekemte town",
-district == "Wayu Tuqa" ~ "Wayu Tuka",
-district == "Berek" ~ "Bereh",
-district == "Sebeta Town" ~ "Sebeta town",
-district == "Senadafa" ~ "Sendafa town",
-district == "Holota Town" ~ "Holeta town",
-district == "Lega Tafo Lega Dadhi Town" ~ "Lege Tafo-Lege Dadi town",
-district == "Sululta Town" ~ "Sululta town",
-district == "Aga wayyu" ~ "Aga Wayu",
-district == "Anna Sorra" ~ "Ana Sora",
-district == "Girja" ~ "Girja /Harenfema",
-district == "Gumi Eldalo" ~ "Gumi Idalo",
-district == "Wadara" ~ "Wadera",
-district == "Woliso Town" ~ "Woliso town",
-district == "Horo Bulluq" ~ "Horo Buluk",
-district == "shambu" ~ "Shambu town",
-district == "Becho" ~ "Becho (Ilu Aba Bora)",
-district == "Bure" ~ "Bure (OR)",
-district == "Doranii" ~ "Dorani",
-district == "Halu" ~ "Halu /Huka",
-district == "Hurrumuu" ~ "Hurumu",
-district == "Yayo" ~ "Yayu",
-district == "Jimma Special" ~ "Jimma town",
-district == "Gomma" ~ "Goma",
-district == "Kersa (Jimma)" ~ "Kersa (Jimma)",
-district == "Mana" ~ "Mena (Jimma)",
-district == "Sokoru" ~  "Sekoru",
-district == "Shabe Sombo" ~ "Shebe Sambo",
-district == "Were Jarso" ~ "Wara Jarso",
-district == "Hawa Gelan" ~ "Hawa Galan",
-district == "Gelan Town Special" ~ "Gelana (Finfine)",
-district == "Gola Oda" ~ "Golo Oda",
-district == "Saden Chanka" ~ "Sedi Chenka",
-district == "Yemalogi Welel" ~ "Yama Logi Welel",
-district == "Ginnir" ~ "Ginir",
-district == "Derra" ~ "Dera (OR)",
-district == "Girar Jarso" ~ "Gerar Jarso",
-district == "Chomen Guduru" ~ "Choman Guduru",
-district == "Were Jarso" ~" Wara Jarso",
-district == "Amaya" ~ "Ameya",
-district == "Becho (SW)" ~ "Becho (SW Shewa)",
-district == "Goro (SW)" ~ "Goro (SW Shewa)",
-district == "Kersana Mamila" ~ "Kersana Malima",
-district == "Saden Sodo" ~ "Seden Sodo",
-district == "Sodo Dacha" ~ "Sodo Daci",
-district == "Wonchi" ~ "Wenchi",
-district == "Dodola Rural" ~ "Dodola",
-district == "Dodola Town" ~ "Dodola town",
-district == "Sele Nono" ~ "Sale Nono",
-district == "Seyo" ~ "Sayo",
-district == "Seyo Nole" ~ "Sayo Nole",
-district == "Gedeb Hasasa" ~ "Gedeb Asasa",
-district == "Heben Arsi" ~ "Heban Arsi",
-district == "Qore" ~ "Kore",
-district == "Nansebo" ~ "Nenesebo",
-district == "Shashemene Town" ~ "Shashemene town",
-district == "Gelana" ~ "Gelana (West Guji)",
-district == "Suro Barguda" ~ "Suro Berguda",
-district == "Burka Dhintu" ~ "Burqua Dhintu",
-district == "Chiro" ~ "Chiro town",
-district == "Chiro Zurya" ~ "Chiro Zuria",
-district == "Guba Qoricha" ~ "Goba Koricha",
-district == "Gumbi Bordode" ~ "Gumbi Bordede",
-district == "Oda Bultum" ~ "Kuni /Oda Bultum",
-district == "Metu Town" ~ "Metu town",
-district == "Metu Zuriya" ~ "Metu Zuria",
-district == "Tulo"	~ "Tulo (OR)",
-district == "Abuna Gindeberet" ~ "Abuna Ginde Beret",
-district == "Gindebert" ~ "Ginde Beret",
-district == "Ambo Town" ~ "Ambo town",
-district == "Ambo" ~ "Ambo Zuria",
-district == "Bako Tibe" ~ "Bako Tibe",
-district == "Chelia" ~ "Cheliya",
-district == "Chobi" ~ "Cobi",
-district == "Shakiso Town" ~ "Shakiso town",
-district == "Ejere" ~ "Ejere /Addis Alem",
-district == "Elfata" ~ "Ifata",
-district == "Ilu Galane" ~ "Illu Galan",
-district == "Mida kegni" ~ "Mida Kegn",
-district == "Nonoo" ~ "Nono",
-district == "Babo Gembel" ~ "Babo",
-district == "Boji Choqorsa" ~ "Boji Chekorsa",
-district == "Ganji" ~ "Gaji",
-district == "Negele Town" ~ "Negele town",
-district == "Gimbi Rural" ~ "Gimbi",
-district == "Qondala" ~ "Gudetu Kondole",
-district == "Jarso" ~ "Jarso (West Wellega)",
-district == "Nedjo Town" ~ "Nejo town",
-district == "Mene Sibu" ~ "Mana Sibu",
-district == "Nedjo Rural" ~ "Nejo",
-district == "Gimbi Town" ~ "Gimbi town",
-district == "Gindeberet" ~ "Ginde Beret",
-district == "Areka Town Administration" ~ "Areka town",
-district == "Bishan Guracha Town" ~ "Bishan Guracha",
-district == "Hababo Guduru" ~ "Ababo",
-district == "Ale Special" ~ "Alle Special",
-district == "Arbaminch Town Administration" ~ "Arba Minch town",
-district == "Arbaminch Zuria" ~ "Arba Minch Zuria",
-district == "Chencha Town Adminstration" ~ "Chencha",
-district == "Kogota" ~ "Ezo /Kogota",
-district == "Garda Martha" ~ "Garda Marta",
-district == "Chencha Zuria" ~ "Chencha Zuriya",
-district == "Kemba Town Administration" ~ "Kemba town",
-district == "Kutcha Alpha" ~ "Kucha Alpha",
-district == "Selamber Town Administration" ~ "Selamber town",
-district == "Demboya" ~ "Damboya",
-district == "Chelekleketu Town Administration" ~ "Chelelektu town",
-district == "Chorso" ~ "Churso",
-district == "Dilla Town Administration" ~ "Dila town",
-district == "Dilla Zuria" ~ "Dila Zuria",
-district == "Gedeb Town Woreda Administr" ~ "Gedeb town",
-district == "Kochore" ~ "Kochere",
-district == "Yirgachefe Town Administration" ~ "Yirgachefe town",
-district == "Geze Gofa" ~ "Gezei Gofa",
-district ==	"Sawla Town Administration" ~ "Sawla town",
-district == "Uba Debretsehay" ~ "Uba Debre Tsehay",
-district == "Zalla" ~ "Zala",
-district == "Gerese Zuria" ~ "Gerese",
-district == "Goba (SP)" ~ "Goba (SP)",
-district == "Abeshge" ~ "Abeshege",
-district == "Enor Enner" ~ "Enor Ener",
-district == "Gimbichau Town" ~ "Gimbichu town",
-district == "Karat Town Administration" ~ "Karat town",
-district == "Hadero Tunto Zuriya" ~ "Hadero Tunto",
-district == "Hosaena Town Administration" ~ "Hosaena town",
-district == "Jajura Town" ~ "Jajura town",
-district == "Kemba Town" ~ "Kemba town",
-district == "Buee Town Administration" ~ "Bui town",
-district == "Butajira Town Administration" ~ "Butajira town",
-district == "Emdibir Town Administration" ~ "Emdebir town",
-district == "Enidguagn" ~ "Endiguagn",
-district == "Enemor Ena Enen" ~ "Enemor Ener",
-district == "Milhurna Aklil" ~ "Muhur Na Aklil",
-district == "Wolkite Town Administration" ~ "Welkite town",
-district == "Ann Lemo"~ "Analemmo",
-district == "Lemo" ~ "Lemmo",
-district == "Shone Town Administration" ~ "Shone Town",
-district == "Shashago" ~ "Shashogo",
-district == "Siraro Badewacho" ~ "Siraro Badawacho",
-district == "Atotii Ulo" ~ "Atote Ulo",
-district == "Halaba Kulito Town Administration" ~ "Kulito town",
-district == "Weeraa" ~ "Wera",
-district == "Weeraa Dijjoo" ~ "Wera Djo",
-district == "Doyo Gena" ~ "Doyogena",
-district == "Durame Town Administration" ~ "Durame town",
-district == "Hadero Town Administration" ~ "Hadero town",
-district == "Kacha Birra" ~ "Kacha Bira",
-district == "Kedida Gamela" ~ "Kediada Gambela",
-district == "Shinshicho Town Administration" ~ "Shinshincho town",
-district == "Alicho Wiriro" ~ "Alicho Woriro",
-district == "Hulbarag" ~ "Hulbareg",
-district == "Konta Special" ~ "Konta",
-district == "Kibet Town Administration" ~ "Kibet town",
-district == "Lanfuro" ~ "Lanfero",
-district == "Bulki Town Administration" ~ "Gezei Gofa",
-district == "Mitto" ~ "Mito",
-district == "Tora Town" ~ "Tora town",
-district == "Worabe Town Administration" ~ "Worabe town",
-district == "Baka Dawula" ~ "Boko Dawula",
-district == "Dasenech" ~ "Dasenech /Kuraz",
-district == "Jinka Town Administration" ~ "Jinka town",
-district == "Ngangatom" ~ "Nyngatom",
-district == "Woba Ari" ~ "Wub Ari", 
-district == "Abala Abaya" ~ "Abela Abaya",
-district == "Areka Town"~ "Areka town",
-district == "Bayira Koysha" ~ "Bayera Koisha",
-district == "Bodit Town Administration" ~ "Boditi town",
-district == "Boloso Sore"  ~ "Boloso Sore", 
-district == "Bolosso Bombe" ~ "Boloso Bombe",
-district == "Damot Pulassa" ~ "Damot Pullasa",
-district == "Damot Woyide" ~ "Damot Woide",
-district == "Gesuba Town Administration" ~ "Gesuba town",
-district == "Gununo Hamus Town Administr" ~ "Gununo Hamus town",
-district == "Afdam" ~ "Afdem",
-district == "Hobicha" ~ "Hobicha Abaya",
-district == "Kawo Koysha" ~ "Kawo Koisha",
-district == "Kindo Didaye" ~ "Kindo Daddaye",
-district == "Kindo Koyisha"~ "Kindo Koyesha",
-district == "Offa" ~ "Ofa",
-district == "Abaqaraw" ~ "Aba-Korow",
-district == "Sodo Zuriya"~"Sodo Zuria",
-district == "Sodo Town Administration" ~"Sodo Town",
-district == "Tebela Town Administration" ~ "Tebela town",
-district == "Yem Special" ~"Yem SP Woreda",
-district == "Gide Bench" ~ "Gidi Bench",
-district == "Guraferda" ~ "Gurafereda",
-district == "Mizan Aman Town Administration" ~ "Mizan Aman town",
-district == "Shebench" ~ "Shay Bench",
-district == "Siz Town Administration" ~ "Size town",
-district == "Issara" ~ "Isara",
-district == "Kechi"~ "Kache",
-district == "Mari mansa" ~ "Mari Mansa",
-district == "Tercha Town Administration" ~ "Tercha town",
-district == "Tercha Zuria" ~ "Tercha Zuriya",
-district == "Zaba" ~ "Zabagazo",
-district == "Adiyo" ~ "Adiyio",
-district == "Bonga Town Administration" ~ "Bonga town",
-district == "Gesha" ~ "Gesha",
-district == "Burji  Special" ~ "Burji Special",
-district == "Shishoende" ~ "Shisho Ande",
-district == "Tello" ~ "Tullo",
-district == "Masha Town Administration" ~ "Masha town",
-district == "Teppi Town Administration" ~ "Tepi", 
-district == "Gorigesha" ~ "Gori Gesha",
-district == "Menit Goldia" ~ "Menit Goldiye",
-district == "Weliso Town" ~ "Woliso town",   
-district == "Aroressa" ~ "Aroresa",
-district == "Borricha" ~  "Boricha",
-district == "Hawassa Zuriya" ~ "Hawassa Zuria",
-district == "Wondo Genet Town" ~ "Wondo-Genet town",
-district == "Hawella" ~ "Hawela",
-district == "Leku Town Administration" ~ "Leku town",
-district ==	"Daela" ~ "Daella", 
-district == "Dara Otilcho" ~ "Dara Otilicho",
-district == "Daye Town Administration" ~ "Daye town",
-district == "Wondogenet" ~ "Wondo-Genet", 
-district == "Wensho" ~ "Wonosho",
-district == "Melga" ~ "Malga",
-district == "Gursum (SM)" ~ "Gursum (SM)",
-district == "Yirgalem Town Administration" ~ "Yirgalem town", 
-district == "Aleta Wondo Town Administration" ~ "Aleta Wondo town",
-district == "Hoko" ~ "Hokko",
-district == "Hadagala" ~ "Hadhagala",
-district == "Hamaro" ~ "Hamero",
-district == "Harorays" ~ "Haroreys",
-district == "Horashagah" ~ "Horshagah",
-district == "Hudhet" ~ "Hudet",
-district == "Kadadumo" ~ "Qada Duma",
-district == "Kebridahar" ~ "Kebridehar", 
-district == "Kebridahar town" ~ "Kebridehar town",
-district == "Koran Mula" ~ "Koran /Mulla",
-district == "Lasdhankeyre" ~ "Lasdhankayre",
-district == "Lehelyuub" ~ "Lehel-Yucub", 
-district == "Mayumuluqo" ~ "Meyumuluka", 
-district == "babili" ~ "Babile (SM)",
-district == "Bare" ~ "Barey",
-district == "Bercano" ~ "Berocano",
-district == "Bilcilbur" ~ "Bilcil-Bur",
-district == "Birqod" ~ "Burqod",
-district == "Bodalay" ~ "Bodaley",
-district == "Bokolmanyo" ~ "Bokolmayo",
-district == "Chareti" ~ "Charati",
-district == "Danbal" ~ "Dembel",
-district == "Danot" ~ "Danod",
-district == "Daroor" ~ "Daror",
-district == "Degahbur" ~ "Degehabur",
-district == "Degahbur town" ~ "Degahabur town",
-district == "Dekasuftu" ~ "Deka Suftu",
-district == "Dhagahmadaw" ~ "Degehamedo",
-district == "Dhanan" ~ "Danan",
-district == "Dhoboweyn" ~ "Debeweyin",
-district == "Dollo bay" ~ "Dolobay",
-district == "Dolo Ado" ~ "Dolo Odo",
-district == "Duhun" ~ "Dihun",
-district == "East Imey" ~ "East Imi",
-district == "EL-Ogaden" ~ "El-Ogaden",
-district == "Elele" ~ "Elale",
-district == "Elkari" ~ "Elkare /Serer",
-district == "Erer (SI)" ~ "Erer (SM)",
-district == "Godey" ~ "Gode",
-district == "Maeso" ~ "Miesso",
-district == "Godey City" ~ "Godey town",
-district == "Gorabaqaqsa" ~ "Goro Baqaqsa",
-district == "gota-biki" ~ "Gota-Biki",
-district == "Gura Damole" ~ "Guradamole",
-district == "Moyale" ~ "Moyale (SM)",
-district == "Mubarak" ~ "Mubarek",
-district == "Qabribayah" ~ "Kebribeyah",
-district == "Qabribayah town" ~ "Kebribayah town",
-district == "Qalafo" ~ "Kelafo",
-district == "Qooxle" ~ "Kohle /Qoxle",
-district == "Shabeley" ~ "Shabeeley",
-district == "Shaykosh" ~ "Shaygosh", 
-district == "Togwajale town" ~ "Wajale town",
-district == "West Imay" ~ "West Imi",
-district == "Yahoob" ~ "Yahob",
-district == "yocale" ~ "Yocale",
-district == "Abi Adi" ~ "Abi Adi town",
-district == "Adwa Town" ~ "Adwa town",
-district == "Ahferom" ~ "Aheferom",
-district == "Alamata"~ "Alamata town",
-district == "Asegede Tsimbila" ~ "Asgede",
-district == "Axum Town" ~ "Axum town",
-district == "Degua Tembien" ~ "Degua Temben",
-district == "Erop" ~ "Erob",
-district == "Hawzien" ~ "Hawzen",
-district == "Hintalo Wajerat" ~ "Hintalo",
-district == "Klite Awlaelo" ~ "Kelete Awelallo",
-district == "Kola Tembien" ~ "Kola Temben",
-district == "Korem" ~ "Korem town",
-district == "Lailay Adeyabo" ~ "Laelay Adiabo",
-district == "Maichew" ~ "Maichew town",
-district == "Saesie Tseada Emba" ~ "Saesie",
-district == "Seharti Samre" ~ "Saharti",
-district == "Setit Humra" ~ "Setit Humera",
-district == "Sheraro" ~ "Sheraro town",
-district == "Shire Endasilase" ~ "Indasilassie town",
-district == "Tahtay Adyabo" ~ "Tahtay Adiyabo",
-district == "Tahtay Maychew" ~ "Tahtay Mayechew",
-district == "Tsegede" ~ "Tsegede (TG)",
-district == "Welkayit" ~ "Welkait",
-district == "Weri Leke" ~ "Werei Leke",
-district == "Wukro" ~ "Wukro town",
-district == "Rural Adwa" ~ "Adwa", 
-district == "Naedier Adet" ~ "Adet",
-district == "Tanqua Abergele" ~ "Abergele (TG)",
-district == "Medebay Zana" ~ "Zana",
-district == "Tahtay Qoraro" ~ "Tahtay Koraro",
-district == "Asegede Tsimbila" ~ "Asegede",
-district == "Atsbi Wenberta" ~ "Atsbi",
-district == "Gulomekeda" ~ "Gulo Mekeda",
-district == "Maichew" ~ "Maichew town",
-district == "Argoba Special" ~  "Arguba",
-district == "Ankasha Guagusa"~ "Ankasha" ,
-district == "Dambi Dollo" ~ "Denbi Dollo town",
-district == "Dangila Zuria" ~ "Dangila" ,
-district == "Alefa" ~ "Alfa"  ,
-district == "Akaki Kality" ~ "Akaki - Kalit",
-district == "Kolfe" ~ "Kolfe - Keran",
-district == "Awbare" ~ "Aw-Bare" ,
-district == "Nifas Silk Lafto" ~ "Nefas Silk" ,
-district == "West Dembia" ~ "West Dembiya",
-district == "Gozamin" ~ "Guzamn",
-district == "Machakel" ~ "Michakel",
-district == "Shebel Berenta" ~ "Shebel Bernta", 
-district == "Sedie" ~ "Sedae" ,
-district == "Adigrat" ~ "Adigrat town",
-district == "Jile Timuga" ~ "Jilye Tumuga",
-district == "Libo Kemkem" ~"Libokemekem"  , 
-district == "Ebinat" ~ "Ebenat" ,
-district == "Simada" ~ "Semada",
-district == "dig" ~ "Dig",
-district == "Sekota Zuria" ~"Sekota" , 
-district == "Tsagibji" ~"Tsagbeji" ,
-district == "Ziquala" ~"Zequala" , 
-district == "Bahir Dar Zuria" ~ "Bahirdar Zuria",
-district == "Bure Zuria" ~ "Bure (AM)",
-district == "Semen Mecha" ~ "Mecha" ,
-district == "Gonji Kollela" ~ "Gonje", 
-district == "Mao Komo Special" ~ "Maokomo Special" ,
-district == "Mandura" ~ "Madira" ,
-district == "Pawi" ~ "Pawe",
-district == "Bale Gasgar" ~ "Bele Gesgar"  ,
-district == "Burayu Town" ~ "Burayu",
-district == "Adami Tulu Jido Kombolcha" ~ "Adama Tulu Jido Kombolcha",
-district == "Adola rede" ~ "Adola" ,
-district == "Adola Town" ~ "Adola town",
-district == "Hawassa City Administration" ~ "Hawasa town",
-district == "Jardga Jarte" ~ "Jarte Jardega",
-district == "Jimma Geneti" ~ "Jimma Genete",
-district == "Chora Botor" ~ "Chora (Jimma)",
-district == "Mencho" ~ "Mancho" , 
-district == "Omo Beyem" ~ "Omo Beyam" ,
-district == "Aleta Wondo" ~ "Aleta Wendo" ,
-district == "Sheraro" ~ "Sheraro Town", 
-district == "Shire Endasilase" ~ "Indasilassie town",
-district == "Saesie Tseada Emba" ~ "Saesie",
-district == "Hawzien" ~ "Hawzen",
-district == "Hintalo Wajerat" ~  "Hintalo",
-district == "Seharti Samre" ~ "Saharti" ,
-district == "Amaro Special" ~"Amaro"  ,
-district == "Basketo Special" ~ "Basketo SP Woreda",
-district == "Kamba Zuria" ~ "Kemba",
-district == "Kutcha Zuria" ~ "Kucha" ,
-district == "Woliso"~ "Waliso", 
-district == "Oyida" ~ "O'yida" ,
-district == "East Meskan" ~ "Misrak Meskan" , 
-district == "South Sodo" ~ "Debub Sodo" ,
-district == "Sokoru" ~ "Sekoru" ,
-district == "West Badewacho" ~ "Mirab Badowach",
-district == "Shebedino" ~  "Shebe Dino",
-district == "East Badawacho" ~ "Misrak Badawacho" ,
-district == "Adilo Zuria" ~  "Adilo" ,
-district == "East Azernet Berbere" ~ "Misrak Azenet Berbere" , 
-district == "West Azernet" ~ "Mierab Azenet Berbere" ,
-district == "East Silti" ~ "Misirak Silti",
-district == "North Bench" ~ "Semen Bench" ,
-district == "South Bench" ~ "Debub Bench",
 TRUE ~ district)) %>% 
   select(-district) %>% 
   rename("district" = "district_new") #rename to district
 ```
 
-![district_old vs district_new](media/name_change.png)
+![district_old vs district_new](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/name_change.png)
 
-change the Year column
+Change the Year column
 
-```{r,match_year, echo=TRUE, eval=FALSE}
+```{r,match_year, echo=TRUE, eval=TRUE}
 routine_data %>% 
   mutate(Year = 
     case_when(Year == 21 ~ 2021,
@@ -981,39 +384,39 @@ The distinct() function removes duplicate rows from a data frame based on specif
 
 To remove duplicate rows based on the district column, you can use:
 
-```{r, keep_all, echo=TRUE, eval=FALSE}
+```{r, keep_all, echo=TRUE, eval=TRUE}
 routine_data %>% 
   distinct(district,
            .keep_all = TRUE)
 
 ```
 
-```{r, count, echo=TRUE, eval=FALSE}
+```{r, count, echo=TRUE, eval=TRUE}
 routine_data %>% 
   select(district) %>% 
   distinct() %>% 
   count()
 ```
 
-#### Null values
+#### **Null values**
 
-Null values are treated differently in R. They appear as `NA` in the dataset, so you may expect the following code to work for filtering data to remove all missing values for the number of people tested for malaria:
+*Null values* are treated differently in R. They appear as `NA` in the dataset, so you may expect the following code to work for filtering data to remove all missing values for the number of people tested for malaria:
 
-```{r, na, echo=TRUE, eval=FALSE}
+```{r, na, echo=TRUE, eval=TRUE}
 routine_data %>% 
   filter(test_performed =NA)
 ```
 
 However, this does not work as R has a special way of dealing with missing values. You use the `is.na()` command, which checks fo `NA` values. As with the equals command, if you want the reverse of this, i.e. "not NA" you can use `!is.na()`. So the code to remove missing values would be:
 
-```{r,is_na, echo=TRUE, eval=FALSE}
+```{r,is_na, echo=TRUE, eval=TRUE}
 routine_data %>% 
   filter(!is.na(test_performed))
 ```
 
 Another method for removing missing data in tidyverse is using the `drop_na()` function from *{tidyr}* package. As with the filter function this takes the dataset as the first argument, followed by the variables for which you are dropping NA values.
 
-```{r, drop_na, echo=TRUE, eval=FALSE}
+```{r, drop_na, echo=TRUE, eval=TRUE}
 routine_data_no_NA <- routine_data %>% 
   drop_na(test_performed)
 ```
@@ -1028,7 +431,7 @@ routine_data %>%
 
 ```
 
-```{r, desc, echo=TRUE, eval=FALSE}
+```{r, desc, echo=TRUE, eval=TRUE}
 routine_data %>% 
   arrange(desc(confirmed_u5))
 ```
@@ -1051,18 +454,17 @@ The basic syntax of the relocate() function as follows:
 
 **Example:** Suppose we have a data frame called **`task_data`** with columns: “zone,” “district,” and “Month.” We want to move the “district” column after the “zone” column and before the “Month” column.
 
-```{r, locate, echo=TRUE, eval=FALSE}
+```{r, locate, echo=TRUE, eval=TRUE}
 task_data %>% 
-  relocate(district, .before =  Month)
+  relocate(district, .before =  Month) %>% 
+  head()
 ```
 
-![Relocate](media/relocate.png)
+#### Summarizing data
 
-#### Summarising data
+There are some useful functions in tidyverse to help you summarize the data. The first of these is the `count()` function. This is a quick function which will allow you to quickly count the occurrences of an item within a dataset.
 
-There are some useful functions in tidyverse to help you summarise the data. The first of these is the `count()` function. This is a quick function which will allow you to quickly count the occurrences of an item within a dataset.
-
-```{r, summary, echo=TRUE, eval=FALSE}
+```{r, summary, echo=TRUE, eval=TRUE}
 routine_data %>% 
   filter(region=="Amhara") %>% 
   group_by(region) %>% 
@@ -1071,14 +473,14 @@ routine_data %>%
 
 By including multiple variables in the command you can count the numbers of times that combination of variables appears.
 
-```{r, n, echo=TRUE, eval=FALSE}
+```{r, n, echo=TRUE, eval=TRUE}
 routine_data %>% 
   count(region, Month)
 ```
 
-If you want to summarise numerical variables you can use the function `summarise().` This is used in conjunction with other mathematical functions such as `sum()`, `mean()`, `median()`, `max()`..
+If you want to summarize numerical variables you can use the function `summarise().` This is used in conjunction with other mathematical functions such as `sum()`, `mean()`, `median()`, `max()`..
 
-```{r, na_rm, echo=TRUE, eval=FALSE}
+```{r, na_rm, echo=TRUE, eval=TRUE}
 task_data %>% 
   summarise(total_case = sum(female, male, na.rm = TRUE),
           mean_cases = mean(conf_5),
@@ -1087,9 +489,9 @@ task_data %>%
           sd_case = sd(conf_5))
 ```
 
-you can combine the `summarise()` function with `group_by()` to summarise the data by different variables in the dataset. To calculate the total number of people tested and positive for malaria in each district in our dataset, you would group by this variable first and then summarise the data. Grouping is not restricted to one variable, if you wanted to group the data by location and date then both variables would be included in the command. When you use the `sum()` function , `na.rm = T` logic required if the column has NULL valuses
+you can combine the `summarise()` function with `group_by()` to summarize the data by different variables in the dataset. To calculate the total number of people tested and positive for malaria in each district in our dataset, you would group by this variable first and then summarize the data. Grouping is not restricted to one variable, if you wanted to group the data by location and date then both variables would be included in the command. When you use the `sum()` function , `na.rm = T` logic required if the column has NULL values
 
-```{r, sum, echo=TRUE, eval=FALSE}
+```{r, sum, echo=TRUE, eval=TRUE}
 routine_data %>%  group_by(region) %>% 
 summarise(total_test = sum(test_performed),
 
@@ -1112,7 +514,7 @@ summarise(total_test = sum(test_performed),
 
 -   The **`summarise()`** function computes summary statistics for each group (in this case, each zone).
 
-```{r, subset, echo=TRUE, eval=FALSE}
+```{r, subset, echo=TRUE, eval=TRUE}
 routine_data %>% 
  select(region, zone, district,
          test_performed,confirmed_all,confirmed_u5) %>%  
@@ -1125,31 +527,37 @@ routine_data %>%
 
 Know to take everything you have learnt to import and clean the routine dataset. If you want your output to contain the total numbers of malaria tests performed and the number of confirmed cases in children under 5, people over 5, and calculate a total for all ages. you want to have the total by district level and Year in the dataset. This is how you would go about building the code.
 
-```{r,all, echo=TRUE, eval=FALSE}
-routine_data <- read_csv('~/Part 2/routine_data.csv',
-                         na = c(0, "NA", -9999))
-
+```{r,all, echo=TRUE, eval=TRUE}
 clean_routine_data <- routine_data %>% 
+  # subset
 dplyr::select(region, zone, district, Month, Year,
          test_performed,confirmed_all,
          confirmed_u5,confirmed_5_14,confirmed_15) %>% 
   drop_na(test_performed,confirmed_all,
          confirmed_u5,confirmed_5_14,confirmed_15) %>% 
+  # filter rows if test number is less than confirmed
   filter(test_performed>confirmed_all) %>% 
-  mutate(region = case_when(region =='Sou'~'South Western Ethiopia',
+  # update region
+  mutate(region = case_when(
+    region =='Sou'~'South Western Ethiopia',
              TRUE~region),
+    # update year
              year = case_when(Year == 3021 ~ 2021,
                           Year == 21 ~ 2021,
                           TRUE ~ Year),
+    # to date
          date_reported = make_date(year = Year,
                                    month = Month), 
          conf_ov5 = confirmed_5_14+confirmed_15) %>%
+  # aggregate by region, zone, and district
   group_by(region, zone, district) %>% 
   summarise(test_total = sum(test_performed),
             conf_total = sum(confirmed_all),
             conf_u5 = sum(confirmed_u5),
-           conf_ov5 = sum(conf_ov5)) |> 
+           conf_ov5 = sum(conf_ov5)) %>% 
+  # deselect test_total, -conf_total 
   dplyr::select(-test_total, -conf_total)
+# top six
 head(clean_routine_data)
 ```
 
@@ -1157,15 +565,15 @@ head(clean_routine_data)
 
 In this section you introducing some more advanced functions for data manipulation. you will be using the "clean_routine_data" dataset you just created.
 
-#### Reshshaping data
+#### Reshaping data
 
 Reshaping or pivoting data is an important part of data cleaning and manipulation. Tidyverse has introduced the functions `pivot_wider()` and `pivot_longer()` to improve the ease of reshaping data in R.
 
-`pivot_longer()` takes a wide dataset and converts it into a long one, decreasing the number of columns and increasing the number of rows. Datasets are often created in a wide format, but for analysis a long format is often preferable, especially for data visualisations.
+`pivot_longer()` takes a wide dataset and converts it into a long one, decreasing the number of columns and increasing the number of rows. Datasets are often created in a wide format, but for analysis a long format is often preferable, especially for data visualization.
 
 To reshape the data long you need to pass the argument the columns which are being pivoted, a name for the new column to identify the columns being reshaped, and a name for the values of the columns being reshaped. you can also combine this with helper functions such as `starts_with()` to help identify the columns to reshape. For this demonstration you will use the "clean_data_routine.csv". To reshape the dataset into long format :
 
-```{r, to_long, echo=TRUE, eval=FALSE}
+```{r, to_long, echo=TRUE, eval=TRUE}
 clean_routine_data <- read_csv("C:/Users/User/Documents/R_training/Tutorial_R/data/clean_routine_data.csv")
 
 clean_long <- clean_routine_data %>% 
@@ -1176,7 +584,7 @@ pivot_longer(cols = starts_with("conf"),
 
 ```
 
-to convert the 'clean_long' dataset to wide forma:\
+to convert the `clean_long` dataset to wide forma:\
 
 ```{r, to_wide, eval=FALSE, echo=TRUE}
 clean_long |> 
@@ -1207,11 +615,9 @@ To run the command you need to pass it the data frames you wish to join and the 
 
 If you have two data frames with varying numbers of rows, you can investigate the outcomes of using the different join commands. Firstly, you create two data frames of different lengths, `tested`, and `confirmed`, then look at what the commands and outcomes would be.
 
-![Data frame Joining in dplyr](tutorials/2024-06-10-Data-manipulation-in-dplyr/join.png)
+![Data frame Joining in dplyr](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/join.png)
 
-![Data frame Joining in dplyr](media/join.png)
-
-```{r, join,echo=TRUE,eval=FALSE}
+```{r, join,echo=TRUE,eval=TRUE}
 tested <- data.frame(year = c(2015, 2016, 2017, 2018, 2019, 2020),
 
                      tested = c(1981, 1992, 2611, 2433, 2291, 2311))
@@ -1240,7 +646,7 @@ anti_join(tested, positive) #Keep all rows in tested that do not have matching v
 
 You can also join datasets which have different names for the variables you wish to join on. Say if the variable for "year" in the positive dataset was "yr", you could use the command:
 
-```{r,join_cmd, echo=TRUE, eval=FALSE}
+```{r,join_cmd, echo=TRUE, eval=TRUE}
 positive <- data.frame(yr = c(2013, 2014, 2015, 2016, 2017, 2018),
                      positive = c(1164, 1391, 981, 871, 1211, 998))
 tested %>% inner_join(positive,
@@ -1251,20 +657,20 @@ tested %>% inner_join(positive,
 
 Once you have finished working on your data there are multiple ways you can save your work in R.
 
-One of the basic ones is to save your dataset as a csv. This is useful as it can easily be opened in other software (such as excel). You may also want to save your data as a Stata (dta) file.
+One of the basic ones is to save your dataset as a csv. This is useful as it can easily be opened in other software (such as excel). You may also want to save your data as a *Stata (dta)* file.
 
-R has some specific formats you can use to store data, these are `.RDS` and `.RData`. RDS files store one R object, whilst RData can store multiple objects.
+R has some specific formats you can use to store data, these are `.RDS` and `.RData`. RDS files store one R object, whilst *RData* can store multiple objects.
 
 Here, you can select which format you want to save the data in and save the `malaria_incidence_2021` data frame you created in this module.
 
 Similarly to importing data, you can use the base R functions of \`write.csv()\`, or preferably the `tidyverse` option if `write_csv()`.
 
-```{r, write_data, echo=TRUE, eval=FALSE}
-write_csv(clean_routine_data, "clean_routine_data.csv")
+```{r, write_data, echo=TRUE, eval=TRUE}
+#write_csv(clean_routine_data, "clean_routine_data.csv")
 
-write_dta(clean_routine_data, "outputs/clean_routine_data.dta")
+#write_dta(clean_routine_data, "outputs/clean_routine_data.dta")
 
-saveRDS(clean_routine_data, "outputs/clean_routine_data.RDS")
+#saveRDS(clean_routine_data, "outputs/clean_routine_data.RDS")
 ```
 
 # Reference
