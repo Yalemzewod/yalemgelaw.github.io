@@ -1,7 +1,15 @@
 ---
-title: " Basic data cleaning and management in dplyr"
-author: "Yalemzewod Gelaw"
-date: "`r Sys.Date()`"
+title: "Data manipulation: dplyr"
+description: |
+  Basic data cleaning and management in dplyr
+author: 
+  - name: Yalemzewod Gelaw
+    url: https://yalemzewodgelaw.com/
+    orcid: 0000-0002-5338-586 
+date: 2024-06-12
+image: "media/pc.png"
+slug: beginner’s guide
+categories: [RStudio, Data management]
 toc: true
 toc-depth: 4
 number-sections: false
@@ -106,7 +114,7 @@ To look at how the data looks like either by clicking on it in the global enviro
 View(routine_data)
 ```
 
-![*View data*](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/data_view.png)
+![*View data*](C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-06-10-Data-manipulation-in-dplyr/media/data_view.png)
 
 Alternatively, you may just want to look at a few rows. You can do this by using the `head()` function, which shows us the first six rows of data and `tail()` function, which shows us the lass six rows of the data.
 
@@ -166,7 +174,7 @@ typeof(routine_data$date)
  #as.Date(routine_data$date) # to date
 ```
 
-![*Convert to date from a character variable*](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/date.png)
+![*Convert to date from a character variable*](C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-06-10-Data-manipulation-in-dplyr/media/date.png)
 
 String inconsistencies: This includes typos, capitalization errors, misplaced punctuation, or similar character data errors that might interfere with data analysis. Take for instance your "Year" column. As you can see there are wrongly entered year 21 and 3021.
 
@@ -363,7 +371,7 @@ TRUE ~ district)) %>%
   rename("district" = "district_new") #rename to district
 ```
 
-![district_old vs district_new](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/name_change.png)
+![district_old vs district_new](C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-06-10-Data-manipulation-in-dplyr/media/name_change.png)
 
 Change the Year column
 
@@ -615,7 +623,7 @@ To run the command you need to pass it the data frames you wish to join and the 
 
 If you have two data frames with varying numbers of rows, you can investigate the outcomes of using the different join commands. Firstly, you create two data frames of different lengths, `tested`, and `confirmed`, then look at what the commands and outcomes would be.
 
-![Data frame Joining in dplyr](tutorials/2024-06-10-Data-manipulation-in-dplyr/media/join.png)
+![Data frame Joining in dplyr](C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-06-10-Data-manipulation-in-dplyr/media/join.png)
 
 ```{r, join,echo=TRUE,eval=TRUE}
 tested <- data.frame(year = c(2015, 2016, 2017, 2018, 2019, 2020),
