@@ -9,7 +9,7 @@ author:
 date: 2024-07-11
 image: "media/cor_reg.png"
 slug: beginner’s guide
-categories: [RStudio, R]
+categories: [EDA, Regression]
 toc: true
 toc-depth: 4
 number-sections: false
