@@ -1,0 +1,644 @@
+---
+title: "Correlation and Linear Regression using R"
+description: |
+  Exploring Correlation and Linear Regression with R: A Comprehensive Guide
+author: 
+  - name: Yalemzewod Gelaw
+    url: https://yalemzewodgelaw.com/
+    orcid: 0000-0002-5338-586 
+date: 2024-07-11
+image: "media/cor_reg.png"
+slug: beginner’s guide
+categories: [RStudio, R]
+toc: true
+toc-depth: 4
+number-sections: false
+highlight-style: github
+format:
+  html:
+    self-contained: true
+    code-fold: false
+    code-summary: "Show the code"
+    code-tools: true
+    theme: united 
+knitr: 
+ opts_knit: 
+   warning: false
+   message: false
+editor: visual
+---
+# Install and load packages
+```{r, package}
+# Install necessary packages if not already installed
+if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+
+if (!requireNamespace("janitor", quietly = TRUE)) install.packages("janitor")
+
+if (!requireNamespace("car", quietly = TRUE)) install.packages("car")
+
+if (!requireNamespace("Hmisc", quietly = TRUE)) install.packages("Hmisc")
+
+if (!requireNamespace("corrplot", quietly = TRUE)) install.packages("corrplot")
+
+if (!requireNamespace("MASS", quietly = TRUE)) install.packages("MASS")
+
+if (!requireNamespace("ggpubr", quietly = TRUE)) install.packages("ggpubr")
+
+if (!requireNamespace("ggcorrplot", quietly = TRUE)) install.packages("ggcorrplot")
+
+if (!requireNamespace("olsrr", quietly = TRUE)) install.packages("olsrr")
+
+if (!requireNamespace("caret", quietly = TRUE)) install.packages("caret")
+
+# Load the packages
+library(tidyverse)   # For data wrganling 
+library(janitor)     # To clean column names
+library(Hmisc)       # To create a correlation coeficient 
+library(car)         # Independent test
+library(corrplot)    # To visualise correlation matrix
+library(MASS)        # Create a hsitogram
+library(ggpubr)      # customizing the plot
+library(ggcorrplot)  # correlation matrix
+library(olsrr)       # variable selection
+library(caret)       # cross validation
+```
+
+### **About the data**
+
+The dataset used in this analysis comes from a study of 94 participants performing treadmill exercises. Data were collected on the following variables: Maximum Volume of Oxygen used per minute per kilogram of body weight `(max VO2)`, duration of exercise `(duration)`, maximum heart rate during exercise `(heart rate)`, `age`, `height`, `weight`, `sex` (1 = male, 2 = female), `ethnicity` (1 = Habesha, 2 = White, 3 = West African), and whether there was an energy shortage during `exercise` (energy; 1 = yes, 0 = no).
+
+```{r, data}
+excercise <- read_csv("Data/excercise.csv") %>% 
+  clean_names()
+```
+
+### **Exploratory data analysis**
+
+Lets investigate the relationships among the continuous variables in our dataset.
+
+```{r, summary_res}
+#Summary of continous variable
+summary(excercise)
+```
+
+To better understand the data, we will label the numeric categories for sex, ethnicity, and energy shortage as factors.
+
+```{r, label,echo=TRUE,eval=TRUE}
+excercise <- excercise %>%
+  mutate(
+    sex = if_else(sex == 1, "male",
+                  if_else(sex == 2, "female", NA)),
+    ethnicity = if_else(ethnicity == 1, "Habesha",
+                        if_else(ethnicity == 2, "White",
+                                if_else(ethnicity == 3, "West African", NA))),
+    energy = if_else(energy_shortage == 1, "yes",
+                     if_else(energy_shortage==0, "no", NA)),
+  BMI = round(weight/(height/100)^2)
+  ) %>% 
+  dplyr::select(-energy_shortage)
+
+```
+
+#### **Correlation Analysis**
+
+Correlation measures the strength and direction of the linear relationship between two variables. We'll explore Pearson’s, Spearman’s, and Kendall’s correlation coefficients.
+
+#### Correlation Matrix
+
+We'll start by creating a correlation matrix for the continuous variables using the `cor()` function.
+
+```{r,duplicate, echo=TRUE,eval=TRUE}
+# Select continuous variables
+cont_var <- excercise %>% 
+  dplyr::select(duration:weight, BMI)
+
+# Create correlation matrix
+cor(cont_var)
+```
+
+**The `rcorr ()` Function**
+
+It will create a correlation matric with p value. The first matrix shows the correlation coefficients between the variables and the second matrix shows the corresponding p-values.
+
+```{r}
+#create matrix of correlation coefficients and p-values
+rcorr(as.matrix(cont_var))
+```
+
+#### Visualizing Correlation
+
+We can visualize the correlation matrix using the `corrplot` function from the `corrplot` package.
+
+```{r,corplot,echo=TRUE,eval=TRUE}
+#visualize correlation matrix
+corrplot(cor(cont_var))
+```
+
+#### Correlation Coefficients
+
+##### Pearson Correlation
+
+Pearson’s correlation measures the linear relationship between two continuous variables. It ranges from -1 to 1, where 1 means a perfect positive linear relationship, -1 means a perfect negative linear relationship, and 0 means no linear relationship.
+
+To calculate Pearson’s correlation coefficient between the `max_vo2` and `duartion` variables in the `exercise` dataset, use the following code:
+
+```{r,Pearson,echo=TRUE,eval=TRUE }
+
+# Pearson's correlation between max_vo2 and duration
+cor(excercise$max_vo2, excercise$duration, method = "pearson")
+```
+
+##### **Spearman’s Correlation for Ranked Variables**
+
+Spearman’s correlation measures the monotonic relationship between two ranked variables. It is suitable for ordinal data or continuous data that do not meet the assumptions of Pearson’s correlation.
+
+```{r, spear,echo=TRUE,eval=TRUE}
+cor(excercise$max_vo2, excercise$heart_rate, method = "spearman")
+```
+
+##### Kendall’s Correlation
+
+Kendall’s correlation coefficient is used when the sample size is small and there are many tied ranks.
+
+```{r,Kendall’s,echo=TRUE,eval=TRUE }
+# Spearman's correlation between max_vo2 and heart_rate
+cor(excercise$max_vo2, excercise$age, method = "kendall")
+```
+
+**Properties of correlation coefficient (r) are:**
+
+-   `r` only measures the strength of a linear relationship.
+
+-   `r` is always between -1 and 1 inclusive. -1 means perfect negative linear correlation and +1 means perfect positive linear correlation
+
+-   `r` does not change if the independent (x) and dependent (y) variables are inter- changed
+
+-   `r` does not change if the scale on either variable is changed. You may multiply, divide, add, or subtract a value from all the x-values or y-values without changing the value of r.
+
+##### Scatter Plot
+
+Let's create a scatter plot to visualize the relationship between `max_vo2` and `duration`.
+
+```{r, scatter,echo=TRUE,eval=TRUE}
+ # Scatter plot
+excercise %>% 
+  ggplot() +
+  # Add color
+  # Add shape
+  # Add transparency
+  geom_point(aes(x=duration, y=max_vo2,
+                 colour = sex),
+             alpha = 1/2) +
+  # Add main title, axis labels, and legend titles
+  labs(title = "Correlation between maximum volume of oxygen and durations \n doing exercise on treadmill (n =94)", 
+       subtitle = "Source: Online",
+       y = "Max Vo2 (minutes/kg)", 
+       x = "Duration (minutes)",
+       colour="Sex") +
+  # Customize theme
+  theme_classic()
+```
+
+*Figure 1: Scatter plot - the relationship between maximum volume of oxygen and duration of exercise.*
+
+As we can see the scatter plot displays the form and directions of the relationship between maximum volume of oxygen and duration of exercise - the maximum volume of oxygen increase when the duration of exercise increased.
+
+### Linear Regression
+
+Linear regression models the relationship between two variables by fitting a linear equation to observed data. The explanatory variable (x) and the dependent variable (y) are key components, with Y being numeric (continuous). In Figure 1, the relationship between the maximum volume of oxygen (Y) and duration of exercise (X) the line that best predicts `max_vo2` from `duration` by minimizing the sum of the squares of the vertical distances of the points from the line.
+
+::: callout-note
+#### Assumptions of Linear Regression
+
+1.  **Independence of Observations**: Residuals should not be correlated.
+
+2.  **Linearity**: The relationship between the independent and dependent variables should be linear.
+
+3.  **Homoscedasticity**: Residuals should have constant variance.
+
+4.  **Normality**: Residuals should follow a normal distribution
+:::
+
+##### **1. Independence of Observations (No Autocorrelation)**
+
+The observations must be independent of each other, meaning the residuals (errors) from one observation should not correlate with the residuals of another. This assumption could be check using the [Durbin-Watson test](https://www.statology.org/durbin-watson-test/). We will check after we fit a model. A significant test statistics corresponding p-value depict the residuals in the regression model is autocorrelated.
+
+```{r, independent,echo=TRUE,eval=TRUE}
+# Fitting the model
+model = lm(max_vo2 ~ duration, data = excercise) 
+#perform Durbin-Watson test
+durbinWatsonTest(model)
+```
+
+From the output above we can see that the p-value is 0.866 which is indicating that the residuals in this regression model are not autocorrelated.
+
+##### 2. Linearity
+
+The relationship between the independent (duration) and dependent (max_vo2) variables must be linear. This can be assessed by plotting the variables and looking for a linear pattern.
+
+```{r,linear,echo=TRUE,eval=TRUE}
+# Plotting to check linearity
+plot(max_vo2 ~ duration, data = excercise)  
+
+```
+
+The points in the plot above look like they fall on roughly a straight line, which indicates that there is a linear relationship between max_vo2 and duration in exercise.
+
+##### **3. Homoscedasticity**
+
+The equal variance assumptions is that the residuals have constant variance at every level of x. This means that the prediction error doesn’t change significantly over the range of prediction of the model. The assumptions will be evaluated by creating a fitted value vs. residual plot.
+
+```{r, homosc,echo=TRUE,eval=TRUE}
+par(mfrow=c(2,2))
+plot(model)
+par(mfrow=c(1,1))
+```
+
+The scatter plot shows the residual are closer the fitted values.
+
+##### 4. Normality
+
+The residuals (errors) should follow a normal distribution. This assumption can be checked by plotting a histogram of the residuals, Q_Q plots.
+
+Example of histogram:
+
+```{r, normality,echo=TRUE,eval=TRUE}
+truehist(excercise$max_vo2, xlab = "Max_VO2", ylab = "Percentage", main= "Max_VO2 per minute per kilogram of body weight~Normal", prob = TRUE)
+curve (dnorm(x,mean=mean(excercise$max_vo2),sd=sd(excercise$max_vo2)), add=TRUE)
+
+```
+
+***Figure 3**: Histogram (with fitted Normal distribution) of Max_VO2(minutes/Kg)*
+
+The distribution (**Figure3**) extends from 20 to 50; a possible low and high values of the volume of oxygen, forcibly blown out in one second after a full intake of breath. The distribution seems asymmetric (skewed to the left).
+
+Example of Q-Q plot:
+
+```{r, q-q plot,echo=TRUE,eval=TRUE}
+qqnorm(excercise$max_vo2)
+qqline(excercise$max_vo2,
+       main = 'Q-Q Plot for Normality', xlab = 'Theoretical Dist',
+       ylab = 'Sample dist', col = 'steelblue')
+```
+
+OR , we can plot from the model
+
+```{r,plt,echo=TRUE,eval=TRUE}
+plot(model, 2)
+```
+
+**Shapiro-Wilk Test** is a common statistical test of normality. The test provides a test statistic *W* along with a corresponding *p-value*. If the *p-value* is less than *α =.05*, there is sufficient evidence to say that the sample does not come from a population that is normally distributed.
+
+```{r,Shapiro,echo=TRUE,eval=TRUE}
+shapiro.test(excercise$max_vo2)
+```
+
+The *Shapiro-Wilk Normality test* tells us the maximum volume of oxygen is distributed normally.
+
+Our assumptions check showed as all the assumptions are met.
+
+**How linear regression works?**
+
+The most common method for fitting a linear regression line is the method of least-squares. This method calculates the best-fitting line for the observed data by minimizing the sum of the squares of the vertical deviations from each data point to the line (if a point lies on the fitted line exactly, then its vertical deviation is 0). More precisely, the goal of regression is to minimize the sum of the squares of the vertical distances of the points from the line.
+
+#### Simple Linear Regression
+
+A regression model aims to model the magnitude of the relationship between one independent variable and a dependent variable. The simple linear regression model can be written with an explicit error term as:
+
+$$
+y= a+ b_1 (x) +e
+$$
+
+Where $a$ is the intercept of the regression line when the $x$ is null; $b_1$ is the slope of the regression line. and $e$ is a random component. It is the difference between the actual and the estimated dependent variable based on the size of the independent variable. The value of error (e) will vary from subject to subject, even if independent variable remains the same. Note that both α and b are population parameters which are usually unknown and hence estimated from the data by a and b.
+
+Below is the equation using our data
+
+```{r, model,echo=TRUE,eval=TRUE}
+# Fit linear regression model
+model<- lm(max_vo2 ~ duration, data = excercise) 
+```
+
+The model results will be printed using the summary function
+
+```{r,m_sum,model,echo=TRUE,eval=TRUE}
+# model output
+summary(model)
+```
+
+*Estimated*: the coefficient for duration
+
+*R-square*: the proportion of variance explained by the model and it measures the strength of the relationship between the model and the dependent variable.
+
+*p-value and t-statistic*: they measure the extent to which a given coefficient is statistically significant - a higher t-statistics corresponds to a smaller p-value which indicates strong evidence against the null hypothesis.
+
+To get the confidence interval we can use the `confint()` function.
+
+```{r, conflimit}
+# confidence interval
+confint.lm(model)
+```
+
+We can also plot the residuals with histogram to check the normality assumptions.
+
+```{r, resid}
+Residuals <- residuals(model)
+hist(Residuals, freq = FALSE)
+curve(dnorm(x,mean = mean(Residuals),sd=sd(Residuals)), add = TRUE)
+```
+
+**Interpreting the results:**
+
+The fitted model of max_vo2 by duaration (minutes):
+
+$$
+max_vo2 = 4.1 + 0.055 * durations (minutes)
+$$
+
+A minutes increase in duration is associated with an expected increase of 0.055 minutes/kg in max_vo2.
+
+The fitted model can be visualized with a regression line added to the scatter plot.
+
+```{r, result_graph}
+
+inc.graph<-ggplot(model,
+                  aes(x=duration,
+                      y=max_vo2 ))+
+  geom_point() +
+  labs(title = "The fitted model of max_vo2 by duration",
+       y = "Max_vo2 (minutes/kg)",
+       x = "Durations (minutes)") +
+  theme_bw()
+# print
+inc.graph
+
+```
+
+Add the linear regression line to the plotted data
+
+```{r, add_line}
+inc.graph <- inc.graph + geom_smooth(method="lm", col="red")
+
+# print
+inc.graph
+```
+
+Add the equation for the regression line.
+
+```{r,add_equation }
+inc.graph <- inc.graph +
+  stat_regline_equation(label.x = 205, label.y = 27) + # for regression equation
+  stat_cor(aes(label = after_stat(rr.label)), abel.x = 205, label.y = 24) # for R^2
+inc.graph
+
+```
+
+#### Multiple Linear Regression
+
+Multiple linear regression model aims to model the magnitude of the relationship between two variable while taking account the effect of other explantory variable and a dependent variable.
+
+$$
+y = a + bx_1 + bx_2 + bx_3 + bx_n + e
+$$
+
+***Multicollinearity*** - the dependency between predictors is another assumptions of linear regression analysis when we fit multiple regression analysis.
+
+The presence of multidisciplinary can be checked if there is a an inflated estimated coefficients and untrue relationships.
+
+```{r, cor_matrix}
+ 
+# Compute correlation at 2 decimal places
+corr_matrix = round(cor(cont_var), 2)
+
+# Compute and show the  result
+ggcorrplot(corr_matrix, hc.order = TRUE, type = "lower",
+          lab = TRUE)
+```
+
+We can notice two strong correlations because their value is higher than 0.8.
+
+-          Max_vo2 and duration: 0.91
+
+-          BMI and weight: 0.86
+
+This result makes sense because BMI is computed from weight and age. In this case, we can get rid of the either BMI or weight from our model.
+
+Let's illustrate this by adding more variable into the previous model
+
+```{r, multiple_reg}
+# Fit multiple linear regression model
+model2 <- lm(lm(formula = max_vo2 ~., data = excercise))
+summary(model2)
+```
+
+Our model result above doesn’t indicate these issues present in our model, so multicollinearity is likely not an issue. To confirm this, let’s use a measure called the VIF (Variance Inflation Factor) computed as:
+
+```{r,vif}
+vif(model2)
+```
+
+The VIF (Variance Inflation Factor) indicates that multicollinearity is present in our model. As a general guideline, a VIF value exceeding 10 is a cause for concern. In our case, height, weight, and BMI are contributing to this issue. Since BMI is derived from weight and height, we should include only one of these variables in our fitness model to address the multicollinearity problem.
+
+```{r, formula}
+formula =  max_vo2 ~ duration + heart_rate + age + ethnicity + weight + sex + energy
+model3 <- lm(formula, data = excercise)
+```
+
+Check the VIF again before interpreting the results. The model3 results indicated that multicollinearity is not an issue.
+
+```{r,vif_model}
+vif(model3)
+```
+
+Explore the final model results and interprete the results
+
+```{r, summary_out}
+summary(model3)
+```
+
+##### **Model selection**
+
+The process of selecting significant predictors for a model involves using criteria like R², Akaike Information Criteria (AIC), or Bayesian Information Criteria (BIC). There are various methods such as forward selection, backward selection, and stepwise selection, which are similar and yield comparable final models. Here, forward selection is used, which follows these steps:
+
+1.  Start with all predictors "not in the model."
+
+2.  Iterate over these predictors, refitting the model with each variable.
+
+3.  Add the variable with the lowest p-value to the model if its p-value is less than α. Repeat until no more variables can be added.
+
+```{r, forward_sel}
+# Run the forward selection algorithm usign a alpha of 0.05
+model2 <- lm(lm(formula = max_vo2 ~., data = excercise))
+
+fwdmodel2 <- ols_step_forward_p(model2, penter=0.05)
+fwdmodel2
+```
+
+Variable selection balances making the model both realistic and simple. Let's make a copy data set removing other variables
+
+```{r, subset}
+excercise <- excercise %>%dplyr:: select(max_vo2,duration,energy,sex)
+```
+
+Let's iterate the model with only duration
+
+```{r, one_var}
+formula2 =  max_vo2 ~ duration 
+model4 <- lm(formula2, data = excercise)
+summary(model4)
+```
+
+Add energy: there is a small change in R\^2
+
+```{r, energy}
+formula3 =  max_vo2 ~ duration + energy     
+model5 <- lm(formula3, data = excercise)
+summary(model5)
+```
+
+Add sex: same for sex there is a small change from the previous model
+
+```{r, sex}
+formula4 =  max_vo2 ~ duration + energy + sex    
+model6 <- lm(formula4, data = excercise)
+#summary(model4)
+# print estimated coefficient in a tidy model
+broom::tidy(model6)
+```
+
+Check assumptions:
+
+```{r, assumption}
+par(mfrow = c(2, 2))
+plot(model6)
+```
+
+we can also plot one by one to have a better understanding of each output.
+
+***Linearity*** : the relationship between the response (max_vo2) and the regression is linear - a straight line through the fitted values.
+
+```{r, plot}
+plot(model6, which = 1)
+```
+
+Normality: the errors are distributed normally.
+
+```{r}
+plot(model6, which = 2)
+```
+
+Homogeneity of variance: the error term *ε* has constant variance
+
+```{r}
+plot(model6, which = 3)
+```
+
+**Results**:
+
+In *model4*, the F-statistic has a p-value of less than 2.2e-16, indicating strong statistical significance. This suggests that at least one predictor variable significantly affects the outcome. The r\^2 result telling us the model has improved by 5% from model. To see the coefficient only result
+
+```{r}
+summary(model6)$coefficient
+```
+
+$$
+max_vo2 = 6.416 + 0.04.duration(minutes) + 4.15.energy(yes) 
+$$
+
+We estimate that the Max_vo2 value will be 6.416 per minute per kilogram of body weight when both predictors (duration and energy) are zero.
+
+Coefficient for duration (0.04): Max_vo2 increases by 0.04 units for each additional minute of exercise.
+
+Coefficient for energy (4.15): Max_vo2 increases by 4.15 units if the energy condition is "yes."
+
+::: callout-note
+#### **Model Diagnostics**
+
+We check the model assumptions using various diagnostic plots and tests.
+
+1.  **Independence of Observations**: Durbin-Watson test
+
+2.  **Linearity**: Scatter plot of residuals vs. fitted values
+
+3.  **Homoscedasticity**: Fitted values vs. residuals plot
+
+4.  **Normality**: Histogram and Q-Q plot of residuals
+:::
+
+#### Train-Test Split and Model Performance
+
+Historically the performance of the model was largely based on the goodness-of-fit test and assessment of residuals. For predictive modeling, perform cross-validation to ensure the model performs well with resampling data (loss function) - compare the predicted value to the actual value. The simplest approach involves:
+
+1.  Splitting the data into a training set and a test set.
+
+2.  Fitting the model to the training set.
+
+3.  Predicting responses in the test set.
+
+4.  Evaluating the prediction quality.
+
+Is there any rules for the percentage of classifying the train and test data ? There are [no specific rules](https://stackoverflow.com/questions/13610074/is-there-a-rule-of-thumb-for-how-to-divide-a-dataset-into-training-and-validatio) for the percentage split between training and test data, but two common proportions are 80:20 and 70:30. The key is to balance maximizing the data for fitting the model while retaining enough data to assess its performance effectively.
+
+There are different mechanism of splitting the data into train and test set. For demonstration, we will be covering the simple random sampling and the caret package.
+
+```{r}
+set.seed(123) # for reproducibility
+
+n_train <- sample(1:nrow(excercise), round(nrow(excercise)*0.8))
+
+train_data <- excercise[n_train,]
+
+test_data <- excercise[-n_train,]
+```
+
+Using the `Caret` package.:
+
+```{r}
+
+# Split the data randomly into a training set and a test set. 
+set.seed(100) 
+
+n_train2 <- createDataPartition(excercise$max_vo2, p =0.8, list = FALSE) 
+
+
+train_data2 <- excercise[n_train2, ] 
+
+test_data2 <- excercise[-n_train2, ]
+```
+
+Mean Absolute Error (MAE), Mean Squared Error (MSE) along with the Root Mean Squared Error (RMSE) are the most common metrics to use.
+
+Fit the model on the training data model
+
+```{r}
+model4 <- lm(max_vo2 ~ ., data = train_data2)
+
+predictions <- predict(model4, test_data2)
+
+```
+
+Measure performance by comparing the prediction with the data using multiple criterion. The model with the smaller the value of RMSE and MAE is optimal.
+
+```{r}
+R_sq <- R2(predictions, test_data2$max_vo2)
+RMSE <- RMSE(predictions, test_data2$max_vo2)
+MSE <- MAE(predictions, test_data2$max_vo2)
+
+print(c(R_sq, RMSE, MAE))
+```
+
+It means on average, our prediction for max_vo2 (per minute per kilogram of body weight) is varied by \~ 3 minutes/kg i.e., the prediction error is 8% .
+
+Prediction error:
+
+```{r}
+pred_error_rate <- RMSE/mean(test_data2$max_vo2)
+pred_error_rate
+```
+
+### Reference:
+
+1.  [A Step-By-Step Guide for Running a Complete Multiple Linear Regression Analysis in R](https://medium.com/analytics-vidhya/a-step-by-step-guide-for-running-a-complete-multiple-linear-regression-analysis-in-r-c08be169fe01)
+
+2.  [Stats and R](https://statsandr.com/blog/multiple-linear-regression-made-simple/)
+
+3.  [Multiple Linear Regression in R](http://sthda.com/english/articles/40-regression-analysis/168-multiple-linear-regression-in-r/)
