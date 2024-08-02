@@ -1,1 +1,3 @@
- This Repo is used to create my perosnal website.
+ This Repo is used to create my perosnal website using Quarto.
+
+ 
