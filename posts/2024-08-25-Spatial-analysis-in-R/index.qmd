@@ -1,0 +1,1345 @@
+---
+title: "Introduction to spatial analysis in R"
+description: |
+  Spatial exploration in R: A Comprehensive Guide
+author: 
+  - name: Yalemzewod Gelaw
+    url: https://yalemzewodgelaw.com/
+    orcid: 0000-0002-5338-586 
+date: 2024-08-25
+image: "images/spa_map.png"
+slug: beginner’s guide
+categories: [EDA, Spatial]
+toc: true
+toc-depth: 4
+number-sections: false
+highlight-style: github
+format:
+  html:
+    self-contained: true
+    code-fold: false
+    code-summary: "Show the code"
+    code-tools: true
+    theme: united 
+knitr: 
+ opts_knit: 
+   warning: false
+   message: false
+editor: visual
+bibliography: references.bib
+---
+
+# Introduction to spatial analysis in R
+
+### Introduction
+
+Spatial epidemiology involves both describing and understanding geographical variation in disease with respect to demographic, environmental, behavioral, socioeconomic, genetic, and infectious risk factors using various methods [@spatial2001][@elliott2004]. Common techniques include proximity calculations, estimating summary measures across geographic areas, assessing clustering, applying spatial smoothing and interpolation techniques, and utilizing spatial regression for in-depth analysis.
+
+### **Spatial Data**
+
+Spatial data, also known as geospatial data, can be broadly categorized into two types: vector and raster data.
+
+#### **Vector Data**
+
+Vector data describes the "geometry" or "shape" of objects and often includes additional variables. The three basic types of vector data are points, lines, and polygons (areas). Each point, line, and polygon has a spatial reference frame such as [**latitude and longitude**](https://gisgeography.com/latitude-longitude-coordinates/).
+
+A polygon refers to a set of closed polylines that represent a geographic location, composed of vertices (a series of `x` and `y` coordinates or spatial points).
+
+![]()![Figure 1: Vector data types](images/spatial_data.png)
+
+#### **Raster Data**
+
+Raster data is pixel-based, where each pixel has a value representing information. This format is particularly useful for representing data that varies continuously over space and is naturally suited to a grid format.
+
+![***Figure: Raster data example with different resolution.***](images/raster3.png)
+
+Check the packages required for this tutorial:
+
+```{r, package, echo=TRUE, eval=TRUE, include=FALSE}
+
+# Install necessary packages if not already installed
+
+if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+
+if (!requireNamespace("hablar", quietly = TRUE)) install.packages("hablar")
+
+if (!requireNamespace("janitor", quietly = TRUE)) install.packages("janitor")
+
+if (!requireNamespace("sf", quietly = TRUE)) install.packages("sf")
+
+if (!requireNamespace("sp", quietly = TRUE)) install.packages("sp")
+
+if (!requireNamespace("spdep", quietly = TRUE)) install.packages("spdep")
+
+if (!requireNamespace("raster", quietly = TRUE)) install.packages("raster")
+
+if (!requireNamespace("tmap", quietly = TRUE)) install.packages("tmap")
+
+if (!requireNamespace("exactextractr", quietly = TRUE)) install.packages("exactextractr")
+
+if (!requireNamespace("terra", quietly = TRUE)) install.packages("terra")
+
+if (!requireNamespace("mapview", quietly = TRUE)) install.packages("mapview")
+
+if (!requireNamespace("scico", quietly = TRUE)) install.packages("scico")
+
+if (!requireNamespace("bispdep", quietly = TRUE)) install.packages("bispdep")
+
+if (!requireNamespace("classInt", quietly = TRUE)) install.packages("classInt")
+
+
+# load packages
+library(tidyverse, quietly=T) # data wrangling and visualization
+library(hablar, quietly = T) #rename
+library(janitor, quietly = T) #clean names
+library(graphics) # for plot methods
+
+# map
+library(mapview, quietly = T) # plot
+library(scico, quietly = T)
+library(classInt, quietly=T)
+
+# to read and clean spatial data
+library(spdep, quietly = T) # neghiborhod matrix
+library(sp, quietly = T) # spatial data manipulation
+library(sf, quietly = T) # spatial data manipulation
+library(spData, quietly = T) # spatial data
+
+# for raster data
+library(raster, quietly = T) 
+library(terra,quietly = T)
+
+# spatial exploration
+library(bispdep, quietly = T)
+
+```
+
+#### `sp` and `sf` packages
+
+*sp* and *sf* are the two common spatail package in R and work in fundamentally different ways, specifically revolving around how they store spatial data within R.
+
+*`sp`* uses something called S4 classes, where the different elements of spatial data (coordinates/geometry, attribute table, coordinate system, etc.) are split up into different 'slots' and accessed using the \@ symbol. *`sf`*uses S3 classes and stores spatial data all within a standard data frame, with some extra header information and a geometry column.
+
+![Figure 2: `sp` and `sf` spatial package comparison](images/sp%20vs%20sf.jpg){fig-align="center"}
+
+How to convert one file format to the other format?
+
+::: callout-tip
+To sp `object <- as(object, Class = "Spatial")`
+
+To sf `object_sf = st_as_sf(object_sp, "sf")`
+:::
+
+A word of advice: be flexible in the usage of `sf` and `sp.` Sometimes it may be hard to explain why functions work for one data type and do not for the other. But since transformation is quite easy, time is better spend on analyzing your data than on wondering why operations do not work. For the purpose of this material we will focus of teaching you the package `sf` as it is intended to succeed and replace R packages `sp`, `rgeos` and the vector parts of `rgdal` packages. It also connects nicely to tidyverse learnt in previous modules. For this session we focus on the `sf` package.
+
+## Vector - **Spatial data**
+
+#### **Area spatial data structure**
+
+After the package is loaded, you can check out all of the methods that are available for `sf` data objects.
+
+```{r,sf,echo=TRUE,eval=FALSE}
+
+# sf package functions
+methods(class = "sf")
+```
+
+**Import Data**
+
+**Shapefiles for area data:**
+
+We will use the `st_read()` from `sf` package, which simply takes the path of the directory with the shapefile as argument. Where as `readOGR()` from the `rgdal` packages will take the path and file name `readOGR("path","fileName")` to a shapefile. In this instance we would load the part of the shapefile that ends with *.shp.* Setting `quiet = T` will keep R from being chatty when it imports the data.
+
+```{r, shapefile,echo=TRUE,eval=TRUE, include=FALSE}
+# read the shapefile  - area
+eth_map <- st_read("C:/Users/User/OneDrive/from_unsw_drive/file_YG/TKI/MAP/Ethiopia_malaria/ethiopia_megregd_shp/V3/edited_v3.shp") %>%  
+rename("district" = "ADM3_EN",
+       "region" = "ADM1_EN")
+
+```
+
+Shepfile reads with the *sp* package has both `sf` and `data.frame` classes.
+
+```{r, class, echo=TRUE,eval=TRUE}
+# class - data
+class(eth_map)
+```
+
+**Shapefile Metadata & Attributes**
+
+You'll notice that when you load the shapefile in, there will be a set of information explaining the features of the shapefile. The first sentence shows that you have loaded a ESRI shapefile, it contains 46 features (which are polygons in this case) and 5 columns of information stored as a data tabel. It mentions also there is a spatial extent (called bounding box) and the coordinate reference system (CRS).
+
+What does this show us? Let's break it down. In this case it is important to read in and check the metadata for the type of spatial information you have loaded. **Metadata**, describing the format, `CRS`, `extent`, and other components of the vector data, and the **attributes** which describe properties associated with each individual vector object.
+
+***Key metadata for all shapefiles include***:
+
+1.  Object Type: the class of the imported object.
+
+2.  Coordinate Reference System (CRS): the projection of the data.
+
+3.  Extent: the spatial extent (geographic area that the shapefile covers) of the shapefile. Note that the spatial extent for a shapefile represents the extent for ALL spatial objects in the shapefile.
+
+You can view shapefile metadata using the `class`, `crs` and `extent` methods:
+
+```{r,meta_data, echo=TRUE, eval=FALSE}
+# metadata
+eth_map
+```
+
+![Figure 3: shapefile meta data](images/data_r.PNG){fig-align="center"}
+
+The `str()` function will also give us the meta data of the dataset including the class and dimensions:
+
+```{r, structure, echo=TRUE, eval=TRUE}
+# structure - column list with details
+str(eth_map)
+```
+
+The `class` function, applied on an `sf` layer, returns both `"sf"` and `"data.frame"` class names:
+
+```{r, class__eth, echo=TRUE, eval=TRUE}
+# spatial attributes
+class(eth_map)
+```
+
+A layer (geometry+attributes) is represented by an `sf` object. The second printed value, `data.frame`, implies that `sf` is, in fact, an extension of the `data.frame` class, inheriting many of its methods. Indeed, we will see that many functions in R work exactly the same way on `sf` and `data.frame` objects.
+
+The *geometric* part can be extracted with `st_geometry`, resulting in an object of class `sfc`, i.e., a geometry column
+
+```{r, geom, echo=TRUE, eval=TRUE}
+# get geometry data
+ st_geometry(eth_map)
+```
+
+Conversely, If we want just the *non-geometric* part (the "attributes"), it can be extracted with `st_drop_geometry` which returns a `data.frame`:
+
+```{r, not_geom, echo=TRUE, eval=TRUE}
+
+# Extract nom-geometric part
+map_nogeom <- st_drop_geometry(eth_map)
+
+# top five rows
+head(map_nogeom)
+```
+
+#### Spatial points
+
+Another key type of spatial data is data linked to coordinates, frequently found in a table format. We can read these data in using the `read_csv()` function, then we may want to convert these into spatial information using the `st_as_sf()` function. Here we have a csv file containing the coordinates for the locations of health facilities in our routine data. Note that we set the projection for the spatial object using the `crs` command; crs 4326 is the standard WGS 84 CRS.
+
+```{r, read_point, echo=TRUE, eval=TRUE}
+
+# Read the `csv` file with geometry information
+hf_gps <- read_csv("C:/Users/User/OneDrive/from_unsw_drive/file_YG/TKI/MAP/training/HF_list.csv") %>% 
+  clean_names() %>% 
+  drop_na() #drop na
+
+```
+
+Check the class of the point spatial data. The dataset read as data.frame th output captured the geographic information: longitude and latitude.
+
+```{r, class_pt, echo=TRUE, eval=TRUE}
+#check the data class
+class(hf_gps)
+```
+
+The `st_as_sf()`\` function from the *sf* package will convert into point spatial data format.
+
+```{r, coord_point, echo=TRUE, eval=TRUE}
+# Make the gps data into a point sample feature and define it as shapefile `eth_hf_points`
+
+eth_hf_points <- st_as_sf(hf_gps,
+                           coords = c("x", "y"),
+                          crs = st_crs(4326))
+```
+
+The map below plotted the each XY geometry health facility points.
+
+```{r, plot_point, echo=TRUE, eval=TRUE}
+# map the geometry
+plot(eth_hf_points$geometry)
+```
+
+#### **Coordinate Reference Systems (CRS)**
+
+A **Coordinate Reference System (CRS)** defines how the coordinates in our geometries relate to the surface of the Earth. There are two main types of CRS:
+
+-   Geographic---longitude and latitude, in degrees
+
+-   Projected---implying flat surface, usually in units of true distance (e.g., meters)
+
+We can then change the projection using the command `st_transform()`. We can also combine the two commands to change the projection of one data type to be that of the other. The CRS of a given `sf` layer can be obtained using function `st_crs`. The CRS information is returned in the WKT format:
+
+```{r, coordinate, echo=TRUE, eval=TRUE}
+# coordinate system
+st_crs(eth_map)
+```
+
+**A vector layer reprojection**
+
+**Reprojection** is the transformation of geometry coordinates, from one CRS to another. It is an important part of spatial analysis workflow, since we often need to:
+
+-   Transform several layers into the same projection
+
+-   Switch between geographic and projected CRS
+
+A vector layer can be reprojected with `st_transform`. The `st_transform` function has two important parameters:
+
+-   `x`---The layer to be reprojected
+
+-   `crs`---The *target* CRS
+
+The `crs` can be specified in one of four ways:
+
+-   An EPSG code (e.g., `4326`)
+
+-   A PROJ4 string (e.g., `"+proj=longlat +datum=WGS84 +no_defs"`)
+
+-   A WKT string
+
+-   A `crs` object of another layer, as returned by `st_crs`
+
+For example, the following expression reprojects the `nafot` layer to the geographic UTM CRS, using its EPSG code (`20138`). In the metadata, the `PROJCRS["Adindan / UTM zone 38N"` showed us the projection is **UTM zone 38N**
+
+```{r, utm, echo=TRUE, eval=TRUE}
+# Change the projection to UTM zone 38N
+eth_utm <- st_transform(eth_map, 20138)
+st_crs(eth_utm)
+```
+
+To change the projection of the *`eth_utm shapefile`* to WGS CRS:
+
+```{r, wgs, echo=TRUE, eval=TRUE}
+# to WGS projection
+eth_map2 <- st_transform(eth_utm, st_crs(eth_map), crs = 4326)
+```
+
+**Geometric calculations**
+
+We will see geometric operations on vector layers:
+
+-   Numeric values ---Functions that summarize geometrical properties of:
+
+    -   A *single* layer---e.g., area, length
+
+    -   A *pair* of layers---e.g., distance
+
+-   Spatial layers ---Functions that create a new layer based on:
+
+    -   A *single* layer---e.g., centroid, buffer
+
+    -   A *pair* of layers---e.g., intersection area
+
+**Numeric**
+
+There are several functions to calculate *numeric* geometric properties of vector layers in package `sf`:
+
+-   `st_length`---Length
+
+-   `st_area`---Area
+
+-   `st_distance`---Distance
+
+-   `st_bbox`---Bounding box
+
+-   `st_dimension`---Dimensions (0 = points, 1 = lines, 2 = polygons)
+
+For example, we can calculate the area of each feature in the `Ethiopia` layer using `st_area`. The result is assigned to a new attribute named `area` in `eth_map`:
+
+```{r, area, echo=TRUE, eval=TRUE}
+# calculate the area of each district
+eth_map$area = st_area(eth_map)
+```
+
+Summary of the area in $m^2$
+
+```{r, summary, echo=TRUE, eval=TRUE}
+# summary in m^2
+summary(eth_map$area)
+```
+
+Plot the area in $m^2$.
+
+```{r, m2, echo=TRUE, eval=TRUE}
+# plot `m^2`
+plot(eth_map["area"] , main = "Area of the Districts (m^2)")
+```
+
+You may notice the `area` values are printed with their units `[m^2]`. The resulting area values, just like any other numeric calculations in `sf`, are returned as object of class `units`:
+
+```{r, units, echo=TRUE, eval=TRUE}
+class(eth_map$area)
+```
+
+A `units` object is basically a numeric vector associated with units of measurement. We can transform `units` measurements to different units, with function `set_units` from package `units`. First, we load the [`units`](https://cran.r-project.org/package=units) library:
+
+```{r, udunits, echo=TRUE, eval=TRUE}
+library(units)
+## udunits system database from /usr/share/xml/udunits
+```
+
+Then, we make the transformation to $km^2$ units :
+
+```{r, km_map, echo=TRUE, eval=TRUE}
+# km^2
+eth_map$area = set_units(eth_map$area, "km^2")
+```
+
+Lets check the summary of the transformed area in $Km^2$. In the below summary, we’ve added `across(geometry, st_union)` to ensure proper summarization of the spatial data. The `st_union` function will be applied to the geometry column.
+
+```{r,km, echo=TRUE, eval=FALSE}
+# summary with chain 
+eth_map %>%
+  summarise(mean_area = mean(area),
+            median_area = median(area),
+            sd_area = sd(area),
+            range_area = range(area),
+            across(geometry, st_union))
+
+```
+
+Plot the calculated `area` for Ethiopia using the `plot()` function
+
+```{r, area_map, echo=TRUE, eval=TRUE}
+# plot `km^2`
+plot(eth_map["area"], , main = "Area of the Districts (km^2)")
+```
+
+**Spatial Geometry Function**
+
+When working with spatial data in R, the `sf` package is a powerful tool that allows you to manipulate and analyze geometric objects. In the below functions, we’ll explore some common *geometry-generating* functions provided by `sf`. These functions are essential for anyone getting started with spatial data analysis.
+
+-   **Centroids (`st_centroid)`**
+
+The `st_centroid` function calculates the centroid (geometric center) of a polygon. Let’s use an example where we want to find the centroids of polygons representing the “Amhara” region in Ethiopia.
+
+```{r, am_map, echo=TRUE, eval=TRUE}
+# Filter Amhara
+amhara_shp <- eth_map |> 
+               filter(region=="Amhara")
+```
+
+Now, let’s calculate the centroids: to calculate the centroids of the *"Amhara"* polygons we can use the `st_centroid` function as follows:
+
+```{r, centroids, echo=TRUE, eval=TRUE}
+# Calculate centroids
+amhara_ctr <- st_centroid(amhara_shp)
+
+# Filled polygons with points
+ plot(st_geometry(amhara_ctr),
+            col = "red",
+            pch = 3)
+```
+
+-   ***Buffering `(st_buffer)`***
+
+The `st_buffer` function creates a buffer around a spatial object. Buffers are useful for visualizing areas of influence or proximity. For instance, you can create a buffer around health facilities to represent their service areas.
+
+```{r, buffering, echo=TRUE, eval=TRUE}
+# Filter hospitals
+hospital <- eth_hf_points %>%
+  filter(facility_type == "Hospital")
+
+# Create a buffer around health facilities (e.g., 2.5 km radius)
+buffer_radius_km <- 2.5
+health_facility_buffer <- st_buffer(hospital, dist = buffer_radius_km * 1000)  # Convert km to meters
+
+# Plot the health facility buffers first (as polygons need a base plot)
+plot(st_geometry(health_facility_buffer),
+     col = "red", lwd = 2, main = "A Buffer arround Health Facilities")
+
+# Convert hospital geometries to points if they aren't already
+hospital_points <- st_cast(hospital, "POINT")
+
+# Plot the original health facilities on top of the buffers
+plot(st_geometry(hospital_points), pch = 16, col = "blue", add = TRUE)
+
+```
+
+-   ***Random sample points (`st_sample)`***
+
+To generate random sample points within a polygon, use the st_sample function. This is handy for spatial sampling in epidemiology or environmental studies. The sampled points are overlaid on the original geometries.
+
+```{r, rsample, echo=TRUE, eval=TRUE}
+# Randomly sample 10 points within hospital polygons
+sample_points <- st_sample(hospital, size = 10)
+
+# Plot the original hospital locations
+plot(hospital$geometry, pch = 16, col = "blue", main = "Sample points of Health Facility Locations")
+
+# Overlay the sampled points
+plot(sample_points, add = TRUE, pch = 2, col = "red")
+
+```
+
+#### Joining non-spatial data to shapefiles
+
+In spatial analysis, it's common to join non-spatial data (e.g., tabular data) with shapefiles. This process allows you to create maps and perform spatial analyses by combining attribute data with geographic information. In this tutorial, we'll walk through how to join non-spatial data to shapefile. We'll also cover some important considerations to ensure your data is properly aligned.
+
+```{r, data_u5, echo=TRUE, eval=TRUE}
+# Load and filter the data for the Amhara region
+u5_data <- read_csv("C:/Users/User/OneDrive/from_unsw_drive/training/R_training/Tutorial_R/data_excercise.csv") %>% 
+  filter(region=="Amhara")
+```
+
+::: callout-note
+Note: Always make sure the data is loaded and filtered correctly before proceeding. Here, we're focusing on a specific region, but you can adjust the filter condition as needed.
+:::
+
+Before joining data, it's crucial to ensure that the names in your non-spatial data match those in your shapefile. If they don't match exactly, the join won't work correctly.
+
+Check names in the Shapefile:
+
+```{r, name_map_check, echo=TRUE, eval=TRUE}
+#  Check if the district name is correctly spelled in the shapefile
+eth_map %>% 
+  filter(district=="Hawi Gudina\n")
+
+# Recode the district name to remove any newline characters
+eth_map$district <- recode(eth_map$district,
+                           "Hawi Gudina\n" = "Hawi Gudina")
+
+# Verify the correction
+eth_map %>% 
+  filter(district == "Hawi Gudina")
+
+# Note: Always check that the names are correctly updated in your shapefile.
+```
+
+Check names in your data. Please note that ensuring consistent naming between datasets is essential for a successful join
+
+```{r, data_name, echo=TRUE, eval=TRUE}
+
+# Verify the district name in the non-spatial data
+
+u5_data %>% 
+  filter(district == "Hawi Gudina")
+```
+
+**Join Non-Spatial Data to the Shapefile**
+
+Once you've confirmed that the names match, you can proceed to join your non-spatial data with the shapefile.
+
+```{r, join, echo=TRUE, eval=TRUE}
+
+# Perform the join operation
+amhara_data_sf <- amhara_shp %>%  
+                  left_join(u5_data, by = "district")
+
+# Note: The `left_join` function keeps all rows from the shapefile and joins matching rows from the data. 
+# If a match isn't found, the resulting shapefile will still include the original geographic information.
+
+```
+
+After the join, ensure your data is still in the `sf` (simple features) format, which is essential for spatial operations.
+
+```{r,as_sf, echo=TRUE, eval=TRUE}
+
+# Convert the joined data to an sf object
+amhara_data_sf <- st_as_sf(amhara_data_sf)
+
+# Note: Converting to `sf` ensures that the data retains its spatial properties.
+
+```
+
+#### Writing shapefiles out
+
+After you've completed your analysis or modifications, you may want to save your shapefile for future use or sharing. Here's how you can write it back to a shapefile format:
+
+```{r, save_shape, echo=TRUE, eval=FALSE}
+# Write the shapefile to disk
+st_write(amhara_data_sf,
+         "C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/amhara_data_with_shapefile.shp")
+
+# Note: Replace "path_to_save" with the directory where you want to save the file. 
+# The .shp extension indicates it's a shapefile.
+```
+
+## Introduction to Raster data
+
+In this section, we'll explore how to work with raster data using the `terra` package, which has replaced the older `raster` package. We'll cover basic operations like loading and visualizing raster data, manipulating rasters, and performing spatial analysis.
+
+**Loading raster data**
+
+The `terra` package in R introduces a new class of raster data called `SpatRaster`. Let's start by loading the `terra` package and importing Ethiopian 2016 population raster data.
+
+The `rast()` function is used to load the raster data, and simply calling the object name (in this case, `population`) will display the raster properties like extent, resolution, and CRS (Coordinate Reference System).
+
+```{r, raster_data, echo=TRUE, eval=TRUE}
+
+# Load the population raster data
+population <- rast("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/eth_ppp_2016.tif")
+
+# View the raster properties
+population
+```
+
+**Visualizing the Raster**
+
+Visualizing raster data helps you quickly understand its spatial distribution. We can start by plotting the raster using the `plot()` function.
+
+This simple plot provides a visual overview of the raster data. You can use this for quick inspections before more detailed analysis.
+
+```{r, raster_plot, echo=TRUE, eval=TRUE}
+# Plot the raster data
+plot(population, main = "Raster level populations map")
+```
+
+**Plotting, reprojecting and manipulating Rasters in R**
+
+***Plotting with `ggplot2`***
+
+Before plotting, lets explore the distributions of the raster data with the log scaling.
+
+```{r, distr, echo=TRUE, eval=TRUE}
+#plotting the log of the population due to the scale
+hist(log(population)) 
+```
+
+Before plotting, first we need to convert the raster to a data frame. The `geom_raster()` function is used to plot raster data, and `scale_fill_viridis_c()` is used to apply a color scale that is perceptually uniform. To make it manageable, first, we need to reduce the resolutions of our data
+
+```{r, plot_raster, echo=TRUE, eval=TRUE}
+# resolutions of our data
+population_reduced <- aggregate(population, fact = 10, fun = mean)
+
+# Convert the raster to a data frame
+pop_df <- as.data.frame(population_reduced, xy = TRUE)
+
+# Plot the raster using ggplot2
+ggplot() +
+  geom_tile(data = pop_df, aes(x = x, y = y, fill = eth_ppp_2016)) +
+  scale_fill_viridis_c() +
+  labs(fill = "Population") +
+  theme_bw()
+```
+
+Re-projecting rasters
+
+Sometimes we need to change the projection of our raster data to align it with other spatial data. The `crs()` function checks the current projection of the raster. By assigning a new CRS, you can reproject the raster to a different coordinate system, which is crucial for spatial analysis when working with multiple datasets.
+
+```{r, projection, echo=TRUE, eval=FALSE}
+
+# Check the current CRS of the raster
+crs(population)
+
+# Reproject the raster to UTM zone 48
+#crs(population) <- "+proj=utm +zone=48 +datum=WGS84"
+
+```
+
+#### Manipulating rasters
+
+We can modify rasters by cropping them to a specific extent or masking out areas outside a certain region. `ext()` retrieves the spatial extent of the raster. `crop()` allows you to focus on a specific area by cutting out the rest of the data. `mask()` sets the raster cells outside a given region (like 'Amhara') to NA, effectively hiding them.
+
+```{r, filter_pop, echo=TRUE, eval=TRUE}
+# Get the extent of the raster
+ext(population)
+
+# Assume we have a spatial object 'Amhara' representing a region in Ethiopia
+Amhara <- filter(eth_map, region == 'Amhara')
+
+# Crop the raster to the Amhara region
+am_pop <- crop(population, Amhara)
+ext(am_pop)
+
+# Mask the raster to keep only the Amhara region
+am_pop2 <- terra::mask(am_pop, Amhara)
+# plot
+plot(am_pop2)
+
+```
+
+#### Extracting raster data
+
+To extract the population values for each admin 3 district of Ethiopia. For this we provide `exact_extract()` function in `exactextractr` package with the raster and the shapefile. The output is then the population value for each cell of the raster, linked to each polygon ID of the shapefile. We can the perform summary statistic on this as we would a standard data frame.
+
+```{r,ext_population, echo=TRUE, eval=FALSE}
+
+terra::extract(am_pop2, amhara_ctr)
+
+am_population <- exactextractr::exact_extract(am_pop,amhara_shp, 'sum',append_cols = "district") 
+
+# write.csv(file = "C:/Users/user/Documents/Data_management_in_R/pop.csv", row.names = FALSE) # to save the population
+
+head(am_population) # to six districts with the 2016 population size
+```
+
+::: callout-important
+If the coordinate reference systems (CRS) of the population raster (`am_pop2` or `am_pop`) and the shapefile (`amhara_ctr` or `amhara_shp`) do not match, the extraction might fail to correctly overlay the raster and the shapefile, resulting in incorrect or zero values.
+
+If you need to check the projection:
+
+terra::crs(am_pop2) \# population raster data
+
+terra::crs(amhara_ctr) \# shapefile
+:::
+
+The above script result showed us the CRS of the raster data (`am_pop2`) and shapefile (`amhara_ctr`) are similar. To ensure proper alignment between the raster and the shapefile for accurate extraction, we need to reproject one of them so that both layers share the same CRS.
+
+## Spatial Epidemiology
+
+In epidemiology, it is concerned with the description, examination and spatial interaction of disease and focuses specifically on the spatial components to understand and explain why health and disease vary by place.
+
+This blog provides how to approach spatial problems in epidemiology, with a specific focus on public health applications.
+
+The framework illustrated in below outlines a logical, sequential process for conducting spatial analyses. However, it should be recognized that this is not a strictly linear process, as presenting the results from exploration and modeling often necessitates a return to visualization.
+
+![Figure: Conceptual framework of spatial epidemiological data analysis[@pfeiffer2008] sourced from (GIS=Geographic information system, DBMS=database management system, R = R programming language)](images/framework.png)
+
+### Making chloropleth maps in R
+
+**Plotting spatial data using base R**
+
+Visualizing the geographical distribution and patterns of a disease is a critical step in epidemiological research. In R, you can create maps using only a few essential packages like `rgdal` and `sf`. While simply calling the `plot` function on a shapefile object will produce a map, it tends to display all attributes in a somewhat unappealing and cluttered manner.
+
+To create a more focused and meaningful map, you can plot a single attribute of interest by subsetting the `sf` object. This can be done using the standard R subsetting syntax: `sf_object[["name_of_attribute"]]`. For example, you can quickly visualize the distribution of a particular disease or condition across administrative regions in Ethiopia by selecting the relevant attribute and plotting it by administrative units.
+
+**Customizing the Legend**
+
+By default, R will automatically place the legend where it "thinks" it fits best on the plot. However, you can customize the legend's position and size to enhance the map's readability.
+
+-   **Positioning the Legend**: Use the `key.pos` argument to specify the location of the legend:
+
+    -   `key.pos = 1` places it below the map.
+
+    -   `key.pos = 2` places it to the left.
+
+    -   `key.pos = 3` places it above the map.
+
+    -   `key.pos = 4` places it to the right.
+
+```{r,ad_leg, echo=TRUE, eval=TRUE}
+# to lower legend
+plot(amhara_data_sf["conf"],
+     main = "Confirmed Malaria cases in Amhara Region",
+     key.pos = 1)
+```
+
+**Mapping using `ggplot2:`**
+
+**Adding features to maps**
+
+Recall from earlier the typical `ggplot` call: `ggplot(data, aesthetic)`. When making chloropleth maps, our data will typically be an `sf` object, with a column corresponding to the variable you wish to map, and a geometry column describing the geography of the data.
+
+Given an `sf` object, you can use `geom_sf` to produce a simple plot of your shapefile without even explicitly defining any aesthetics.
+
+```{r, mapping_features, echo=TRUE, eval=TRUE}
+# base
+ggplot(amhara_shp) + 
+  geom_sf() + # as we've called ggplot using an sf object as the data argument, geom_sf can figure it out itself
+  coord_sf()  # deals with map projection 
+```
+
+-   **viridis package -** pretty color map with color scale using the `scale_fill_viridis()` function
+
+```{r, viridis, echo=TRUE, eval=TRUE,fig.width=10, fig.height=8, dpi=300}
+# pretty color map with color scale
+library(viridis)
+
+ggplot(data = amhara_data_sf, 
+       aes(fill = conf)) +
+  geom_sf() +
+  scale_fill_viridis() + 
+  theme_void() +
+  labs(title = "Confirmed malaria in Amhara Region, Ethiopia")
+```
+
+-   **leaflet package** - an open-source *JavaScript* library for interactive maps to make easy to create Leaflet maps from R. leaflet will also allow you to zoom in and out from the world map view.
+
+```{r,leaflet, echo=TRUE, eval=TRUE, fig.width=10, fig.height=8, dpi=300}
+
+library(leaflet)
+
+# create an interactive map
+pal <- colorNumeric("YlOrRd", domain = amhara_data_sf$conf)
+
+leaflet(amhara_data_sf) %>%
+  addTiles() %>%
+  addPolygons(
+    color = "white", fillColor = ~ pal(conf),
+    fillOpacity = 1
+  ) %>%
+  addLegend("bottomright",pal = pal, values = ~conf, opacity = 1, title = "Confirmed malaria")
+```
+
+-   **Mapview pacakge -** allows to very quickly create interactive visualizations to investigate both the spatial geometries and the variables in the data
+
+```{r,mapview, echo=TRUE, eval=TRUE, fig.width=10, fig.height=8, dpi=300}
+
+library(mapview)
+
+ mapview(amhara_data_sf, zcol = "conf", 
+         legend = "TRUE",
+         layer.name = "Confirmed malaria") # edit legend name
+```
+
+We can use the `sync()` function to produce a lattice-like view of multiple synchronized maps created with mapview or leaflet.
+
+Create maps of confirmed cases and incidence with synchronized zoom and pan by first creating maps of the variables *conf* and `Incid_per_1000`with *mapview()*, and then passing those maps as arguments of the *sync()* function
+
+```{r,multiple, eval=TRUE, echo=TRUE,fig.width=10, fig.height=8, dpi=300}
+
+library(leafsync)
+# plot the confirmed case map
+mcf <- mapview(amhara_data_sf, zcol = "conf", legend = "TRUE", layer.name = "Confirmed malaria")
+
+# plot the incidence map
+minc <- mapview(amhara_data_sf, zcol = "Incid_per_1000", legend = "TRUE", layer.name = "Incidence of malaria/1000 population")
+
+# sync both map using the `leafsync` package
+m <- sync(mcf, minc)
+
+m
+
+```
+
+Lets present the confirmed cases in discrete breaks with a specified breaks to distinguish the case density with a clear cut and categories. Following [Timo Grossenbacher’s](https://timogrossenbacher.ch/) and [Milos Popovic](https://milospopovic.net/) code.
+
+The first step is to find a natural breaks with specified interval (6 or 8 intervals).
+
+```{r, cut_point,echo=TRUE, eval=TRUE}
+# six natural interval with quantile breaks
+interval = classIntervals(amhara_data_sf$conf,
+	            n = 6,
+	            style = 'quantile')$brks
+am_df = amhara_data_sf # let's copy the dataset for simplicity 
+```
+
+Then we will create categories based on the above intervals:
+
+```{r,labels, echo=TRUE, eval=TRUE}
+
+labels <- c()
+for(i in 1:length(interval)){
+    labels <- c(labels, paste0(round(interval[i], 0),
+                             "–",
+                             round(interval[i + 1], 0)))
+}
+labels <- labels[1:length(labels)-1]
+```
+
+Let's create a new variable called `category` in the dataframe by dividing the confirmed malaria cases `conf` into intervals defined by `breaks`. Then we'll assigns labels from `labels` to these intervals and include the lowest value in the first interval.
+
+```{r, category, echo=TRUE, eval=TRUE}
+am_df$cat <- cut(am_df$conf,
+              breaks = interval,
+              labels = labels,
+              include.lowest = T)
+levels(am_df$cat) # let's check how many levels it has (6)
+```
+
+As you can see the interval clearly showed the data distribution from `(0 to 13542)` confirmed cases reported across districts in the region. In this category, we are assuming `0` cases are not really zero rather unreported cases. If you have a dataset with missing data, you could create additional category `No data`. You could see the the [Popovic](https://milospopovic.net/) example.
+
+Now we are ready to plot. The below code has two steps. The first layer (`geom_sf(data = eth_map, aes(group = district), color = "white", size = 0.2)`) is drawing the base map using the `eth_map` dataset. It outlines the district boundaries in white with a thin line (size = 0.2), which gives the country map its structure. The second layer (`geom_sf(data = am_df, aes(group = district, fill = cat))`) adds another set of polygons using the `am_df` dataset. These polygons are filled with colors based on the `cat(categorical grouped confirmed malaria cases)` variable, which likely represents different categories or groups within the districts. The `group = district` ensures that the polygons are grouped by district.
+
+```{r, basemap, echo=TRUE, eval=TRUE}
+p <-
+ggplot() +
+  # geom_sf(data = eth_map, aes(group = district),
+  #         color = "white", size = 0.2)+
+  geom_sf(data = am_df, aes(group = district, fill = cat)) 
+```
+
+Let's include title and/or subtitle, the source of our data.
+
+```{r, title_map, echo=TRUE, eval=TRUE}
+p2 <- p + labs(x = "",
+     title="Confirmed malaria cases in Amhara Region,\nEthiopia in 2019",
+     subtitle = "Districts level",
+     caption="©2024 Yalemzewod Gelaw https://yalemzewodgelaw.com/\nSource: Ethiopian Public Health Institute (EPHI)")
+```
+
+In the below code we will manually assign the color palette
+
+```{r}
+p3 <- p2 + scale_fill_manual(name= "Confirmed malaria cases",
+  values=c('#ffd080', '#f4a77a', '#e18079', '#c35e7d', '#9b4283', '#6c2d83'),
+  labels=c("0–7",     "7–33",     "33–107",    "107–391",   "391–976",   ">976"),
+  drop=F)+
+guides(fill=guide_legend(
+            direction = "horizontal",
+            keyheight = unit(1.15, units = "mm"),
+            keywidth = unit(15, units = "mm"),
+            title.position = 'top',
+            title.hjust = 0.5,
+            label.hjust = .5,
+            nrow = 1,
+            byrow = T,
+            reverse = F,
+            label.position = "bottom"
+          )
+    )
+```
+
+In the below code, we’re customizing our plot with the following changes: The plot uses a clean minimal theme and removes background elements and grid lines for a clear look. The title is centered and colored, while the subtitle is bold and also centered. The caption is styled to fit neatly at the bottom. We’ve adjusted text sizes and colors for the legend and axis labels. Margins are set to provide ample space around the plot, and axis titles and ticks are hidden to reduce clutter. The plot dimensions are set to 10x8 inches and a high resolution of 300 DPI for clear, detailed visuals:
+
+```{r,print, echo=TRUE,eval=TRUE, fig.width=10, fig.height=8, dpi=300}
+p4 <- p3 + 
+theme_minimal() +
+  theme(
+    panel.background = element_blank(),
+    legend.background = element_blank(),
+    legend.position = c(.45, .04),
+    panel.border = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank(),
+    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+    axis.title.x = element_text(size = 7, color = "grey60"),
+    legend.text = element_text(size = 9, color = "grey20"),
+    legend.title = element_text(size = 10, color = "grey20"),
+    strip.text = element_text(size = 12),
+    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
+    axis.title.y = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  )
+p4
+```
+
+How to save the plot?
+
+```{r,save_plot, echo=TRUE, eval=TRUE}
+# Save the plot with higher resolution and larger dimensions
+# ggsave("malaria.png", plot = p4, width = 10, height = 8, dpi = 300)
+```
+
+Plot the confirmed malaria case by splitting the confirmed malaria cases by administrative level 2 named zone
+
+```{r, tmap_split, echo=TRUE, eval=TRUE, fig.width=12, fig.height=5, dpi=300}
+library(tmap)
+
+tm_shape(am_df) + 
+  tm_polygons(col = "conf") +
+  tm_facets(by = "ADM2_EN", nrow = 2) +
+  tm_layout(
+    legend.position = c(.05, .04),  # Position the legend
+    legend.title.size = 1.1,        # Adjust the title size
+    legend.text.size = 0.8,         # Adjust the label text size
+    legend.frame = TRUE,            # Add a frame around the legend
+    legend.bg.color = "white",      # Background color of the legend
+    legend.bg.alpha = 0.7,          # Transparency of the legend background
+    legend.outside = TRUE,         # Position inside the plot area
+    legend.stack = "horizontal" # Horizontal layout for legend items
+  )
+
+```
+
+### Adding points to maps
+
+Suppose we want to add the locations of health facilities in Ethiopia to our map of conf. `eth_hf_points`is an `` sf` `` object, but this time consisting of points. That doesn't matter to `geom_sf`.
+
+```{r, point_map, eval=TRUE, echo=TRUE}
+# Assign some of these points to be hospitals
+eth_hospitals <- sample(eth_hf_points$facility_type, 0.1*length(eth_hf_points$facility_type))
+
+# filter hospital and health center
+eth_hf_points <- eth_hf_points %>% 
+  mutate(hf_type = if_else(facility_type%in%"Hospital","Hospital", "Health Center/Clinics"))
+         
+```
+
+-   **scico** - package uses more or less the same api as *viridis* and provides scales for *ggplot2* without requiring ggplot2 to be installed. `Scico` provides 39 different palettes, all of which are perceptually uniform and colourblind safe.
+
+```{r,hf_map, echo=TRUE, eval=TRUE, fig.width=10, fig.height=8, dpi=300}
+# load package
+
+library(scico)
+
+# Plot
+ggplot() + 
+  geom_sf(data = eth_map,
+          colour = "grey50", size = 0.2) +
+  scico::scale_fill_scico(palette = "davos", trans = "log") +
+  geom_sf(data = eth_hf_points, aes(color = hf_type, shape = hf_type), size = 0.5) + 
+  labs(title = "Hospitals and Health Centers in Ethiopia", 
+       caption = "©2024 Yalemzewod Gelaw https://yalemzewodgelaw.com/\nSource: Ethiopian Public Health Institute (EPHI)",
+       subtitle = "SPA, 2021",
+       shape = "Health Facility") +
+  coord_sf() +
+  guides(color = "none", shape = guide_legend(title = "Health Facility")) +  # Hide color legend and show shape legend
+  theme_minimal() +
+  theme(
+    panel.background = element_blank(),
+    legend.background = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank(),
+    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+    axis.title.x = element_text(size = 7, color = "grey60"),
+    legend.text = element_text(size = 9, color = "grey20"),
+    legend.title = element_text(size = 10, color = "grey20"),
+    strip.text = element_text(size = 12),
+    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
+    axis.title.y = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  )
+
+```
+
+### Exploration: **Autocorrelation**
+
+In this section discusses what it is spatial exploration (i.e., identify disease clustering) for area data, and how statistics describing it can be computed . For this demonstration we will use tuberculosis notification data in Amhara region from 2014 to 2017[@gelaw2019].
+
+Measures of spatial autocorrelation describe the degree two which observations (values) at spatial locations (whether they are points, areas, or raster cells), are similar to each other. So we need two things: observations and locations.
+
+```{r,am_shp, eval=TRUE, echo=TRUE}
+# read using 'sf' package
+map <- st_read("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/shapefile",
+             layer = "Amhara_2013s")
+
+# class
+class(map)
+
+```
+
+Transform from `sf` to `sp` spatial data :
+
+```{r,to_sp, echo=TRUE, eval=TRUE}
+# transform to sp
+map <- as(map, "Spatial")
+# calss
+class(map)
+```
+
+Read tuberculosis data
+
+```{r, mereg, echo=TRUE, eval=TRUE}
+
+# read tuberculosis notification data 
+tb <- read.csv("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/nall.csv",sep=",",header = T)
+
+# merge
+map_tb <- merge(map,tb,by="WOREDANAME")
+
+map_tb
+
+```
+
+The Moran's I statistic is not robust to outliers or strongly skewed datasets. It's therefore good practice to check the distribution of the attribute values. You can plot the attribute values as follows:
+
+Histogram : distribution
+
+```{r, histogram, echo=TRUE, eval=TRUE}
+# histogram
+hist(tb$propallcase, main = NULL)
+```
+
+Box-plot - outlier
+
+```{r, box_plot, echo=TRUE,eval=TRUE}
+# box
+boxplot(tb$propallcase, horizontal = T)
+```
+
+The dataset seems to be not well behaved - skewed to the right and there is an outliers. To symbolize the polygons using the `proportions of all tuberculosis cases`attribute we will first define the classification breaks (`style = quantile` with `n = 8` breaks) and the symbol colors (`palette="Greens"`) using the `tmap` package.
+
+```{r, tmap, echo=TRUE, eval=TRUE}
+
+library(tmap)
+# plot
+tm_shape(map_tb) + 
+  tm_polygons(col="propallcase",
+          style="quantile",
+          n=8, palette="Greens") +
+          tm_legend(outside=TRUE)
+```
+
+#### **Define neighboring polygons**
+
+The first step in a Moran's I analysis requires that we define "neighboring" polygons. This could refer to contiguous polygons, polygons within a certain distance, or it could be non-spatial in nature and defined by social, political or cultural "neighbors".
+
+Here, we'll adopt a contiguous neighbor definition. We'll accept any contiguous polygons that share at least one vertex; this is the "queen" case (if one chooses to adopt the chess analogy) and it's parameterized as `queen = TRUE` in the call to `poly2nb`. If we required that just *edges* be shared between polygons then we would set `queen = FALSE` (the *rook* analogy). A spatial weight matrix is used to specify the spatial relationships of the districts. We defined neighbours usingfirst-order Queen's contiguity, where by districts sharing borders or a common vertex with each otherwere considered neighbours
+
+For each polygon in our shape object, `nb` lists all neighboring polygons. A spatial weight matrix is used to specify the spatial relationships of the districts.
+
+```{r,neighboring, echo=TRUE, eval=TRUE}
+
+library(spdep) # calculate neighboring 
+##Spatial matrix
+
+nb <- poly2nb(map, row.names = map$ADM3_EN)
+# str(nb)# for more details of the neighborhood
+cords <- coordinates(map_tb)
+```
+
+To see the neighbors (by ID number) for the first polygon in the shape object, type:
+
+```{r, vie_nb, echo=TRUE, eval=TRUE}
+nb
+```
+
+or by plotting the cords:
+
+```{r,nb_plot,echo=TRUE, eval=TRUE}
+# grey
+plot(map_tb,border="lightgrey")
+# red
+plot(nb,cords,lwd=1,col='red')
+```
+
+Calculate the Rook's case neighbours - queen's contiguity, mean districts sharing borders or a common vertex with each other is considered neighbour.
+
+```{r,queen, echo=TRUE, eval=TRUE}
+# queen's neighbour
+nb2 <- poly2nb(map_tb,queen = TRUE)
+nb2
+```
+
+Compares different types of neighbours
+
+```{r, compare,echo=TRUE, eval=TRUE}
+# Set up a 1x2 layout
+layout(matrix(1:2, nrow = 1))
+
+# First plot: Distance
+plot(map_tb, border='lightgrey') # Background map
+plot(nb, cords, col='blue', main="Distance", add = TRUE)
+
+# Second plot: Queen
+plot(map_tb, border='lightgrey') # Background map
+plot(nb2, cords, col='red', main="Queen", add = TRUE)
+
+# Reset the layout to default (optional)
+layout(1)
+
+```
+
+#### **Step 2: Assign weights to the neighbors**
+
+Assign equal weights to each neighboring polygon, each neighboring polygon will be assigned **equal weight** when computing the neighboring mean confirmed cases values. The equal neighboring matrix will be computed using `nb2listw()`function:
+
+```{r, weights, echo=TRUE, eval=TRUE}
+# Convert the neighbour data to a listw object
+lw <- nb2listw(nb, style="W", zero.policy=TRUE)
+```
+
+In this example, each neighboring polygon will be assigned **equal weight** when computing the neighboring mean proportions of tuberculosis values. To see the weight of the first polygon's neighbors type:
+
+```{r, first, echo=TRUE, eval=TRUE}
+# first polygon
+lw$weights[1]
+```
+
+#### **Step 3: Computing Global Moran's I statistic**
+
+Investigation of global clustering patterns across regions is very important in spatial data analysis. `Moran's I` is a widely used spatial statistic for detecting global spatial patterns - unusually large cluster. Here, we intend to explore the presence of geographical clustering of TB in the region. The Moran's I statistic can be computed using the `moran` function.
+
+```{r, moran, echo=TRUE, eval=TRUE}
+# Global MORAN
+I <- moran(map_tb$propallcase, lw, length(nb2), Szero(lw))[1]
+I
+```
+
+::: callout-note
+The output will contain: the value of the standard deviate of Moran's I,the p-value of the test, the value of the observed Moran's I. Moran's `I` value is the slope of the line that best fits the relationship between neighboring proportions of tuberculosis values and each polygon's proportion in the dataset.
+:::
+
+#### **Step 4: Performing a hypothesis test**
+
+The hypothesis we are testing states that *"the proportions of tuberculosis are randomly distributed across districts following a completely random process"*. There are two methods to testing this hypothesis: an ***analysis method*** and a ***Monte Carlo*** method. We'll explore both approaches in the following examples.
+
+4.1. Analysis method
+
+To run the Moran's I analysis using the analytic method, use the `moran.test` function.
+
+```{r, moran_test, echo=TRUE, eval=TRUE}
+# moran test
+moran.test(map_tb$propallcase,lw, 
+           alternative="greater")
+```
+
+Spatial explanatory data analysis indicated significant spatial autocorrelation in district-level TB notification rates; the global Moran’s I = 0.314 test found significant positive autocorrelation (p\<0.001) for the year 2014 - 2017 over the region.
+
+**4.2. Monte Carlo method**
+
+The analytical approach to the Moran's I analysis benefits from being fast. But it may be sensitive to irregularly distributed polygons. A safer approach to hypothesis testing is to run an MC simulation using the `moran.mc()` function. The `moran.mc` function takes an extra argument `n`, the number of simulations.
+
+```{r,mc, echo=TRUE, eval=TRUE}
+# monte carlo
+MC<- moran.mc(map_tb$propallcase, lw, nsim=999, alternative="greater")
+
+# View results (including p-value)
+MC
+```
+
+The MC simulation generates a very small p-value, 0.001 suggesting that proportions are strongly clustered. We can see the results graphically by passing the Moran's I model to the plot function:
+
+```{r, plot_mc, echo=TRUE, eval=TRUE}
+# Plot the Null distribution (note that this is a density plot instead of a histogram)
+plot(MC)
+```
+
+The curve shows the distribution of Moran I values we could expect had the proportions of tuberculosis been randomly distributed across the counties. Note that our observed statistic, 0.314, falls way to the right of the distribution suggesting that the tuberculosis proportions are clustered (a positive Moran's I value suggests clustering whereas a negative Moran's I value suggests dispersion).
+
+Now, had the Moran's I statistic been negative (suggesting a dispersed pattern), you would probably want to set the `alternative` argument to `less` thus giving you the fraction of simulated `I` values more dispersed than your observed `I` value.
+
+A visual exercise that you can perform to assess how "typical" or "atypical" your pattern may be relative to a randomly distributed pattern is to plot your observed pattern alongside a few simulated patterns generated under the null hypothesis.
+
+```{r, distribution, echo=TRUE, eval=TRUE, fig.width=10, fig.height=4, dpi=300}
+
+set.seed(131)  # Set the random seed to 131 for reproducibility of the random sampling.
+
+# Create a new variable 'rand1' in 'map_tb' by shuffling the values of 'propallcase'.
+# 'replace = FALSE' ensures that each value is used exactly once, meaning no duplicates.
+map_tb$rand1 <- sample(map_tb$propallcase, length(map_tb$propallcase), replace = FALSE)
+
+# Create another variable 'rand2' in 'map_tb' by shuffling 'propallcase' again.
+# This generates a different random permutation from the previous 'rand1'.
+map_tb$rand2 <- sample(map_tb$propallcase, length(map_tb$propallcase), replace = FALSE)
+
+# Create a third variable 'rand3' in 'map_tb' by shuffling 'propallcase' once more.
+# This produces yet another random permutation, different from both 'rand1' and 'rand2'.
+map_tb$rand3 <- sample(map_tb$propallcase, length(map_tb$propallcase), replace = FALSE)
+
+
+# Create a faceted plot with labeled facets
+tm_shape(map_tb) +
+  tm_polygons(col = c("propallcase", "rand1", "rand2", "rand3"),
+          style = "quantile", 
+          n = 8, 
+          palette = "Greens",
+          legend.show = FALSE) +
+  tm_facets(nrow = 1, free.coords = FALSE) +  # Create facets in a single row
+  tm_layout(panel.labels = c("Proportions", "Random 1", "Random 2", "Random 3"), # Labels for each plot
+            panel.label.size = 1.5,  # Size of the labels
+            panel.label.bg.color = "white", # Background color for labels
+            panel.label.fontface = "bold")  # Make the labels bold
+
+```
+
+Is there a difference between our observed proportions of tuberculosis distribution and those generated from a completely random process? The map on the left is our observed distribution. The three maps on the right are realizations of a completely random process.
+
+### **Local Moran's I**
+
+```{r, local, echo=TRUE, eval=FALSE}
+# creates a local moran output
+did <- order(map_tb$WOR_P_CODE)  #order by id
+localr <- localmoran(x=tb$propallcase,nb2listw(nb2,style="W"))
+
+head(printCoefmat(data.frame(localr[did,], row.names=map_tb$WOREDANAME[did]),
+ check.names=FALSE))
+
+# binds results to our polygon shapefile
+moran.mapr <- cbind(map_tb,localr)
+```
+
+The output contains: local moran's statistic `Ii`, expectation of local moran's statistic `E.Ii`, variance of local moran's statistic `Var.Ii`, standard deviate of local moran's statistic `Z.Ii`, and p-value of local moran statistic using `pr()`.
+
+```{r,local_dist, echo=TRUE, eval=TRUE}
+# Local distribution 
+hist(localr[,5])
+```
+
+In the map below, local moran I's was negative for higher-order adjacencies, thus districts far away from the one of interest tended to have disparate notification rates
+
+```{r, local_clustering, echo=TRUE, eval=TRUE}
+# maps the results
+tm_shape(moran.mapr)+
+  tm_polygons(col="Ii",n= 6, 
+          style="quantile",
+          title = "Local moran statistic", Frame=T)+
+  tm_compass(north = 1, text.size = 0.2,
+             position=c("left", "top"))+
+  tm_layout(title = "TB local clustering")
+
+```
+
+Let's present this in Local Indicators of Spatial Association(LISA) using the `tidyrgeoda`. Details about the
+
+LISA will be found here [tidyrgeoda package](https://spatlyu.github.io/tidyrgeoda/articles/Local-Indicators-of-Spatial-Association.html)
+
+Install the development version of the package from github as below
+
+```{r, install_, echo=TRUE, eval=TRUE}
+# install.packages("devtools")
+library(devtools)
+devtools::install_github("SpatLyu/tidyrgeoda",
+                         build_vignettes = T,
+                         dep = T)
+```
+
+Assessing the Local Moran at 0.05 significance level
+
+```{r, localmr, echo=TRUE, eval=TRUE, fig.width=10, fig.height=10, dpi=300}
+
+library(tidyverse)
+library(tidyrgeoda)
+# Convert the SpatialPolygonsDataFrame to an sf object
+map_sf <- st_as_sf(map_tb)
+
+map_sf %>% 
+  dplyr::mutate(lisa = st_local_moran(.,'propallcase',
+                               wt = st_contiguity_weights(.),
+                               significance_cutoff = 0.05)) %>% 
+  dplyr::select(lisa) %>% 
+  ggplot() +
+  geom_sf(aes(fill = lisa),lwd = .1,color = 'grey') +
+  scale_fill_lisa(name = 'LISA 95%') +
+      labs(title = "Tuberculosis Hotspots in Amhara Region, 2014–2017 ",
+       caption = "©2019 Yalemzewod Gelaw https://doi.org/10.1093/trstmh/trz017/",
+       subtitle = "LISA at 0.05 significance level")+
+  theme_minimal() +
+  theme(
+    panel.background = element_blank(),
+    legend.background = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank(),
+    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+    axis.title.x = element_text(size = 7, color = "grey60"),
+    legend.text = element_text(size = 9, color = "grey20"),
+    legend.title = element_text(size = 10, color = "grey20"),
+    strip.text = element_text(size = 12),
+    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
+    axis.title.y = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  )
+```
+
+**Local Getis-Ord Statistics**
+
+```{r,gt_or, echo=TRUE, eval=TRUE, fig.width=10, fig.height=10, dpi=300}
+map_sf %>% 
+  dplyr::mutate(lisa = st_local_g(.,'propallcase',
+                               wt = st_contiguity_weights(.),
+                               significance_cutoff = 0.05)) %>% 
+  dplyr::select(lisa) %>% 
+  ggplot() +
+  geom_sf(aes(fill = lisa),lwd = .1,color = 'grey') +
+  scale_fill_lisa(name = 'Local G') +
+   labs(title = "Tuberculosis Hotspots in Amhara Region, 2014–2017 ",
+       caption = "©2019 Yalemzewod Gelaw https://doi.org/10.1093/trstmh/trz017/",
+       subtitle = "LISA Getis-Ord Statistics")+
+  theme_minimal() +
+  theme(
+    panel.background = element_blank(),
+    legend.background = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank(),
+    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+    axis.title.x = element_text(size = 7, color = "grey60"),
+    legend.text = element_text(size = 9, color = "grey20"),
+    legend.title = element_text(size = 10, color = "grey20"),
+    strip.text = element_text(size = 12),
+    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
+    axis.title.y = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  )
+```
+
+LISA is used to detect the location of hotspot districts with high rates of TB notifications surrounded by others also with high rates of TB. The LISA led to the classification of districts into five classes: high–high (hotspot), low–low (LL), low–high (LH), high–low (HL). and not significant. The hotspot and low–low locations suggest clustering of similar areas, whereas the high–low and low–high locations indicate spatial outliers. A high–low spatial outlier describes a location where there is a mixture of high and low scores in neighbouring areas. The outliers (high–low and low–high TB cluster districts) have epidemiological significance for TB prevention and control. High–low clusters indicate a location with a high incidence of notified TB cases sharing borders with locations with low incidence, so that infection can be disseminated from the high-incidence location to the low-incidence locations. Low–high clusters indicate a location with low TB incidence sharing borders with locations with high TB incidence, so that areas of low TB incidence can be a receptor of infection.
