@@ -89,15 +89,15 @@ if (!requireNamespace("classInt", quietly = TRUE)) install.packages("classInt")
 
 
 # load packages
-library(tidyverse, quietly=T) # data wrangling and visualization
-library(hablar, quietly = T) #rename
-library(janitor, quietly = T) #clean names
+library(tidyverse, quietly = T) # data wrangling and visualization
+library(hablar, quietly = T) # rename
+library(janitor, quietly = T) # clean names
 library(graphics) # for plot methods
 
 # map
 library(mapview, quietly = T) # plot
 library(scico, quietly = T)
-library(classInt, quietly=T)
+library(classInt, quietly = T)
 
 # to read and clean spatial data
 library(spdep, quietly = T) # neghiborhod matrix
@@ -106,8 +106,8 @@ library(sf, quietly = T) # spatial data manipulation
 library(spData, quietly = T) # spatial data
 
 # for raster data
-library(raster, quietly = T) 
-library(terra,quietly = T)
+library(raster, quietly = T)
+library(terra, quietly = T)
 
 # spatial exploration
 library(bispdep, quietly = T)
@@ -152,9 +152,11 @@ We will use the `st_read()` from `sf` package, which simply takes the path of th
 
 ```{r, shapefile,echo=TRUE,eval=TRUE, include=FALSE}
 # read the shapefile  - area
-eth_map <- st_read("C:/Users/User/OneDrive/from_unsw_drive/file_YG/TKI/MAP/Ethiopia_malaria/ethiopia_megregd_shp/V3/edited_v3.shp") %>%  
-rename("district" = "ADM3_EN",
-       "region" = "ADM1_EN")
+eth_map <- st_read("C:/Users/User/OneDrive/from_unsw_drive/file_YG/TKI/MAP/Ethiopia_malaria/ethiopia_megregd_shp/V3/edited_v3.shp") %>%
+    rename(
+        "district" = "ADM3_EN",
+        "region" = "ADM1_EN"
+    )
 
 ```
 
@@ -208,7 +210,7 @@ The *geometric* part can be extracted with `st_geometry`, resulting in an object
 
 ```{r, geom, echo=TRUE, eval=TRUE}
 # get geometry data
- st_geometry(eth_map)
+st_geometry(eth_map)
 ```
 
 Conversely, If we want just the *non-geometric* part (the "attributes"), it can be extracted with `st_drop_geometry` which returns a `data.frame`:
@@ -229,16 +231,16 @@ Another key type of spatial data is data linked to coordinates, frequently found
 ```{r, read_point, echo=TRUE, eval=TRUE}
 
 # Read the `csv` file with geometry information
-hf_gps <- read_csv("C:/Users/User/OneDrive/from_unsw_drive/file_YG/TKI/MAP/training/HF_list.csv") %>% 
-  clean_names() %>% 
-  drop_na() #drop na
+hf_gps <- read_csv("C:/Users/User/OneDrive/from_unsw_drive/file_YG/TKI/MAP/training/HF_list.csv") %>%
+    clean_names() %>%
+    drop_na() # drop na
 
 ```
 
 Check the class of the point spatial data. The dataset read as data.frame th output captured the geographic information: longitude and latitude.
 
 ```{r, class_pt, echo=TRUE, eval=TRUE}
-#check the data class
+# check the data class
 class(hf_gps)
 ```
 
@@ -248,8 +250,9 @@ The `st_as_sf()`\` function from the *sf* package will convert into point spatia
 # Make the gps data into a point sample feature and define it as shapefile `eth_hf_points`
 
 eth_hf_points <- st_as_sf(hf_gps,
-                           coords = c("x", "y"),
-                          crs = st_crs(4326))
+    coords = c("x", "y"),
+    crs = st_crs(4326)
+)
 ```
 
 The map below plotted the each XY geometry health facility points.
@@ -347,7 +350,7 @@ For example, we can calculate the area of each feature in the `Ethiopia` layer u
 
 ```{r, area, echo=TRUE, eval=TRUE}
 # calculate the area of each district
-eth_map$area = st_area(eth_map)
+eth_map$area <- st_area(eth_map)
 ```
 
 Summary of the area in $m^2$
@@ -361,7 +364,7 @@ Plot the area in $m^2$.
 
 ```{r, m2, echo=TRUE, eval=TRUE}
 # plot `m^2`
-plot(eth_map["area"] , main = "Area of the Districts (m^2)")
+plot(eth_map["area"], main = "Area of the Districts (m^2)")
 ```
 
 You may notice the `area` values are printed with their units `[m^2]`. The resulting area values, just like any other numeric calculations in `sf`, are returned as object of class `units`:
@@ -381,19 +384,21 @@ Then, we make the transformation to $km^2$ units :
 
 ```{r, km_map, echo=TRUE, eval=TRUE}
 # km^2
-eth_map$area = set_units(eth_map$area, "km^2")
+eth_map$area <- set_units(eth_map$area, "km^2")
 ```
 
 Lets check the summary of the transformed area in $Km^2$. In the below summary, we’ve added `across(geometry, st_union)` to ensure proper summarization of the spatial data. The `st_union` function will be applied to the geometry column.
 
 ```{r,km, echo=TRUE, eval=FALSE}
-# summary with chain 
+# summary with chain
 eth_map %>%
-  summarise(mean_area = mean(area),
-            median_area = median(area),
-            sd_area = sd(area),
-            range_area = range(area),
-            across(geometry, st_union))
+    summarise(
+        mean_area = mean(area),
+        median_area = median(area),
+        sd_area = sd(area),
+        range_area = range(area),
+        across(geometry, st_union)
+    )
 
 ```
 
@@ -414,8 +419,8 @@ The `st_centroid` function calculates the centroid (geometric center) of a polyg
 
 ```{r, am_map, echo=TRUE, eval=TRUE}
 # Filter Amhara
-amhara_shp <- eth_map |> 
-               filter(region=="Amhara")
+amhara_shp <- eth_map |>
+    filter(region == "Amhara")
 ```
 
 Now, let’s calculate the centroids: to calculate the centroids of the *"Amhara"* polygons we can use the `st_centroid` function as follows:
@@ -425,9 +430,10 @@ Now, let’s calculate the centroids: to calculate the centroids of the *"Amhara
 amhara_ctr <- st_centroid(amhara_shp)
 
 # Filled polygons with points
- plot(st_geometry(amhara_ctr),
-            col = "red",
-            pch = 3)
+plot(st_geometry(amhara_ctr),
+    col = "red",
+    pch = 3
+)
 ```
 
 -   ***Buffering `(st_buffer)`***
@@ -437,15 +443,16 @@ The `st_buffer` function creates a buffer around a spatial object. Buffers are u
 ```{r, buffering, echo=TRUE, eval=TRUE}
 # Filter hospitals
 hospital <- eth_hf_points %>%
-  filter(facility_type == "Hospital")
+    filter(facility_type == "Hospital")
 
 # Create a buffer around health facilities (e.g., 2.5 km radius)
 buffer_radius_km <- 2.5
-health_facility_buffer <- st_buffer(hospital, dist = buffer_radius_km * 1000)  # Convert km to meters
+health_facility_buffer <- st_buffer(hospital, dist = buffer_radius_km * 1000) # Convert km to meters
 
 # Plot the health facility buffers first (as polygons need a base plot)
 plot(st_geometry(health_facility_buffer),
-     col = "red", lwd = 2, main = "A Buffer arround Health Facilities")
+    col = "red", lwd = 2, main = "A Buffer arround Health Facilities"
+)
 
 # Convert hospital geometries to points if they aren't already
 hospital_points <- st_cast(hospital, "POINT")
@@ -477,8 +484,8 @@ In spatial analysis, it's common to join non-spatial data (e.g., tabular data) w
 
 ```{r, data_u5, echo=TRUE, eval=TRUE}
 # Load and filter the data for the Amhara region
-u5_data <- read_csv("C:/Users/User/OneDrive/from_unsw_drive/training/R_training/Tutorial_R/data_excercise.csv") %>% 
-  filter(region=="Amhara")
+u5_data <- read_csv("C:/Users/User/OneDrive/from_unsw_drive/training/R_training/Tutorial_R/data_excercise.csv") %>%
+    filter(region == "Amhara")
 ```
 
 ::: callout-note
@@ -491,16 +498,17 @@ Check names in the Shapefile:
 
 ```{r, name_map_check, echo=TRUE, eval=TRUE}
 #  Check if the district name is correctly spelled in the shapefile
-eth_map %>% 
-  filter(district=="Hawi Gudina\n")
+eth_map %>%
+    filter(district == "Hawi Gudina\n")
 
 # Recode the district name to remove any newline characters
 eth_map$district <- recode(eth_map$district,
-                           "Hawi Gudina\n" = "Hawi Gudina")
+    "Hawi Gudina\n" = "Hawi Gudina"
+)
 
 # Verify the correction
-eth_map %>% 
-  filter(district == "Hawi Gudina")
+eth_map %>%
+    filter(district == "Hawi Gudina")
 
 # Note: Always check that the names are correctly updated in your shapefile.
 ```
@@ -511,8 +519,8 @@ Check names in your data. Please note that ensuring consistent naming between da
 
 # Verify the district name in the non-spatial data
 
-u5_data %>% 
-  filter(district == "Hawi Gudina")
+u5_data %>%
+    filter(district == "Hawi Gudina")
 ```
 
 **Join Non-Spatial Data to the Shapefile**
@@ -522,10 +530,10 @@ Once you've confirmed that the names match, you can proceed to join your non-spa
 ```{r, join, echo=TRUE, eval=TRUE}
 
 # Perform the join operation
-amhara_data_sf <- amhara_shp %>%  
-                  left_join(u5_data, by = "district")
+amhara_data_sf <- amhara_shp %>%
+    left_join(u5_data, by = "district")
 
-# Note: The `left_join` function keeps all rows from the shapefile and joins matching rows from the data. 
+# Note: The `left_join` function keeps all rows from the shapefile and joins matching rows from the data.
 # If a match isn't found, the resulting shapefile will still include the original geographic information.
 
 ```
@@ -547,10 +555,12 @@ After you've completed your analysis or modifications, you may want to save your
 
 ```{r, save_shape, echo=TRUE, eval=FALSE}
 # Write the shapefile to disk
-st_write(amhara_data_sf,
-         "C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/amhara_data_with_shapefile.shp")
+st_write(
+    amhara_data_sf,
+    "C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-25-Spatial-analysis-in-R/data/amhara_data_with_shapefile.shp"
+)
 
-# Note: Replace "path_to_save" with the directory where you want to save the file. 
+# Note: Replace "path_to_save" with the directory where you want to save the file.
 # The .shp extension indicates it's a shapefile.
 ```
 
@@ -565,9 +575,8 @@ The `terra` package in R introduces a new class of raster data called `SpatRaste
 The `rast()` function is used to load the raster data, and simply calling the object name (in this case, `population`) will display the raster properties like extent, resolution, and CRS (Coordinate Reference System).
 
 ```{r, raster_data, echo=TRUE, eval=TRUE}
-
 # Load the population raster data
-population <- rast("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/eth_ppp_2016.tif")
+population <- rast("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-25-Spatial-analysis-in-R/data/eth_ppp_2016.tif")
 
 # View the raster properties
 population
@@ -591,8 +600,8 @@ plot(population, main = "Raster level populations map")
 Before plotting, lets explore the distributions of the raster data with the log scaling.
 
 ```{r, distr, echo=TRUE, eval=TRUE}
-#plotting the log of the population due to the scale
-hist(log(population)) 
+# plotting the log of the population due to the scale
+hist(log(population))
 ```
 
 Before plotting, first we need to convert the raster to a data frame. The `geom_raster()` function is used to plot raster data, and `scale_fill_viridis_c()` is used to apply a color scale that is perceptually uniform. To make it manageable, first, we need to reduce the resolutions of our data
@@ -606,10 +615,10 @@ pop_df <- as.data.frame(population_reduced, xy = TRUE)
 
 # Plot the raster using ggplot2
 ggplot() +
-  geom_tile(data = pop_df, aes(x = x, y = y, fill = eth_ppp_2016)) +
-  scale_fill_viridis_c() +
-  labs(fill = "Population") +
-  theme_bw()
+    geom_tile(data = pop_df, aes(x = x, y = y, fill = eth_ppp_2016)) +
+    scale_fill_viridis_c() +
+    labs(fill = "Population") +
+    theme_bw()
 ```
 
 Re-projecting rasters
@@ -622,7 +631,7 @@ Sometimes we need to change the projection of our raster data to align it with o
 crs(population)
 
 # Reproject the raster to UTM zone 48
-#crs(population) <- "+proj=utm +zone=48 +datum=WGS84"
+# crs(population) <- "+proj=utm +zone=48 +datum=WGS84"
 
 ```
 
@@ -635,7 +644,7 @@ We can modify rasters by cropping them to a specific extent or masking out areas
 ext(population)
 
 # Assume we have a spatial object 'Amhara' representing a region in Ethiopia
-Amhara <- filter(eth_map, region == 'Amhara')
+Amhara <- filter(eth_map, region == "Amhara")
 
 # Crop the raster to the Amhara region
 am_pop <- crop(population, Amhara)
@@ -656,7 +665,7 @@ To extract the population values for each admin 3 district of Ethiopia. For this
 
 terra::extract(am_pop2, amhara_ctr)
 
-am_population <- exactextractr::exact_extract(am_pop,amhara_shp, 'sum',append_cols = "district") 
+am_population <- exactextractr::exact_extract(am_pop, amhara_shp, "sum", append_cols = "district")
 
 # write.csv(file = "C:/Users/user/Documents/Data_management_in_R/pop.csv", row.names = FALSE) # to save the population
 
@@ -710,8 +719,9 @@ By default, R will automatically place the legend where it "thinks" it fits best
 ```{r,ad_leg, echo=TRUE, eval=TRUE}
 # to lower legend
 plot(amhara_data_sf["conf"],
-     main = "Confirmed Malaria cases in Amhara Region",
-     key.pos = 1)
+    main = "Confirmed Malaria cases in Amhara Region",
+    key.pos = 1
+)
 ```
 
 **Mapping using `ggplot2:`**
@@ -724,9 +734,9 @@ Given an `sf` object, you can use `geom_sf` to produce a simple plot of your sha
 
 ```{r, mapping_features, echo=TRUE, eval=TRUE}
 # base
-ggplot(amhara_shp) + 
-  geom_sf() + # as we've called ggplot using an sf object as the data argument, geom_sf can figure it out itself
-  coord_sf()  # deals with map projection 
+ggplot(amhara_shp) +
+    geom_sf() + # as we've called ggplot using an sf object as the data argument, geom_sf can figure it out itself
+    coord_sf() # deals with map projection
 ```
 
 -   **viridis package -** pretty color map with color scale using the `scale_fill_viridis()` function
@@ -735,12 +745,14 @@ ggplot(amhara_shp) +
 # pretty color map with color scale
 library(viridis)
 
-ggplot(data = amhara_data_sf, 
-       aes(fill = conf)) +
-  geom_sf() +
-  scale_fill_viridis() + 
-  theme_void() +
-  labs(title = "Confirmed malaria in Amhara Region, Ethiopia")
+ggplot(
+    data = amhara_data_sf,
+    aes(fill = conf)
+) +
+    geom_sf() +
+    scale_fill_viridis() +
+    theme_void() +
+    labs(title = "Confirmed malaria in Amhara Region, Ethiopia")
 ```
 
 -   **leaflet package** - an open-source *JavaScript* library for interactive maps to make easy to create Leaflet maps from R. leaflet will also allow you to zoom in and out from the world map view.
@@ -753,12 +765,12 @@ library(leaflet)
 pal <- colorNumeric("YlOrRd", domain = amhara_data_sf$conf)
 
 leaflet(amhara_data_sf) %>%
-  addTiles() %>%
-  addPolygons(
-    color = "white", fillColor = ~ pal(conf),
-    fillOpacity = 1
-  ) %>%
-  addLegend("bottomright",pal = pal, values = ~conf, opacity = 1, title = "Confirmed malaria")
+    addTiles() %>%
+    addPolygons(
+        color = "white", fillColor = ~ pal(conf),
+        fillOpacity = 1
+    ) %>%
+    addLegend("bottomright", pal = pal, values = ~conf, opacity = 1, title = "Confirmed malaria")
 ```
 
 -   **Mapview pacakge -** allows to very quickly create interactive visualizations to investigate both the spatial geometries and the variables in the data
@@ -767,9 +779,11 @@ leaflet(amhara_data_sf) %>%
 
 library(mapview)
 
- mapview(amhara_data_sf, zcol = "conf", 
-         legend = "TRUE",
-         layer.name = "Confirmed malaria") # edit legend name
+mapview(amhara_data_sf,
+    zcol = "conf",
+    legend = "TRUE",
+    layer.name = "Confirmed malaria"
+) # edit legend name
 ```
 
 We can use the `sync()` function to produce a lattice-like view of multiple synchronized maps created with mapview or leaflet.
@@ -798,10 +812,11 @@ The first step is to find a natural breaks with specified interval (6 or 8 inter
 
 ```{r, cut_point,echo=TRUE, eval=TRUE}
 # six natural interval with quantile breaks
-interval = classIntervals(amhara_data_sf$conf,
-	            n = 6,
-	            style = 'quantile')$brks
-am_df = amhara_data_sf # let's copy the dataset for simplicity 
+interval <- classIntervals(amhara_data_sf$conf,
+    n = 6,
+    style = "quantile"
+)$brks
+am_df <- amhara_data_sf # let's copy the dataset for simplicity
 ```
 
 Then we will create categories based on the above intervals:
@@ -809,21 +824,24 @@ Then we will create categories based on the above intervals:
 ```{r,labels, echo=TRUE, eval=TRUE}
 
 labels <- c()
-for(i in 1:length(interval)){
-    labels <- c(labels, paste0(round(interval[i], 0),
-                             "–",
-                             round(interval[i + 1], 0)))
+for (i in 1:length(interval)) {
+    labels <- c(labels, paste0(
+        round(interval[i], 0),
+        "–",
+        round(interval[i + 1], 0)
+    ))
 }
-labels <- labels[1:length(labels)-1]
+labels <- labels[1:length(labels) - 1]
 ```
 
 Let's create a new variable called `category` in the dataframe by dividing the confirmed malaria cases `conf` into intervals defined by `breaks`. Then we'll assigns labels from `labels` to these intervals and include the lowest value in the first interval.
 
 ```{r, category, echo=TRUE, eval=TRUE}
 am_df$cat <- cut(am_df$conf,
-              breaks = interval,
-              labels = labels,
-              include.lowest = T)
+    breaks = interval,
+    labels = labels,
+    include.lowest = T
+)
 levels(am_df$cat) # let's check how many levels it has (6)
 ```
 
@@ -833,68 +851,71 @@ Now we are ready to plot. The below code has two steps. The first layer (`geom_s
 
 ```{r, basemap, echo=TRUE, eval=TRUE}
 p <-
-ggplot() +
-  # geom_sf(data = eth_map, aes(group = district),
-  #         color = "white", size = 0.2)+
-  geom_sf(data = am_df, aes(group = district, fill = cat)) 
+    ggplot() +
+    # geom_sf(data = eth_map, aes(group = district),
+    #         color = "white", size = 0.2)+
+    geom_sf(data = am_df, aes(group = district, fill = cat))
 ```
 
 Let's include title and/or subtitle, the source of our data.
 
 ```{r, title_map, echo=TRUE, eval=TRUE}
-p2 <- p + labs(x = "",
-     title="Confirmed malaria cases in Amhara Region,\nEthiopia in 2019",
-     subtitle = "Districts level",
-     caption="©2024 Yalemzewod Gelaw https://yalemzewodgelaw.com/\nSource: Ethiopian Public Health Institute (EPHI)")
+p2 <- p + labs(
+    x = "",
+    title = "Confirmed malaria cases in Amhara Region,\nEthiopia in 2019",
+    subtitle = "Districts level",
+    caption = "©2024 Yalemzewod Gelaw https://yalemzewodgelaw.com/\nSource: Ethiopian Public Health Institute (EPHI)"
+)
 ```
 
 In the below code we will manually assign the color palette
 
 ```{r}
-p3 <- p2 + scale_fill_manual(name= "Confirmed malaria cases",
-  values=c('#ffd080', '#f4a77a', '#e18079', '#c35e7d', '#9b4283', '#6c2d83'),
-  labels=c("0–7",     "7–33",     "33–107",    "107–391",   "391–976",   ">976"),
-  drop=F)+
-guides(fill=guide_legend(
-            direction = "horizontal",
-            keyheight = unit(1.15, units = "mm"),
-            keywidth = unit(15, units = "mm"),
-            title.position = 'top',
-            title.hjust = 0.5,
-            label.hjust = .5,
-            nrow = 1,
-            byrow = T,
-            reverse = F,
-            label.position = "bottom"
-          )
-    )
+p3 <- p2 + scale_fill_manual(
+    name = "Confirmed malaria cases",
+    values = c("#ffd080", "#f4a77a", "#e18079", "#c35e7d", "#9b4283", "#6c2d83"),
+    labels = c("0–7", "7–33", "33–107", "107–391", "391–976", ">976"),
+    drop = F
+) +
+    guides(fill = guide_legend(
+        direction = "horizontal",
+        keyheight = unit(1.15, units = "mm"),
+        keywidth = unit(15, units = "mm"),
+        title.position = "top",
+        title.hjust = 0.5,
+        label.hjust = .5,
+        nrow = 1,
+        byrow = T,
+        reverse = F,
+        label.position = "bottom"
+    ))
 ```
 
 In the below code, we’re customizing our plot with the following changes: The plot uses a clean minimal theme and removes background elements and grid lines for a clear look. The title is centered and colored, while the subtitle is bold and also centered. The caption is styled to fit neatly at the bottom. We’ve adjusted text sizes and colors for the legend and axis labels. Margins are set to provide ample space around the plot, and axis titles and ticks are hidden to reduce clutter. The plot dimensions are set to 10x8 inches and a high resolution of 300 DPI for clear, detailed visuals:
 
 ```{r,print, echo=TRUE,eval=TRUE, fig.width=10, fig.height=8, dpi=300}
-p4 <- p3 + 
-theme_minimal() +
-  theme(
-    panel.background = element_blank(),
-    legend.background = element_blank(),
-    legend.position = c(.45, .04),
-    panel.border = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank(),
-    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
-    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
-    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
-    axis.title.x = element_text(size = 7, color = "grey60"),
-    legend.text = element_text(size = 9, color = "grey20"),
-    legend.title = element_text(size = 10, color = "grey20"),
-    strip.text = element_text(size = 12),
-    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
-    axis.title.y = element_blank(),
-    axis.ticks = element_blank(),
-    axis.text.x = element_blank(),
-    axis.text.y = element_blank()
-  )
+p4 <- p3 +
+    theme_minimal() +
+    theme(
+        panel.background = element_blank(),
+        legend.background = element_blank(),
+        legend.position = c(.45, .04),
+        panel.border = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+        plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+        plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+        axis.title.x = element_text(size = 7, color = "grey60"),
+        legend.text = element_text(size = 9, color = "grey20"),
+        legend.title = element_text(size = 10, color = "grey20"),
+        strip.text = element_text(size = 12),
+        plot.margin = margin(t = 10, r = 10, b = 30, l = 10),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank()
+    )
 p4
 ```
 
@@ -910,19 +931,19 @@ Plot the confirmed malaria case by splitting the confirmed malaria cases by admi
 ```{r, tmap_split, echo=TRUE, eval=TRUE, fig.width=12, fig.height=5, dpi=300}
 library(tmap)
 
-tm_shape(am_df) + 
-  tm_polygons(col = "conf") +
-  tm_facets(by = "ADM2_EN", nrow = 2) +
-  tm_layout(
-    legend.position = c(.05, .04),  # Position the legend
-    legend.title.size = 1.1,        # Adjust the title size
-    legend.text.size = 0.8,         # Adjust the label text size
-    legend.frame = TRUE,            # Add a frame around the legend
-    legend.bg.color = "white",      # Background color of the legend
-    legend.bg.alpha = 0.7,          # Transparency of the legend background
-    legend.outside = TRUE,         # Position inside the plot area
-    legend.stack = "horizontal" # Horizontal layout for legend items
-  )
+tm_shape(am_df) +
+    tm_polygons(col = "conf") +
+    tm_facets(by = "ADM2_EN", nrow = 2) +
+    tm_layout(
+        legend.position = c(.05, .04), # Position the legend
+        legend.title.size = 1.1, # Adjust the title size
+        legend.text.size = 0.8, # Adjust the label text size
+        legend.frame = TRUE, # Add a frame around the legend
+        legend.bg.color = "white", # Background color of the legend
+        legend.bg.alpha = 0.7, # Transparency of the legend background
+        legend.outside = TRUE, # Position inside the plot area
+        legend.stack = "horizontal" # Horizontal layout for legend items
+    )
 
 ```
 
@@ -932,12 +953,12 @@ Suppose we want to add the locations of health facilities in Ethiopia to our map
 
 ```{r, point_map, eval=TRUE, echo=TRUE}
 # Assign some of these points to be hospitals
-eth_hospitals <- sample(eth_hf_points$facility_type, 0.1*length(eth_hf_points$facility_type))
+eth_hospitals <- sample(eth_hf_points$facility_type, 0.1 * length(eth_hf_points$facility_type))
 
 # filter hospital and health center
-eth_hf_points <- eth_hf_points %>% 
-  mutate(hf_type = if_else(facility_type%in%"Hospital","Hospital", "Health Center/Clinics"))
-         
+eth_hf_points <- eth_hf_points %>%
+    mutate(hf_type = if_else(facility_type %in% "Hospital", "Hospital", "Health Center/Clinics"))
+
 ```
 
 -   **scico** - package uses more or less the same api as *viridis* and provides scales for *ggplot2* without requiring ggplot2 to be installed. `Scico` provides 39 different palettes, all of which are perceptually uniform and colourblind safe.
@@ -948,37 +969,41 @@ eth_hf_points <- eth_hf_points %>%
 library(scico)
 
 # Plot
-ggplot() + 
-  geom_sf(data = eth_map,
-          colour = "grey50", size = 0.2) +
-  scico::scale_fill_scico(palette = "davos", trans = "log") +
-  geom_sf(data = eth_hf_points, aes(color = hf_type, shape = hf_type), size = 0.5) + 
-  labs(title = "Hospitals and Health Centers in Ethiopia", 
-       caption = "©2024 Yalemzewod Gelaw https://yalemzewodgelaw.com/\nSource: Ethiopian Public Health Institute (EPHI)",
-       subtitle = "SPA, 2021",
-       shape = "Health Facility") +
-  coord_sf() +
-  guides(color = "none", shape = guide_legend(title = "Health Facility")) +  # Hide color legend and show shape legend
-  theme_minimal() +
-  theme(
-    panel.background = element_blank(),
-    legend.background = element_blank(),
-    panel.border = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank(),
-    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
-    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
-    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
-    axis.title.x = element_text(size = 7, color = "grey60"),
-    legend.text = element_text(size = 9, color = "grey20"),
-    legend.title = element_text(size = 10, color = "grey20"),
-    strip.text = element_text(size = 12),
-    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
-    axis.title.y = element_blank(),
-    axis.ticks = element_blank(),
-    axis.text.x = element_blank(),
-    axis.text.y = element_blank()
-  )
+ggplot() +
+    geom_sf(
+        data = eth_map,
+        colour = "grey50", size = 0.2
+    ) +
+    scico::scale_fill_scico(palette = "davos", trans = "log") +
+    geom_sf(data = eth_hf_points, aes(color = hf_type, shape = hf_type), size = 0.5) +
+    labs(
+        title = "Hospitals and Health Centers in Ethiopia",
+        caption = "©2024 Yalemzewod Gelaw https://yalemzewodgelaw.com/\nSource: Ethiopian Public Health Institute (EPHI)",
+        subtitle = "SPA, 2021",
+        shape = "Health Facility"
+    ) +
+    coord_sf() +
+    guides(color = "none", shape = guide_legend(title = "Health Facility")) + # Hide color legend and show shape legend
+    theme_minimal() +
+    theme(
+        panel.background = element_blank(),
+        legend.background = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+        plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+        plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+        axis.title.x = element_text(size = 7, color = "grey60"),
+        legend.text = element_text(size = 9, color = "grey20"),
+        legend.title = element_text(size = 10, color = "grey20"),
+        strip.text = element_text(size = 12),
+        plot.margin = margin(t = 10, r = 10, b = 30, l = 10),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank()
+    )
 
 ```
 
@@ -990,8 +1015,9 @@ Measures of spatial autocorrelation describe the degree two which observations (
 
 ```{r,am_shp, eval=TRUE, echo=TRUE}
 # read using 'sf' package
-map <- st_read("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/shapefile",
-             layer = "Amhara_2013s")
+map <- st_read("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-25-Spatial-analysis-in-R/data/shapefile",
+    layer = "Amhara_2013s"
+)
 
 # class
 class(map)
@@ -1011,11 +1037,11 @@ Read tuberculosis data
 
 ```{r, mereg, echo=TRUE, eval=TRUE}
 
-# read tuberculosis notification data 
-tb <- read.csv("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-04-Spatial-analysis-in-R/data/nall.csv",sep=",",header = T)
+# read tuberculosis notification data
+tb <- read.csv("C:/Users/User/Documents/R_training/Tutorial_R/R_Tutorial/scripts/tutorials/2024-08-25-Spatial-analysis-in-R/data/nall.csv", sep = ",", header = T)
 
 # merge
-map_tb <- merge(map,tb,by="WOREDANAME")
+map_tb <- merge(map, tb, by = "WOREDANAME")
 
 map_tb
 
@@ -1043,11 +1069,13 @@ The dataset seems to be not well behaved - skewed to the right and there is an o
 
 library(tmap)
 # plot
-tm_shape(map_tb) + 
-  tm_polygons(col="propallcase",
-          style="quantile",
-          n=8, palette="Greens") +
-          tm_legend(outside=TRUE)
+tm_shape(map_tb) +
+    tm_polygons(
+        col = "propallcase",
+        style = "quantile",
+        n = 8, palette = "Greens"
+    ) +
+    tm_legend(outside = TRUE)
 ```
 
 #### **Define neighboring polygons**
@@ -1060,8 +1088,8 @@ For each polygon in our shape object, `nb` lists all neighboring polygons. A spa
 
 ```{r,neighboring, echo=TRUE, eval=TRUE}
 
-library(spdep) # calculate neighboring 
-##Spatial matrix
+library(spdep) # calculate neighboring
+## Spatial matrix
 
 nb <- poly2nb(map, row.names = map$ADM3_EN)
 # str(nb)# for more details of the neighborhood
@@ -1078,16 +1106,16 @@ or by plotting the cords:
 
 ```{r,nb_plot,echo=TRUE, eval=TRUE}
 # grey
-plot(map_tb,border="lightgrey")
+plot(map_tb, border = "lightgrey")
 # red
-plot(nb,cords,lwd=1,col='red')
+plot(nb, cords, lwd = 1, col = "red")
 ```
 
 Calculate the Rook's case neighbours - queen's contiguity, mean districts sharing borders or a common vertex with each other is considered neighbour.
 
 ```{r,queen, echo=TRUE, eval=TRUE}
 # queen's neighbour
-nb2 <- poly2nb(map_tb,queen = TRUE)
+nb2 <- poly2nb(map_tb, queen = TRUE)
 nb2
 ```
 
@@ -1098,12 +1126,12 @@ Compares different types of neighbours
 layout(matrix(1:2, nrow = 1))
 
 # First plot: Distance
-plot(map_tb, border='lightgrey') # Background map
-plot(nb, cords, col='blue', main="Distance", add = TRUE)
+plot(map_tb, border = "lightgrey") # Background map
+plot(nb, cords, col = "blue", main = "Distance", add = TRUE)
 
 # Second plot: Queen
-plot(map_tb, border='lightgrey') # Background map
-plot(nb2, cords, col='red', main="Queen", add = TRUE)
+plot(map_tb, border = "lightgrey") # Background map
+plot(nb2, cords, col = "red", main = "Queen", add = TRUE)
 
 # Reset the layout to default (optional)
 layout(1)
@@ -1116,7 +1144,7 @@ Assign equal weights to each neighboring polygon, each neighboring polygon will 
 
 ```{r, weights, echo=TRUE, eval=TRUE}
 # Convert the neighbour data to a listw object
-lw <- nb2listw(nb, style="W", zero.policy=TRUE)
+lw <- nb2listw(nb, style = "W", zero.policy = TRUE)
 ```
 
 In this example, each neighboring polygon will be assigned **equal weight** when computing the neighboring mean proportions of tuberculosis values. To see the weight of the first polygon's neighbors type:
@@ -1150,8 +1178,9 @@ To run the Moran's I analysis using the analytic method, use the `moran.test` fu
 
 ```{r, moran_test, echo=TRUE, eval=TRUE}
 # moran test
-moran.test(map_tb$propallcase,lw, 
-           alternative="greater")
+moran.test(map_tb$propallcase, lw,
+    alternative = "greater"
+)
 ```
 
 Spatial explanatory data analysis indicated significant spatial autocorrelation in district-level TB notification rates; the global Moran’s I = 0.314 test found significant positive autocorrelation (p\<0.001) for the year 2014 - 2017 over the region.
@@ -1162,7 +1191,7 @@ The analytical approach to the Moran's I analysis benefits from being fast. But 
 
 ```{r,mc, echo=TRUE, eval=TRUE}
 # monte carlo
-MC<- moran.mc(map_tb$propallcase, lw, nsim=999, alternative="greater")
+MC <- moran.mc(map_tb$propallcase, lw, nsim = 999, alternative = "greater")
 
 # View results (including p-value)
 MC
@@ -1183,7 +1212,7 @@ A visual exercise that you can perform to assess how "typical" or "atypical" you
 
 ```{r, distribution, echo=TRUE, eval=TRUE, fig.width=10, fig.height=4, dpi=300}
 
-set.seed(131)  # Set the random seed to 131 for reproducibility of the random sampling.
+set.seed(131) # Set the random seed to 131 for reproducibility of the random sampling.
 
 # Create a new variable 'rand1' in 'map_tb' by shuffling the values of 'propallcase'.
 # 'replace = FALSE' ensures that each value is used exactly once, meaning no duplicates.
@@ -1200,16 +1229,20 @@ map_tb$rand3 <- sample(map_tb$propallcase, length(map_tb$propallcase), replace =
 
 # Create a faceted plot with labeled facets
 tm_shape(map_tb) +
-  tm_polygons(col = c("propallcase", "rand1", "rand2", "rand3"),
-          style = "quantile", 
-          n = 8, 
-          palette = "Greens",
-          legend.show = FALSE) +
-  tm_facets(nrow = 1, free.coords = FALSE) +  # Create facets in a single row
-  tm_layout(panel.labels = c("Proportions", "Random 1", "Random 2", "Random 3"), # Labels for each plot
-            panel.label.size = 1.5,  # Size of the labels
-            panel.label.bg.color = "white", # Background color for labels
-            panel.label.fontface = "bold")  # Make the labels bold
+    tm_polygons(
+        col = c("propallcase", "rand1", "rand2", "rand3"),
+        style = "quantile",
+        n = 8,
+        palette = "Greens",
+        legend.show = FALSE
+    ) +
+    tm_facets(nrow = 1, free.coords = FALSE) + # Create facets in a single row
+    tm_layout(
+        panel.labels = c("Proportions", "Random 1", "Random 2", "Random 3"), # Labels for each plot
+        panel.label.size = 1.5, # Size of the labels
+        panel.label.bg.color = "white", # Background color for labels
+        panel.label.fontface = "bold"
+    ) # Make the labels bold
 
 ```
 
@@ -1217,36 +1250,41 @@ Is there a difference between our observed proportions of tuberculosis distribut
 
 ### **Local Moran's I**
 
-```{r, local, echo=TRUE, eval=FALSE}
+```{r, local, echo=TRUE, eval=TRUE, include = FALSE}
 # creates a local moran output
-did <- order(map_tb$WOR_P_CODE)  #order by id
-localr <- localmoran(x=tb$propallcase,nb2listw(nb2,style="W"))
+did <- order(map_tb$WOR_P_CODE) # order by id
+localr <- localmoran(x = tb$propallcase, nb2listw(nb2, style = "W"))
 
-head(printCoefmat(data.frame(localr[did,], row.names=map_tb$WOREDANAME[did]),
- check.names=FALSE))
+head(printCoefmat(data.frame(localr[did, ], row.names = map_tb$WOREDANAME[did]),
+    check.names = FALSE
+))
 
 # binds results to our polygon shapefile
-moran.mapr <- cbind(map_tb,localr)
+moran.mapr <- cbind(map_tb, localr)
 ```
 
 The output contains: local moran's statistic `Ii`, expectation of local moran's statistic `E.Ii`, variance of local moran's statistic `Var.Ii`, standard deviate of local moran's statistic `Z.Ii`, and p-value of local moran statistic using `pr()`.
 
 ```{r,local_dist, echo=TRUE, eval=TRUE}
-# Local distribution 
-hist(localr[,5])
+# Local distribution
+hist(localr[, 5])
 ```
 
 In the map below, local moran I's was negative for higher-order adjacencies, thus districts far away from the one of interest tended to have disparate notification rates
 
 ```{r, local_clustering, echo=TRUE, eval=TRUE}
 # maps the results
-tm_shape(moran.mapr)+
-  tm_polygons(col="Ii",n= 6, 
-          style="quantile",
-          title = "Local moran statistic", Frame=T)+
-  tm_compass(north = 1, text.size = 0.2,
-             position=c("left", "top"))+
-  tm_layout(title = "TB local clustering")
+tm_shape(moran.mapr) +
+    tm_polygons(
+        col = "Ii", n = 6,
+        style = "quantile",
+        title = "Local moran statistic", Frame = T
+    ) +
+    tm_compass(
+        north = 1, text.size = 0.2,
+        position = c("left", "top")
+    ) +
+    tm_layout(title = "TB local clustering")
 
 ```
 
@@ -1260,8 +1298,9 @@ Install the development version of the package from github as below
 # install.packages("devtools")
 library(devtools)
 devtools::install_github("SpatLyu/tidyrgeoda",
-                         build_vignettes = T,
-                         dep = T)
+    build_vignettes = T,
+    dep = T
+)
 ```
 
 Assessing the Local Moran at 0.05 significance level
@@ -1273,73 +1312,79 @@ library(tidyrgeoda)
 # Convert the SpatialPolygonsDataFrame to an sf object
 map_sf <- st_as_sf(map_tb)
 
-map_sf %>% 
-  dplyr::mutate(lisa = st_local_moran(.,'propallcase',
-                               wt = st_contiguity_weights(.),
-                               significance_cutoff = 0.05)) %>% 
-  dplyr::select(lisa) %>% 
-  ggplot() +
-  geom_sf(aes(fill = lisa),lwd = .1,color = 'grey') +
-  scale_fill_lisa(name = 'LISA 95%') +
-      labs(title = "Tuberculosis Hotspots in Amhara Region, 2014–2017 ",
-       caption = "©2019 Yalemzewod Gelaw https://doi.org/10.1093/trstmh/trz017/",
-       subtitle = "LISA at 0.05 significance level")+
-  theme_minimal() +
-  theme(
-    panel.background = element_blank(),
-    legend.background = element_blank(),
-    panel.border = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank(),
-    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
-    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
-    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
-    axis.title.x = element_text(size = 7, color = "grey60"),
-    legend.text = element_text(size = 9, color = "grey20"),
-    legend.title = element_text(size = 10, color = "grey20"),
-    strip.text = element_text(size = 12),
-    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
-    axis.title.y = element_blank(),
-    axis.ticks = element_blank(),
-    axis.text.x = element_blank(),
-    axis.text.y = element_blank()
-  )
+map_sf %>%
+    dplyr::mutate(lisa = st_local_moran(., "propallcase",
+        wt = st_contiguity_weights(.),
+        significance_cutoff = 0.05
+    )) %>%
+    dplyr::select(lisa) %>%
+    ggplot() +
+    geom_sf(aes(fill = lisa), lwd = .1, color = "grey") +
+    scale_fill_lisa(name = "LISA 95%") +
+    labs(
+        title = "Tuberculosis Hotspots in Amhara Region, 2014–2017 ",
+        caption = "©2019 Yalemzewod Gelaw https://doi.org/10.1093/trstmh/trz017/",
+        subtitle = "LISA at 0.05 significance level"
+    ) +
+    theme_minimal() +
+    theme(
+        panel.background = element_blank(),
+        legend.background = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+        plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+        plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+        axis.title.x = element_text(size = 7, color = "grey60"),
+        legend.text = element_text(size = 9, color = "grey20"),
+        legend.title = element_text(size = 10, color = "grey20"),
+        strip.text = element_text(size = 12),
+        plot.margin = margin(t = 10, r = 10, b = 30, l = 10),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank()
+    )
 ```
 
 **Local Getis-Ord Statistics**
 
 ```{r,gt_or, echo=TRUE, eval=TRUE, fig.width=10, fig.height=10, dpi=300}
-map_sf %>% 
-  dplyr::mutate(lisa = st_local_g(.,'propallcase',
-                               wt = st_contiguity_weights(.),
-                               significance_cutoff = 0.05)) %>% 
-  dplyr::select(lisa) %>% 
-  ggplot() +
-  geom_sf(aes(fill = lisa),lwd = .1,color = 'grey') +
-  scale_fill_lisa(name = 'Local G') +
-   labs(title = "Tuberculosis Hotspots in Amhara Region, 2014–2017 ",
-       caption = "©2019 Yalemzewod Gelaw https://doi.org/10.1093/trstmh/trz017/",
-       subtitle = "LISA Getis-Ord Statistics")+
-  theme_minimal() +
-  theme(
-    panel.background = element_blank(),
-    legend.background = element_blank(),
-    panel.border = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank(),
-    plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
-    plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
-    plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
-    axis.title.x = element_text(size = 7, color = "grey60"),
-    legend.text = element_text(size = 9, color = "grey20"),
-    legend.title = element_text(size = 10, color = "grey20"),
-    strip.text = element_text(size = 12),
-    plot.margin = margin(t = 10, r = 10, b = 30, l = 10),  
-    axis.title.y = element_blank(),
-    axis.ticks = element_blank(),
-    axis.text.x = element_blank(),
-    axis.text.y = element_blank()
-  )
+map_sf %>%
+    dplyr::mutate(lisa = st_local_g(., "propallcase",
+        wt = st_contiguity_weights(.),
+        significance_cutoff = 0.05
+    )) %>%
+    dplyr::select(lisa) %>%
+    ggplot() +
+    geom_sf(aes(fill = lisa), lwd = .1, color = "grey") +
+    scale_fill_lisa(name = "Local G") +
+    labs(
+        title = "Tuberculosis Hotspots in Amhara Region, 2014–2017 ",
+        caption = "©2019 Yalemzewod Gelaw https://doi.org/10.1093/trstmh/trz017/",
+        subtitle = "LISA Getis-Ord Statistics"
+    ) +
+    theme_minimal() +
+    theme(
+        panel.background = element_blank(),
+        legend.background = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(size = 16, color = "#6c2d83", hjust = 0.5, vjust = 2),
+        plot.subtitle = element_text(size = 12, color = "#bd5288", hjust = 0.5, vjust = 0.5, face = "bold"),
+        plot.caption = element_text(size = 9, color = "grey60", hjust = 0.5, vjust = 1.5),
+        axis.title.x = element_text(size = 7, color = "grey60"),
+        legend.text = element_text(size = 9, color = "grey20"),
+        legend.title = element_text(size = 10, color = "grey20"),
+        strip.text = element_text(size = 12),
+        plot.margin = margin(t = 10, r = 10, b = 30, l = 10),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank()
+    )
 ```
 
 LISA is used to detect the location of hotspot districts with high rates of TB notifications surrounded by others also with high rates of TB. The LISA led to the classification of districts into five classes: high–high (hotspot), low–low (LL), low–high (LH), high–low (HL). and not significant. The hotspot and low–low locations suggest clustering of similar areas, whereas the high–low and low–high locations indicate spatial outliers. A high–low spatial outlier describes a location where there is a mixture of high and low scores in neighbouring areas. The outliers (high–low and low–high TB cluster districts) have epidemiological significance for TB prevention and control. High–low clusters indicate a location with a high incidence of notified TB cases sharing borders with locations with low incidence, so that infection can be disseminated from the high-incidence location to the low-incidence locations. Low–high clusters indicate a location with low TB incidence sharing borders with locations with high TB incidence, so that areas of low TB incidence can be a receptor of infection.
