@@ -10,7 +10,6 @@ materials: ""
 toc: false
 categories:
   - Tuberculosis
-  - Multidrug-resistant
   - Infectious disease
 ---
 

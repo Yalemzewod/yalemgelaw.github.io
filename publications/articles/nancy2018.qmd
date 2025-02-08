@@ -10,7 +10,7 @@ materials: ""
 toc: false
 categories:
   - Healthcare Access and Quality Index
-  - Global burden of disease study 
+  - GBD collaborator 
 ---
 
 ## Citation (Vancouver)

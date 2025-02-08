@@ -4,6 +4,14 @@ title: "Workshops and Presentations"
 
 ## Recent workshops and conference presentations
 
+### Workshop 1
+
+-   Title: Introduction to R for data analysis
+-   Date: May - August, 2024
+-   Location: Virtual
+
+I provided a virtual training on introduction R for data analysis for around 50 PhD students in five rounds. 
+
 ### Workshop 2
 
 -   Title: [Geostatistical modelling](https://sctravelmedconference.com/speakers-2022/ "Spatial analysis workshop")

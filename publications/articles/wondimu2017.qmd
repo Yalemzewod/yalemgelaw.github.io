@@ -9,7 +9,7 @@ doi: "https://doi.org/10.3109/14659891.2016.1166273"
 materials: ""
 toc: false
 categories:
-  - Substance Use
+  - khat use
   - Survey
 ---
 

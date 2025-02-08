@@ -1,9 +1,9 @@
 ---
-pagetitle: "Yalemzewod Gelaw"
+pagetitle: "Yalemzewod A Gelaw"
 title: ""
 image: "images/yalem.jpg"
 about: 
- template: jolla
+ template: broadside
  image-shape: rounded
  image-width: 16em
  links: 
