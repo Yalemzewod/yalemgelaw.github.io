@@ -9,9 +9,9 @@ doi: "https://doi.org/10.1017/S0950268820002514"
 materials: ""
 toc: false
 categories:
+  - Tuberculosis
   - Multidrug-resistant
-  - Mortality
-  - TB
+  - Infectious disease
 ---
 
 ## Citation (Vancouver)

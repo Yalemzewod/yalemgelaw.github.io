@@ -9,8 +9,9 @@ doi: "https://doi.org/10.4081/gh.2021.948"
 materials: ""
 toc: false
 categories:
+  - Infectious disease
   - Dengue
-  - Spatial analysis
+  - Geo-spatial
 ---
 
 ## Citation (Vancouver)

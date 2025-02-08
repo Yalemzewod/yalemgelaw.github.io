@@ -10,8 +10,7 @@ materials: ""
 toc: false
 categories:
   - NCDs
-  - Diabetes
-  - Residence
+  - Survey
 ---
 
 ## Citation (Vancouver)

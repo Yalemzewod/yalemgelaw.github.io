@@ -9,8 +9,8 @@ doi: "https://doi.org/10.11604/pamj.2016.23.100.7879"
 materials: ""
 toc: false
 categories:
-  - Vaccination
-  - Children
+  - Child and Adolescent Health
+  - Immunization
 ---
 
 ## Citation (Vancouver)

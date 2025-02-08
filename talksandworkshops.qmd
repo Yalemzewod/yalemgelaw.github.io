@@ -12,6 +12,16 @@ title: "Talks and Workshops"
 
 I was an invited speaker in the 5th Annual South Cross Travel Medicine Conference and the Inaugural South Cross Tropical Medicine Conference, conducted from 16th - 18th September 2022 at Hilton Hotel Brisbane.
 
+
+
+### Workshop 1
+
+-   Title: Introduction to R for data analysis
+-   Date: May 25 - August 25, 2024  
+-   Location: Virtual
+
+I have provided a five round online training for around 50 PhD students in Australia. 
+
 ### Workshop 2
 
 -   Title: [Spatial Analysis Using QGIS and R](https://malariaatlas.org/news/spatial-analysis-training-in-ethiopia-2/ "Spatial analysis in R")

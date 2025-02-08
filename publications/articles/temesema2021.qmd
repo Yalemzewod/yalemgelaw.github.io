@@ -11,8 +11,7 @@ toc: false
 categories:
   - Health system
   - COVID
-  - Review
-  - Preparedness, impact, and response
+  - Systematic review
 ---
 
 ## Citation (Vancouver)

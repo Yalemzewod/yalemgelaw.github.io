@@ -9,9 +9,8 @@ doi: "https://doi.org/10.1186/s12981-015-0079-2"
 materials: ""
 toc: false
 categories:
-  - Health care seeking
+  - Infectious disease
   - HIV/AIDS
-  - Late presentation
 ---
 
 ## Citation (Vancouver)

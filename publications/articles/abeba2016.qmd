@@ -9,7 +9,7 @@ doi: "https://doi.org/10.1186/s12905-016-0290-x"
 materials: ""
 toc: false
 categories:
-  - Decision-making power
+  - Women Health
   - Family planning
 ---
 

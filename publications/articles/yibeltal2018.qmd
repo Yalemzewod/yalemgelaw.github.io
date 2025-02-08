@@ -9,9 +9,9 @@ doi: "https://doi.org/10.1183/13993003.00395-2018"
 materials: ""
 toc: false
 categories:
-  - Latent tuberculosis infection
-  - TB
-  - Review
+  - Infectious disease
+  - Tuberculosis
+  - Systematic review
 ---
 
 ## Citation (Vancouver)

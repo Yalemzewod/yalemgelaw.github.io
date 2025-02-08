@@ -10,7 +10,7 @@ materials: ""
 toc: false
 categories:
   - Population and Fertility 
-  - Global burden of disease study 
+  - GBD collaborator 
 ---
 
 ## Citation (Vancouver)

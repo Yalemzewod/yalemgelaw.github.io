@@ -10,14 +10,13 @@ materials: ""
 toc: false
 categories:
   - Infectious disease
-  - TB
-  - Review
-  - Journal article
+  - Tuberculosis
+  - Systematic review
 ---
 
 ## Citation (Vancouver)
 
-> Gelaw YA, Yu W, Magalhães RJ, Assefa Y, Williams G. Effect of temperature and altitude difference on tuberculosis notification: a systematic review. Journal of global infectious diseases. 2019 Apr;11(2):63.
+> Gelaw YA, Yu W, Magalh?es RJ, Assefa Y, Williams G. Effect of temperature and altitude difference on tuberculosis notification: a systematic review. Journal of global infectious diseases. 2019 Apr;11(2):63.
 
 ## Abstract
 

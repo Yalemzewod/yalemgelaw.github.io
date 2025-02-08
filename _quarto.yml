@@ -34,7 +34,7 @@ website:
         text: publications
       - href: tutorials.qmd
         text: posts
-      - href: CV/CV_Yalemzewod_Gelaw.pdf
+      - href: CV/Yalemzewod_A_Gelaw.pdf
         text: cv
 
     right:
@@ -64,6 +64,8 @@ format:
     page-layout: full
     sidebar: false
     theme: 
-      - styles.scss
+      light: minty
+      dark: solar
+    css: styles.scss
     mainfont: Nunito
     toc: true

@@ -10,7 +10,7 @@ materials: ""
 toc: false
 categories:
   - Community Health Insurance
-  - Residence
+  - Survey
 ---
 
 ## Citation (Vancouver)

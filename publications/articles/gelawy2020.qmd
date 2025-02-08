@@ -9,9 +9,8 @@ doi: "https://doi.org/10.2147/HIV.S284722"
 materials: ""
 toc: false
 categories:
-  - Co-infection
+  - Infectious disease
   - TB/HIV
-  - Collaborative Health Services
 ---
 
 ## Citation (Vancouver)

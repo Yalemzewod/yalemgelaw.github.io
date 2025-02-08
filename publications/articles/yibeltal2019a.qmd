@@ -10,9 +10,8 @@ materials: ""
 toc: false
 categories:
   - Meta-analysis
-  - TB
-  - Review
-  - Screening tools
+  - Tuberculosis
+  - Systematic review
 ---
 
 ## Citation (Vancouver)

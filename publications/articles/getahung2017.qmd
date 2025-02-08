@@ -9,10 +9,8 @@ doi: "https://doi.org/10.1186/s12879-017-2504-8"
 materials: ""
 toc: false
 categories:
-  - Childhood diarrhea
-  - DHS
-  - Spatial analysis 
-  - Common childhood illness
+  - Child and Adolescent Health
+  - Geo-spatial
 ---
 
 ## Citation (Vancouver)

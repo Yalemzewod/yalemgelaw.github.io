@@ -10,7 +10,7 @@ materials: ""
 toc: false
 categories:
   - Eating attitude
-  - High school students
+  - Child and Adolescent Health
 ---
 
 ## Citation (Vancouver)

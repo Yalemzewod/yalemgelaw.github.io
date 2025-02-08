@@ -9,8 +9,9 @@ doi: "http://dx.doi.org/10.1136/bmjopen-2020-044618"
 materials: ""
 toc: false
 categories:
+  - Infectious disease
   - COVID
-  - Review
+  - Systematic review
 ---
 
 ## Citation (Vancouver)

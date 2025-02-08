@@ -10,7 +10,7 @@ materials: ""
 toc: false
 categories:
   - Workplace safety
-  - Hazard awarness
+  - Occupational Health
 ---
 
 ## Citation (Vancouver)

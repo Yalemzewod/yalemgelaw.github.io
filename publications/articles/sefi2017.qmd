@@ -11,6 +11,7 @@ toc: false
 categories:
   - Outbreak
   - Pertussis
+  - Child and Adolescent Health
 ---
 
 ## Citation (Vancouver)

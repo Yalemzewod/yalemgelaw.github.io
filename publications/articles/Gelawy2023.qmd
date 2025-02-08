@@ -1,0 +1,32 @@
+---
+title: "Socio-demographic correlates of unhealthy lifestyle in Ethiopia: a secondary analysis of a national survey"
+type: "article"
+author: "Gelaw, Y.A., Koye, D.N., Alene, K.A. et al."
+year: "2023"
+publication: "BMC Public Health"
+preprint: ""
+doi: "https://doi.org/10.1186/s12889-023-16436-7"
+materials: ""
+toc: false
+categories:
+  - NCDs
+  - Survey
+---
+
+## Citation (Vancouver)
+
+> Gelaw, Y.A., Koye, D.N., Alene, K.A. et al. Socio-demographic correlates of unhealthy lifestyle in Ethiopia: a secondary analysis of a national survey. BMC Public Health 23, 1528 (2023).
+
+## Abstract
+
+**Background**
+Multiple lifestyle risk factors exhibit a stronger association with non-communicable diseases (NCDs) compared to a single factor, emphasizing the necessity of considering them collectively. By integrating these major lifestyle risk factors, we can identify individuals with an overall unhealthy lifestyle, which facilitates the provision of targeted interventions for those at significant risk of NCDs. The aim of this study was to evaluate the socio-demographic correlates of unhealthy lifestyles among adolescents and adults in Ethiopia.
+
+**Methods**
+A national cross-sectional survey, based on the World Health Organization's NCD STEPS instruments, was conducted in Ethiopia. The survey, carried out in 2015, involved a total of 9,800 participants aged between 15 and 69 years. Lifestyle health scores, ranging from 0 (most healthy) to 5 (most unhealthy), were derived considering factors such as daily fruit and vegetable consumption, smoking status, prevalence of overweight/obesity, alcohol intake, and levels of physical activity. An unhealthy lifestyle was defined as the co-occurrence of three or more unhealthy behaviors. To determine the association of socio-demographic factors with unhealthy lifestyles, multivariable logistic regression models were utilized, adjusting for metabolic factors, specifically diabetes and high blood pressure.
+
+**Results**
+Approximately one in eight participants (16.7%) exhibited three or more unhealthy lifestyle behaviors, which included low fruit/vegetable consumption (98.2%), tobacco use (5.4%), excessive alcohol intake (15%), inadequate physical activity (66%), and obesity (2.3%). Factors such as male sex, urban residency, older age, being married or in a common-law relationship, and a higher income were associated with these unhealthy lifestyles. On the other hand, a higher educational status was associated with lower odds of these behaviors.
+
+**Conclusion**
+In our analysis, we observed a higher prevalence of concurrent unhealthy lifestyles. Socio-demographic characteristics, such as sex, age, marital status, residence, income, and education, were found to correlate with individuals' lifestyles. Consequently, tailored interventions are imperative to mitigate the burden of unhealthy lifestyles in Ethiopia.

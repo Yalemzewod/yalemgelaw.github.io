@@ -9,7 +9,8 @@ doi: "http://dx.doi.org/10.2147/DMSO.S179699"
 materials: ""
 toc: false
 categories:
-  - Overweight and obesity
+  - NCDs
+  - Survey
 ---
 
 ## Citation (Vancouver)

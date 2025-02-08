@@ -11,6 +11,8 @@ toc: false
 categories:
   - COVID
   - Malaria
+  - Geo-spatial
+  - Infectious disease
 ---
 
 ## Citation (Vancouver)

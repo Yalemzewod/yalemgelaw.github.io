@@ -10,8 +10,7 @@ materials: ""
 toc: false
 categories:
   - Infectious disease
-  - TB
-  - Xpert MTB/RIF assay
+  - Tuberculosis
 ---
 
 ## Citation (Vancouver)

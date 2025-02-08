@@ -9,10 +9,9 @@ doi: "http://dx.doi.org/10.1186/s40695-017-0031-9"
 materials: ""
 toc: false
 categories:
-  - smoking
-  - Mediation analysis
-  - Longitudinal Study 
-  - Intimate partner violence
+  - Women Health
+  - Smoking
+  - Longitudinal
 ---
 
 ## Citation (Vancouver)

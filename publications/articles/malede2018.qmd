@@ -9,8 +9,8 @@ doi: "http://dx.doi.org/10.1136/bmjopen-2017-019181"
 materials: ""
 toc: false
 categories:
+  - Infectious disease
   - HIV/AIDS
-  - Antiretroviral treatment
 ---
 
 ## Citation (Vancouver)

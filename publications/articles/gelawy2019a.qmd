@@ -9,8 +9,9 @@ doi: "https://doi.org/10.1093/trstmh/trz017"
 materials: ""
 toc: false
 categories:
-  - TB
-  - Spatial analysis
+  - Infectious disease
+  - Tuberculosis
+  - Geo-spatial
 ---
 
 ## Citation (Vancouver)

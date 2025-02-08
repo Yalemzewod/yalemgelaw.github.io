@@ -10,9 +10,7 @@ materials: ""
 toc: false
 categories:
   - NCDs
-  - Spatial analysis
-  - Hypertension 
-  - Diabetes
+  - Geo-spatial
 ---
 
 ## Citation (Vancouver)

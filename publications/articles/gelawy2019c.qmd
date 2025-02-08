@@ -10,7 +10,7 @@ materials: ""
 toc: false
 categories:
   - TB/HIV
-  - Prevalence
+  - Infectious disease
   - Meta-analysis
 ---
 

@@ -9,8 +9,9 @@ doi: "https://doi.org/10.1016/j.ijid.2019.02.046"
 materials: ""
 toc: false
 categories:
+  - Infectious disease
   - HIV/AIDS
-  - Spatial analysis
+  - Geo-spatial
 ---
 
 ## Citation (Vancouver)

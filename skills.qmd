@@ -14,10 +14,15 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 > ***Skills*****:** PowerBI, SQL, R, Snowflakes.
 
-> **Key responsibilities**\
-> - Dashboard development\
-> - Data modeling & reporting\
-> - Project management and stakeholder consultation\
+> **Key responsibilities**
+>
+> -    Power BI dashboard development, reporting, data modeling, and pipeline deployment
+>
+> -    Project management
+>
+> -   Stakeholder engagement
+>
+> -   ETL (SQL and Power Query)\
 
 > #### 2021 - 2023
 >
@@ -55,13 +60,11 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -   Authored manuscripts for research publications, including three submissions, two of which were as a lead or co-lead author.
 
-     
 > #### 2019 - 2020
 >
 > *Metro North Public Health Unit, Queensland Health* *Epidemiologist* *Skills*: PostgreSQL, R, and QGIS
 
 > **Key responsibilities:**
-
 
 -   Offered statistical analysis expertise and input in population health research studies, projects, programs, and community population health planning processes.
 
@@ -71,7 +74,6 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -   Took on a leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.
 
-         
 > #### 2016 - 2020
 >
 > *The University of Queensland, Brisbane, AU* *PhD study*
@@ -79,7 +81,6 @@ With over seven years of academic and research experience, Yalemzewod has develo
 > ***Skills***: Scientific writing, R, ArcGIS, and Win BUGS.
 >
 > **Key activities**:
-
 
 -   Applied a range of statistical methods including population-attributable risks, ANOVAs, Poisson, Binomial, Bayesian statistics, and geostatistical models to analyze the collected data.
 
@@ -89,7 +90,6 @@ With over seven years of academic and research experience, Yalemzewod has develo
 
 -   Authored five first-author journal papers and provided assistance in the preparation of four additional journal articles.
 
-        
 > #### 2013 - 2016
 >
 > *Institute of Public Health, The University of Gondar* *Lecturer*
@@ -97,7 +97,6 @@ With over seven years of academic and research experience, Yalemzewod has develo
 > ***Skills***: Scientific writing, teaching, R and SPSS.
 >
 > **Key responsibilities**:
-
 
 -   Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years.
 
