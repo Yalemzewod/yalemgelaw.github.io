@@ -9,7 +9,6 @@ doi: "https://doi.org/10.1016/j.chiabu.2023.106058"
 materials: ""
 toc: false
 categories:
-  - Out-of-home care
   - Child and Adolescent Health
 ---
 
