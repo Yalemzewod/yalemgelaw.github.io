@@ -41,7 +41,7 @@ anchor-sections: false
 
 Welcome to my website! I’m Yalemzewod Gelaw, a Senior Data Scientist passionate about data-driven insights. 
 
-On this website, I will share my experiences, insights, and practical tips. Expect blog posts, tutorials, and code snippets related to data science, epidemiology, and more.
+On this website, I will share my experiences, insights, and practical tips. Expect blog posts, tutorials, and code snippets related to data science, statistical analysis, epidemiology, and more.
 
 Feel free to explore, learn, and connect! If you have any questions or want to collaborate, please reach out. 🌟
 

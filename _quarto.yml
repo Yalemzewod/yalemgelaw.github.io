@@ -9,7 +9,7 @@ execute:
 
 website:
   title: "Yalemzewod A Gelaw"
-  description: "Professional blog for practical data wrangling, insightful data visualization, and effective statistical modelling techniques using R and Python"
+  description: "Professional blog for practical data manipulation, insightful data visualization, and effective statistical analysis using R and Python"
   site-url: https://yalemzewodgelaw.com
   repo-url: https://github.com/Yalemzewod/yalemgelaw.github.io
   repo-actions:
