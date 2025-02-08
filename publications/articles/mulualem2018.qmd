@@ -10,7 +10,6 @@ materials: ""
 toc: false
 categories:
   - Infectious disease
-  - Tuberculosis
 ---
 
 ## Citation (Vancouver)

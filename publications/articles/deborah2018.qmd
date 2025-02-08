@@ -9,8 +9,7 @@ doi: "http://dx.doi.org/10.1186/s40695-017-0031-9"
 materials: ""
 toc: false
 categories:
-  - Women Health
-  - Longitudinal
+  - Womens Health
 ---
 
 ## Citation (Vancouver)

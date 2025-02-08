@@ -9,7 +9,6 @@ doi: "http://dx.doi.org/10.1186/s13006-017-0118-9"
 materials: ""
 toc: false
 categories:
-  - Breastfeeding
   - Child and Adolescent Health
 ---
 

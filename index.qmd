@@ -1,9 +1,9 @@
 ---
 pagetitle: "Yalemzewod A Gelaw"
 title: ""
-image: "images/yalem.jpg"
+image: "images/zewa.jpg"
 about: 
- template: broadside
+ template: jolla
  image-shape: rounded
  image-width: 16em
  links: 

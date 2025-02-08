@@ -9,7 +9,6 @@ doi: "https://doi.org/10.1016/S0140-6736(18)32278-5"
 materials: ""
 toc: false
 categories:
-  - Population and Fertility 
   - GBD collaborator 
 ---
 

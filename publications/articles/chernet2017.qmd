@@ -9,8 +9,7 @@ doi: "http://dx.doi.org/10.1186/s12905-017-0432-9"
 materials: ""
 toc: false
 categories:
-  - Women Health
-  - Family planning
+  - Womens Health
 ---
 
 ## Citation (Vancouver)

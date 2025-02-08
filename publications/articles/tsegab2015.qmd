@@ -9,7 +9,6 @@ doi: "https://doi.org/10.1371/journal.pone.0112790"
 materials: ""
 toc: false
 categories:
-  - Survey
   - NCDs
 ---
 

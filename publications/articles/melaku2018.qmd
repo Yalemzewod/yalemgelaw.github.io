@@ -10,7 +10,6 @@ materials: ""
 toc: false
 categories:
   - Child and Adolescent Health
-  - Survey
 ---
 
 ## Citation (Vancouver)

@@ -9,8 +9,6 @@ doi: "https://doi.org/10.3390/tropicalmed8040216"
 materials: ""
 toc: false
 categories:
-  - COVID
-  - Malaria
   - Geo-spatial
   - Infectious disease
 ---

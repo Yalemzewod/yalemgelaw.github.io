@@ -9,7 +9,6 @@ doi: "https://doi.org/10.1007/s10461-018-02386-4"
 materials: ""
 toc: false
 categories:
-  - TB/HIV
   - Infectious disease
   - Meta-analysis
 ---

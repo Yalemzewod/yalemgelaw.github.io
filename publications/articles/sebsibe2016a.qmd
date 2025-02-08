@@ -9,7 +9,6 @@ doi: "https://doi.org/10.1186/s12995-016-0105-x"
 materials: ""
 toc: false
 categories:
-  - Workplace safety
   - Occupational Health
 ---
 

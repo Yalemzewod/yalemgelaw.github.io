@@ -9,8 +9,6 @@ doi: "https://doi.org/10.1186/s13104-017-2735-1"
 materials: ""
 toc: false
 categories:
-  - Outbreak
-  - Pertussis
   - Child and Adolescent Health
 ---
 

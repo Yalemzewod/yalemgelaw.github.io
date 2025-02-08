@@ -10,7 +10,6 @@ materials: ""
 toc: false
 categories:
   - Health system
-  - COVID
   - Systematic review
 ---
 
