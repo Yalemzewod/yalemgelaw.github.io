@@ -1,7 +1,7 @@
 ---
 pagetitle: "Yalemzewod A Gelaw"
 title: ""
-image: "images/yalem.png"
+image: "images/yalem.jpg"
 about: 
  template: jolla
  image-shape: rounded

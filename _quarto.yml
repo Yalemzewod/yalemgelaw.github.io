@@ -20,22 +20,23 @@ website:
     creator: "@yalassefa"
     
   navbar:
-    pinned: true
+    background: primary
+    search: true
     logo: images/logo.png
     left:
       - href: index.qmd
-        text: home
+        text: Home
       - about.qmd
       - href: grantsandawards.qmd
-        text: grants & awards
+        text: Grants & awards
       - href: workshopsandpresentations.qmd
-        text: workshops & presentations
+        text: Workshops & presentations
       - href: publications.qmd
-        text: publications
+        text: Publications
       - href: tutorials.qmd
-        text: posts
+        text: Posts
       - href: CV/Yalemzewod_A_Gelaw.pdf
-        text: cv
+        text: CV
 
     right:
       - icon: twitter
@@ -57,15 +58,18 @@ website:
 
 page-footer: 
     background: light
-    left: © Copyright 2023, Yalemzewod Gelaw
+    left: "© Copyright 2023, Yalemzewod Gelaw"
+    right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
     page-layout: full
-    sidebar: false
+    sidebar: true
     theme: 
-      light: minty
-      dark: solar
+      light: flatly
+      dark: darkly
     css: styles.scss
     mainfont: Nunito
     toc: true
+    toc-depth: 3
+    toc-location: left
