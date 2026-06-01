@@ -6,18 +6,18 @@ title-block-banner: true
 
 ## {{< fa briefcase title="Current Affiliation" >}} Current Affiliation: 
 
-I'm a Senior Data Scientist in the Western Australia Department of Health in Perth Australia, where I'm managing, analysing and visualizing complex big and longitudinal cloud-based data to develop a deep dive dashboard to provide a better understanding of patient journey related to safety and clinical quality.
+I'm a Senior Data Analyst in HBF HEALTH, Perth Australia, where I'm managing, analysing and visualizing complex insurance claims data in a cloud-based environment to develop a deep dive dashboard to provide a better understanding of high claim episodes and health conditions.
 
 ## {{< fa graduation-cap title="Education" >}} Education:
 
-I have a background in Environmental Health and a Master of Public Health in Epidemiology and Biostatistics. I earned my PhD from the University of Queensland, specializing in mathematical modelling, data visualization, statistical analysis, and spatial modelling. My studies provided me with tools to address unique data challenges in the healthcare sector.
+I have a solid research and data analytics background in Public Health and clinical data analysis. I earned my PhD from the University of Queensland, specializing in mathematical modelling, data visualization, statistical analysis, and spatial modelling. My studies provided me with tools to address unique data challenges in the healthcare sector.
 
 During my time at UQ, I learned coding, starting with R. The supportive R community fostered my love for the language, and I now use it regularly for data analysis and visualization.
 
 ## {{< fa history title="Work Experience" >}} Work Experience: 
 
-I have diverse working experience, including roles in the Ethiopian Health System at the district health office (2007–2011), University Lecturer at the University of Gondar (2013–2016), Epidemiologist in the Queensland Department of Health (2019–2020), and Postdoctoral Research positions (2020–2023). Currently, I am a Senior Data Scientist at the WA Department of Health.
+I have diverse working experience,  with over 8 years of experience in data analysis, research, and statistical modelling across academia and public services, and proficient in tools such as Microsoft Fabric, SQL Server, Snowflake, R, and Python. I have a strong background in data management, analysis, and visualization, with a focus on healthcare data. My experience includes working with large datasets, developing predictive models, and creating interactive dashboards to support decision-making in the healthcare sector. I am passionate about using data to drive insights and improve health outcomes.
 
 ## {{< fa tools title="Skills" >}} Skills: 
 
-I'm proficient in various software tools, including R, SQL, Python, and PowerBI. Whether it's analysing epidemiological trends, creating compelling visualizations, or building predictive models, I'm always up for a data-driven adventure.
+I'm proficient in various software tools, including R, SQL, Python, PowerBI and Tableau. 

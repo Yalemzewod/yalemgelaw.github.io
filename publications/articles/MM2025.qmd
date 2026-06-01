@@ -1,0 +1,38 @@
+---
+title: "Mapping residual malaria transmission in Vietnam"
+type: "article"
+author: "McPhail M, Gelaw Y, Nguyen X et al."
+year: "2025"
+publication: "Infectious Diseases"
+preprint: ""
+doi: "https://doi.org/10.1016/j.lanwpc.2025.101545."
+materials: ""
+toc: false
+categories:
+  - Child and Adolescent Health
+  - Mental Health
+---
+
+## Citation (Vancouver)
+
+> McPhail M, **Gelaw Y**, Nguyen X, et al. Mapping residual malaria transmission in Vietnam. Infectious Diseases. 2025; doi: https://doi.org/10.1016/j.lanwpc.2025.101545.
+
+## Abstract
+
+
+### Background
+
+Vietnam, as one of the countries in the Greater Mekong Subregion, has committed to eliminating all malaria by 2030. Declining case numbers highlight the country's progress, but challenges including imported cases and pockets of residual transmission remain. To successfully eliminate malaria and to prevent reintroduction of malaria transmission, geostatistical modelling of vulnerability (importation rate) and receptivity (quantified by the reproduction number) of malaria is critical.
+
+
+### Methods
+
+Case data from 2019 to 2022 was used to train a range of network and geostatistical models, from which strategically useful metrics were computed. These metrics include vulnerability, which was estimated from the abundance of imported cases, and receptivity, which was estimated based on a transmission model linking cases as well as environmental covariate data.
+
+### Findings
+
+There is considerable spatiotemporal heterogeneity in the computed metrics. Importations are concentrated in the South Central Coast and Central highlands regions. The importation rate of Plasmodium falciparum is around 2.5 times higher than that of P. vivax. The mean computed reproduction number is less than one, which is consistent with the historical decline in cases and eventual elimination. There are, however, places where the estimated reproduction number can temporarily exceed one, which explains the seasonal case resurgence observed in the case data. The reproduction number is typically higher in forested areas.
+
+### Interpretation
+
+Receptivity and vulnerability to malaria is spatiotemporally heterogeneous in Vietnam. Despite the average reproduction number being less than one, the spatial pockets and temporal windows of elevated reproduction number could prevent timely elimination of malaria or even lead to a reversal of progress. The predictive maps presented in this paper can inform appropriate intervention strategies to advance goals of malaria elimination.

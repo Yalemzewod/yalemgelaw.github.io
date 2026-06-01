@@ -1,0 +1,38 @@
+---
+title: "Trend analysis and modelling of universal health coverage, Ethiopia"
+type: "article"
+author: "Assefa, Y., Gelaw, Y. A., Endalamaw, A., Wolka, E., & Zewdie, A"
+year: "2025"
+publication: "Health System"
+preprint: ""
+doi: "http://dx.doi.org/10.2471/BLT.24.292995"
+materials: ""
+toc: false
+categories:
+  - Child and Adolescent Health
+  - Mental Health
+---
+
+## Citation (Vancouver)
+
+> Assefa Y, **Gelaw YA**, Endalamaw A, Wolka E, Zewdie A. Trend analysis and modelling of universal health coverage, Ethiopia. Health System. 2025; doi: http://dx.doi.org/10.2471/BLT.24.292995.
+
+## Abstract
+
+
+### Objectives
+
+To investigate the attainability of the 2030 universal health coverage (UHC) target of 80% using Ethiopia as a case study.
+
+
+### Methods
+
+We examined trends in Ethiopia’s universal health service coverage index and its subindices between 2000 and 2021 in Ethiopia. 
+To assess long-term progress, we projected coverage to 2030 and 2040 using Bayesian mode
+
+### Findings
+
+Ethiopia’s universal health service coverage index increased steadily from 2000 to 2015 and slowed between 2015 and 2019 before progress stalled between 2019 and 2021. Projections indicate the country will achieve a UHC index of 64.7% by 2030, failing to meet the 80% target. Projected subindex values for 2030 were 68.4% for reproductive, maternal, neonatal and child health and 66.1% for infectious diseases but only 58.5% for noncommunicable diseases. Simulation modelling indicated that doubling health system inputs would only modestly increase UHC and that the 80% target is unlikely to be reached before 2040.
+### Conclusions
+
+The trajectory of UHC in Ethiopia reflects both achievements and persistent gaps in health services. Modelling suggests that boosting health system inputs alone will be insufficient to reach the 80% coverage target by 2030. Structural reforms, better governance and greater system integration are required. The modelling framework used could help other countries assess progress and design context-specific, equitable pathways towards UHC.
