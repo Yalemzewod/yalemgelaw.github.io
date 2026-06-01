@@ -4,102 +4,136 @@ editor:
   visual 
 ---
 
-With over seven years of academic and research experience, Yalemzewod has developed a comprehensive skill set in data science and data analysis. He is proficient in using *R* programming language, Query language (MySQL, PostgreSQL,and SQL server); visualization tool (PowerBI) and snowflakes data warehouse. His expertise includes data management and statistical modeling, analytic, systematic and strategical skills. He also had enough experience in providing training, University teaching and research supervision. He holds a master's and PhD in Epidemiology and Biostatistics.
+Over 8+ years, I've been on a relentless mission to make data useful — spanning academia, public health, and the private sector. My journey has taken me from modelling disease dynamics in R to orchestrating cloud-scale pipelines in Snowflake and Microsoft Fabric. I'm equally at home wrangling messy surveillance datasets and shipping polished Power BI dashboards to executive stakeholders. Armed with a PhD in Epidemiology & Biostatistics, I bring rigors to every analysis and a genuine obsession with turning raw numbers into decisions that matter.
 
-> #### 2024 - present
+> <div>
 >
-> *WA Department of Health, Healthcare Quality Intelligence Unit*
-
-> *Senior Data Scientist*
-
-> ***Skills*****:** PowerBI, SQL, R, Snowflakes.
-
-> **Key responsibilities**
+> **2025 - Present**
 >
-> -    Power BI dashboard development, reporting, data modeling, and pipeline deployment
+> HBF Health, Data Analytics and Insight Team
 >
-> -    Project management
+> Senior Data Analyst
 >
-> -   Stakeholder engagement
+> **Stack**: Snowflake · Python · SQL · Tableau · Streamlit · Atlassian
 >
-> -   ETL (SQL and Power Query)\
+> Key responsibilities:
+>
+> -   Design and ship end-to-end dashboards that translate complex insurance claims data into clear, actionable narratives for business stakeholders
+>
+> -   Interrogate high-dimensional cloud datasets to surface patterns in high-claim episodes and health conditions
+>
+> -   Engage cross-functional stakeholders to align data products with real decision-making needs
+>
+> -   Build interactive Streamlit apps to democratize data access across the organization
+>
+> </div>
+>
+> #### 2024 - 2025
+>
+> WA Department of Health, Healthcare Quality Intelligence Unit
+>
+> Senior Data Scientist
+>
+> **Stack**: Power BI · SQL Server · Snowflake · R · Power Query
+>
+> **Key responsibilities:**
+>
+> -   Architected and deployed Power BI dashboards and data models that drove quality intelligence decisions across WA Health services
+>
+> -   Built and maintained ETL pipelines using SQL and Power Query, ensuring clean, reliable data flowing from source to insight
+>
+> -   Led end-to-end project delivery from requirements gathering through to stakeholder sign-off
+>
+> -   Translated complex healthcare metrics into visual stories that non-technical audiences could act on instantly
 
 > #### 2021 - 2023
 >
-> *Child Health Analytics Team,* *Telethon Kids Institute Researcher and geospatial analyst.*
-
-> ***Skills*** Excel, R, Python, ArcGIS, and QGIS
+> Child Health Analytics Team, Telethon Kids Institute
+>
+> Researcher & Geospatial Analyst
+>
+> **Stack**: R · Python · ArcGIS · QGIS · Excel
 >
 > **Key responsibilities:**
 
--   Provided assistance in data management and validation for high-resolution raster insecticide-treated nets (ITNs) model outputs.
+-   Managed and validated high-resolution raster outputs for insecticide-treated net (ITN) models — because bad input data means bad decisions in the field.
 
--   Acquired, cleaned, and geolocated malaria surveillance data along with shapefiles.
+-   Acquired, cleaned, and geolocated malaria surveillance datasets and shapefiles, building a pipeline from raw coordinates to analysis-ready layers.
 
--   Led geostatistical modeling of malaria endemicity at a sub-national level, employing Bayesian statistics.
+-   Led sub-national geostatistical modeling of malaria endemicity using Bayesian statistics, producing maps that informed elimination strategies.
 
--   Lead authored two manuscripts, which are currently prepared for submission to high-impact journals.
+-   Lead-authored two manuscripts for high-impact journal submission.
 
--   Collaborated with colleagues to develop a training manual on spatial analysis in R and QGIS, and successfully conducted two rounds of training in Ethiopia.
+-   Co-developed a spatial analysis training manual in R and QGIS, delivering two rounds of hands-on training in Ethiopia.
 
--   Secured a seed grant of \$15,000 AUD to conduct a research project focused on developing a web-based interactive tool to enhance decision-making for malaria elimination in Vietnam.
+-   Secured a \$15,000 AUD seed grant to build a web-based interactive decision-support tool for malaria elimination in Vietnam.
 
 > #### 2020 - 2021
 >
-> *Population Child Health Research Group, UNSW Sydney* *Child Health Biostatistician*
-
-> ***Skills***: MySQL, R.
-
+> Population Child Health Research Group, UNSW Sydney
+>
+> Child Health Biostatistician
+>
+> **Stack**: R · MySQL
+>
 > **Key responsibilities:**
 
--   Conducted quantitative analysis on linked administrative data sets and data sets specifically related to children in out-of-home care.
+-   Ran quantitative analyses on linked administrative datasets covering children in out-of-home care — turning sensitive, complex records into rigorous, policy-relevant insights.
 
--   Provided statistical and research design support to the Population Child Health Research Group.
+-   Delivered statistical and research design support across the group, from choosing the right model to interpreting results for non-statistician collaborators.
 
--   Played a key role in grant writing applications, including study design, sample size determination, and selection of analytical techniques.
+-   Contributed to competitive grant applications, owning study design, sample size calculations, and analytical strategy.
 
--   Authored manuscripts for research publications, including three submissions, two of which were as a lead or co-lead author.
+-   Authored three manuscripts, leading or co-leading two submissions to peer-reviewed journals.
 
 > #### 2019 - 2020
 >
-> *Metro North Public Health Unit, Queensland Health* *Epidemiologist* *Skills*: PostgreSQL, R, and QGIS
-
+> Metro North Public Health Unit, Queensland Health
+>
+> Epidemiologist
+>
+> **Stack**: R · PostgreSQL · QGIS
+>
 > **Key responsibilities:**
 
--   Offered statistical analysis expertise and input in population health research studies, projects, programs, and community population health planning processes.
+-   Delivered statistical analysis and epidemiological expertise to population health research, programs, and community health planning — bridging the gap between raw surveillance data and public health action.
 
--   Collected data from a routine disease surveillance database, performed analysis, and prepared comprehensive reports based on the findings. - Conducted monitoring and surveillance of food borne outbreaks by applying best epidemiological practices, including data collection, management, and analysis.
+-   Extracted, analyzed, and reported on data from routine disease surveillance databases, turning continuous data streams into timely, decision-ready reports.
 
--   Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years. - Provided research supervision and guidance to undergraduate and postgraduate medicine, as well as other health sciences students, fostering their development of research skills and knowledge.
+-   Led monitoring and surveillance of forborne outbreaks, applying rigorous epidemiological methods from data collection through to actionable findings.
 
--   Took on a leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.
+-   Mentored and supervised undergraduate and postgraduate students in research methods, building the next generation of data-literate health scientists.
 
 > #### 2016 - 2020
 >
-> *The University of Queensland, Brisbane, AU* *PhD study*
-
-> ***Skills***: Scientific writing, R, ArcGIS, and Win BUGS.
+> The University of Queensland, Brisbane, AU
+>
+> PhD Candidate — Epidemiology & Biostatistics
+>
+> **Stack**: R · ArcGIS · WinBUGS · Scientific writing
 >
 > **Key activities**:
 
--   Applied a range of statistical methods including population-attributable risks, ANOVAs, Poisson, Binomial, Bayesian statistics, and geostatistical models to analyze the collected data.
+-   Deployed a full arsenal of statistical methods — population-attributable risks, Poisson and Binomial regression, Bayesian inference, and geostatistical models — to crack complex public health questions.
 
--   Developed multiple high-resolution maps using surveillance data and environmental data.
+-   Produced multiple high-resolution geospatial maps by fusing surveillance data with environmental datasets, pushing the boundary of what spatial analytics could reveal.
 
--   Collaborated with senior researchers involved in WHO projects to conduct two systematic reviews aimed at updating the Adolescent latent Tuberculosis Infection Treatment guidelines.
+-   Partnered with WHO-linked senior researchers on two systematic reviews to update Adolescent Latent TB Infection Treatment guidelines.
 
--   Authored five first-author journal papers and provided assistance in the preparation of four additional journal articles.
+-   Published five first-author journal papers and co-authored four additional articles — building a track record of rigorous, reproducible research.
 
 > #### 2013 - 2016
 >
-> *Institute of Public Health, The University of Gondar* *Lecturer*
-
-> ***Skills***: Scientific writing, teaching, R and SPSS.
+> Institute of Public Health, The University of Gondar
+>
+> Lecturer
+>
+> **Stack**: R · SPSS · Scientific writing
 >
 > **Key responsibilities**:
 
--   Taught Biostatistics, teaching undergraduate and postgraduate medicine, as well as other health sciences students, for a period of three years.
+-   Taught Biostatistics to undergraduate and postgraduate students across medicine and health sciences — sparking a love of data-driven thinking in the next generation of public health professionals.
 
--   Provided research supervision and guidance to undergraduate and postgraduate medicine, as well as other health sciences students, fostering their development of research skills and knowledge.
+-   Supervised student research projects, guiding them from research question to robust analysis and publication-ready findings.
 
--   Took on a team leadership role in overseeing and guiding fieldwork students' community professional practices, ensuring a valuable and impactful learning experience.\
+-   Led fieldwork students through community professional practice, turning classroom theory into real-world impact.
