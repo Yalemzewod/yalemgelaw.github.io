@@ -27,7 +27,9 @@ knitr:
    message: false
 editor: visual
 ---
+
 # Install and load packages
+
 ```{r, package}
 # Install necessary packages if not already installed
 if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
