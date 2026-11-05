@@ -1,7 +1,7 @@
 ---
 pagetitle: "Yalemzewod A Gelaw | Data Scientist"
 title: "Yalemzewod Gelaw, PhD"
-subtitle: "Senior Data Analyst · Data Scientist · Biostatistician"
+subtitle: "Data Scientist · Biostatistician"
 description: "Data scientist working on health data: statistical and geospatial modelling, cloud analytics, and dashboards that people use to make decisions."
 image: "images/profile.jpg"
 about:
@@ -49,7 +49,7 @@ I turn messy, high-dimensional data into **models, maps and dashboards that peop
 I have 8+ years of experience across academia, public health and health insurance, and a PhD in
 Epidemiology & Biostatistics from The University of Queensland.
 
-Right now I work as a **Senior Data Analyst at HBF Health** in Perth, Australia. I build analytics on insurance
+Right now I work as a **Data Scientist at HBF** in Perth, Australia. I build analytics on insurance
 claims data in Snowflake, Python and SQL, and ship Tableau dashboards and Streamlit apps.
 
 ::: {.hero-cta}
