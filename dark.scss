@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;600&display=swap');
+
+$dark-green: #cfd8c9;
+$sage: #a4ad98;
+$light-green: #444a41;
+$cream: #222;
+$gray: #e6e3df;
+$purple: #d7b6e3;
+$orange: #e2a76b;
+
+$primary: #9b64ad;
+$link-color: $purple;
+$code-color: $purple;
+
+/*-- scss:rules --*/
+
+@import "site-rules";
+
+.ds-card, .project-card, .stat { background: #2b2b2b; }
+.tech { border-color: rgba(215, 182, 227, .35); background: rgba(215, 182, 227, .08); }
+.quarto-title-banner { background: linear-gradient(120deg, #3a4535 0%, #5e3a6b 100%) !important; }

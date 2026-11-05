@@ -1,0 +1,120 @@
+---
+title: "Projects"
+subtitle: "Selected data science work: modelling, geospatial analytics, pipelines and data products"
+title-block-banner: true
+toc: false
+page-layout: full
+---
+
+Here's a selection of projects from industry, government and research roles. Each card lists the
+problem, the approach, the tools and where to read more. Commercial work is described at a high level only.
+
+::::: {.grid .project-grid}
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[Industry · Health insurance]{.project-tag}
+
+### Claims analytics & self-serve data apps
+
+**Problem:** Business teams needed faster, clearer insight into high-claim episodes and health-condition patterns.
+
+**Approach:** Interrogated high-dimensional claims data in a cloud warehouse, built reusable SQL/Python
+transformations, and shipped Tableau dashboards plus interactive Streamlit apps to give stakeholders self-serve access.
+
+[Snowflake]{.tech} [Python]{.tech} [SQL]{.tech} [Tableau]{.tech} [Streamlit]{.tech}
+::::
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[Government · Healthcare quality]{.project-tag}
+
+### Healthcare quality intelligence dashboards
+
+**Problem:** Quality-intelligence teams across WA Health services needed reliable, timely metrics.
+
+**Approach:** Designed data models and ETL pipelines (SQL Server, Power Query, Snowflake) feeding Power BI
+dashboards, and delivered the work end to end from requirements to stakeholder sign-off.
+
+[Power BI]{.tech} [SQL Server]{.tech} [Snowflake]{.tech} [R]{.tech} [Power Query]{.tech}
+::::
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[Research · Geostatistics]{.project-tag}
+
+### Mapping residual malaria transmission in Vietnam
+
+**Problem:** To eliminate malaria by 2030, Vietnam needs to know *where* and *when* transmission can resurge.
+
+**Approach:** Trained network and geostatistical models on 2019–2022 case data to estimate vulnerability
+(importation rate) and receptivity (reproduction number, *R*) with environmental covariates. The work was funded by
+a $15k ACREME seed grant for a web-based decision-support tool.
+
+[R]{.tech} [Bayesian geostatistics]{.tech} [Spatio-temporal models]{.tech} [Raster data]{.tech}
+
+[Paper](https://doi.org/10.1016/j.lanwpc.2025.101545){.btn .btn-sm .btn-outline-primary target="_blank"}
+[Talk (ACREME 2023)](workshopsandpresentations.qmd){.btn .btn-sm .btn-outline-secondary}
+::::
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[Research · Geospatial pipelines]{.project-tag}
+
+### Sub-national malaria endemicity & ITN models
+
+**Problem:** Programs need high-resolution, validated estimates to target insecticide-treated nets (ITNs).
+
+**Approach:** Built a pipeline from raw surveillance coordinates and shapefiles to analysis-ready layers, ran
+Bayesian sub-national geostatistical models of endemicity, and validated high-resolution raster outputs.
+
+[R]{.tech} [Python]{.tech} [ArcGIS]{.tech} [QGIS]{.tech} [Bayesian models]{.tech}
+::::
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[Research · Linked data]{.project-tag}
+
+### Linked administrative data for child health
+
+**Problem:** Policy questions about children in out-of-home care depend on sensitive, complex linked records.
+
+**Approach:** Ran quantitative analyses on linked administrative datasets, and owned study design, sample-size
+calculations and analytical strategy for competitive grant applications.
+
+[R]{.tech} [MySQL]{.tech} [Record linkage]{.tech} [Regression]{.tech}
+::::
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[PhD · Spatial epidemiology]{.project-tag}
+
+### Spatial epidemiology of TB & HIV in Ethiopia
+
+**Problem:** Where are TB and TB/HIV co-infection clustered, and what drives the clustering?
+
+**Approach:** Fused surveillance and environmental data, using population-attributable risks, Poisson and binomial
+regression, and Bayesian geostatistical models to produce high-resolution risk maps.
+
+[R]{.tech} [WinBUGS]{.tech} [ArcGIS]{.tech} [Bayesian inference]{.tech}
+
+[Publications](publications.qmd){.btn .btn-sm .btn-outline-primary}
+::::
+
+:::: {.g-col-12 .g-col-lg-6 .project-card}
+[Open education]{.project-tag}
+
+### Open tutorials: R, dplyr, regression & spatial analysis
+
+**Problem:** Many public-health analysts lack hands-on, practical training in reproducible R workflows.
+
+**Approach:** Wrote open tutorials using real routine malaria surveillance (DHIS2-style) data, ran a spatial
+analysis course in R & QGIS in Ethiopia, and taught R virtually to around 50 PhD students.
+
+[R]{.tech} [tidyverse]{.tech} [sf]{.tech} [Quarto]{.tech} [QGIS]{.tech}
+
+[Read the posts](tutorials.qmd){.btn .btn-sm .btn-outline-primary}
+[Workshops](workshopsandpresentations.qmd){.btn .btn-sm .btn-outline-secondary}
+::::
+
+:::::
+
+::: {.callout-tip appearance="simple"}
+## Want to collaborate?
+I'm happy to talk about analytics, modelling or data-product work. [Email me](mailto:yalassefa@gmail.com) or find me on
+[LinkedIn](https://www.linkedin.com/in/yalemzewod-gelaw){target="_blank"}.
+:::

@@ -9,13 +9,14 @@ execute:
 
 website:
   title: "Yalemzewod A Gelaw"
-  description: "Professional blog for practical data manipulation, insightful data visualization, and effective statistical analysis using R and Python"
+  description: "Data scientist working on health data: statistical & geospatial modelling, cloud analytics, dashboards, and practical R/Python tutorials."
   site-url: https://yalemzewodgelaw.com
   repo-url: https://github.com/Yalemzewod/yalemgelaw.github.io
   repo-actions:
     - source
     - issue
   favicon: images/logo.png
+  open-graph: true
   twitter-card:
     creator: "@yalassefa"
     
@@ -26,50 +27,64 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - href: grantsandawards.qmd
-        text: Grants & awards
-      - href: workshopsandpresentations.qmd
-        text: Workshops & presentations
+      - href: about.qmd
+        text: About
+      - href: projects.qmd
+        text: Projects
+      - href: tutorials.qmd
+        text: Blog
       - href: publications.qmd
         text: Publications
-      - href: tutorials.qmd
-        text: Posts
+      - text: Experience
+        menu:
+          - href: skills.qmd
+            text: Career summary
+          - href: workshopsandpresentations.qmd
+            text: Workshops & talks
+          - href: grantsandawards.qmd
+            text: Grants & awards
       - href: CV/Resume_YG_202603.pdf
         text: CV
+        target: _blank
 
     right:
-      - icon: twitter
-        href: https://twitter.com/yalassefa
-        aria-label: Quarto Twitter
-        target: _blank
       - icon: github
         href: https://github.com/yalemzewod
-        aria-label: Quarto GitHub
+        aria-label: GitHub
         target: _blank
       - icon: linkedin
-        href: https://www.linkedin.com/feed/
-        aria-label: Quarto LinKedin
+        href: https://www.linkedin.com/in/yalemzewod-gelaw
+        aria-label: LinkedIn
+        target: _blank
+      - icon: twitter-x
+        href: https://twitter.com/yalassefa
+        aria-label: X (Twitter)
         target: _blank
       - icon: youtube
-        text: YouTube
-        href: https://youtube.com/@yz1121?si=y7dpAlVtlEnGRSSm
+        href: https://youtube.com/@yz1121
+        aria-label: YouTube
         target: _blank
+      - icon: rss
+        href: tutorials.xml
+        aria-label: RSS feed
 
-page-footer: 
+  page-footer:
     background: light
-    left: "© Copyright 2023, Yalemzewod Gelaw"
-    right: "Built with [Quarto](https://quarto.org)"
+    left: "© 2026 Yalemzewod Gelaw · Data science for health"
+    right: "Built with [Quarto](https://quarto.org) · [Source](https://github.com/Yalemzewod/yalemgelaw.github.io)"
 
 format:
   html:
     page-layout: full
     sidebar: true
-    theme: 
-      light: flatly
-      dark: darkly
-    css: styles.scss
+    theme:
+      light: [flatly, styles.scss]
+      dark: [darkly, dark.scss]
     mainfont: Nunito
+    monofont: JetBrains Mono
+    code-copy: true
+    highlight-style: github
+    link-external-newwindow: true
     toc: true
     toc-depth: 3
     toc-location: left

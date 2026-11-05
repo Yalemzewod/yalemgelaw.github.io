@@ -1,52 +1,141 @@
 ---
-pagetitle: "Yalemzewod A Gelaw"
-title: ""
-image: "images/yalem.jpg"
-about: 
- template: jolla
- image-shape: rounded
- image-width: 16em
- links: 
-   - icon: linkedin
-     text: linkdeIn
-     href: https://www.linkedin.com/in/yalemzewod-gelaw
-     target: _blank
-   - icon: twitter
-     text: X
-     href: https://twitter.com/yalassefa
-     target: _blank
-   - icon: github
-     text: GitHub
-     href: https://github.com/yalemzewod
-     target: _blank
-   - icon: envelop
-     text: Email
-     href: mailto:'yalassefa@gmail.com'
-     target: _blank
-   - icon: orcid
-     text: OrcId
-     href: https://orcid.org/0000-0002-5338-586X
-     target: _blank
-   - icon: youtube
-     text: YouTube
-     href: https://youtube.com/@yz1121?si=y7dpAlVtlEnGRSSm
-     target: _blank
+pagetitle: "Yalemzewod A Gelaw | Data Scientist"
+title: "Yalemzewod Gelaw, PhD"
+subtitle: "Senior Data Analyst · Data Scientist · Biostatistician"
+description: "Data scientist working on health data: statistical and geospatial modelling, cloud analytics, and dashboards that people use to make decisions."
+image: "images/profile.jpg"
+about:
+  id: hero
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: file-earmark-person
+      text: CV
+      href: CV/Resume_YG_202603.pdf
+      target: _blank
+    - icon: github
+      text: GitHub
+      href: https://github.com/yalemzewod
+      target: _blank
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/yalemzewod-gelaw
+      target: _blank
+    - icon: mortarboard
+      text: ORCID
+      href: https://orcid.org/0000-0002-5338-586X
+      target: _blank
+    - icon: envelope
+      text: Email
+      href: mailto:yalassefa@gmail.com
+listing:
+  id: latest-posts
+  contents: posts
+  sort: "date desc"
+  type: grid
+  max-items: 3
+  grid-columns: 3
+  fields: [image, date, title, description, categories]
+  image-height: 160px
 toc: false
 anchor-sections: false
+page-layout: full
 ---
 
-### Hello there!
+:::: {#hero}
 
-<p class="topbr">
+I turn messy, high-dimensional data into **models, maps and dashboards that people use to make decisions**.
+I have 8+ years of experience across academia, public health and health insurance, and a PhD in
+Epidemiology & Biostatistics from The University of Queensland.
 
-Welcome to my website! I'm Yalemzewod Gelaw, a data enthusiast who loves uncovering stories hidden in data. 
+Right now I work as a **Senior Data Analyst at HBF Health** in Perth, Australia. I build analytics on insurance
+claims data in Snowflake, Python and SQL, and ship Tableau dashboards and Streamlit apps.
 
-Here, I share my journey exploring data science, statistical analysis, and epidemiology. You'll find blog posts, tutorials, and code snippets packed with insights and practical applications that turn raw data into actionable knowledge.
+::: {.hero-cta}
+[View projects](projects.qmd){.btn .btn-primary .me-2}
+[Read the blog](tutorials.qmd){.btn .btn-outline-primary}
+:::
 
-Dive in, explore, and let's geek out about data together! Got ideas or want to collaborate? I'd love to hear from you! 📊✨
+::::
 
-</p>
+## {{< fa chart-line >}} What I do {.section-heading}
 
-------------------------------------------------------------------------
+::::: {.grid .ds-grid}
 
+:::: {.g-col-12 .g-col-md-6 .g-col-lg-3 .ds-card}
+### {{< fa brain >}} Statistical & ML modelling
+Bayesian inference, regression (GLMs, Poisson/binomial), and predictive models that flag at-risk populations.
+::::
 
+:::: {.g-col-12 .g-col-md-6 .g-col-lg-3 .ds-card}
+### {{< fa globe >}} Geospatial analytics
+Geostatistical models, raster pipelines and high-resolution maps for disease surveillance and elimination planning.
+::::
+
+:::: {.g-col-12 .g-col-md-6 .g-col-lg-3 .ds-card}
+### {{< fa database >}} Data engineering
+ETL pipelines and data models in Snowflake, Microsoft Fabric, SQL Server and Power Query, built to scale to billions of rows.
+::::
+
+:::: {.g-col-12 .g-col-md-6 .g-col-lg-3 .ds-card}
+### {{< fa chart-pie >}} Dashboards & storytelling
+Power BI and Tableau dashboards, plus Streamlit apps that turn numbers into narratives for executives.
+::::
+
+:::::
+
+## {{< fa code >}} Tech stack {.section-heading}
+
+::: {.stack-group}
+**Languages**
+[R]{.tech} [Python]{.tech} [SQL]{.tech} [WinBUGS]{.tech} [Stata]{.tech} [SPSS]{.tech}
+:::
+
+::: {.stack-group}
+**Data platforms**
+[Snowflake]{.tech} [Microsoft Fabric]{.tech} [SQL Server]{.tech} [PostgreSQL]{.tech} [MySQL]{.tech}
+:::
+
+::: {.stack-group}
+**Modelling & analysis**
+[tidyverse / dplyr]{.tech} [Bayesian inference]{.tech} [Geostatistics]{.tech} [sf / raster]{.tech} [Power Query]{.tech}
+:::
+
+::: {.stack-group}
+**Visualisation & apps**
+[Power BI]{.tech} [Tableau]{.tech} [Streamlit]{.tech} [ggplot2]{.tech} [tmap / leaflet]{.tech} [QGIS / ArcGIS]{.tech}
+:::
+
+::: {.stack-group}
+**Workflow**
+[Git / GitHub]{.tech} [Quarto]{.tech} [Atlassian]{.tech} [Reproducible research]{.tech}
+:::
+
+## {{< fa diagram-project >}} By the numbers {.section-heading}
+
+::::: {.grid .stats-grid}
+:::: {.g-col-6 .g-col-md-3 .stat}
+[8+]{.stat-num}
+[years in data]{.stat-label}
+::::
+:::: {.g-col-6 .g-col-md-3 .stat}
+[40+]{.stat-num}
+[peer-reviewed publications]{.stat-label}
+::::
+:::: {.g-col-6 .g-col-md-3 .stat}
+[7]{.stat-num}
+[organisations across academia, government & industry]{.stat-label}
+::::
+:::: {.g-col-6 .g-col-md-3 .stat}
+[50+]{.stat-num}
+[PhD students trained in R]{.stat-label}
+::::
+:::::
+
+## {{< fa pen-nib >}} Latest from the blog {.section-heading}
+
+::: {#latest-posts}
+:::
+
+[All posts →](tutorials.qmd){.btn .btn-sm .btn-outline-primary}

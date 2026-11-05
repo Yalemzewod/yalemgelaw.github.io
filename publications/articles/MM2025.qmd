@@ -9,8 +9,8 @@ doi: "https://doi.org/10.1016/j.lanwpc.2025.101545"
 materials: ""
 toc: false
 categories:
-  - Child and Adolescent Health
-  - Mental Health
+  - Infectious disease
+  - Geo-spatial
 ---
 
 ## Citation (Vancouver)

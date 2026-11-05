@@ -5,7 +5,7 @@ description: |
 author: 
   - name: Yalemzewod Gelaw
     url: https://yalemzewodgelaw.com/
-    orcid: 0000-0002-5338-586 
+    orcid: 0000-0002-5338-586X
 date: 2024-07-11
 image: "media/cor_reg.png"
 slug: beginner’s guide
