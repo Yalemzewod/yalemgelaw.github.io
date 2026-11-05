@@ -12,7 +12,7 @@ Over 8+ years, I've been on a relentless mission to make data useful — spannin
 >
 > HBF Health, Data Analytics and Insight Team
 >
-> Senior Data Analyst
+> Data Scientist
 >
 > **Stack**: Snowflake · Python · SQL · Tableau · Streamlit · Atlassian
 >

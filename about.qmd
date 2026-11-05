@@ -6,7 +6,7 @@ title-block-banner: true
 
 ## {{< fa briefcase title="Current Affiliation" >}} Current Affiliation: 
 
-I'm a Senior Data Analyst at HBF HEALTH, Perth Australia — where every day is a deep dive into complex insurance claims data, pipelines, and cloud-powered analytics. My playground is a cloud-based environment where I interrogate messy, high-dimensional datasets to surface the signals that actually matter. Whether it's tracking high-claim episodes, spotting health condition patterns, or building interactive dashboards that transform numbers into narratives, I live at the intersection of data and decision-making.
+I'm a Data Scientist at HBF, Perth Australia — where every day is a deep dive into complex insurance claims data, pipelines, and cloud-powered analytics. My playground is a cloud-based environment where I interrogate messy, high-dimensional datasets to surface the signals that actually matter. Whether it's tracking high-claim episodes, spotting health condition patterns, or building interactive dashboards that transform numbers into narratives, I live at the intersection of data and decision-making.
 
 ## {{< fa graduation-cap title="Education" >}} Education:
 
