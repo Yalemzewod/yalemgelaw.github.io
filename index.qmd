@@ -3,7 +3,7 @@ pagetitle: "Yalemzewod A Gelaw | Data Scientist"
 title: "Yalemzewod Gelaw, PhD"
 subtitle: "Senior Data Analyst · Data Scientist · Biostatistician"
 description: "Data scientist working on health data: statistical and geospatial modelling, cloud analytics, and dashboards that people use to make decisions."
-image: "images/yalem.jpg"
+image: "images/profile.jpg"
 about:
   id: hero
   template: trestles
