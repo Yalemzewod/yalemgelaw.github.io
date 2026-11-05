@@ -1,28 +1,34 @@
 /*-- scss:defaults --*/
 
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:wght@400;600&display=swap');
 
 // Colors
-$dark-green: #858E79;
+$dark-green: #4f5d47;
+$sage: #858E79;
 $light-green: #D1D9CE;
 $cream: #FDFBF7;
-$gray: #64605f;
-$purple: #9158A2;
+$gray: #4a4645;
+$purple: #7d4a8f;
 $orange: #ad7237;
 
 // Base document colors
-$navbar-bg: $cream; // navbar
-$navbar-fg: $dark-green; // navbar foreground elements
-$navbar-hl: $purple; // highlight color when hovering over navbar links
-$body-bg: $light-green; // page background 
-$body-color: $gray; // page text 
-$footer-bg: $cream; // footer 
-$link-color: $purple; // hyperlinks 
+$primary: $purple;
+$navbar-bg: $cream;        // navbar
+$navbar-fg: $dark-green;   // navbar foreground elements
+$navbar-hl: $purple;       // hover color for navbar links
+$body-bg: $cream;          // page background
+$body-color: $gray;        // page text
+$footer-bg: $cream;        // footer
+$link-color: $purple;      // hyperlinks
 
 // Inline code
-$code-bg: $cream; // inline code background color
-$code-color: $purple; // inline code text color
+$code-bg: #f3efe7;
+$code-color: $purple;
 
 // Code blocks
-$code-block-bg: $cream; // code block background color 
+$code-block-bg: #f6f3ec;
+
+/*-- scss:rules --*/
+
+@import "site-rules";

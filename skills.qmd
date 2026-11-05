@@ -4,7 +4,7 @@ editor:
   visual 
 ---
 
-Over 8+ years, I've been on a relentless mission to make data useful — spanning academia, public health, and the private sector. My journey has taken me from modelling disease dynamics in R to orchestrating cloud-scale pipelines in Snowflake and Microsoft Fabric. I'm equally at home wrangling messy surveillance datasets and shipping polished Power BI dashboards to executive stakeholders. Armed with a PhD in Epidemiology & Biostatistics, I bring rigors to every analysis and a genuine obsession with turning raw numbers into decisions that matter.
+Over 8+ years, I've been on a relentless mission to make data useful — spanning academia, public health, and the private sector. My journey has taken me from modelling disease dynamics in R to orchestrating cloud-scale pipelines in Snowflake and Microsoft Fabric. I'm equally at home wrangling messy surveillance datasets and shipping polished Power BI dashboards to executive stakeholders. Armed with a PhD in Epidemiology & Biostatistics, I bring rigour to every analysis and a genuine obsession with turning raw numbers into decisions that matter.
 
 > <div>
 >
@@ -100,7 +100,7 @@ Over 8+ years, I've been on a relentless mission to make data useful — spannin
 
 -   Extracted, analyzed, and reported on data from routine disease surveillance databases, turning continuous data streams into timely, decision-ready reports.
 
--   Led monitoring and surveillance of forborne outbreaks, applying rigorous epidemiological methods from data collection through to actionable findings.
+-   Led monitoring and surveillance of foodborne outbreaks, applying rigorous epidemiological methods from data collection through to actionable findings.
 
 -   Mentored and supervised undergraduate and postgraduate students in research methods, building the next generation of data-literate health scientists.
 
