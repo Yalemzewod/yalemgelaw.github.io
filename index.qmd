@@ -1,8 +1,8 @@
 ---
 pagetitle: "Yalemzewod A Gelaw | Data Scientist"
 title: "Yalemzewod Gelaw, PhD"
-subtitle: "Data Scientist · Biostatistician"
-description: "Data scientist working on health data: statistical and geospatial modelling, cloud analytics, and dashboards that people use to make decisions."
+subtitle: "Data Scientist"
+description: "Data scientist working on health and insurance data: statistical modelling, cloud analytics, churn and retention prediction and dashboards that people use to make decisions."
 image: "images/profile.jpg"
 about:
   id: hero
@@ -46,11 +46,11 @@ page-layout: full
 :::: {#hero}
 
 I turn messy, high-dimensional data into **models, maps and dashboards that people use to make decisions**.
-I have 8+ years of experience across academia, public health and health insurance, and a PhD in
+I have 10+ years of experience across working in public health, medical and health insurance data, and hold a PhD in
 Epidemiology & Biostatistics from The University of Queensland.
 
 Right now I work as a **Data Scientist at HBF** in Perth, Australia. I build analytics on insurance
-claims data in Snowflake, Python and SQL, and ship Tableau dashboards and Streamlit apps.
+claims data in Snowflake, churn and proactive retention modelling in Python and SQL, and built Tableau dashboards and Streamlit apps.
 
 ::: {.hero-cta}
 [View projects](projects.qmd){.btn .btn-primary .me-2}
@@ -65,7 +65,7 @@ claims data in Snowflake, Python and SQL, and ship Tableau dashboards and Stream
 
 :::: {.g-col-12 .g-col-md-6 .g-col-lg-3 .ds-card}
 ### {{< fa brain >}} Statistical & ML modelling
-Bayesian inference, regression (GLMs, Poisson/binomial), and predictive models that flag at-risk populations.
+Bayesian inference, ML, and predictive models that flag at-risk populations.
 ::::
 
 :::: {.g-col-12 .g-col-md-6 .g-col-lg-3 .ds-card}
