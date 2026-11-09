@@ -45,7 +45,7 @@ Vector data describes the "geometry" or "shape" of objects and often includes ad
 
 A polygon refers to a set of closed polylines that represent a geographic location, composed of vertices (a series of `x` and `y` coordinates or spatial points).
 
-![]()![Figure 1: Vector data types](images/spatial_data.png)
+![Figure 1: Vector data types](images/spatial_data.png)
 
 #### **Raster Data**
 
